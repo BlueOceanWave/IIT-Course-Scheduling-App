@@ -18,14 +18,14 @@ IIT Administration
 Web Application
  
 ### Tech stack
-React and Mysql? <br>
-Python and Django? <br>
-Dart and Flutter? <br>
+Python, Django and Mysql <br>
 
 #### Client Tech 
 Internet Browser 
 #### Server Tech
- Still not decided; might be used if we decide to do the account approach (?)
+Python
+Django
+MySQL Database
 
 ## Top Application Capabilities (name at least 5)
 * Computer Science and Computer Engineering Students at IIT can select their major  
@@ -76,20 +76,20 @@ Internet Browser
 
 | Week | Sprint Leader |
 | --------  | ------------------- |
-| 1 - Problem Framing                                 | Team member #N              |
-| 2 - Problem Framing                                 | Team member #N             |
-| 3 - Problem Framing                                 | Team member #N+1|
-| 4 - Problem Framing                                 | Team member #N+1|
-| 5 - Think, build, test, and demo for midterm        | Team member #N+2 |
-| 6 - Think, build, test, and demo for midterm        | Team member #N+2 |
-| 7 - Think, build, test, and demo for midterm        | Team member #N+3|
-| 8 - Think, build, test, and demo for midterm        | Team member #N+3|
-| 9 - Think, build, test, and demo for final          | Team member ...             |
-| 10 - Think, build, test, and demo for final	      |  Team member ...      |
-| 11 - Think, build, test, and demo for final         | Team member ...         |
-| 12 - Think, build, test, and demo for final         | Team member ...          |
-| 13 - Think, build, test, and demo for final         | Team member ...          |
-| 14 - Presentation dry run                           | Team member ...   |
-| 15 - Presentation                                   | Team member ... |
+| 1 - Problem Framing                                 | Team member #1|
+| 2 - Problem Framing                                 | Team member #1|
+| 3 - Problem Framing                                 | Team member #2|
+| 4 - Problem Framing                                 | Team member #2|
+| 5 - Think, build, test, and demo for midterm        | Team member #3|
+| 6 - Think, build, test, and demo for midterm        | Team member #3|
+| 7 - Think, build, test, and demo for midterm        | Team member #4|
+| 8 - Think, build, test, and demo for midterm        | Team member #4|
+| 9 - Think, build, test, and demo for final          | Team member #1|
+| 10 - Think, build, test, and demo for final	        | Team member #1|
+| 11 - Think, build, test, and demo for final         | Team member #2|
+| 12 - Think, build, test, and demo for final         | Team member #2|
+| 13 - Think, build, test, and demo for final         | Team member #3|
+| 14 - Presentation dry run                           | Team member #3|
+| 15 - Presentation                                   | Team member #4|
 
 
