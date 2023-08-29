@@ -7,7 +7,7 @@
  
 ## Customer
 ### Description
-Illinois Tech students [Computer Science or Computer Engineering students] who are trying to create their schedule based on their major requirements 
+Computer Science or Computer Engineering students who are trying to create their schedule based on their major requirements 
 
 Occupation: Undergrad/Grad Students 
 
@@ -28,7 +28,7 @@ Internet Browser
  Still not decided; might be used if we decide to do the account approach (?)
 
 ## Top Application Capabilities (name at least 5)
-* [Computer Science and Computer Engineering] Students at IIT can select their major  
+* Computer Science and Computer Engineering Students at IIT can select their major  
 * Students can enter classes they’ve taken 
 * Helps students track the number of credits they have earned and how many are remaining for graduation  
 * App will list remaining required classes for degree 
