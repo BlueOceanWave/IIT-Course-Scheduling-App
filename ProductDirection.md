@@ -1,8 +1,7 @@
 # IPro 497 – Product Design Document
 
 ## Problem statement
-1. Students at IIT will be able to use this web app to plan their future semesters and be given recommendations based on their major and the courses they’ve already finished.
-2. Computer Science and Computer Engineering students at IIT will be able to plan their future semesters and be given recommendations based on their major and the courses they’ve already finished. 
+Computer Science and Computer Engineering students at IIT will be able to plan their future semesters and be given recommendations based on their major and the courses they’ve already finished. 
 
  
 ## Customer
@@ -23,9 +22,9 @@ Python, Django and Mysql <br>
 #### Client Tech 
 Internet Browser 
 #### Server Tech
-Python
-Django
-MySQL Database
+* Python
+* Django
+* MySQL Database
 
 ## Top Application Capabilities (name at least 5)
 * Computer Science and Computer Engineering Students at IIT can select their major  
@@ -39,8 +38,7 @@ MySQL Database
 * Incorporates a user-friendly interface allowing students to plan their academic journeys 
 
 
-## Top Two to Three Scenarios
-[see sample scenarios](https://github.com/mschray/IPro497Sample/blob/main/Examples/ScenarioExample.md)
+## Scenarios
 
 1. A student is trying to plan for future semesters but is having trouble keeping track of completed courses, required courses, when courses may be offered, prerequisite courses, and all other things they need to worry about. The student then finds our website and can simply enter the classes they have taken and their major and find all this information in one organized spot so they can spend less time creating their schedule. 
 2. A student is in their final year before they graduate but cannot find which classes they still need to take to graduate. Rather than spending time making a spreadsheet and possibly missing a class, they use our website.  
@@ -77,19 +75,19 @@ MySQL Database
 | Week | Sprint Leader |
 | --------  | ------------------- |
 | 1 - Problem Framing                                 | Team member #1|
-| 2 - Problem Framing                                 | Team member #1|
-| 3 - Problem Framing                                 | Team member #2|
+| 2 - Labor Day                                       | No Class|
+| 3 - Problem Framing                                 | Team member #1|
 | 4 - Problem Framing                                 | Team member #2|
-| 5 - Think, build, test, and demo for midterm        | Team member #3|
+| 5 - Think, build, test, and demo for midterm        | Team member #2|
 | 6 - Think, build, test, and demo for midterm        | Team member #3|
-| 7 - Think, build, test, and demo for midterm        | Team member #4|
-| 8 - Think, build, test, and demo for midterm        | Team member #4|
-| 9 - Think, build, test, and demo for final          | Team member #1|
-| 10 - Think, build, test, and demo for final	        | Team member #1|
-| 11 - Think, build, test, and demo for final         | Team member #2|
-| 12 - Think, build, test, and demo for final         | Team member #2|
-| 13 - Think, build, test, and demo for final         | Team member #3|
-| 14 - Presentation dry run                           | Team member #3|
-| 15 - Presentation                                   | Team member #4|
+| 7 - Fall Break Day                                  | No Class|
+| 8 - Think, build, test, and demo for midterm        | Team member #3|
+| 9 - Think, build, test, and demo for final          | Team member #4|
+| 10 - Think, build, test, and demo for final	        | Team member #4|
+| 11 - Think, build, test, and demo for final         | Team member #5|
+| 12 - Think, build, test, and demo for final         | Team member #5|
+| 13 - Think, build, test, and demo for final         | Team member #1|
+| 14 - Presentation dry run                           | Team member #1|
+| 15 - Presentation                                   | Team member #2|
 
 
