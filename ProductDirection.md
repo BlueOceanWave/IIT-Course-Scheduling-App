@@ -63,7 +63,7 @@ Internet Browser
 - We will use Discord for out-of-class communication and meetings. 
 
 ### Requested Approach/Behavior 
-##### Examples (edit and add your own)
+##### Examples
 - We will communicate respectfully and professionally; we will listen to each other's ideas and come to a consensus on what must be done. 
 - Work will be fairly divided between each member of the team.  Each member will choose a fair number of stories from the Kanban board. 
 - No changing an idea without discussion with the whole group. 
@@ -74,20 +74,20 @@ Internet Browser
 
 | Week | Sprint Leader |
 | --------  | ------------------- |
-| 1 - Problem Framing                                 | Team member #1|
+| 1 - Problem Framing                                 | Marcin |
 | 2 - Labor Day                                       | No Class|
-| 3 - Problem Framing                                 | Team member #1|
-| 4 - Problem Framing                                 | Team member #2|
-| 5 - Think, build, test, and demo for midterm        | Team member #2|
-| 6 - Think, build, test, and demo for midterm        | Team member #3|
+| 3 - Problem Framing                                 | Marcin |
+| 4 - Problem Framing                                 | Nadeem |
+| 5 - Think, build, test, and demo for midterm        | Nadeem |
+| 6 - Think, build, test, and demo for midterm        | Robert |
 | 7 - Fall Break Day                                  | No Class|
-| 8 - Think, build, test, and demo for midterm        | Team member #3|
-| 9 - Think, build, test, and demo for final          | Team member #4|
-| 10 - Think, build, test, and demo for final	        | Team member #4|
-| 11 - Think, build, test, and demo for final         | Team member #5|
-| 12 - Think, build, test, and demo for final         | Team member #5|
-| 13 - Think, build, test, and demo for final         | Team member #1|
-| 14 - Presentation dry run                           | Team member #1|
-| 15 - Presentation                                   | Team member #2|
+| 8 - Think, build, test, and demo for midterm        | Robert |
+| 9 - Think, build, test, and demo for final          | Nabilah |
+| 10 - Think, build, test, and demo for final	        | Nabilah |
+| 11 - Think, build, test, and demo for final         | Hans |
+| 12 - Think, build, test, and demo for final         | Hans |
+| 13 - Think, build, test, and demo for final         | Marcin |
+| 14 - Presentation dry run                           | Marcin |
+| 15 - Presentation                                   | Nadeem |
 
 
