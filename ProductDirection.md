@@ -40,7 +40,7 @@ Internet Browser
 
 ## Scenarios
 
-1. A student is trying to plan for future semesters but is having trouble keeping track of completed courses, required courses, when courses may be offered, prerequisite courses, and all other things they need to worry about. The student then finds our website and can simply enter the classes they have taken and their major and find all this information in one organized spot so they can spend less time creating their schedule. 
+1. David is trying to plan for future semesters but is having trouble keeping track of completed courses, required courses, when courses may be offered, prerequisite courses, and all other things he needs to worry about. He then finds our website and can simply enter the classes he have taken and his major and find all this information in one organized spot so he can spend less time creating he schedule. 
 2. A student is in their final year before they graduate but cannot find which classes they still need to take to graduate. Rather than spending time making a spreadsheet and possibly missing a class, they use our website.  
 
 
