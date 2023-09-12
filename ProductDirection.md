@@ -13,7 +13,7 @@ Occupation: Undergrad/Grad Students
 ### Other customer(s) or stakeholder(s)
 IIT Administration 
  
-## Application type (web app, mobile, website, native client, …)
+## Application type
 Web Application
  
 ### Tech stack
