@@ -19,9 +19,9 @@ Web Application
 ### Tech stack
 Python, Django and Mysql <br>
 
-#### Client Tech 
+### Client Tech 
 Internet Browser 
-#### Server Tech
+### Server Tech
 * Python
 * Django
 * MySQL Database
@@ -40,7 +40,7 @@ Internet Browser
 
 ## Scenarios
 
-1. David is trying to plan for future semesters but is having trouble keeping track of completed courses, required courses, when courses may be offered, prerequisite courses, and all other things he needs to worry about. He then finds our website and can simply enter the classes he have taken and his major and find all this information in one organized spot so he can spend less time creating he schedule. 
+1. David is trying to plan for future semesters but is having trouble keeping track of completed courses, required courses, when courses may be offered, prerequisite courses, and all other things he needs to worry about. He then finds our website and can simply enter the classes he has taken and his major and find all this information in one organized spot so he can spend less time creating he schedule. 
 2. Clair is in her senior year and is unsure which classes she wants to take and when they’re offered. She then finds that she can enter her completed classes and our app will recommend her future schedules with classes she can take. She can then use this as a template to fine tune her schedule to her liking. 
 
 
@@ -58,7 +58,7 @@ Internet Browser
 ### What do we want to accomplish/learn together?
 
 ### Tools
-#### Examples (edit and add your own)
+#### Examples
 - We will use Github for version control. Team-members will push their finished code to a branch to ensure the main branch remains bug-free.
 - We will use Discord for out-of-class communication and meetings. 
 
