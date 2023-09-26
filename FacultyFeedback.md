@@ -13,6 +13,9 @@
 ## Week 5 ##
 
 ## Week 6 ##
+ Update the board (if its not on the board it didn't)
+-Mid-term presentation 10/16
+-Add a story to for the mid-term presentation slide creation
 
 ## Week 7 ##
 
