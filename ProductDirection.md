@@ -17,14 +17,14 @@ IIT Administration
 Web Application
  
 ### Tech stack
-Python, Django and Mysql <br>
+Python, Django and Postgres <br>
 
 ### Client Tech 
 Internet Browser 
 ### Server Tech
 * Python
 * Django
-* MySQL Database
+* Postgres Database
 
 ## Top Application Capabilities (name at least 5)
 * Computer Science and Computer Engineering Students at IIT can select their major  
