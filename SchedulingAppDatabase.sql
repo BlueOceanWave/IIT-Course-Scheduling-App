@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS term CASCADE;
 
 --Account
 CREATE TABLE account
-(aID int PRIMARY KEY,
+(
  username varchar (50) UNIQUE,
  password varchar (50),
  major varchar (20)
