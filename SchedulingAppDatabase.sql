@@ -74,7 +74,7 @@ CREATE TABLE classes
 (CRN int PRIMARY KEY,
  sID varchar (10),
  cID int,
- sNum int,
+ sNum varchar (10),
  term varchar (15),
  days varchar (5),
  startTime time,

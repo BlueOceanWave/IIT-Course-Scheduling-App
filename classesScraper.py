@@ -27,12 +27,18 @@ classSearch = driver.find_element(By.CSS_SELECTOR, 'input[type="submit"]')
 classSearch.click()
 
     # THIRD PAGE #
+#Get all of the Sectionm Titles
+ddTitle = driver.find_elements(By.CLASS_NAME, 'ddtitle')
+
+class_list = []
+for p in range(len(ddTitle)):
+    list = ddTitle[p].text.split(" - ") # Title, CRN, (sID, cID), sNum
+    if(p < 10):
+        print(list)
+    class_list.append(ddTitle[p].text)
 
 time.sleep(10)
 '''
-course_list = []
-for p in range(len(courses)):
-    print(courses[p].text)
-    course_list.append(courses[p].text)
+
 '''
 driver.close
