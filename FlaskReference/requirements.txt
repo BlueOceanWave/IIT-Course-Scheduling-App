@@ -1,0 +1,6 @@
+flask
+jinja2
+flask_socketio
+cryptography
+db
+psycopg2
