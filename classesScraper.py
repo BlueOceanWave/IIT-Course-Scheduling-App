@@ -25,9 +25,15 @@ def get_data():
     for p in range(len(ddTitle)):
         list = ddTitle[p].text.split(" - ") # Title, CRN, (sID, cID), sNum
         info = ddDefault[0].text.split("\n")
-        list.append(info[1].split(" ")[2] + " " + info[1].split(" ")[3]) #term
-        list.append(info[6].split(" ")[0]) #campus
-        list.append(info[8].split(" ")[0]) #online
+        #print(info)
+        infoEx = info[1].split(" ")[2]
+        if(infoEx == "Fall" or infoEx == "Spring" or infoEx == "Summer"):
+            n = 1
+        else: 
+            n = 0
+        list.append(info[n].split(" ")[2] + " " + info[n].split(" ")[3]) #term
+        list.append(info[n + 5].split(" ")[0]) #campus
+        list.append(info[n + 7].split(" ")[0]) #online
         for i in range (2, 8):
             #startTime, endTime, days, building, room, startDate, endDate, cType, instructor(s)
             if(i == 2 or i == 5):
@@ -42,8 +48,8 @@ def get_data():
                     list.append(loc[-1])   
             else:
                 list.append(ddDefault[i + (p * 8)].text) 
-        if(p == 0):
-            print(list)
+        #if(p == 0):
+        #    print(list)
         class_list.append(list)
     returnToPrev = driver.find_element(By.XPATH, '/html/body/div[3]/table[2]/tbody/tr/td/a')
     returnToPrev.click()
@@ -67,3 +73,34 @@ for i in range (len(select.find_elements(By.CSS_SELECTOR, '*'))):
     print(i)
     choose_subject(i)
     get_data()
+
+
+'''
+JSON:
+(term.json)
+[
+    {
+        "title": ---
+        "CRN": ---
+        "sID": ---
+        "cID": ---
+        "sNum": ---
+        "term": --- ???
+        "campus": --- ???
+        "online": --- ???
+        "startTime": --- 
+        "endTime": ---
+        "days": ---
+        "building": ---
+        "room": ---
+        "startDate": ---
+        "endDate": ---
+        "cType": ---
+        "instructors": [
+            name: ---
+            ]
+    },
+    {...
+    }
+]
+'''
