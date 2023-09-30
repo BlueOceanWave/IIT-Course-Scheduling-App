@@ -3,7 +3,7 @@ import psycopg2
 # This is the simplest way I can make a python file communicate with a databse. 
 # These are all just functions that make the code get values from the database.
 
-# Still unfinished.
+# Still unfinished. Hey, it's me Nabilah :)
 
 # connect to PostgreSQL database
 connection = psycopg2.connect(
