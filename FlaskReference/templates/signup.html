@@ -10,8 +10,13 @@
     <form class = "grid" action = "/result" method ="POST">
         <input type="hidden" name="source" value="signup">
         <center>
-        <label for = "Name">Enter your Name :</label>
+        <label for = "Name">Enter a valid username :</label>
         <input type="text" name="name" id = "name">             <! -- this is the namedata in result() -->
+        <br>
+        <br>
+        <br>
+        <label for = "Name">Enter your major :</label>
+        <input type="text" name="major" id = "name">             <! -- this is the namedata in result() -->
         <br>
         <br>
         <br>
@@ -29,7 +34,7 @@
         <h3 style="color: blue;">Account Created!</h3>
         <button type="submit">Log in</button>
     </form>
-        <form class = "grid" action = "/home" method ="POST">
+        <form class = "grid" action = "/" method ="POST">
         <button type="submit">Back to home</button>
     </form>
     {% endif %}

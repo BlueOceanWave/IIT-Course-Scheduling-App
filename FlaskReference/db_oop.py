@@ -14,39 +14,47 @@ connection = psycopg2.connect(
     port='5432'
 )
 
-class Student:
-    
+class student_account:
+    table = "accounts"
     username = ""
     password = ""
     major = ""
 
-    def __init__(self, un, pswd, mjr):
-        username = un
-        password = pswd
-        major = mjr
+    def __init__(self, un="", pswd="", mjr=""):
+        self.username = un
+        self.password = pswd
+        self.major = mjr
         
-    def newEntry(self):
+    def insertToDB(self):
         cursor = connection.cursor()
-        query = "INSERT INTO persons (username, password) VALUES (%s, %s, %s)"
+        query = f"INSERT INTO {self.table} (username, password, major) VALUES (%s, %s, %s)"
         values = (self.username, self.password, self.major)
         cursor.execute(query, values)
         connection.commit()
         cursor.close()
         print("Successful row insert")
         
-    def searchEntry(self):
+    def isInDB(self):
         cursor = connection.cursor()
-        query = "SELECT EXISTS(SELECT 1 FROM persons WHERE name = %s)"
-        match_val = self.username
-        cursor.execute(query, (match_val,))
+        query = f"SELECT COUNT(*) FROM {self.table} WHERE username = %s AND password = %s;"
+        values = (self.username, self.password)
+        cursor.execute(query, values)
         result = cursor.fetchone()
         cursor.close()
-        return result[0]
+        if result[0] == 0:
+            return False
+        else:
+            return True
     
-    def getUsername(self):
-        exists = self.searchEntry(self.username)
+    def getFromDB(self):
+        exists = self.isInDB()
         if exists:
-            return self.username
+            cursor = connection.cursor()
+            query = f"SELECT major FROM {self.table} WHERE username = %s AND password = %s"
+            values = (self.username, self.password)
+            cursor.execute(query, values)
+            major = cursor.fetchone()[0]
+            return student_account(self.username, self.password, major)
         else:
             print("Username not in database")
             return

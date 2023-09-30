@@ -15,26 +15,22 @@ connection = psycopg2.connect(
 )
 
 
-# Gets an entry give the name of the row (to be updated for the ipro db)
+# Gets an entry given the username of the row (to be updated for the ipro db)
 def getEntry(name):
     # create a cursor to interact with the database
     cursor = connection.cursor()
-
-    query = "SELECT * FROM persons WHERE name = %s"  # define the query
+    query = "SELECT * FROM accounts WHERE username = %s"  # define the query
     match_val = name
-
     cursor.execute(query, (match_val,))
-
     row = cursor.fetchone()
-
     cursor.close()
-    return row[1]
+    return row
 
 # Creates a new entry given the name and password (to be updated for the ipro db)
-def newEntry(name, password):
+def newEntry(name, password, major):
     cursor = connection.cursor()
-    query = "INSERT INTO persons (name, password) VALUES (%s, %s)"
-    values = (name, password)
+    query = "INSERT INTO accounts (username, password, major) VALUES (%s, %s, %s)"
+    values = (name, password, major)
     cursor.execute(query, values)
     connection.commit()
     cursor.close()
@@ -43,7 +39,7 @@ def newEntry(name, password):
 # Checks if an entry exists in the database (to be updated for the ipro db)
 def searchEntry(name):
     cursor = connection.cursor()
-    query = "SELECT EXISTS(SELECT 1 FROM persons WHERE name = %s)"
+    query = "SELECT EXISTS(SELECT 1 FROM accounts WHERE username = %s)"
     match_val = name
     cursor.execute(query, (match_val,))
     result = cursor.fetchone()

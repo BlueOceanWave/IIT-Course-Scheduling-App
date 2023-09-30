@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS account CASCADE;
+DROP TABLE IF EXISTS accounts CASCADE;
 DROP TABLE IF EXISTS subjects CASCADE;
 DROP TABLE IF EXISTS courses CASCADE;
 DROP TABLE IF EXISTS prerequisites CASCADE;
@@ -8,11 +8,11 @@ DROP TABLE IF EXISTS enrollment CASCADE;
 DROP TABLE IF EXISTS term CASCADE;
 
 --Account
-CREATE TABLE account
+CREATE TABLE accounts
 (
  username varchar (50) PRIMARY KEY,
  password varchar (50),
- major varchar (20)
+ major varchar (50)
 );
 
 --Subjects
