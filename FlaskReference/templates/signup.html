@@ -5,7 +5,7 @@
     <title>Sign Up</title>
 </head>
 <body>
-    <h1>Please enter your credentials.</h1>
+    <h1>Create an account.</h1>
     <br><br><br><br><br><br><br><br><br><br><br>
     <form class = "grid" action = "/result" method ="POST">
         <input type="hidden" name="source" value="signup">
@@ -15,8 +15,12 @@
         <br>
         <br>
         <br>
-        <label for = "Name">Enter your major :</label>
-        <input type="text" name="major" id = "name">             <! -- this is the namedata in result() -->
+        <label for = "Major">Enter a valid major :</label>
+        <select name = "major">
+            <option value = "Computer Science" selected>Computer Science</option>
+            <option value = "Computer Engineering">Computer Engineering</option>
+            <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
+        </select>                                               <! -- this is the namedata in result() -->
         <br>
         <br>
         <br>
