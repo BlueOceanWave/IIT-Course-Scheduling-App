@@ -17,13 +17,14 @@ IIT Administration
 Web Application
  
 ### Tech stack
-Python, Django and Postgres <br>
+Python, Selenium, Flask and Postgres <br>
 
 ### Client Tech 
 Internet Browser 
 ### Server Tech
 * Python
-* Django
+* Selenium
+* Flask
 * Postgres Database
 
 ## Top Application Capabilities (name at least 5)
