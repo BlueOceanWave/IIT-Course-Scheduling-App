@@ -3,4 +3,5 @@ jinja2
 flask_socketio
 cryptography
 db
+psycopg2-binary
 psycopg2
