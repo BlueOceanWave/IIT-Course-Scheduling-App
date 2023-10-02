@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, Markup, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from jinja2 import Environment
 from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
@@ -82,8 +82,8 @@ def result():
             return "Invalid credentials!"
         else:
             student_db_info = student_account.getFromDB(userInput)
-            return Markup(render_template("welcome.html", name=student_db_info.username, 
-                                          major=student_db_info.major)) # renders and executes index.html again,
+            return render_template("welcome.html", name=student_db_info.username, 
+                                          major=student_db_info.major) # renders and executes index.html again,
                                                                         # but this time with the given name
 
 if __name__ == "__main__":
