@@ -28,7 +28,7 @@ CREATE TABLE courses
  title varchar (25), --Primary Key?
  hours int,
  description varchar (200),
- attributes varchar (30),
+ --attributes varchar (30),
  PRIMARY KEY (sID, cID),
  FOREIGN KEY (sID) REFERENCES subjects
 );
@@ -80,7 +80,7 @@ CREATE TABLE classes
  startTime time,
  endTime time,
  campus varchar (10),
- online bool,
+ online varchar (20),
  instructor varchar (30),
  building varchar (30),
  room varchar (10), --incase its 124-j
