@@ -81,11 +81,16 @@ CREATE TABLE classes
  endTime time,
  campus varchar (10),
  online varchar (20),
- instructor varchar (30),
  building varchar (30),
  room varchar (10), --incase its 124-j
  FOREIGN KEY (sID, cID) REFERENCES courses,
  FOREIGN KEY (term) REFERENCES term
+);
+
+--Instructors
+CREATE TABLE instructors
+(CRN int PRIMARY KEY,
+ instructor varchar (30)
 );
 
 --Enrollment
