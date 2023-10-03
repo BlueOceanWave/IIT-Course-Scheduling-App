@@ -1,0 +1,36 @@
+/*style elements for the container*/
+.container {
+    padding: 25px;
+    background-color:#D3D3D3;
+    text-align: center;
+    /*add border elements to the container*/
+    border: 3px solid black;
+}
+
+/*style login-button*/
+#login-button {
+    background-color: #2565AE;
+    color: white;
+    text-align: center;
+}
+
+/*style guest-button*/
+#guest-button {
+    background-color: #D5F3FE;
+    color: black;
+}
+
+/*style create-account*/
+#create-account{
+    background-color: white;
+    color: black;
+}
+
+/*center the text within the input box*/
+input{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}

@@ -1,25 +1,22 @@
 <html>
-    <!-- Enter your username and password-->
     <head>
-        <!-- Linking stylesheet to this html file-->
-        <link rel="stylesheet" type="text/css" href="login.css">
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='normalize.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
     </head>
     <body>
-    <h1>Please enter your credentials.</h1>
-        <form class = "grid" action = "/result" method ="POST">     <! -- calls result() and POSTs to it -->
-            <input type="hidden" name="source" value="login">
-             <center>
-            <! --     {% if name %} -->
-            <! --     <h3 style="color: blue;"> Hello {{name}}, how are you ?</h3> -->
-            <! --     {% endif %} -->
-            </center>
-            <center>
-            <label for = "Name">Username</label>
-            <input type="text" name="name" id = "name">             <! -- this is the namedata in result() -->
-            <label for = "Password">Password</label>
-            <input type="text" name="pass" id = "password">             <! -- this is the passdata in result() -->
-            <input type="Submit" class = "file_submit">
-            </center>
-        </form>
-    </body>
+    <h1>Login Page</h1>
+    <form class = "grid" action = "/result" method ="POST">    
+        <input type="hidden" name="source" value="login">
+        <div class="container">
+            <label for="Name">Username</label>
+            <input type="text" name="name" id = "name" placeholder="Username"><br>            
+            <label for="Password">Password</label>
+            <input type="password" name="pass" id = "password" placeholder="Password"><br>            
+            <button type="submit" id="login-button">Login</button><br>
+            <button type="submit" id="guest-button">Continue as Guest</button><br>
+            <button type="submit" id="create-account">Create Account</button>
+        </div>
+    </form>
+</body>
 </html>
