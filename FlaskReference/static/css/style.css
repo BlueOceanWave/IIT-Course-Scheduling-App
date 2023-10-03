@@ -1,5 +1,7 @@
 html{
     background-image: url('/static/builtin/mies_campus.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
