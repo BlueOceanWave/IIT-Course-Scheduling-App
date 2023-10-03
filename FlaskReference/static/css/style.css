@@ -7,7 +7,7 @@ html{
 
 /*style elements for the container*/
 .container {
-    padding: 50px;
+    padding: 40px;
     background-color:#D3D3D3;
     text-align: center;
     /*add border elements to the container*/
@@ -27,6 +27,7 @@ html{
     background-color: #2565AE;
     color: white;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /*style guest-button*/
@@ -50,8 +51,16 @@ html{
 /*center the text within the input box*/
 input{
     text-align: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 h1{
     text-align: center;
+}
+
+label{
+    margin-right: 20px;
+    margin-bottom: 20px;
+
 }
