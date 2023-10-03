@@ -5,6 +5,7 @@ from cryptography.fernet import Fernet
 import db
 from db_oop import student_account
 
+'''This is where flask application is being made.'''
 app = Flask(__name__)
 
 key = b'-NwUP8bcuumHeCWIJPz2L_MQimrSxUCKXZaNwYHRbQU='
