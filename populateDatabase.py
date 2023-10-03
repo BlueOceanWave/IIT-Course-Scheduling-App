@@ -108,7 +108,7 @@ def extractClassData(entry):
         'cID': entry['cID'],
         'sNum': entry['sNum'],
         'term': entry['term'],
-        'campus': extractOneOf(entry['campus'], ['Internet','Mies','Internship','Lecture','International','Downtown']),
+        'campus': entry['campus'],
         'online': extractOneOf(entry['online'], ['Online', 'Traditional', 'Non Traditional']),
         'startTime': extractTime(entry['startTime']),
         'endTime': extractTime(entry['endTime']),
