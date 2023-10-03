@@ -1,3 +1,8 @@
+html{
+    background-image: url('/static/builtin/mies_campus.jpg');
+    background-size: cover;
+}
+
 /*style elements for the container*/
 .container {
     padding: 25px;

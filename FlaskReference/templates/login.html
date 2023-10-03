@@ -1,22 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Login Page</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='normalize.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
     </head>
     <body>
-    <h1>Login Page</h1>
-    <form class = "grid" action = "/result" method ="POST">    
-        <input type="hidden" name="source" value="login">
-        <div class="container">
-            <label for="Name">Username</label>
-            <input type="text" name="name" id = "name" placeholder="Username"><br>            
-            <label for="Password">Password</label>
-            <input type="password" name="pass" id = "password" placeholder="Password"><br>            
-            <button type="submit" id="login-button">Login</button><br>
-            <button type="submit" id="guest-button">Continue as Guest</button><br>
-        </div>
-        <button type="submit" id="create-account">Create Account</button>
-    </form>
-</body>
-</html>
+        <div class="background-image"></div>
+        <h1>Login Page</h1>
+        <form class = "grid" action = "/result" method ="POST">    
+            <input type="hidden" name="source" value="login">
+            <div class="container">
+                <label for="Name">Username</label>
+                <input type="text" name="name" id = "name" placeholder="Username"><br>            
+                <label for="Password">Password</label>
+                <input type="password" name="pass" id = "password" placeholder="Password"><br>            
+                <button type="submit" id="login-button">Login</button><br>
+                <button type="submit" id="guest-button">Continue as Guest</button><br>
+            </div>
+            <button type="submit" id="create-account">Create Account</button>
+        </form>
+    </body>
+    </html>
