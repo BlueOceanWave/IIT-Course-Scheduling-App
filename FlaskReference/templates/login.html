@@ -1,22 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Login Page</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='normalize.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
+        <!--Adding Google fonts to website-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <!-- Adding Google icons to website-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
     <body>
-    <h1>Login Page</h1>
-    <form class = "grid" action = "/result" method ="POST">    
-        <input type="hidden" name="source" value="login">
-        <div class="container">
-            <label for="Name">Username</label>
-            <input type="text" name="name" id = "name" placeholder="Username"><br>            
-            <label for="Password">Password</label>
-            <input type="password" name="pass" id = "password" placeholder="Password"><br>            
-            <button type="submit" id="login-button">Login</button><br>
-            <button type="submit" id="guest-button">Continue as Guest</button><br>
-        </div>
-        <button type="submit" id="create-account">Create Account</button>
-    </form>
-</body>
+        <div class="background-image"></div>
+        <h1>Login Page</h1>
+        <form class = "grid" action = "/result" method ="POST">    
+            <input type="hidden" name="source" value="login">
+            <div class="container">
+                <!--Adding icon here-->
+                <span class="material-symbols-outlined">person</span>
+                <!--<label for="Name">Username</label>-->
+                <input type="text" name="name" id = "name" placeholder="Username"><br>            
+                <!--<label for="Password">Password</label>-->
+                <!--Adding icon here-->
+                <span class="material-icons">&#xE87C;</span>
+                <input type="password" name="pass" id = "password" placeholder="Password"><br>            
+                <button type="submit" id="login-button">Login</button><br>
+                <button type="submit" id="guest-button">Continue as Guest</button><br>
+            </div>
+            <button type="submit" id="create-account">Create Account</button>
+        </form>
+    </body>
 </html>

@@ -1,0 +1,72 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+html{
+    background-image: url('/static/builtin/mies_campus.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*style elements for the container*/
+.container {
+    padding: 40px;
+    background-color:#D3D3D3;
+    text-align: center;
+    /*add border elements to the container*/
+    border: 3px solid black;
+    width: 450px;
+    height: 250px;
+    margin: 0 auto;
+    position: absolute;
+    /*below code places login page in center of page*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*style login-button*/
+/*increase size of login-button*/
+#login-button {
+    background-color: #2565AE;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 10em;
+    height: 2em;
+    font-size: 30px;
+}
+
+/*style guest-button*/
+#guest-button {
+    background-color: #D5F3FE;
+    color: black;
+}
+
+/*style create-account*/
+#create-account{
+    background-color: white;
+    color: black;
+    margin-top: 200px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*center the text within the input box*/
+input{
+    text-align: center;
+    /*margin-left: 10px;*/
+    margin-bottom: 30px;
+    width: 15em;
+    height: 2em;
+}
+
+h1{
+    text-align: center;
+}
+
