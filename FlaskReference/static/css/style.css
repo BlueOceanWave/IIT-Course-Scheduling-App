@@ -28,11 +28,15 @@ html{
 }
 
 /*style login-button*/
+/*increase size of login-button*/
 #login-button {
     background-color: #2565AE;
     color: white;
     text-align: center;
     margin-bottom: 20px;
+    width: 10em;
+    height: 2em;
+    font-size: 30px;
 }
 
 /*style guest-button*/
@@ -57,7 +61,7 @@ html{
 input{
     text-align: center;
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h1{
@@ -67,5 +71,4 @@ h1{
 label{
     margin-right: 20px;
     margin-bottom: 20px;
-
 }
