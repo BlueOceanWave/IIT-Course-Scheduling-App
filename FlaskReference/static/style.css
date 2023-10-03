@@ -5,6 +5,13 @@
     text-align: center;
     /*add border elements to the container*/
     border: 3px solid black;
+    width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    /*below code places login page in center of page*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*style login-button*/
@@ -24,6 +31,10 @@
 #create-account{
     background-color: white;
     color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /*center the text within the input box*/
