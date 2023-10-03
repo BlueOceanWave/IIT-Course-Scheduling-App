@@ -18,17 +18,17 @@ CREATE TABLE accounts
 
 --Subjects
 CREATE TABLE subjects
-(sID varchar (10),
- lID varchar (20) PRIMARY KEY
+(sID varchar (10) PRIMARY KEY,
+ lID varchar (50) 
 );
 
 --Courses
 CREATE TABLE courses
 (sID varchar (10),
  cID int,
- title varchar (25), --Primary Key?
+ title varchar (150), --Primary Key?
  hours int,
- description varchar (200),
+ description varchar (4000),
  --attributes varchar (30),
  PRIMARY KEY (sID, cID),
  FOREIGN KEY (sID) REFERENCES subjects
@@ -80,7 +80,7 @@ CREATE TABLE classes
  days varchar (5),
  startTime time,
  endTime time,
- campus varchar (10),
+ campus varchar (20),
  online varchar (20),
  building varchar (30),
  room varchar (10), --incase its 124-j
@@ -90,8 +90,10 @@ CREATE TABLE classes
 
 --Instructors
 CREATE TABLE instructors
-(CRN int PRIMARY KEY,
- instructor varchar (30)
+(CRN int,
+ instructor varchar (60),
+ PRIMARY KEY (CRN, instructor),
+ FOREIGN KEY (CRN) REFERENCES classes
 );
 
 --Enrollment

@@ -1,0 +1,282 @@
+[
+    {
+        "sID": "ATR",
+        "lID": "Academic Training and Research"
+    },
+    {
+        "sID": "AS",
+        "lID": "Air Force Aerospace Studies"
+    },
+    {
+        "sID": "AURB",
+        "lID": "Architecture and Urbanism"
+    },
+    {
+        "sID": "ARCH",
+        "lID": "Architecture"
+    },
+    {
+        "sID": "AAH",
+        "lID": "Art and Architectural History"
+    },
+    {
+        "sID": "BIOL",
+        "lID": "Biology"
+    },
+    {
+        "sID": "BME",
+        "lID": "Biomedical Engineering"
+    },
+    {
+        "sID": "BUS",
+        "lID": "Business"
+    },
+    {
+        "sID": "CHE",
+        "lID": "Chemical Engineering"
+    },
+    {
+        "sID": "CHEM",
+        "lID": "Chemistry"
+    },
+    {
+        "sID": "CAE",
+        "lID": "Civil and Architectural Engr"
+    },
+    {
+        "sID": "COM",
+        "lID": "Communications"
+    },
+    {
+        "sID": "CS",
+        "lID": "Computer Science"
+    },
+    {
+        "sID": "CSP",
+        "lID": "Computer Science Prof Master"
+    },
+    {
+        "sID": "CSSP",
+        "lID": "N/A"
+    },
+    {
+        "sID": "DS",
+        "lID": "Data Science"
+    },
+    {
+        "sID": "ECON",
+        "lID": "Economics"
+    },
+    {
+        "sID": "ECE",
+        "lID": "Electrical and Computer Engr"
+    },
+    {
+        "sID": "EG",
+        "lID": "Engineering Graphics"
+    },
+    {
+        "sID": "EMGT",
+        "lID": "Engineering Management"
+    },
+    {
+        "sID": "ELP",
+        "lID": "English Language Program"
+    },
+    {
+        "sID": "ENVE",
+        "lID": "Environmental Engineering"
+    },
+    {
+        "sID": "EMS",
+        "lID": "Environmental Management and Sustainability"
+    },
+    {
+        "sID": "FMC",
+        "lID": "Financial Markets Compliance"
+    },
+    {
+        "sID": "FDSN",
+        "lID": "Food Science and Nutrition"
+    },
+    {
+        "sID": "GEM",
+        "lID": "Game Design and Experiential Media"
+    },
+    {
+        "sID": "ENGR",
+        "lID": "General Engineering"
+    },
+    {
+        "sID": "HIST",
+        "lID": "History"
+    },
+    {
+        "sID": "HUM",
+        "lID": "Humanities"
+    },
+    {
+        "sID": "INTM",
+        "lID": "Industrial Tech and Mgmt"
+    },
+    {
+        "sID": "ITM",
+        "lID": "Information Tech and Mgmt"
+    },
+    {
+        "sID": "ID",
+        "lID": "Institute of Design"
+    },
+    {
+        "sID": "IDN",
+        "lID": "Institute of Design"
+    },
+    {
+        "sID": "IDX",
+        "lID": "Institute of Design"
+    },
+    {
+        "sID": "IPMM",
+        "lID": "Intellectual Prop Mgt and Mkts"
+    },
+    {
+        "sID": "IEP",
+        "lID": "Intensive English Program"
+    },
+    {
+        "sID": "IPRO",
+        "lID": "Interprofessional Project"
+    },
+    {
+        "sID": "ITMD",
+        "lID": "ITM Development"
+    },
+    {
+        "sID": "ITMM",
+        "lID": "ITM Management"
+    },
+    {
+        "sID": "ITMO",
+        "lID": "ITM Operations"
+    },
+    {
+        "sID": "ITMS",
+        "lID": "ITM Security"
+    },
+    {
+        "sID": "ITMT",
+        "lID": "ITM Theory and Technology"
+    },
+    {
+        "sID": "LA",
+        "lID": "Landscape Architecture"
+    },
+    {
+        "sID": "LAW",
+        "lID": "Law"
+    },
+    {
+        "sID": "LCHS",
+        "lID": "Lewis College"
+    },
+    {
+        "sID": "LIT",
+        "lID": "Literature"
+    },
+    {
+        "sID": "MSC",
+        "lID": "Management Science"
+    },
+    {
+        "sID": "MAX",
+        "lID": "Marketing Analytics"
+    },
+    {
+        "sID": "MSF",
+        "lID": "Master of Science in Finance"
+    },
+    {
+        "sID": "MS",
+        "lID": "Materials Science"
+    },
+    {
+        "sID": "MSED",
+        "lID": "Mathematics and Science Educ"
+    },
+    {
+        "sID": "MATH",
+        "lID": "Mathematics"
+    },
+    {
+        "sID": "MBA",
+        "lID": "MBA Business"
+    },
+    {
+        "sID": "MMAE",
+        "lID": "Mechl, Mtrls and Arspc Engrg"
+    },
+    {
+        "sID": "MILS",
+        "lID": "Military Science"
+    },
+    {
+        "sID": "NS",
+        "lID": "Naval Science"
+    },
+    {
+        "sID": "PHIL",
+        "lID": "Philosophy"
+    },
+    {
+        "sID": "PHYS",
+        "lID": "Physics"
+    },
+    {
+        "sID": "PS",
+        "lID": "Political Science"
+    },
+    {
+        "sID": "PESL",
+        "lID": "Proficiency of English as a Second Language"
+    },
+    {
+        "sID": "PSYC",
+        "lID": "Psychology"
+    },
+    {
+        "sID": "PA",
+        "lID": "Public Administration"
+    },
+    {
+        "sID": "SCI",
+        "lID": "Science"
+    },
+    {
+        "sID": "SSCI",
+        "lID": "Social Sciences"
+    },
+    {
+        "sID": "SOC",
+        "lID": "Sociology"
+    },
+    {
+        "sID": "STAT",
+        "lID": "Statistics"
+    },
+    {
+        "sID": "SSB",
+        "lID": "Stuart School of Business"
+    },
+    {
+        "sID": "SAM",
+        "lID": "Sustainability Analytics and Management"
+    },
+    {
+        "sID": "SMGT",
+        "lID": "Sustainability Management"
+    },
+    {
+        "sID": "TECH",
+        "lID": "Technology"
+    }
+]

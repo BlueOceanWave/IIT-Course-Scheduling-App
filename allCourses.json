@@ -23483,5 +23483,26 @@
         "title": "Special Problems in Technology",
         "desc": "Independent study and projects in applied technology that are multi/cross-disciplinary not tied to a specific department.",
         "hours": "0"
+    },
+    {
+        "subject": "CSSP",
+        "coursenum": "201",
+        "title": "Self-Paced Accelerated Introduction to Computer Science",
+        "desc": "Self-Paced Accelerated Introduction to Computer Science",
+        "hours": "4"
+    },
+    {
+        "subject": "CSSP",
+        "coursenum": "401",
+        "title": "Self-Paced Intro to Adv Stu I",
+        "desc": "Self-Paced first course in a two-course sequence that is designed to prepare students for graduate study in computer science. Explores the implementation and application of fundamental data structures and algorithms with an emphasis on object-oriented programming. Examines the relationship between these elements and the mathematical structures that form the foundation of computer science. This course does not apply toward MAS/MS/PhD credit in Computer Science.",
+        "hours": "3"
+    },
+    {
+        "subject": "CSSP",
+        "coursenum": "402",
+        "title": "Self-Paced Intro to Adv Stu II",
+        "desc": "Self-Paced second course in a two-course sequence that is designed to prepare students for graduate study in computer science. Explores the development of the multiple layers of software that form a sophisticated software system, from device drivers to application interfaces to user interfaces. Examines how computer architecture influences software development. Emphasizes the design and implementation of interrupt-driven/event-driven software. This course does not apply toward MAS/MS/PhD credit in Computer Science.",
+        "hours": "3" 
     }
 ]

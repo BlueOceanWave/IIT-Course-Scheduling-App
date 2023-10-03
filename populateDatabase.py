@@ -10,8 +10,14 @@ connection = psycopg2.connect(
     port='5432'
 )
 
+# Extract json files
 classes_json = open('Fall_2023.json')
+courses_json = open('allCourses.json')
+subjects_json = open('subjects.json')
 classes = json.load(classes_json)
+courses = json.load(courses_json)
+subjects = json.load(subjects_json)
+
 
 def extractTime(time):
     ABORT_VALUE = None
@@ -81,15 +87,13 @@ def extractDays(days):
         if day not in 'MTWRF':
             return None
     
-    return days[:5]
+    return days
 
 def extractOneOf(element, list):
     if element not in list:
         return None
     
-    return element[:10]
-
-
+    return element
 
 def extractClassData(entry):
     # 'title', 'CRN', 'sID', 'cID', 'sNum', 'term', 'campus', 'online', 'startTime', 'endTime', 
@@ -100,93 +104,116 @@ def extractClassData(entry):
     result = {
         'title': entry['title'],
         'CRN': entry['CRN'],
-        'sID': entry['sID'][:10],
+        'sID': entry['sID'],
         'cID': entry['cID'],
-        'sNum': entry['sNum'][:10],
+        'sNum': entry['sNum'],
         'term': entry['term'],
         'campus': extractOneOf(entry['campus'], ['Internet','Mies','Internship','Lecture','International','Downtown']),
         'online': extractOneOf(entry['online'], ['Online', 'Traditional', 'Non Traditional']),
         'startTime': extractTime(entry['startTime']),
         'endTime': extractTime(entry['endTime']),
         'days': extractDays(entry['days']),
-        'building': entry['building'][:30],
-        'room': entry['room'][:10],
+        'building': entry['building'],
+        'room': entry['room'],
         'startDate': entry['startDate'],
         'endDate': entry['endDate'],
         'cType': entry['cType'],
-        'instructors': entry['instructors'][0][:30]
+        'instructors': entry['instructors']
     }
 
     return result
 
-def addClassesToDatabase(classes, major):
+
+def createDatabase():
+    cursor = connection.cursor()
+
+    with open('SchedulingAppDatabase.sql', 'r') as sql_file:
+        sql_commands = sql_file.read()
+        cursor.execute(sql_commands)
+    
+    connection.commit()
+    cursor.close()
+
+def addSubjectsToDatabse(subjects):
 
     cursor = connection.cursor()
+
+    for subject in subjects:
+        subjectQuery = 'INSERT INTO subjects (sID, lID) VALUES (%s, %s)'
+        subjectValues = (subject['sID'], subject['lID'])
+
+        cursor.execute(subjectQuery, subjectValues)
     
-    for course in classes:
-        if course['sID'].lower() == major.lower():
-            course_data = extractClassData(course)
+    connection.commit()
+    cursor.close()
 
-            classQuery = 'INSERT INTO classes (CRN, sID, cID, sNUM, term, days, startTime, endTime, campus, online, instructor, building, room) \
-                          VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
-            classValues = tuple(course_data[i] for i in ['CRN', 'sID', 'cID', 'sNum', 'term', 'days', 'startTime', 'endTime', 'campus', 'online', 'instructors', 'building', 'room'])
+    print("Added subjects to databse")
 
-            # termQuery = "INSERT INTO term (term, startDate, endDate) VALUES (%s, %s, %s)"
-            # termValues = tuple(course_data[i] for i in ['term', 'startDate', 'endDate'])
-            # cursor.execute(termQuery, termValues)
-            
-            
-            cursor.execute(classQuery, classValues)
+def addCoursesToDatabse(courses):
+    
+    cursor = connection.cursor()
 
-            # try:
-            #     cursor.execute(classQuery, classValues)
-            # except Exception as e:
-            #     print(e)
-            #     print(course_data['sID'], course_data['cID'], course_data['CRN'])
-            #     print(*map(lambda x: 0 if x==None else len(x), classValues))
+    for course in courses:
+        courseQuery = 'INSERT INTO courses (sID, cID, title, hours, description) VALUES (%s, %s, %s, %s, %s) ON CONFLICT (sID, cID) DO NOTHING'
+        courseValues = tuple(course[i] for i in ['subject', 'coursenum', 'title', 'hours', 'desc'])
+
+        cursor.execute(courseQuery, courseValues)
 
     connection.commit()
     cursor.close()
 
-    print(f'Added {major} classes to Database')
+    print('Added courses to database')
+
+def addClassesToDatabase(classes):
+
+    cursor = connection.cursor()
+    
+    for course in classes:
+    
+        course_data = extractClassData(course)
+    
+        # Create queries
+        classQuery = 'INSERT INTO classes (CRN, sID, cID, sNUM, term, days, startTime, endTime, campus, online, building, room) \
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
+        classValues = tuple(course_data[i] for i in ['CRN', 'sID', 'cID', 'sNum', 'term', 'days', 'startTime', 'endTime', 'campus', 'online', 'building', 'room'])
+
+        termQuery = "INSERT INTO term (term, startDate, endDate) VALUES (%s, %s, %s) ON CONFLICT (term) DO NOTHING"
+        termValues = tuple(course_data[i] for i in ['term', 'startDate', 'endDate'])
+        
+        # Execute queries. Order is important to ensure foreign keys have references
+        # Add Term
+        try:
+            cursor.execute(termQuery, termValues)
+        except:
+            print(f"Couldn't add term for {course_data['sID']} {course_data['cID']}")
+
+        # Add class
+        try:
+            cursor.execute(classQuery, classValues)
+        except:
+            print(f"Couldn't add class {course_data['sID']} {course_data['cID']}")
+
+        # Add instructors
+        try:
+            # Execute query for each instructor
+            for instructor in course_data['instructors']:
+                instructorQuery = "INSERT INTO instructors (CRN, instructor) VALUES (%s, %s)"
+                instructorValues = (course_data['CRN'], instructor)
+                cursor.execute(instructorQuery, instructorValues)
+        except:
+            print(f"Couldn't add instructors for {course_data['sID']} {course_data['cID']}\n")
+
+    connection.commit()
+    cursor.close()
+
+    print(f'Added classes, instructors, and terms to Database')
 
 
-addClassesToDatabase(classes, 'CS')
+# Deletes all tables and recreates them
+createDatabase() 
 
-
-
-
-
-
-
-
-# print("classes: ", len(classes))
-# # print("keys: ", classes[0].keys())
-
-# print(extractDate("DEC 09. 2023"))
-
-# camp = set()
-# online = set()
-# term = set()
-# room = set()
-
-# for c in classes[:]:
-#     camp.add(c['campus'])
-#     online.add(c['online'])
-#     term.add(c['term'])
-#     room.add(c['room'])
-
-# print(camp)
-# print(online)
-# print(term)
-# print([len(b) for b in room if len(b) > 10])
-
-
-
-
-# def insertClass():
-#     return
-
-# def insertTerm():
-#     return
+# Add table entries in order to ensure foriegn keys are satisfied
+addSubjectsToDatabse(subjects) 
+addCoursesToDatabse(courses)
+addClassesToDatabase(classes)
 
