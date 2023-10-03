@@ -18,6 +18,12 @@
 - Add a story to for the mid-term presentation slide creation
 
 ## Week 7 ##
+- No class on 10/9
+- Mid-term Presentation when we return on 10/16
+- Robert is the sprint review lead
+- On 10/16 
+	• You'll have about 30 minutes at the start of class to get ready.
+	• From there we will random presentation order so you could first or last or anywhere in between
 
 ## Week 8 ##
 
