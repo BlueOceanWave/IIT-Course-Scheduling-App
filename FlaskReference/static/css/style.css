@@ -7,12 +7,13 @@ html{
 
 /*style elements for the container*/
 .container {
-    padding: 25px;
+    padding: 50px;
     background-color:#D3D3D3;
     text-align: center;
     /*add border elements to the container*/
     border: 3px solid black;
     width: 400px;
+    height: 200px;
     margin: 0 auto;
     position: absolute;
     /*below code places login page in center of page*/
