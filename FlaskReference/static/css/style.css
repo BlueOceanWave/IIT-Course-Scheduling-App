@@ -17,7 +17,7 @@ html{
     text-align: center;
     /*add border elements to the container*/
     border: 3px solid black;
-    width: 400px;
+    width: 450px;
     height: 250px;
     margin: 0 auto;
     position: absolute;
@@ -60,9 +60,9 @@ html{
 /*center the text within the input box*/
 input{
     text-align: center;
-    margin-left: 20px;
+    /*margin-left: 10px;*/
     margin-bottom: 30px;
-    width: 10em;
+    width: 15em;
     height: 2em;
 }
 
