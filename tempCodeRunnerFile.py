@@ -1,0 +1,2 @@
+   
+            cursor.execute(classQuery, classValues)
