@@ -14,10 +14,10 @@ cipher = Fernet(key)
 
 @app.route("/", methods = ['GET', 'POST'])
 def home():
-    return render_template("home.html")
+    return render_template("login.html")
 
 
-@app.route("/signup", methods = ['GET'])
+@app.route("/signup", methods = ['GET', 'POST'])
 def signup():
     return render_template("signup.html")    # renders and executes index.html
 
