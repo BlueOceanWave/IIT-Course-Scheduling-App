@@ -20,9 +20,10 @@
                     <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
                 </select>                                            
                 <label for = "Password">Enter your Password :</label><br>
-                <input type="password" name="pass" id = "password">             
+                <input type="password" name="pass" id = "password"><br>             
                 <input type="submit" class = "file_submit">
             </form>
+            <!-- if statement to check if account was created successfully -->
             {% if done %}
             <form class = "grid" action = "/login" method ="POST">
                 <h3 style="color: blue;">Account Created!</h3>
