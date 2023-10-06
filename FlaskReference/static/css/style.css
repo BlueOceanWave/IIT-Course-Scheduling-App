@@ -29,6 +29,8 @@ html{
 
 /*style login-button*/
 /*increase size of login-button*/
+/*add hover effect to this button*/
+/*#1E4B8D*/
 #login-button {
     background-color: #2565AE;
     color: white;
@@ -37,12 +39,28 @@ html{
     width: 10em;
     height: 2em;
     font-size: 30px;
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+}
+
+#login-button:hover {
+    background-color: #1E4B8D;
 }
 
 /*style guest-button*/
 #guest-button {
     background-color: #D5F3FE;
     color: black;
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    width: 9em;
+    height: 2em;
+}
+
+#guest-button:hover {
+    background-color: #B0D7F6;
 }
 
 /*style create-account*/
@@ -55,6 +73,15 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    width: 8em;
+    height: 1.5em;
+}
+
+#create-account:hover{
+    background-color: #F5F5F5;
 }
 
 /*center the text within the input box*/
