@@ -3,36 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>Sign Up</title>
+        <!-- Link stylesheets in header file -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
     </head>
     <body>
-        <h1>Create an account.</h1>
-        <br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Create Account </h1>
         <form class = "grid" action = "/result" method ="POST">
             <input type="hidden" name="source" value="signup">
-            <center>
-                <label for = "Name">Enter a valid username :</label>
+                <label for = "Name">Enter a valid username :</label><br>
                 <input type="text" name="name" id = "name">             
-                <br>
-                <br>
-                <br>
-                <label for = "Major">Enter a valid major :</label>
+                <label for = "Major">Enter a valid major :</label><br>
                 <select name = "major">
                     <option value = "Computer Science" selected>Computer Science</option>
                     <option value = "Computer Engineering">Computer Engineering</option>
                     <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
                 </select>                                            
-                <br>
-                <br>
-                <br>
-                <label for = "Password">Enter your Password :</label>
+                <label for = "Password">Enter your Password :</label><br>
                 <input type="password" name="pass" id = "password">             
-                <br>
-                <br>
                 <input type="submit" class = "file_submit">
-            </center>
-            <br>
-            <center>
-
             </form>
             {% if done %}
             <form class = "grid" action = "/login" method ="POST">
@@ -43,6 +32,5 @@
                 <button type="submit">Back to home</button>
             </form>
             {% endif %}
-        </center>
     </body>
     </html>
