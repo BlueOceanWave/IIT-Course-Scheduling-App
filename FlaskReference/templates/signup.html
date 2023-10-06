@@ -6,23 +6,32 @@
         <!-- Link stylesheets in header file -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
+        <!-- import icons over here -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     </head>
     <body>
         <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
-        <h1>Create Account </h1>
+        <h1>Create Account</h1>
         <form class = "grid" action = "/result" method ="POST">
             <input type="hidden" name="source" value="signup">
-                <label for = "Name">Enter a valid username :</label><br>
-                <input type="text" name="name" id = "name">             
+            <div class="container">
+                <!-- Add a p element prompting user to create account -->
+                <span class="material-symbols-outlined">person</span>
+                <input type="text" name="name" id = "name" placeholder="Username"><br>            
+                <span class="material-symbols-outlined">lock</span>
+                <input type="password" name="pass" id = "password" placeholder="Password"><br>     
+            </div>
+                          
                 <label for = "Major">Enter a valid major :</label><br>
                 <select name = "major">
                     <option value = "Computer Science" selected>Computer Science</option>
                     <option value = "Computer Engineering">Computer Engineering</option>
                     <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
                 </select>                                            
-                <label for = "Password">Enter your Password :</label><br>
-                <input type="password" name="pass" id = "password"><br>             
-                <input type="submit" class = "file_submit">
+                           
+                <input type="submit">
             </form>
             <!-- if statement to check if account was created successfully -->
             {% if done %}
