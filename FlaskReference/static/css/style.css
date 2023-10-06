@@ -16,7 +16,7 @@ html{
     background-color:#D3D3D3;
     text-align: center;
     /*add border elements to the container*/
-    border: 3px solid black;
+    /*border: 3px solid black;*/
     width: 450px;
     height: 250px;
     margin: 0 auto;
@@ -25,6 +25,7 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 5px;
 }
 
 /*style login-button*/
@@ -42,7 +43,7 @@ html{
     /*remove border from buttons*/
     padding: 0;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #login-button:hover {
@@ -58,7 +59,7 @@ html{
     border: none;
     width: 9em;
     height: 2em;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #guest-button:hover {
@@ -80,7 +81,7 @@ html{
     border: none;
     width: 8em;
     height: 1.5em;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #create-account:hover{
@@ -95,7 +96,7 @@ input{
     width: 15em;
     height: 2em;
     margin-right: 53px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 h1{
