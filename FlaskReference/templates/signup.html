@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign Up</title>
-</head>
-<body>
-    <h1>Create an account.</h1>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <form class = "grid" action = "/result" method ="POST">
-        <input type="hidden" name="source" value="signup">
-        <center>
-        <label for = "Name">Enter a valid username :</label>
-        <input type="text" name="name" id = "name">             
-        <br>
-        <br>
-        <br>
-        <label for = "Major">Enter a valid major :</label>
-        <select name = "major">
-            <option value = "Computer Science" selected>Computer Science</option>
-            <option value = "Computer Engineering">Computer Engineering</option>
-            <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
-        </select>                                            
-        <br>
-        <br>
-        <br>
-        <label for = "Password">Enter your Password :</label>
-        <input type="password" name="pass" id = "password">             
-        <br>
-        <br>
-        <input type="submit" class = "file_submit">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <h1>Create an account.</h1>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <form class = "grid" action = "/result" method ="POST">
+            <input type="hidden" name="source" value="signup">
+            <center>
+                <label for = "Name">Enter a valid username :</label>
+                <input type="text" name="name" id = "name">             
+                <br>
+                <br>
+                <br>
+                <label for = "Major">Enter a valid major :</label>
+                <select name = "major">
+                    <option value = "Computer Science" selected>Computer Science</option>
+                    <option value = "Computer Engineering">Computer Engineering</option>
+                    <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
+                </select>                                            
+                <br>
+                <br>
+                <br>
+                <label for = "Password">Enter your Password :</label>
+                <input type="password" name="pass" id = "password">             
+                <br>
+                <br>
+                <input type="submit" class = "file_submit">
+            </center>
+            <br>
+            <center>
+
+            </form>
+            {% if done %}
+            <form class = "grid" action = "/login" method ="POST">
+                <h3 style="color: blue;">Account Created!</h3>
+                <button type="submit">Log in</button>
+            </form>
+            <form class = "grid" action = "/" method ="POST">
+                <button type="submit">Back to home</button>
+            </form>
+            {% endif %}
         </center>
-        <br>
-        <center>
-    </form>
-    {% if done %}
-    <form class = "grid" action = "/login" method ="POST">
-        <h3 style="color: blue;">Account Created!</h3>
-        <button type="submit">Log in</button>
-    </form>
-        <form class = "grid" action = "/" method ="POST">
-        <button type="submit">Back to home</button>
-    </form>
-    {% endif %}
-    </center>
-</body>
-</html>
+    </body>
+    </html>
