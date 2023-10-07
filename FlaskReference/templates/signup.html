@@ -10,6 +10,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+        <!-- include Roboto font here -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
     <body>
         <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
@@ -17,11 +19,11 @@
         <form class = "grid" action = "/result" method ="POST">
             <input type="hidden" name="source" value="signup">
             <div class="container">
-                <!-- Add a p element prompting user to create account -->
                 <span class="material-symbols-outlined">person</span>
                 <input type="text" name="name" id = "name" placeholder="Username"><br>            
                 <span class="material-symbols-outlined">lock</span>
-                <input type="password" name="pass" id = "password" placeholder="Password"><br>     
+                <input type="password" name="pass" id = "password" placeholder="Password"><br>
+                <button type="submit" id="create-account1">Create Account</button><br>
             </div>
                           
                 <label for = "Major">Enter a valid major :</label><br>
@@ -31,7 +33,7 @@
                     <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
                 </select>                                            
                            
-                <input type="submit">
+                <!--<input type="submit">-->
             </form>
             <!-- if statement to check if account was created successfully -->
             {% if done %}
