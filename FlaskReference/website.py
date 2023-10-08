@@ -21,7 +21,6 @@ def home():
 def signup():
     return render_template("signup.html")    # renders and executes index.html
 
-
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
     return render_template("login.html")    # renders and executes index.html
