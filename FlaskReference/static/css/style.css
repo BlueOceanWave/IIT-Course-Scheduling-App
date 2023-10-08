@@ -105,6 +105,22 @@ html{
     margin-top: 10px;
 }
 
+#enter-button {
+    /*include sign-in attributes*/
+    background-color: #2565AE;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 10em;
+    height: 2em;
+    font-size: 30px;
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
 /*include hover effect*/
 #create-account1:hover{
     background-color: #1E4B8D;
@@ -132,4 +148,16 @@ h1{
     width: 48px;
     height: 48px;
     font-size: 32px;
+}
+
+/*Add code for dropw-down list*/
+/*
+<label for = "Major" id = "majorLabel">Enter a valid major :</label><br>
+<select name = "major" id = "majorOptions">*/
+#majorLabel {
+    display: none;
+}
+
+#majorOptions {
+    display: none;
 }

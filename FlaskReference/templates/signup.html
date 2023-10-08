@@ -12,6 +12,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
         <!-- include Roboto font here -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <!-- Integrating JavaScript -->
+        <!-- Importing URL for JavaScript -->
+        <script type="text/javascript" src="{{ url_for('static', filename='/script/script.js')}}">
+        </script>
     </head>
     <body>
         <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
@@ -25,14 +29,14 @@
                 <input type="password" name="pass" id = "password" placeholder="Password"><br>
                 <button type="submit" id="create-account1">Create Account</button><br>
             </div>
-            
-                <label for = "Major">Enter a valid major :</label><br>
-                <select name = "major">
+        
+                <label for = "Major" id = "majorLabel">Enter a valid major :</label><br>
+                <select name = "major" id = "majorOptions">
                     <option value = "Computer Science" selected>Computer Science</option>
                     <option value = "Computer Engineering">Computer Engineering</option>
                     <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
-                </select>                                            
-                           
+                </select>                 
+
                 <!--<input type="submit">-->
             </form>
             <!-- if statement to check if account was created successfully -->
