@@ -11,15 +11,18 @@ app = Flask(__name__)
 key = b'-NwUP8bcuumHeCWIJPz2L_MQimrSxUCKXZaNwYHRbQU='
 cipher = Fernet(key)
 
-
+# Directs to Main Page 
 @app.route("/", methods = ['GET', 'POST'])
 def home():
     return render_template("login.html")
 
-
 @app.route("/signup", methods = ['GET', 'POST'])
 def signup():
     return render_template("signup.html")    # renders and executes index.html
+
+@app.route("/major", methods = ['GET', 'POST'])
+def major():
+    return render_template("major.html")    # renders and executes index.html
 
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
@@ -66,12 +69,17 @@ def result():
         name_input = request.form.get("name")          # Extracts the "name" field from the form
         print("name is", name_input)
         password_input = request.form.get("pass")  # Extracts the "name" field from the dictionary
-        major_input = request.form.get("major")
-        newUser = student_account(name_input, password_input, major_input)
+        newUser = student_account(name_input, password_input)
         newUser.insertToDB()
         print('oop is used')
-        return render_template("signup.html", done=True)
-
+        return redirect(url_for("major"))
+    elif source == "major":
+        major_input = request.form.get("pass")
+        newUser = student_account(major_input)
+        newUser.major = major_input
+        newUser.insertToDB()
+        print('oop is used')
+        return render_template("major.html", done=True)
     elif source == "login":
         name_input = request.form.get("name")   # Extracts the "name" field from the form
         password_input = request.form.get("pass")  # Extracts the "name" field from the form

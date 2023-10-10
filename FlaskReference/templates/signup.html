@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Sign Up</title>
+        <meta charset="utf-8">
         <!-- Link stylesheets in header file -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
@@ -14,8 +15,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <!-- Integrating JavaScript -->
         <!-- Importing URL for JavaScript -->
-        <script type="text/javascript" src="{{ url_for('static', filename='/script/script.js')}}">
-        </script>
+        <!--<script type="text/javascript" src="{{ url_for('static', filename='/script/script.js')}}">
+        </script>-->
     </head>
     <body>
         <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
@@ -27,27 +28,22 @@
                 <input type="text" name="name" id = "name" placeholder="Username"><br>            
                 <span class="material-symbols-outlined">lock</span>
                 <input type="password" name="pass" id = "password" placeholder="Password"><br>
-                <button type="submit" id="create-account1">Create Account</button><br>
+                <form class="grid" action="/major" method="POST">
+                    <button type="submit" id="create-account1">Create Account</button><br>
+                </form>
             </div>
-        
-                <label for = "Major" id = "majorLabel">Enter a valid major :</label><br>
-                <select name = "major" id = "majorOptions">
-                    <option value = "Computer Science" selected>Computer Science</option>
-                    <option value = "Computer Engineering">Computer Engineering</option>
-                    <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
-                </select>                 
-
-                <!--<input type="submit">-->
-            </form>
+        </form>
             <!-- if statement to check if account was created successfully -->
+          
             {% if done %}
             <form class = "grid" action = "/login" method ="POST">
                 <h3 style="color: blue;">Account Created!</h3>
                 <button type="submit">Log in</button>
             </form>
-            <form class = "grid" action = "/" method ="POST">
+            <form class = "grid" action = "/login" method ="POST">
                 <button type="submit">Back to home</button>
             </form>
             {% endif %}
+
     </body>
-    </html>
+</html>

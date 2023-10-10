@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Select Your Major</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
+        <h1>Select Your Major</h1>
+        <p>Hello World!</p>
+        <form class = "grid" action = "/result" method ="POST">
+            <label for = "Major" id = "majorLabel">Enter a valid major :</label><br>
+            <select name = "major" id = "majorOptions">
+                <option value = "Computer Science" selected>Computer Science</option>
+                <option value = "Computer Engineering">Computer Engineering</option>
+                <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
+            </select>
+        </form>
+        <form class = "grid" action = "/signup" method ="POST">    
+            <button type="submit" id="enter">Enter</button>
+        </form>
+        <!-- if account was created successfully-->
+        {% if done %}
+        <form class = "grid" action = "/login" method ="POST">
+            <h3 style="color: blue;">Account Created!</h3>
+            <button type="submit">Log in</button>
+        </form>
+        <form class = "grid" action = "/" method ="POST">
+            <button type="submit">Back to home</button>
+        </form>
+        {% endif %}
+    </body>
+    </html>

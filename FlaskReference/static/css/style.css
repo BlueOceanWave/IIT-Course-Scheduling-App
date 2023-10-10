@@ -147,15 +147,3 @@ h1{
     height: 48px;
     font-size: 2rem;
 }
-
-/*Add code for dropw-down list*/
-/*
-<label for = "Major" id = "majorLabel">Enter a valid major :</label><br>
-<select name = "major" id = "majorOptions">*/
-#majorLabel {
-    display: none;
-}
-
-#majorOptions {
-    display: none;
-}
