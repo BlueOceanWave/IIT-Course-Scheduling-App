@@ -64,21 +64,20 @@ def login():
 @app.route("/result", methods = ['POST', 'GET'])
 def result():
     source = request.form.get('source')
-
     if source == "signup":
         name_input = request.form.get("name")          # Extracts the "name" field from the form
         print("name is", name_input)
         password_input = request.form.get("pass")  # Extracts the "name" field from the dictionary
         newUser = student_account(name_input, password_input)
         newUser.insertToDB()
-        print('oop is used')
+        print('oop is used1')
         return redirect(url_for("major"))
     elif source == "major":
+        #getting backend api 
         major_input = request.form.get("pass")
         newUser = student_account(major_input)
-        newUser.major = major_input
         newUser.insertToDB()
-        print('oop is used')
+        print('oop is used2')
         return render_template("major.html", done=True)
     elif source == "login":
         name_input = request.form.get("name")   # Extracts the "name" field from the form

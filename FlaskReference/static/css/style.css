@@ -28,6 +28,20 @@ html{
     border-radius: 5px;
 }
 
+#enter-button {
+    background-color: #2565AE;
+    color: white;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    width: 320px;
+    height: 72px;
+    font-size: 1.875rem;
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.625rem;
+}
 
 #login-button {
     background-color: #2565AE;
@@ -103,8 +117,9 @@ html{
     margin-top: 0.625rem;
 }
 
+/*
 #enter-button {
-    /*include sign-in attributes*/
+    /*include sign-in attributes
     background-color: #2565AE;
     color: white;
     text-align: center;
@@ -112,12 +127,12 @@ html{
     width: 160px;
     height: 32px;
     font-size: 1.875rem;
-    /*remove border from buttons*/
+    /*remove border from buttons
     padding: 0;
     border: none;
     border-radius: 5px;
     margin-top: 0.625rem;
-}
+}*/
 
 /*include hover effect*/
 #create-account1:hover{

@@ -1,6 +1,6 @@
 import psycopg2
 
-# This is my attemp at making an object-oriented approach at communicating with the database
+# This is my attempt at making an object-oriented approach at communicating with the database
 # The goal is to make a user object, and link it to the database.
 
 # Still a work in progress.
