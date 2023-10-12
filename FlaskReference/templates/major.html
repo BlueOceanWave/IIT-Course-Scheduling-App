@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Select Your Major</title>
+        <meta charset="utf-8">
+        <!-- Linking stylesheets here -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
+
+    </head>
+    <body>
+        <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
+        <!-- Store form in div container -->
+        <div class="box">
+            <h1>Choose Your Major:</h1>
+            <form class = "grid" action = "/result" method ="POST">
+                <!--<label for = "Major" id = "majorLabel">Choose Your Major:</label><br>-->
+                <select name = "major" id = "majorOptions">
+                    <option value = "Computer Science" selected>Computer Science</option>
+                    <option value = "Computer Engineering">Computer Engineering</option>
+                    <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
+                </select>
+            </form><br>
+            <form class = "grid" action = "/signup" method ="POST">    
+                <button type="submit" id="enter-button">Enter</button>
+            </form>
+        </div>
+        
+        <!-- if account was created successfully-->
+        {% if done %}
+        <form class = "grid" action = "/login" method ="POST">
+            <h3 style="color: blue;">Account Created!</h3>
+            <button type="submit">Log in</button>
+        </form>
+        <form class = "grid" action = "/" method ="POST">
+            <button type="submit">Back to home</button>
+        </form>
+        {% endif %}
+    </body>
+    </html>
