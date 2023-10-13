@@ -26,11 +26,14 @@
                 <span class="material-symbols-outlined">lock</span>
                 <input type="password" name="pass" id = "password" placeholder="Password"><br>            
                 <button type="submit" id="login-button">Login</button><br>
-                <button type="submit" id="guest-button">Continue as Guest</button><br>
+                <form class="grid" action="/major" method="POST">
+                    <input type="hidden" name="guest-input" value="true">
+                    <button type="submit" id="guest-button">Continue as Guest</button><br>
+                </form>
             </div>
         </form>
-        <form class = "grid" action = "/signup" method ="POST">    
-        <button type="submit" id="create-account">Create Account</button>
+        <form class="grid" action="/signup" method="POST">    
+            <button type="submit" id="create-account">Create Account</button>
         </form>
     </body>
 </html>

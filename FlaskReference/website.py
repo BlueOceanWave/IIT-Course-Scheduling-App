@@ -82,16 +82,22 @@ def result():
     elif source == "login":
         name_input = request.form.get("name")   # Extracts the "name" field from the form
         password_input = request.form.get("pass")  # Extracts the "name" field from the form
+        guest_input = request.form.get("guest-input") # Extracts the "name" field from the form
         print("name is ", name_input)
         userInput = student_account(name_input, password_input)
         print(userInput.isInDB())
-        if userInput.isInDB() is False:
+        if guest_input == "true":
+            # Handle the guest user case
+            return render_template("major.html", done=True)
+        elif userInput.isInDB() is False:
             return "Invalid credentials!"
         else:
             student_db_info = student_account.getFromDB(userInput)
             return render_template("welcome.html", name=student_db_info.username, 
                                           major=student_db_info.major) # renders and executes index.html again,
                                                                         # but this time with the given name
+        
+           
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
