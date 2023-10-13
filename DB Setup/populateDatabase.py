@@ -127,7 +127,7 @@ def extractClassData(entry):
 def createDatabase():
     cursor = connection.cursor()
 
-    with open('SchedulingAppDatabase.sql', 'r') as sql_file:
+    with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
         sql_commands = sql_file.read()
         cursor.execute(sql_commands)
     
@@ -203,7 +203,8 @@ def addClassesToDatabase(classes):
         except:
             print(f"Couldn't add instructors for {course_data['sID']} {course_data['cID']}\n")
 
-    connection.commit()
+        connection.commit()
+    
     cursor.close()
 
     print(f'Added classes, instructors, and terms to Database')
