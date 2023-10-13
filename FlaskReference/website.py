@@ -75,10 +75,15 @@ def result():
     elif source == "major":
         #getting backend api 
         major_input = request.form.get("pass")
+        enter_input = request.form.get("pass")
         newUser = student_account(major_input)
         newUser.insertToDB()
         print('oop is used2')
-        return render_template("major.html", done=True)
+        #return render_template("major.html", done=True)
+        if enter_input == "true":
+            return render_template("major.html", done=True)
+        else:
+            return render_template("major.html", done=True)
     elif source == "login":
         name_input = request.form.get("name")   # Extracts the "name" field from the form
         password_input = request.form.get("pass")  # Extracts the "name" field from the form
