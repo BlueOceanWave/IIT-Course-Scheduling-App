@@ -127,7 +127,7 @@ def extractClassData(entry):
 def createDatabase():
     cursor = connection.cursor()
 
-    with open('SchedulingAppDatabase.sql', 'r') as sql_file:
+    with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
         sql_commands = sql_file.read()
         cursor.execute(sql_commands)
     
