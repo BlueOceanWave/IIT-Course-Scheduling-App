@@ -92,7 +92,7 @@ for line in subjects.split('--'):
     subjectList.append(theSubject)
 
 # Convert to JSON
-fileName = "subjects.json" 
+fileName = "DB Setup\data\subjects.json" 
 with open(fileName, 'w') as json_file: 
     json_string = json.dump(subjectList, json_file, indent = 4)
 

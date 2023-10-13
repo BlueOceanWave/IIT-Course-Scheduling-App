@@ -11,9 +11,9 @@ connection = psycopg2.connect(
 )
 
 # Extract json files
-classes_json = open('Fall_2023.json')
-courses_json = open('allCourses.json')
-subjects_json = open('subjects.json')
+classes_json = open('DB Setup/data/Fall_2023.json')
+courses_json = open('DB Setup/data/allCourses.json')
+subjects_json = open('DB Setup/data/subjects.json')
 classes = json.load(classes_json)
 courses = json.load(courses_json)
 subjects = json.load(subjects_json)
