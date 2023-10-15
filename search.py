@@ -136,15 +136,15 @@ def search(searchbar):
 
     # Search all classes for a match
     matches = []
-    for c in classes:
-        search_attributes = getSearchAttributes(c)
+    for raw_class in classes:
+        search_attributes = getSearchAttributes(raw_class)
         
         # If the subject ID was specified, match it. If not, continue
-        if  sID is None or sID.lower() == search_attributes[0].lower():
+        if sID is None or sID.lower() == search_attributes[0].lower():
             # Check if any other search terms are left
             # If not, return any class of that subject
             if len(search_terms) == 0:
-                matches.append(c)
+                matches.append(raw_class)
                 continue
 
             # If we get here, then other terms are left for us to match
@@ -155,7 +155,7 @@ def search(searchbar):
             
             # Only add if all the terms are present
             if allTermsPresent:            
-                matches.append(c)
+                matches.append(raw_class)
 
     # Convert the results into Course and Section objects    
     courses = []    
