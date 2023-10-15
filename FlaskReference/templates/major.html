@@ -14,20 +14,28 @@
         <!-- Store form in div container -->
         <div class="box">
             <h1>Choose Your Major:</h1>
+            <!-- Code for enter-button -->
             <form class = "grid" action = "/result" method ="POST">
                 <!--<label for = "Major" id = "majorLabel">Choose Your Major:</label><br>-->
+                <!-- <form class="grid" action="/major" method="POST">
+                    <input type="hidden" name="guest-input" value="true">
+                    <button type="submit" id="guest-button">Continue as Guest</button><br>
+                </form>-->
                 <select name = "major" id = "majorOptions">
                     <option value = "Computer Science" selected>Computer Science</option>
                     <option value = "Computer Engineering">Computer Engineering</option>
                     <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
                 </select>
             </form><br>
-            <form class = "grid" action = "/signup" method ="POST">    
+            <!-- <form class = "grid" action = "/result" method ="POST">   -->
+            <form class="grid" action ="/result" method="POST">  
+                <!--<input type="hidden" name="enter-input" value="true">--> 
+                <input type="hidden" name="source" value="login">
                 <button type="submit" id="enter-button">Enter</button>
             </form>
         </div>
-        
-        <!-- if account was created successfully -->
+        <!-- if account was created successfully
+
         {% if done %}
         <form class = "grid" action = "/login" method ="POST">
             <h3 style="color: blue;">Account Created!</h3>
@@ -36,6 +44,6 @@
         <form class = "grid" action = "/" method ="POST">
             <button type="submit">Back to home</button>
         </form>
-        {% endif %}
+        {% endif %}-->
     </body>
     </html>

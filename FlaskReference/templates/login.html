@@ -24,8 +24,10 @@
                 <span class="material-symbols-outlined">person</span>
                 <input type="text" name="name" id = "name" placeholder="Username"><br>            
                 <span class="material-symbols-outlined">lock</span>
-                <input type="password" name="pass" id = "password" placeholder="Password"><br>            
-                <button type="submit" id="login-button">Login</button><br>
+                <input type="password" name="pass" id = "password" placeholder="Password"><br>
+                <form class="grid" action="/welcome" method="POST">
+                    <button type="submit" id="login-button">Login</button><br>
+                </form>          
                 <form class="grid" action="/major" method="POST">
                     <input type="hidden" name="guest-input" value="true">
                     <button type="submit" id="guest-button">Continue as Guest</button><br>
