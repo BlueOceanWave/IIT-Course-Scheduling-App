@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h1>Welcome to your account page {{name|safe}}!</h1><!-- vulnerability here!!! -->
+        <br><br><br>
+        <h3 style="color: blue;"> Here, you can edit your username, password, and major.</h3>  <!-- vulnerability here!!! -->
+        <br><br><br>
+        <h3 style="color: blue;"> This is also the place where you add the courses that you've taken already.</h3>
+    </center>
+
+</body>
+</html>
