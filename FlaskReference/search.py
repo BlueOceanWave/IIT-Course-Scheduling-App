@@ -177,3 +177,15 @@ for course in search('cs algorithms'):
     for section in course.sections:
         print(f'\t{section}')
     print()
+
+
+def show_search_results(searchbar):    
+    output = ""
+    for course in search(searchbar):
+        output = output + str(course)
+        for section in course.sections:
+            output = output + f'\t{str(section)}'+ '\n' + ""
+        output = output + '\n' + ""
+    return output
+
+print(show_search_results("ece 443"))
