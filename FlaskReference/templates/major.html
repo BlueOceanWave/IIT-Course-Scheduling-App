@@ -16,7 +16,16 @@
             <h1>Choose Your Major:</h1>
             <!-- Code for enter-button -->
             <form class = "grid" action = "/result" method ="POST">
+                <!-- @app.route("/redirect_major", methods = ['GET', 'POST'])
+def redirect_major():
+    name_input = request.form.get("name")
+    password_input = request.form.get("pass")
+    return render_template("major.html", name = name_input, password = password_input)-->
+
+
                 <input type="hidden" name="source" value="major">
+                <input type="hidden" name = "name" id="name" value="{{ name_input }}">
+                <input type="hidden" name = "password" id="password" value="{{ password_input }}">
                 <!--<label for = "Major" id = "majorLabel">Choose Your Major:</label><br>-->
                 <!-- <form class="grid" action="/major" method="POST">
                     <input type="hidden" name="guest-input" value="true">
