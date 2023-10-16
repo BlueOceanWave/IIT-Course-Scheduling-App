@@ -71,11 +71,10 @@ def result():
         print(newUser.username)
         print(newUser.password)
         print(newUser.major)
-        print(isGuest)
-        if isGuest is False:    # if not guest, then add account to database
+        print(type(isGuest))
+        if isGuest != "True":    # if not guest, then add account to database
             print("i am somehow here")
             newUser.insertToDB()
-            #print(newUser.major)
             return render_template("signup.html",done=True)
         else:                   # if guest, then send straight to welcome page without adding to database
             return render_template("welcome.html", name="Guest", 
