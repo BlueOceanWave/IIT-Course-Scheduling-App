@@ -44,26 +44,31 @@ def show_classes():
 @app.route("/result", methods = ['POST', 'GET'])
 def result():
     source = request.form.get('source')
+    newUser = student_account()
     if source == "signup":
         name_input = request.form.get("name")          # Extracts the "name" field from the form
         print("name is", name_input)
         password_input = request.form.get("pass")  # Extracts the "name" field from the dictionary
-        newUser = student_account(name_input, password_input)
-        newUser.insertToDB()
+        newUser.username = name_input
+        newUser.password = password_input
+        print(newUser.username)
+        print(newUser.password)
         print('oop is used1')
         return redirect(url_for("major"))
     elif source == "major":
         #getting backend api 
-        major_input = request.form.get("pass")
-        enter_input = request.form.get("pass")
-        newUser = student_account(major_input)
-        newUser.insertToDB()
-        print('oop is used2')
+        print("in major rn")
+        major_input = request.form.get("major")
+        newUser.major = major_input
         #return render_template("major.html", done=True)
-        if enter_input == "true":
-            return render_template("major.html", done=True)
+        print(newUser.username)
+        print(newUser.password)
+        print(newUser.major)
+        newUser.insertToDB()
+        if major_input == "true":
+            return render_template("signup.html", done=True)
         else:
-            return render_template("major.html", done=True)
+            return render_template("signup.html", done=True)
     elif source == "login":
         name_input = request.form.get("name")   # Extracts the "name" field from the form
         password_input = request.form.get("pass")  # Extracts the "name" field from the form

@@ -16,6 +16,7 @@
             <h1>Choose Your Major:</h1>
             <!-- Code for enter-button -->
             <form class = "grid" action = "/result" method ="POST">
+                <input type="hidden" name="source" value="major">
                 <!--<label for = "Major" id = "majorLabel">Choose Your Major:</label><br>-->
                 <!-- <form class="grid" action="/major" method="POST">
                     <input type="hidden" name="guest-input" value="true">
@@ -26,11 +27,8 @@
                     <option value = "Computer Engineering">Computer Engineering</option>
                     <option value = "Computer and Cybersecurity Engineering">Computer and Cybersecurity Engineering</option>
                 </select>
-            </form><br>
-            <!-- <form class = "grid" action = "/result" method ="POST">   -->
-            <form class="grid" action ="/result" method="POST">  
+            <br>
                 <!--<input type="hidden" name="enter-input" value="true">--> 
-                <input type="hidden" name="source" value="login">
                 <button type="submit" id="enter-button">Enter</button>
             </form>
         </div>
