@@ -13,7 +13,7 @@ connection = psycopg2.connect(
 )
 
 class Section:
-        def __init__(self, crn, snum, days, starttime, endtime, campus, online, building, room, enrollment=None, enrollmentmax=None, waitlist=None):
+        def __init__(self, crn, snum, days, starttime, endtime, campus, online, building, room, instructor, enrollment=None, enrollmentmax=None, waitlist=None):
             self.crn = crn
             self.snum = snum
             self.days = days
@@ -26,14 +26,30 @@ class Section:
             self.enrollment = enrollment
             self.enrollmentmax = enrollmentmax
             self.waitlist = waitlist
+            self.instructors = [instructor]
+
+        def addInstructor(self, instructor):
+            self.instructors.append(instructor)
+
+        def _toStandardTime(self, militaryTime):
+            hr, min, sec = militaryTime.split(':')
+            suffix = 'AM' if int(hr)<12 else 'PM'
+            
+            # Convert 24 hour time to 12 hour time
+            if int(hr) == 0 or int(hr) == 12:
+                hr = '12'
+            elif int(hr)>12:
+                hr = str(int(hr)-12)
+
+            return f'{hr}:{min} {suffix}'
 
         def __str__(self):
             result = ''
             result += f'{self.enrollment} seats avail. '
             result += f'| {"Lab" if self.snum[0]=="L" else "Lecture"} ({self.online}) '
-            #result += f'~ {",".join(self.instructors)} '
-            if self.days != None:
-                result += f'~ {self.days} from {self.starttime} to {self.endtime} '
+            result += f'~ {", ".join(self.instructors)} '
+            if self.days != 'None':
+                result += f'~ {self.days} from {self._toStandardTime(self.starttime)} to {self._toStandardTime(self.endtime)} '
                 if self.building != 'TBA':
                     result += f'in {self.building} {self.room}'
             
@@ -54,7 +70,13 @@ class Course:
         self.sections = []
     
     def addSection(self, section):
-        self.sections.append(section)
+        # Add if its a new section
+        if section not in self.sections:
+            self.sections.append(section)
+        # Otherwise update the existing section with the new instructor
+        else:
+            existing_section = self.sections[self.sections.index(section)]
+            existing_section.addInstructor(section.instructors[0])
 
     def __str__(self):
         result = ''
@@ -69,7 +91,7 @@ class Course:
     
 query = {
     'getSubjects': 'SELECT DISTINCT sID AS subject FROM subjects;',
-    'getActiveClasses' : 'SELECT * FROM classes INNER JOIN courses USING (sID, cID) INNER JOIN subjects USING (sID) ',
+    'getActiveClasses' : 'SELECT * FROM classes INNER JOIN courses USING (sID, cID) INNER JOIN subjects USING (sID) INNER JOIN instructors USING (crn)',
 }
 
 cursor = connection.cursor()
@@ -83,12 +105,12 @@ subjects = [subject for (subject,) in  cursor.fetchall()]
 cursor.close()
 
 # Attribute indexes:
-#  0    1    2     3     4    5        6         7       8       9        10      11     12    13        14        15
-# sid, cid, crn, snum, term, days, starttime, endtime, campus, online, building, room, title, hours, description, lid
+#  0    1    2     3     4    5        6         7       8       9        10      11     12    13        14        15     16
+# sid, cid, crn, snum, term, days, starttime, endtime, campus, online, building, room, title, hours, description, lid, instructor
 attr_idx = {
-    'sid': 0,
-    'cid': 1,
-    'crn': 2,
+    'crn': 0,
+    'sid': 1,
+    'cid': 2,
     'snum': 3,
     'term': 4,
     'days': 5,
@@ -102,6 +124,7 @@ attr_idx = {
     'hours': 13,
     'description': 14,
     'lid': 15,
+    'instructor': 16
 }
 
 
@@ -117,8 +140,8 @@ def getCourseAttributes(attributes):
 
 # Get attributes for section object
 def getSectionAttributes(attributes):
-    #crn, snum, days, starttime, endtime, campus, online, building, room, enrollment, enrollmentmax, waitlist
-    cols = ['crn', 'snum', 'days', 'starttime', 'endtime', 'campus', 'online', 'building', 'room']
+    #crn, snum, days, starttime, endtime, campus, online, building, room, instructor, enrollment, enrollmentmax, waitlist
+    cols = ['crn', 'snum', 'days', 'starttime', 'endtime', 'campus', 'online', 'building', 'room', 'instructor']
     return [str(attributes[attr_idx[i]]) for i in cols]
 
 # Searches classes
@@ -163,16 +186,18 @@ def search(searchbar):
         course = Course(*getCourseAttributes(match))
         section = Section(*getSectionAttributes(match))
 
+        # If its a new course, add it
         if course not in courses:
             course.addSection(section)
             courses.append(course)
+        # Otherwise update the existing course
         else:
             course = courses[courses.index(course)]
             course.addSection(section)
-
+    
     return courses
 
-for course in search('cs algorithms'):
+for course in search('cs 100'):
     print(course)
     for section in course.sections:
         print(f'\t{section}')
