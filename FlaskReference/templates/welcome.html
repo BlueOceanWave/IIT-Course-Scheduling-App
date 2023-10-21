@@ -23,9 +23,27 @@
                 },
                 body: `query=${searchTerm}`,
             })
-            .then(response => response.text())
+            .then(response => response.json())
             .then(data => {
-                document.getElementById('resultsBox').innerText = data;
+                let resultsBox = document.getElementById('resultsBox');
+                resultsBox.innerHTML = '';  // Clear previous results
+                data.forEach(course => {
+                    let courseElem = document.createElement('div');
+                    courseElem.innerHTML = `<strong>${course.title}</strong>: ${course.description}`;
+                    resultsBox.appendChild(courseElem);
+        
+                    course.sections.forEach(section => {
+                        let sectionElem = document.createElement('a');
+                        sectionElem.href = '#';
+                        sectionElem.innerHTML = `Section: ${section.snum}`;
+                        sectionElem.addEventListener('click', function() {
+                            // Handle the click event for the section here
+                            // For instance:
+                            alert(`Clicked on section ${section.snum} of ${course.title}`);
+                        });
+                        resultsBox.appendChild(sectionElem);
+                    });
+                });
             });
         }
     </script>

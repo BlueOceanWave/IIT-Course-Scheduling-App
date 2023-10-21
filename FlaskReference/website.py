@@ -4,7 +4,7 @@ from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
 from db_oop import student_account, classes, getAllClasses
-import search
+import search, json
 
 '''This is where flask application is being made.'''
 app = Flask(__name__, template_folder="templates")
@@ -38,8 +38,34 @@ def show_classes():
 @app.route("/search_course", methods = ["POST"])
 def search_course():
     sQuery = request.form.get('query')
-    result =  search.show_search_results(sQuery)
-    return result
+    courses = search.search(sQuery)
+
+    # Convert the courses and sections to a list of dictionaries
+    result = []
+    for course in courses:
+        sections = [{"crn": section.crn, 
+                     "snum": section.snum, 
+                     "days": section.days, 
+                     "starttime": section.starttime,
+                     "endtime": section.endtime, 
+                     "campus": section.campus, 
+                     "online": section.online, 
+                     "building": section.building,
+                     "room": section.room, 
+                     "instructors": section.instructors}
+                     for section in course.sections]
+        
+        course_dict = {
+            "sid": course.sid,
+            "cid": course.cid,
+            "title": course.title,
+            "description": course.description,
+            "hours": course.hours,
+            "sections": sections
+        }
+        result.append(course_dict)
+
+    return json.dumps(result)  # Return the data as JSON
 
 @app.route("/view_profile", methods = ["POST"])
 def view_profile():
