@@ -14,26 +14,16 @@ cipher = Fernet(key)
 
 # Directs to Main Page 
 @app.route("/", methods = ['GET', 'POST'])
-def home():
+def login():
     return render_template("login.html")
 
 @app.route("/signup", methods = ['GET', 'POST'])
 def signup():
-    return render_template("signup.html")    
+    return render_template("signup.html")      
 
-@app.route("/guest_major", methods = ['GET', 'POST'])
-def guest_major():
-    return render_template("major.html", guest=True)    
-
-@app.route("/redirect_major", methods = ['GET', 'POST'])
-def redirect_major():
-    name_input = request.form.get("name")
-    password_input = request.form.get("pass")
-    return render_template("major.html", name = name_input, password = password_input, guest=False)
-
-@app.route("/login", methods = ['GET', 'POST'])
-def login():
-    return render_template("login.html")    
+@app.route("/home/<username>/<major>", methods = ['GET', 'POST'])
+def home(username, major):
+    return render_template("welcome.html", name=username, major=major)   
 
 @app.route("/courses", methods=['GET'])
 def get_courses():
@@ -56,6 +46,16 @@ def view_profile():
     usrname = request.form.get('name')
     return render_template("profile.html", name=usrname)
 
+@app.route("/guest_major", methods = ['GET', 'POST'])
+def guest_major():
+    return render_template("major.html", guest=True)    
+
+@app.route("/redirect_major", methods = ['GET', 'POST'])
+def redirect_major():
+    name_input = request.form.get("name")
+    password_input = request.form.get("pass")
+    return render_template("major.html", name = name_input, password = password_input, guest=False)
+
 # This version of the /result route uses the object-oriented approach for the database entries (see db_test.py)
 # Still a work in progress.
 @app.route("/result", methods = ['POST', 'GET'])
@@ -73,12 +73,10 @@ def result():
         print(newUser.major)
         print(type(isGuest))
         if isGuest != "True":    # if not guest, then add account to database
-            print("i am somehow here")
             newUser.insertToDB()
             return render_template("signup.html",done=True)
         else:                   # if guest, then send straight to welcome page without adding to database
-            return render_template("welcome.html", name="Guest", 
-                                          major=newUser.major)
+            return redirect(url_for('home', username="Guest", major=newUser.major))
     elif source == "login":
         name_input = request.form.get("name")   # Extracts the "name" field from the form
         password_input = request.form.get("pass")  # Extracts the "name" field from the form
@@ -86,15 +84,12 @@ def result():
         print("name is ", name_input)
         userInput = student_account(name_input, password_input)
         print(userInput.isInDB())
-        if guest_input == "true":
-            # Handle the guest user case
-            return render_template("major.html", done=True)
-        elif userInput.isInDB() is False:
+        if userInput.isInDB() is False:
             return "Invalid credentials!"
         else:
             student_db_info = student_account.getFromDB(userInput)
-            return render_template("welcome.html", name=student_db_info.username, 
-                                          major=student_db_info.major) # renders and executes index.html again,
+            return redirect(url_for("home", username=student_db_info.username, 
+                                          major=student_db_info.major)) # renders and executes index.html again,
                                                                         # but this time with the given name
         
 
