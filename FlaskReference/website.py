@@ -67,10 +67,15 @@ def search_course():
 
     return json.dumps(result)  # Return the data as JSON
 
-@app.route("/view_profile", methods = ["POST"])
+@app.route("/view_profile", methods = ["POST", "GET"])
 def view_profile():
-    usrname = request.form.get('name')
-    return render_template("profile.html", name=usrname)
+    if request.method =="POST":
+        usrname = request.form.get('name')
+        mjr = request.form.get('major')
+    elif request.method == "GET":
+        usrname = request.args.get('name')
+        mjr = request.args.get('major')
+    return render_template("profile.html", name=usrname, major=mjr)
 
 @app.route("/guest_major", methods = ['GET', 'POST'])
 def guest_major():
@@ -82,12 +87,52 @@ def redirect_major():
     password_input = request.form.get("pass")
     return render_template("major.html", name = name_input, password = password_input, guest=False)
 
+@app.route('/verify_password', methods=['POST'])
+def verify_password():
+    data = request.json
+    username = data.get('username')
+    password = data.get('password')
+
+    account = student_account(username, password)
+    if account.isInDB():
+        return jsonify(status="success")
+    else:
+        return jsonify(status="fail")
+
+@app.route('/change_account_info', methods = ['GET'])
+def change_account_info():
+    username = request.args.get('username')
+    password = request.args.get('password')
+    major = request.args.get('major')
+    print(username, password, major)
+    user = student_account(un=username, pswd=password, mjr=major).getFromDB()
+    return render_template('change_account_info.html', username=user.username, password=user.password, major=user.major)
+
+
+@app.route('/update_account_info', methods=['POST'])
+def update_account_info():
+    # Extract data from the form
+    old_password = request.form.get('old_password')
+    old_username = request.form.get('old_username')
+    new_username = request.form.get('new_username')
+    new_password = request.form.get('new_password')
+    confirm_password = request.form.get('confirm_password')
+    new_major = request.form.get('new_major')
+    # Check if passwords match
+    if new_password != confirm_password:
+        return "Passwords do not match! Please go back and try again."
+    # Use the changeInfo method from db_oop.py
+    account = student_account(un=old_username, pswd=old_password).getFromDB()
+    account.changeInfo(old_username, new_username, new_password, new_major)
+    return redirect(f'/view_profile?name={new_username}&major={new_major}')
+
 # This version of the /result route uses the object-oriented approach for the database entries (see db_test.py)
 # Still a work in progress.
 @app.route("/result", methods = ['POST', 'GET'])
 def result():
     source = request.form.get('source')
-    if source == "major":
+
+    if source == "major":                              # Handles signing up
         name_input = request.form.get("name")          # Extracts the "name" field from the form
         print("name is", name_input)
         password_input = request.form.get("pass")  # Extracts the "name" field from the dictionary
@@ -103,10 +148,11 @@ def result():
             return render_template("signup.html",done=True)
         else:                   # if guest, then send straight to welcome page without adding to database
             return redirect(url_for('home', username="Guest", major=newUser.major))
-    elif source == "login":
-        name_input = request.form.get("name")   # Extracts the "name" field from the form
-        password_input = request.form.get("pass")  # Extracts the "name" field from the form
-        guest_input = request.form.get("guest-input") # Extracts the "name" field from the form
+    
+    elif source == "login":     # handles logging in
+        name_input = request.form.get("name") 
+        password_input = request.form.get("pass")
+        guest_input = request.form.get("guest-input") 
         print("name is ", name_input)
         userInput = student_account(name_input, password_input)
         print(userInput.isInDB())

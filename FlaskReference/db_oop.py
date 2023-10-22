@@ -58,8 +58,17 @@ class student_account:
             major = cursor.fetchone()[0]
             return student_account(self.username, self.password, major)
         else:
-            print("Username not in database")
-            return
+            print("Account not in database")
+            return None
+        
+    def searchEntry(self, name):
+        cursor = connection.cursor()
+        query = "SELECT EXISTS(SELECT 1 FROM accounts WHERE username = %s)"
+        match_val = name
+        cursor.execute(query, (match_val,))
+        result = cursor.fetchone()
+        cursor.close()
+        return result[0]
     
     def getPassword(self):
         exists = self.searchEntry(self.username)
@@ -76,7 +85,19 @@ class student_account:
         else:
             print("Major not in database")
             return
-
+        
+    def changeInfo(self, old_username, new_username, new_password, new_major):
+        cursor = connection.cursor()
+        query = f"""
+            UPDATE {self.table}
+            SET username = %s, password = %s, major = %s
+            WHERE username = %s;
+        """
+        values = (new_username, new_password, new_major, old_username)
+        cursor.execute(query, values)
+        connection.commit()
+        cursor.close()
+        return
 
 class classes:
     table = "classes"

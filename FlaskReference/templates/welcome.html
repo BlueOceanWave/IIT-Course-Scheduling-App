@@ -35,7 +35,7 @@
                     course.sections.forEach(section => {
                         let sectionElem = document.createElement('a');
                         sectionElem.href = '#';
-                        sectionElem.innerHTML = `Section: ${section.snum}`;
+                        sectionElem.innerHTML = `Section: ${section.snum}, ${section.starttime}-${section.endtime} <br>`;
                         sectionElem.addEventListener('click', function() {
                             // Handle the click event for the section here
                             // For instance:
@@ -61,7 +61,8 @@
 
     <!-- Top right corner: Clickable box -->
     <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
-        <input type="hidden" name="name" value="{{name|safe}}">
+        <input type="hidden" name="name" value="{{name}}">
+        <input type="hidden" name="major" value="{{major}}">
         {{name|safe}} - {{major}}
     </form>
 
