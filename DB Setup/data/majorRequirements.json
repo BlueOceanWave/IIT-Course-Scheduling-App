@@ -117,8 +117,9 @@
         "Chemistry Requirement (3)": [
             "CHEM 122"
         ],
-        "Career Elective (3) 2": [],
-        "Career Elective I 3": [],
+        "Career Elective (3) 2": [
+            "Career Elective I"
+        ],
         "Interprofessional Projects (IPRO) (6)": [
             "See Illinois Tech Core Curriculum, section E"
         ],
@@ -181,10 +182,11 @@
         "Chemistry Requirement (3)": [
             "CHEM 122"
         ],
-        "Career Elective (9) 1": [],
-        "Career Elective I 2 3": [],
-        "Career Elective II 3 3": [],
-        "Career Elective III 4 3": [],
+        "Career Elective (9) 1": [
+            "Career Elective I 2",
+            "Career Elective II 3",
+            "Career Elective III 4"
+        ],
         "Interprofessional Projects (IPRO) (6)": [
             "See Illinois Tech Core Curriculum, section E"
         ],

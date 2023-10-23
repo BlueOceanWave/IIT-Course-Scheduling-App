@@ -26,7 +26,7 @@ def getReqs(i):
                 classList.append(splitClass[0] + " " + splitClass[1].split("\n")[0])
             elif(splitClass[0] == "or"):
                 classList[-1] = classList[-1] + " " + splitClass[0] + " " + splitClass[1] + " " + splitClass[2]
-            elif(splitClass[0] == 'Select' or splitClass[0] == "See"):
+            elif(splitClass[0] == 'Select' or splitClass[0] == "See" or list(splitClass[2])[0] == "I"):
                 classList.append(" ".join(splitClass[0 : -1]))
             else:
                 if(category != []):
