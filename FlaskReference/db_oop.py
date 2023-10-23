@@ -61,6 +61,23 @@ class student_account:
             print("Account not in database")
             return None
         
+    def getFromDBWOPassword(self):
+        exists = self.searchEntry(self.username)
+        if exists:
+            cursor = connection.cursor()
+            query = f"SELECT major, password FROM {self.table} WHERE username = %s"
+            values = (self.username,)
+            cursor.execute(query, values)
+            result = cursor.fetchone()
+            major = result[0]
+            password = result[1]
+            print(self.username, major, password)
+            return student_account(self.username, password, major)
+        else:
+            print("Account not in database")
+            return None
+        
+
     def searchEntry(self, name):
         cursor = connection.cursor()
         query = "SELECT EXISTS(SELECT 1 FROM accounts WHERE username = %s)"

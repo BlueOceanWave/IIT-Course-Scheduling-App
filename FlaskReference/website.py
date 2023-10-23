@@ -102,10 +102,9 @@ def verify_password():
 @app.route('/change_account_info', methods = ['GET'])
 def change_account_info():
     username = request.args.get('username')
-    password = request.args.get('password')
     major = request.args.get('major')
-    print(username, password, major)
-    user = student_account(un=username, pswd=password, mjr=major).getFromDB()
+    print(username,  major)
+    user = student_account(un=username, mjr=major).getFromDBWOPassword()
     return render_template('change_account_info.html', username=user.username, password=user.password, major=user.major)
 
 

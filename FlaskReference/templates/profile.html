@@ -114,7 +114,7 @@
             if (data.status == "success") {
               // On success, send POST request to change_account_info
               alert("we are here");
-              let queryParams = `?username=${username}&password=${password}&major=${major}`;
+              let queryParams = `?username=${username}&major=${major}`;
               window.location.href = '/change_account_info' + queryParams;
             } else {
               alert("Wrong password. Please try again.");
