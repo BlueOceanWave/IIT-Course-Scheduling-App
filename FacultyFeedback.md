@@ -1,4 +1,4 @@
-# Faculty Feedback #
+![image](https://github.com/LMarcin12/IPRO-497-Group-D/assets/86471/888a7528-c5b7-45d1-bbeb-d676e8717ee2)# Faculty Feedback #
 
 ## Grading Philosophy ##
 - Team grade - You start with an A and we will give you feedback if your team performance is falling below the A pace (e.g., your A is at risk).
@@ -26,6 +26,11 @@
 	• From there we will random presentation order so you could first or last or anywhere in between
 
 ## Week 8 ##
+ - problem statement is what the app does rather than a problem and solution (you basically say it does this and that rather than it hard to select plan courses for the current courses to make a viable schedule) 
+-Nice user "persona" in the scenarios
+-Which money making approach do you plan to use first
+-Nice use of labels
+-Don't store passwords in the database as plaintext
 
 ## Week 9 ##
 

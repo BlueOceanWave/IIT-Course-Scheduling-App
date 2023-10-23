@@ -13,31 +13,40 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
         <!-- include Roboto font here -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <script>
+            function validateForm() {
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+    
+                if (password !== confirmPassword) {
+                    alert('The two password inputs must match.');
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </head>
     <body>
         <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
         <h1>Create Account</h1>
-        <form class = "grid" action = "/redirect_major" method ="POST">
+        <form class = "grid" action = "/redirect_major" method ="POST" onsubmit="return validateForm();">
             <input type="hidden" name="source" value="signup">
             <div class="box">
                 <span class="material-symbols-outlined">person</span>
                 <input type="text" name="name" id = "name" placeholder="Username"><br>            
                 <span class="material-symbols-outlined">lock</span>
                 <input type="password" name="pass" id = "password" placeholder="Password"><br>
-                <form class="grid" action="/welcome" method="POST">
-                    <button type="submit" id="create-account1">Create Account</button><br>
-                </form>
+                <span class="material-symbols-outlined">lock</span>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password"><br>
+                <button type="submit" id="create-account1">Create Account</button><br>
             </div>
         </form>
             <!-- if statement to check if account was created successfully -->
           
             {% if done %}
-            <form class = "grid" action = "/login" method ="POST">
+            <form class = "grid" action = "/" method ="POST">
                 <h3 style="color: blue;">Account Created!</h3>
                 <button type="submit">Log in</button>
-            </form>
-            <form class = "grid" action = "/login" method ="POST">
-                <button type="submit">Back to home</button>
             </form>
             {% endif %}
 

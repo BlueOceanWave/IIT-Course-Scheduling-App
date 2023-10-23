@@ -13,7 +13,7 @@ connection = psycopg2.connect(
 )
 
 class Section:
-        def __init__(self, crn, snum, days, starttime, endtime, campus, online, building, room, instructor, enrollment=None, enrollmentmax=None, waitlist=None):
+        def __init__(self, crn, snum, days, starttime, endtime, campus, online, building, room, instructor, course=None, enrollment=None, enrollmentmax=None, waitlist=None):
             self.crn = crn
             self.snum = snum
             self.days = days
@@ -27,6 +27,11 @@ class Section:
             self.enrollmentmax = enrollmentmax
             self.waitlist = waitlist
             self.instructors = [instructor]
+
+            self.course = course
+
+        def linkCourse(self, course):
+            self.course = course
 
         def addInstructor(self, instructor):
             self.instructors.append(instructor)
@@ -43,10 +48,27 @@ class Section:
 
             return f'{hr}:{min} {suffix}'
 
+        def _toAbsoluteTime(self, militaryTime):
+            hr, min, sec = militaryTime.split(':')
+
+            # Returns time of 17:50 to 1750 as a number for camprison purposes
+            return int(hr)*100+int(min)
+
+        def _getAbsoluteTimeRange(self):
+            return (self._toAbsoluteTime(self.starttime), self._toAbsoluteTime(self.endtime))
+
+        def _getSectionType(self):
+            if 'L' in self.snum:
+                return 'Lecture'
+            elif 'R' in self.snum:
+                return 'Recitation'
+            else:
+                return 'Lecture'
+
         def __str__(self):
-            result = ''
+            result = f'{self.crn} - '
             result += f'{self.enrollment} seats avail. '
-            result += f'| {"Lab" if self.snum[0]=="L" else "Lecture"} ({self.online}) '
+            result += f'| {self._getSectionType()} ({self.online}) '
             result += f'~ {", ".join(self.instructors)} '
             if self.days != 'None':
                 result += f'~ {self.days} from {self._toStandardTime(self.starttime)} to {self._toStandardTime(self.endtime)} '
@@ -70,6 +92,9 @@ class Course:
         self.sections = []
     
     def addSection(self, section):
+        # Link the section to this course
+        section.linkCourse(self)
+
         # Add if its a new section
         if section not in self.sections:
             self.sections.append(section)
@@ -77,6 +102,27 @@ class Course:
         else:
             existing_section = self.sections[self.sections.index(section)]
             existing_section.addInstructor(section.instructors[0])
+
+    def hasLabSection(self):
+        # Check to see if any sections are a Lab
+        for section in self.sections:
+            if 'L' in section.snum:
+                return True
+            
+        return False
+    
+    def hasRecitationSection(self):
+        # Check to see if any sections are a Lab
+        for section in self.sections:
+            if 'R' in section.snum:
+                return True
+            
+        return False
+    def toJSON():
+        return
+
+    def fromJSON():
+        return
 
     def __str__(self):
         result = ''
@@ -88,6 +134,7 @@ class Course:
     def __eq__(self, course):
         isEqual = self.sid.lower() == course.sid.lower() and self.cid.lower() == course.cid.lower() 
         return isEqual
+    
     
 query = {
     'getSubjects': 'SELECT DISTINCT sID AS subject FROM subjects;',
@@ -197,11 +244,11 @@ def search(searchbar):
     
     return courses
 
-for course in search('cs 100'):
-    print(course)
-    for section in course.sections:
-        print(f'\t{section}')
-    print()
+# for course in search('cs 100'):
+#     print(course)
+#     for section in course.sections:
+#         print(f'\t{section}')
+#     print()
 
 
 def show_search_results(searchbar):    
@@ -213,4 +260,7 @@ def show_search_results(searchbar):
         output = output + '\n' + ""
     return output
 
-print(show_search_results("ece 443"))
+# print(show_search_results("ece 443"))
+
+for s in search('cs 330')[0].sections:
+    print(s)
