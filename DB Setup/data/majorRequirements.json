@@ -1,0 +1,195 @@
+{
+    "Bachelor of Science in Computer Science": {
+        "Computer Science Requirements (36)": [
+            "CS 100",
+            "CS 115",
+            "CS 116",
+            "CS 330",
+            "CS 331",
+            "CS 350",
+            "CS 351",
+            "CS 425",
+            "CS 430",
+            "CS 440",
+            "CS 450",
+            "CS 485",
+            "CS 487"
+        ],
+        "Computer Science Electives (12)": [
+            "Select 12 credit hours 2"
+        ],
+        "Mathematics Requirements (20)": [
+            "MATH 151",
+            "MATH 152",
+            "MATH 251",
+            "MATH 332 or MATH 333",
+            "MATH 474 or MATH 475"
+        ],
+        "Mathematics Elective (3)": [
+            "Select one of the following:",
+            "MATH 252",
+            "MATH 350",
+            "MATH 380",
+            "MATH 410",
+            "MATH 435",
+            "MATH 453",
+            "MATH 454",
+            "MATH 476",
+            "MATH 481"
+        ],
+        "Science Requirements (8)": [
+            "PHYS 123",
+            "PHYS 221"
+        ],
+        "Science Electives (6)": [
+            "Select six credit hours 3"
+        ],
+        "Communication Elective (3)": [
+            "Select one of the following:",
+            "COM 421",
+            "COM 424",
+            "COM 425",
+            "COM 428",
+            "COM 435"
+        ],
+        "Interprofessional Projects (IPRO) (6)": [
+            "See Illinois Tech Core Curriculum, section E"
+        ],
+        "Humanities and Social Sciences Requirements (21)": [
+            "See Illinois Tech Core Curriculum, sections B and C"
+        ],
+        "Free Electives (12)": [
+            "Select 12 credit hours"
+        ]
+    },
+    "Bachelor of Science in Computer and Cybersecurity Engineering": {
+        "Computer and Cyber Security Engineering Requirements (47)": [
+            "ECE 100",
+            "ECE 211",
+            "ECE 213",
+            "ECE 218",
+            "ECE 222",
+            "ECE 242",
+            "ECE 308",
+            "ECE 311",
+            "ECE 407",
+            "ECE 441",
+            "ECE 443 or CS 458",
+            "ECE 444",
+            "ECE 485",
+            "ECE 497"
+        ],
+        "Computer Science Major Requirements (16)": [
+            "CS 115",
+            "CS 116",
+            "CS 330",
+            "CS 331",
+            "CS 351",
+            "CS 450"
+        ],
+        "Cybersecurity Software Engineering Elective (3)": [],
+        "Choose one from the following courses: 3": [
+            "ECE 442",
+            "ECE 448",
+            "ECE 449",
+            "ECE 473"
+        ],
+        "Cybersecurity Law Elective (2-3)": [
+            "Select two to three credit hours from the following courses:",
+            "LAW 252",
+            "LAW 285",
+            "LAW 295",
+            "LAW 379",
+            "LAW 478"
+        ],
+        "Mathematics Requirements (24)": [
+            "MATH 151",
+            "MATH 152",
+            "MATH 251",
+            "MATH 252",
+            "MATH 333",
+            "MATH 374"
+        ],
+        "Physics Requirements (8)": [
+            "PHYS 123",
+            "PHYS 221"
+        ],
+        "Chemistry Requirement (3)": [
+            "CHEM 122"
+        ],
+        "Career Elective (3) 2": [],
+        "Career Elective I 3": [],
+        "Interprofessional Projects (IPRO) (6)": [
+            "See Illinois Tech Core Curriculum, section E"
+        ],
+        "Humanities and Social Sciences Requirements (21)": [
+            "See Illinois Tech Core Curriculum, sections B and C"
+        ]
+    },
+    "Bachelor of Science in Computer Engineering": {
+        "Electrical Engineering Requirements (28)": [
+            "ECE 100",
+            "ECE 211",
+            "ECE 213",
+            "ECE 218",
+            "ECE 242",
+            "ECE 311",
+            "ECE 441",
+            "ECE 485"
+        ],
+        "Computer Science Major Requirements (16)": [
+            "CS 115",
+            "CS 116",
+            "CS 330",
+            "CS 331",
+            "CS 351",
+            "CS 450"
+        ],
+        "Junior Computer Engineering Elective (3-4)": [
+            "Select one of the following:",
+            "ECE 307",
+            "ECE 308",
+            "ECE 319"
+        ],
+        "Professional ECE Electives (6-8)": [
+            "Select six to eight credit hours"
+        ],
+        "Computer Systems/Software Elective (3-4)": [
+            "Select one of the following:",
+            "ECE 407",
+            "ECE 408",
+            "ECE 443",
+            "ECE 449",
+            "CS 425",
+            "CS 487"
+        ],
+        "Hardware-Design Elective (4)": [
+            "ECE 429 or ECE 446"
+        ],
+        "Mathematics Requirements (24)": [
+            "MATH 151",
+            "MATH 152",
+            "MATH 251",
+            "MATH 252",
+            "MATH 374",
+            "MATH 333 or MATH 350"
+        ],
+        "Physics Requirements (8)": [
+            "PHYS 123",
+            "PHYS 221"
+        ],
+        "Chemistry Requirement (3)": [
+            "CHEM 122"
+        ],
+        "Career Elective (9) 1": [],
+        "Career Elective I 2 3": [],
+        "Career Elective II 3 3": [],
+        "Career Elective III 4 3": [],
+        "Interprofessional Projects (IPRO) (6)": [
+            "See Illinois Tech Core Curriculum, section E"
+        ],
+        "Humanities and Social Sciences Requirements (21)": [
+            "See Illinois Tech Core Curriculum, sections B and C"
+        ]
+    }
+}
