@@ -4,10 +4,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
-#list of all classes, each in JSON format
+# List of all classes, each in JSON format
 class_list = [] 
 
-#choose the subject at index i and open that webpage
+# Choose the subject at index i and open that webpage
 def choose_subject(i):
 # Second PAGE #
     #Select a Subject
@@ -19,7 +19,7 @@ def choose_subject(i):
     classSearch = driver.find_element(By.CSS_SELECTOR, 'input[type="submit"]')
     classSearch.click()
 
-#return the enrollment for the specified class
+# Return the enrollment for the specified class
 def get_data(CRN):
 # THIRD PAGE #
     #Get all of the Sections
@@ -53,6 +53,7 @@ def get_data(CRN):
 
             break
     return True
+
 def updateEnrollment(lID, CRN): #Subject, CRN
     #Open Chrome
     driver.get("https://ssb.iit.edu/bnrprd/bwckschd.p_disp_dyn_sched") 
