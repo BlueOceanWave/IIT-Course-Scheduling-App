@@ -20,6 +20,7 @@
 <body>
   
     <!-- Top right corner: Clickable box -->
+    <div class="searchBox">
     <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
         <input type="hidden" name="name" value="{{name}}">
         <input type="hidden" name="major" value="{{major}}">
@@ -28,7 +29,7 @@
 
     <!-- Right side: Search and results box -->
     
-    <div class="searchBox">
+    
         <div style="position: absolute; right: 10px; top: 60px;">
             <input type="text" id="searchInput" placeholder="Search...">
             <button onclick="searchCourse()">Search</button>  
@@ -42,7 +43,8 @@
     <!-- Updating Days box -->
     <div class="days-box">
         <h1 id="welcome-header">Welcome to our Illinois Tech Scheduling App!</h1>
-            Monday      |      Tuesday      |      Wednesday      |      Thursday      |      Friday
+            <!--Monday      |      Tuesday      |      Wednesday      |      Thursday      |      Friday-->
+
     </div>
 
     <!-- Bottom box: Recommended classes -->
