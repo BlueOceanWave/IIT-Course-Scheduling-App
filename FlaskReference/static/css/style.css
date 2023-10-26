@@ -212,7 +212,7 @@ h1{
 
 #resultsBox {
     border: 1px solid black;
-    width: 440px;
+    width: 420px;
     height: calc(100vh - 100px);
     overflow-y: scroll;
     margin: 10px auto;
