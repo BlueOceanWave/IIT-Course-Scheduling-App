@@ -192,8 +192,8 @@ h1{
     text-align: center;
     width: 54%;
     height: 100%;
-    margin: 0 auto;
     position: absolute;
+    margin-right: 20px;
 }
 
 /*updating search button*/
@@ -204,4 +204,20 @@ h1{
 #welcome-header{
     color: white;
     margin-top: -10px;
+}
+
+#searchInput {
+    position: absolute;
+    right: 10px;
+    top: 60px;
+}
+
+#resultsBox {
+    border: 1px solid black;
+    width: 450px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    margin-top: 10px;
+    margin-left: 20px; /* Create space on the left */
+    top: 10px; /* Adjust the top value to match .days-box */
 }

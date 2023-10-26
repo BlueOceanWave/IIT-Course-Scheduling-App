@@ -18,6 +18,7 @@
     <script type="text/JavaScript" src="{{ url_for('static', filename='/script/script.js')}}"></script>
 </head>
 <body>
+  
     <!-- Top right corner: Clickable box -->
     <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
         <input type="hidden" name="name" value="{{name}}">
@@ -26,11 +27,12 @@
     </form>
 
     <!-- Right side: Search and results box -->
+    
     <div style="position: absolute; right: 10px; top: 60px;">
         <input type="text" id="searchInput" placeholder="Search...">
-        <button onclick="searchCourse()">Search</button>
-        <div id="resultsBox" style="border: 1px solid black; width: 450px; height: calc(100vh - 100px); overflow-y: scroll; margin-top: 10px;">
-            <!-- Results will appear here -->
+        <button onclick="searchCourse()">Search</button>  
+        <!-- Results will appear here -->
+        <div id="resultsBox">
         </div>
     </div>
 
