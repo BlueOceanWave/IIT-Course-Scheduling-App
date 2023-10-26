@@ -265,9 +265,9 @@ h1{
 /*background-image: url('/static/images/mies_campus.jpg');*/
 
 #searchButton {
-    width: 100px;
+    width: 20%;
     height: 51px;
-    margin-left: -70px;
+    margin-left: -16%;
 }
 
 #custom-table {
