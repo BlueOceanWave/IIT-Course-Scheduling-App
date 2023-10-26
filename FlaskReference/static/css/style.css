@@ -234,13 +234,12 @@ h1{
 
 #columnStyle {
     text-align: center;
-    height: 450px;
+    height: 480px;
     width: 200px;
     vertical-align: top;
     padding-top: 20px;
     color: black;
     background-color: white;
-
 }
 
 .search-container {
@@ -259,6 +258,7 @@ h1{
     background-size: 50px 50px, 400px 400px;
     padding-left: 30px;
     width: 290px;
+    margin-top: 60px;
 }
 
 /*background-image: url('/static/images/mies_campus.jpg');*/
@@ -267,6 +267,10 @@ h1{
     width: 100px;
     height: 51px;
     margin-left: -70px;
+}
+
+#custom-table {
+    vertical-align: top;
 }
 
 /*
