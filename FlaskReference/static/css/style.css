@@ -211,11 +211,6 @@ h1{
     margin-top: -10px;
 }
 
-#searchInput {
-    position: absolute;
-    text-align: center;
-}
-
 #resultsBox {
     border: 1px solid black;
     width: 440px;
