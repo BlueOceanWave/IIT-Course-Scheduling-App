@@ -198,7 +198,12 @@ h1{
 
 /*updating search button*/
 #searchInput{
-    margin-top: 41px;
+    position: absolute;
+    text-align: center;
+    width: 200px; /* Adjust the width of the input as needed */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #welcome-header{
@@ -208,8 +213,7 @@ h1{
 
 #searchInput {
     position: absolute;
-    right: 10px;
-    top: 60px;
+    text-align: center;
 }
 
 #resultsBox {
@@ -240,5 +244,3 @@ h1{
     vertical-align: top;
     padding-top: 20px;
 }
-
-/*border="5" cellspacing="0" align="center"*/
