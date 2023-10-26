@@ -214,12 +214,14 @@ h1{
 
 #resultsBox {
     border: 1px solid black;
-    width: 450px;
+    width: 440px;
     height: calc(100vh - 100px);
     overflow-y: scroll;
+    /*
     margin-top: 10px;
-    margin-left: 25px; /* Create space on the left */
+    margin-left: 25px; /* Create space on the left
     top: 10px; /* Adjust the top value to match .days-box */
+    margin: 10px auto;
 }
 
 /*creating separate box for right side of page*/
