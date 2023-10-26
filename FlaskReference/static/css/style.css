@@ -245,20 +245,28 @@ h1{
 
 .search-container {
     position: relative;
+    /*
     width: 100%;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 20%;*/
+    display: inline-block;
 }
 
 #searchInput {
-    width: 300px;
+    background:
+        url('/static/images/search.png') left center no-repeat,
+        url('/static/images/white_color.png') center no-repeat;
+    background-size: 50px 50px, 400px 400px;
+    padding-left: 30px;
+    width: 290px;
 }
+
+/*background-image: url('/static/images/mies_campus.jpg');*/
 
 #searchButton {
     width: 100px;
     height: 51px;
     margin-left: -70px;
-
 }
 
 /*
