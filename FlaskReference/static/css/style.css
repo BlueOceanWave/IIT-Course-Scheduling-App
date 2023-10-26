@@ -197,6 +197,7 @@ h1{
     height: 100%;
     position: absolute;
     margin-right: 20px;
+    overflow: hidden;
 }
 
 
@@ -221,6 +222,7 @@ h1{
 .searchBox {
     padding: 2.5rem;
     background-color: rgba(173, 216, 230, 0.5);
+    overflow: hidden;
     text-align: center;
     width: 30%;
     height: 100%;
@@ -256,7 +258,7 @@ h1{
     width: 100px;
     height: 51px;
     margin-left: -70px;
-    
+
 }
 
 /*
