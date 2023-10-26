@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
         <title>Select Your Major</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Linking stylesheets here -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
@@ -36,8 +36,6 @@
                 <button type="submit" id="enter-button">Enter</button>
             </form>
         </div>
-        <!-- if account was created successfully
-
         {% if done %}
         <form class = "grid" action = "/login" method ="POST">
             <h3 style="color: blue;">Account Created!</h3>
@@ -46,6 +44,7 @@
         <form class = "grid" action = "/" method ="POST">
             <button type="submit">Back to home</button>
         </form>
-        {% endif %}-->
+        {% endif %}
+
     </body>
     </html>
