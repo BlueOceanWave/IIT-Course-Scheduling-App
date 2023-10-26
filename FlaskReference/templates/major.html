@@ -7,13 +7,14 @@
         <!-- Linking stylesheets here -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
-
+        <!-- Linking fonts here -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
     <body>
         <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
         <!-- Store form in div container -->
         <div class="box">
-            <h1>Choose Your Major:</h1>
+            <h1 id="major-header">Choose Your<br>Major:</h1>
             <!-- Code for enter-button -->
             <form class = "grid" action = "/result" method ="POST">
                 <input type="hidden" name="source" value="major">

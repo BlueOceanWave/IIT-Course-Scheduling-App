@@ -26,6 +26,7 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
+    border: 0.25rem solid;
 }
 
 #enter-button {
@@ -161,4 +162,22 @@ h1{
     width: 48px;
     height: 48px;
     font-size: 2rem;
+}
+
+#major-header{
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    margin-top: -1px;
+}
+
+#majorOptions {
+   /*identify dimensions of input field*/
+   margin-top: 10px;
+   text-align: center;
+   margin-bottom: 1.25rem;
+   width: 330px;
+   height: 48px;
+   border-radius: 5px;
+   font-family: 'Roboto', sans-serif;
+   border: 0.1rem solid;
 }
