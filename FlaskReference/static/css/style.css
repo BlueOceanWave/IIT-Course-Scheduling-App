@@ -249,12 +249,14 @@ h1{
 }
 
 #searchInput {
-    width: 200px;
+    width: 300px;
 }
 
 #searchButton {
     width: 100px;
-    margin-left: 10px;
+    height: 51px;
+    margin-left: -70px;
+    
 }
 
 /*
