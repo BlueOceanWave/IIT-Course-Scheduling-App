@@ -1,0 +1,8 @@
+/*Styling Account Page Here*/
+html{
+    background-image: url('/static/images/mies_campus.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
