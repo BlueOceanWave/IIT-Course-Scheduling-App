@@ -18,11 +18,6 @@
     <script type="text/JavaScript" src="{{ url_for('static', filename='/script/script.js')}}"></script>
 </head>
 <body>
-    <!-- Top left corner: Webapp name -->
-    <div style="position: absolute; top: 10px; left: 10px;">
-        <h1 id="welcome-header">Welcome to our Illinois Tech Scheduling App!</h1>
-    </div>
-
     <!-- Top right corner: Clickable box -->
     <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
         <input type="hidden" name="name" value="{{name}}">
@@ -39,8 +34,9 @@
         </div>
     </div>
 
-    <!-- Left side: Days box -->
-    <div style="position: absolute; left: 10px; top: 60px; width: 66%; border: 1px solid black; padding: 5px;">
+    <!-- Updating Days box -->
+    <div class="days-box">
+        <h1 id="welcome-header">Welcome to our Illinois Tech Scheduling App!</h1>
             Monday      |      Tuesday      |      Wednesday      |      Thursday      |      Friday
     </div>
 

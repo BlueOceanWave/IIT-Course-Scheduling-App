@@ -181,3 +181,31 @@ h1{
    font-family: 'Roboto', sans-serif;
    border: 0.1rem solid;
 }
+
+/*Styling for Weekdays*/
+.days-box {
+    position: absolute;
+    left: 10px;
+    top: 110px;
+    width: 58%;
+    padding: 5px;
+    padding: 2.5rem;
+    background-color:#034694;
+    text-align: center;
+    /*add border elements to the container*/
+    /*3.5 inches x 5 inches*/
+    width: 480px;
+    height: 336px;
+    margin: 0 auto;
+    position: absolute;
+
+}
+
+/*updating search button*/
+#searchInput{
+    margin-top: 41px;
+}
+
+#welcome-header{
+    color: white;
+}
