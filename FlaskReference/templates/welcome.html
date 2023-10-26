@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
     <!-- Adding Google fonts to website -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <!-- Adding Google icons to website -->
@@ -13,46 +14,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <!-- Adding icon to header file for tab -->
     <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <!-- linking custom stylesheet here -->
-    <script>
-        function searchCourse() {
-            let searchTerm = document.getElementById('searchInput').value;
-            fetch('/search_course', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `query=${searchTerm}`,
-            })
-            .then(response => response.json())
-            .then(data => {
-                let resultsBox = document.getElementById('resultsBox');
-                resultsBox.innerHTML = '';  // Clear previous results
-                data.forEach(course => {
-                    let courseElem = document.createElement('div');
-                    courseElem.innerHTML = `<strong>${course.title}</strong>: ${course.description}`;
-                    resultsBox.appendChild(courseElem);
-        
-                    course.sections.forEach(section => {
-                        let sectionElem = document.createElement('a');
-                        sectionElem.href = '#';
-                        sectionElem.innerHTML = `Section: ${section.snum}, ${section.starttime}-${section.endtime} <br>`;
-                        sectionElem.addEventListener('click', function() {
-                            // Handle the click event for the section here
-                            // For instance:
-                            alert(`Clicked on section ${section.snum} of ${course.title}`);
-                        });
-                        resultsBox.appendChild(sectionElem);
-                    });
-                });
-            });
-        }
-    </script>
-    <script>
-        function submitForm() {
-            document.getElementById('profileForm').submit();
-        }
-    </script>
+    <!-- Adding JavaScript here -->
+    <script type="text/JavaScript" src="{{ url_for('static', filename='/script/script.js')}}"></script>
 </head>
 <body>
     <!-- Top left corner: Webapp name -->
