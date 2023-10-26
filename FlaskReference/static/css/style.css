@@ -236,7 +236,8 @@ h1{
     width: 200px;
     vertical-align: top;
     padding-top: 20px;
-    color: white;
+    color: black;
+    background-color: white;
 
 }
 
