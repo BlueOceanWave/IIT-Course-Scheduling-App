@@ -206,7 +206,7 @@ h1{
     /*Landa's suggestion*/
     color: black; 
     margin-top: -10px;
-    border: 0.5rem solid;
+    border: 0.5rem solid white;
 }
 
 #resultsBox {
