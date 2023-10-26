@@ -186,14 +186,12 @@ h1{
 .days-box {
     position: absolute;
     left: 10px;
-    top: 110px;
-    width: 58%;
     padding: 5px;
     padding: 2.5rem;
     background-color:#034694;
     text-align: center;
-    width: 480px;
-    height: 336px;
+    width: 54%;
+    height: 100%;
     margin: 0 auto;
     position: absolute;
 }
