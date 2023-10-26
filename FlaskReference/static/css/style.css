@@ -218,6 +218,19 @@ h1{
     height: calc(100vh - 100px);
     overflow-y: scroll;
     margin-top: 10px;
-    margin-left: 20px; /* Create space on the left */
+    margin-left: 25px; /* Create space on the left */
     top: 10px; /* Adjust the top value to match .days-box */
+}
+
+/*creating separate box for right side of page*/
+.searchBox {
+    padding: 2.5rem;
+    background-color: rgba(173, 216, 230, 0.5);
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    right: 10px;
+    margin-left: 10px;
 }
