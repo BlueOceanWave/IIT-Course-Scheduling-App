@@ -235,8 +235,10 @@ h1{
 
 #columnStyle {
     text-align: center;
-    height: 50px;
-    width: 100px;
+    height: 450px;
+    width: 200px;
+    vertical-align: top;
+    padding-top: 20px;
 }
 
 /*border="5" cellspacing="0" align="center"*/
