@@ -200,14 +200,15 @@ h1{
     overflow: hidden;
 }
 
-
-
 #welcome-header{
     /*color: white;*/
-    /*Landa's suggestion*/
+    /*
     color: black; 
     margin-top: -10px;
-    border: 0.5rem solid white;
+    border: 0.5rem solid white;*/
+    border: 5px solid #000;
+    border-collapse: collapse;
+    margin: 0 auto;
 }
 
 #resultsBox {
@@ -258,7 +259,7 @@ h1{
     background-size: 50px 50px, 400px 400px;
     padding-left: 30px;
     width: 290px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 /*background-image: url('/static/images/mies_campus.jpg');*/
