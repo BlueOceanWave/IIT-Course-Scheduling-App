@@ -232,3 +232,11 @@ h1{
     right: 10px;
     margin-left: 20px;
 }
+
+#columnStyle {
+    text-align: center;
+    height: 50px;
+    width: 100px;
+}
+
+/*border="5" cellspacing="0" align="center"*/
