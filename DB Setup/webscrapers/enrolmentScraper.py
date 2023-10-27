@@ -4,10 +4,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
-#list of all classes, each in JSON format
+# List of all classes, each in JSON format
 class_list = [] 
 
-#choose the subject at index i and open that webpage
+# Choose the subject at index i and open that webpage
 def choose_subject(i):
 # Second PAGE #
     #Select a Subject
@@ -19,7 +19,7 @@ def choose_subject(i):
     classSearch = driver.find_element(By.CSS_SELECTOR, 'input[type="submit"]')
     classSearch.click()
 
-#return the enrollment for the specified class
+# Return the enrollment for the specified class
 def get_data(CRN):
 # THIRD PAGE #
     #Get all of the Sections
@@ -45,14 +45,21 @@ def get_data(CRN):
             seats = table.find_elements(By.CSS_SELECTOR, 'tr')[1].find_elements(By.CLASS_NAME, "dddefault")
             waitlist = table.find_elements(By.CSS_SELECTOR, 'tr')[2].find_elements(By.CLASS_NAME, "dddefault")
 
-            seatsStr = ["Capacity: " + seats[0].text, "Actual: " + seats[1].text, "Remaining: " + seats[2].text]
-            waitlistStr = ["Capacity: " + waitlist[0].text, "Actual: " + waitlist[1].text, "Remaining: " + waitlist[2].text]
+            seatsData = {"capacity": int(seats[0].text), 
+                        "actual": int(seats[1].text), 
+                        "remaining":  int(seats[2].text)}
+            waitlistData = { "capacity": int(waitlist[0].text), 
+                            "actual": int(waitlist[1].text), 
+                            "remaining":  int(waitlist[2].text)}
+            
+            return { 
+                    'seats': seatsData,
+                    'waitlist': waitlistData
+                    }
+        
+    # If we get here that means no class was found
+    return None
 
-            print(seatsStr)
-            print(waitlistStr)
-
-            break
-    return True
 def updateEnrollment(lID, CRN): #Subject, CRN
     #Open Chrome
     driver.get("https://ssb.iit.edu/bnrprd/bwckschd.p_disp_dyn_sched") 
@@ -73,9 +80,12 @@ def updateEnrollment(lID, CRN): #Subject, CRN
     for i in range (len(select.find_elements(By.CSS_SELECTOR, 'option'))):
         if(driver.find_elements(By.NAME, 'sel_subj')[1].text.split("\n")[i] == lID):
             choose_subject(i)
-            if(get_data(CRN)):
-                break
+            data = get_data(CRN)
+
+            if data is not None:
+                return data
 
 driver = webdriver.Chrome()
+
 updateEnrollment("Chemistry", "10037")
 

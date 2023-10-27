@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome!</title>
-    <meta charset="UTF-8">
+    <title>Fall 2023 Course Schedule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
     <!-- Adding Google fonts to website -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <!-- Adding Google icons to website -->
@@ -11,75 +13,56 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <!-- Adding icon to header file for tab -->
-    <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-        function searchCourse() {
-            let searchTerm = document.getElementById('searchInput').value;
-            fetch('/search_course', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `query=${searchTerm}`,
-            })
-            .then(response => response.json())
-            .then(data => {
-                let resultsBox = document.getElementById('resultsBox');
-                resultsBox.innerHTML = '';  // Clear previous results
-                data.forEach(course => {
-                    let courseElem = document.createElement('div');
-                    courseElem.innerHTML = `<strong>${course.title}</strong>: ${course.description}`;
-                    resultsBox.appendChild(courseElem);
-        
-                    course.sections.forEach(section => {
-                        let sectionElem = document.createElement('a');
-                        sectionElem.href = '#';
-                        sectionElem.innerHTML = `Section: ${section.snum}, ${section.starttime}-${section.endtime} <br>`;
-                        sectionElem.addEventListener('click', function() {
-                            // Handle the click event for the section here
-                            // For instance:
-                            alert(`Clicked on section ${section.snum} of ${course.title}`);
-                        });
-                        resultsBox.appendChild(sectionElem);
-                    });
-                });
-            });
-        }
-    </script>
-    <script>
-        function submitForm() {
-            document.getElementById('profileForm').submit();
-        }
-    </script>
+    <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script type="text/JavaScript" src="{{ url_for('static', filename='/script/script.js')}}"></script>
 </head>
 <body>
-    <!-- Top left corner: Webapp name -->
-    <div style="position: absolute; top: 10px; left: 10px;">
-        <h2>Welcome to our IIT Scheduling App!</h2>
-    </div>
-
+  
     <!-- Top right corner: Clickable box -->
-    <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
-        <input type="hidden" name="name" value="{{name}}">
-        <input type="hidden" name="major" value="{{major}}">
-        {{name|safe}} - {{major}}
-    </form>
+    <div class="searchBox">
+        <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
+            <input type="hidden" name="name" value="{{name}}">
+            <input type="hidden" name="major" value="{{major}}">
+            {{name|safe}} - {{major}}
+        </form>
+        <!-- Right side: Search and results box -->
+        <div style="position: absolute; right: 10px; top: 60px;">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button id="searchButton" onclick="searchCourse()">Search</button>  
+                <!-- Results will appear here -->
+                <div id="resultsBox">
 
-    <!-- Right side: Search and results box -->
-    <div style="position: absolute; right: 10px; top: 60px;">
-        <input type="text" id="searchInput" placeholder="Search...">
-        <button onclick="searchCourse()">Search</button>
-        <div id="resultsBox" style="border: 1px solid black; width: 450px; height: calc(100vh - 100px); overflow-y: scroll; margin-top: 10px;">
-            <!-- Results will appear here -->
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Left side: Days box -->
-    <div style="position: absolute; left: 10px; top: 60px; width: 66%; border: 1px solid black; padding: 5px;">
-            Monday      |      Tuesday      |      Wednesday      |      Thursday      |      Friday
-    </div>
-
+    <!-- Updating Days box -->
+    <div class="days-box">
+        <h1 id="welcome-header">Fall 2023</h1>
+        <table id ="custom-table" border="5" cellspacing="0" align="center">
+            <tr>
+                <td id="columnStyle">
+                    <b>Monday</b> 
+                </td>
+                <td id="columnStyle">
+                    <b>Tuesday</b> 
+                </td>
+                <td id="columnStyle">
+                    <b>Wednesday</b> 
+                </td>
+                <td id="columnStyle">
+                    <b>Thursday</b>  
+                </td>
+                <td id="columnStyle">
+                    <b>Friday</b> 
+                </td>
+            </td>
+        </tr>
+    </table>
+</div>
+         
     <!-- Bottom box: Recommended classes -->
     <div style="position: absolute; bottom: 10px; left: 10px; right: 500px; border: 1px solid black; padding: 5px;">
         Recommended Classes:

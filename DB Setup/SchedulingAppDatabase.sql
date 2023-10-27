@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS subjects CASCADE;
 DROP TABLE IF EXISTS courses CASCADE;
 DROP TABLE IF EXISTS prerequisites CASCADE;
 DROP TABLE IF EXISTS corequisites CASCADE;
+DROP TABLE IF EXISTS requirements CASCADE;
 DROP TABLE IF EXISTS classes CASCADE;
 DROP TABLE IF EXISTS enrollment CASCADE;
 DROP TABLE IF EXISTS term CASCADE;
@@ -34,34 +35,20 @@ CREATE TABLE courses
  FOREIGN KEY (sID) REFERENCES subjects
 );
 
---Prerequisites
-CREATE TABLE prerequisites
+--Requirements
+CREATE TABLE requirements
 (sID varchar (10),
  cID int,
- psID varchar (10),
- pcID int,
- other varchar (20), --Placement tests, etc.
+ rsID varchar (10),
+ rcID int,
  concurrent bool,
  minGrade varchar (1),
  index int,
- PRIMARY KEY (sID, cID, psID, pcID),
+ PRIMARY KEY (sID, cID, rsID, rcID, index),
  FOREIGN KEY (sID, cID) REFERENCES courses,
- FOREIGN KEY (psID, pcID) REFERENCES courses
+ FOREIGN KEY (rsID, rcID) REFERENCES courses (sID, cID)
 );
 
---Corequisites
-CREATE TABLE corequisites
-(sID varchar (10),
- cID int,
- csID varchar (10),
- ccID int,
- other varchar (20), --Placement tests, etc.
- minGrade varchar (1),
- index int,
- PRIMARY KEY (sID, cID, csID, ccID),
- FOREIGN KEY (sID, cID) REFERENCES courses,
- FOREIGN KEY (csID, ccID) REFERENCES courses
-);
 
 --Term
 CREATE TABLE term

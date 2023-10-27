@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
         <title>Sign Up</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Link stylesheets in header file -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
@@ -42,13 +42,14 @@
             </div>
         </form>
             <!-- if statement to check if account was created successfully -->
-          
             {% if done %}
             <form class = "grid" action = "/" method ="POST">
                 <h3 style="color: blue;">Account Created!</h3>
                 <button type="submit">Log in</button>
             </form>
             {% endif %}
+            
+            <!--should redirect to login page-->
 
     </body>
 </html>
