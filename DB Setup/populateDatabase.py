@@ -11,12 +11,14 @@ connection = psycopg2.connect(
 )
 
 # Extract json files
-classes_json = open('Fall_2023.json')
-courses_json = open('allCourses.json')
-subjects_json = open('subjects.json')
+classes_json = open('DB Setup/data/Fall_2023.json')
+courses_json = open('DB Setup/data/allCourses.json')
+subjects_json = open('DB Setup/data/subjects.json')
+requirements_json = open('DB Setup/data/PreCoreReq.json')
 classes = json.load(classes_json)
 courses = json.load(courses_json)
 subjects = json.load(subjects_json)
+requirements = json.load(requirements_json)
 
 
 def extractTime(time):
@@ -123,11 +125,25 @@ def extractClassData(entry):
 
     return result
 
+def extractRequirementData(entry):
+    result = {
+        "sID": entry['Subject'],
+        "cID": entry['Course'],
+        "rsID": entry['Pre-Subject'],
+        "rcID": entry['Pre-Course'],
+        "concurrent": '1' if entry['Concurrent'] == 'True' else '0',
+        "minGrade": extractOneOf(entry['MinGrade'], ['A', 'B', 'C', 'D', 'S', 'P']),
+        "index": entry['Index']
+    }
+
+    return result
+
+
 
 def createDatabase():
     cursor = connection.cursor()
 
-    with open('SchedulingAppDatabase.sql', 'r') as sql_file:
+    with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
         sql_commands = sql_file.read()
         cursor.execute(sql_commands)
     
@@ -203,11 +219,63 @@ def addClassesToDatabase(classes):
         except:
             print(f"Couldn't add instructors for {course_data['sID']} {course_data['cID']}\n")
 
-    connection.commit()
+        connection.commit()
+    
     cursor.close()
 
     print(f'Added classes, instructors, and terms to Database')
 
+def addRequirementsToDatabase(requirements):
+    cursor = connection.cursor()
+
+    for requirement in requirements:
+        requirement_data = extractRequirementData(requirement)
+
+        # Make sure that the class has requirements, and that its not a range
+        if requirement_data['rsID'] != 'None' and requirement_data['rcID'] != 'None' and ('to' not in requirement_data['rcID']):
+          if not (requirement_data['rsID'] == 'HUM' and requirement_data['rcID'] in ['102', '104', '106']):
+            requirementQuery = 'INSERT INTO requirements (sID, cID, rsID, rcID, concurrent, minGrade, index) VALUES (%s, %s, %s, %s, %s, %s, %s)'
+            requirementValues = tuple(requirement_data[i] for i in ['sID', 'cID', 'rsID', 'rcID', 'concurrent', 'minGrade', 'index'])
+
+            try:
+                cursor.execute(requirementQuery, requirementValues)
+            except:
+                print(f"Couldn't add requirement {requirement_data['rsID']} {requirement_data['rcID']} for {requirement_data['sID']} {requirement_data['cID']}")
+
+            connection.commit()
+
+        # If the requirements is a range, add each class separately    
+        elif 'to' in requirement_data['rcID']:
+            # Get beginning and end of range
+            low, high = requirement_data['rcID'].split('to') 
+
+            # Get all valid cIDs given the sID
+            cursor.execute('SELECT cID FROM courses WHERE sID = %s', (requirement_data['rsID'],))
+            getValidcIDs = cursor.fetchall()
+
+            # Add each cID in the range as a coreq
+            i = 1
+            for (cID,) in getValidcIDs:
+                if int(cID) in range(int(low), int(high)): # Check to see if the cID is in the range
+                    requirementQuery = 'INSERT INTO requirements (sID, cID, rsID, rcID, concurrent, minGrade, index) VALUES (%s, %s, %s, %s, %s, %s, %s)'
+                    requirementValues = [requirement_data[i] for i in ['sID', 'cID', 'rsID', 'rcID', 'concurrent', 'minGrade', 'index']]
+                    requirementValues[3] = cID # Update cID
+                    requirementValues[-1] = int(requirementValues[-1])*1000 + i # Update index to make them 'or' requirements
+                    requirementValues = tuple(requirementValues)
+
+                    try:
+                        cursor.execute(requirementQuery, requirementValues)
+                    except:
+                        print(f"Couldn't add requirement {requirement_data['rsID']} {requirement_data['rcID']} for {requirement_data['sID']} {requirement_data['cID']} from range {low} to {high}")
+
+                    connection.commit()
+
+                    i += 1 # Update index value to make them unique
+        
+
+    cursor.close()
+
+    print('Added requirements to database')
 
 # Deletes all tables and recreates them
 createDatabase() 
@@ -216,4 +284,4 @@ createDatabase()
 addSubjectsToDatabse(subjects) 
 addCoursesToDatabse(courses)
 addClassesToDatabase(classes)
-
+addRequirementsToDatabase(requirements)

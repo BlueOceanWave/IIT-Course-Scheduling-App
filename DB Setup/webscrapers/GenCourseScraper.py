@@ -56,7 +56,7 @@ def goThroughEachAttr() :
         
 goThroughEachAttr() #go through each bulletin subsite
 
-outputFileName = "allCourses.json"  #the name of the file the courses will go
+outputFileName = "DB Setup/data/allCourses.json"  #the name of the file the courses will go
 with open(outputFileName, 'w') as json_file:  #export list to JSON file
     json_string = json.dump(class_list, json_file, indent = 4)
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Classes</title>
+</head>
+
+<body>
+
+    <div id="courses" class="container">
+        <h2>Incidents</h2>
+        <table id="courseTable" class="table">
+            <thead>
+                <tr>
+                    <th>CRN</th>
+                    <th>SID</th>
+                    <th>CID</th>
+                    <th>Days</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Building</th>
+                    <th>Room</th>
+                </tr>
+            </thead>
+            <tbody id="classList"></tbody>
+        </table>
+    </div>
+
+
+    <script>
+        // Here's your JavaScript embedded directly in the HTML file.
+        async function fetchClasses() {
+            try {
+                let response = await fetch('/courses', {method: 'GET'});
+                const classes = await response.json();                
+                //alert(classes)
+                if (response.ok) {
+                    renderClasses(classes);
+                } else {
+                    alert(classes.detail);
+                }
+            } catch (error) {
+                alert("error happened: " + error.message)
+                console.error('Error:', error);
+            }
+        }
+
+        function renderClasses(classes) {
+            const listElement = document.getElementById('classList');
+            classes.forEach(course => {
+                let row = `<tr>
+                            <td>${course.crn}</td>
+                            <td>${course.sid}</td>
+                            <td>${course.cid}</td>
+                            <td>${course.days}</td>
+                            <td>${course.starttime}</td>
+                            <td>${course.endtime}</td>
+                            <td>${course.building}</td>
+                            <td>${course.room}</td>
+                        </tr>`;
+                listElement.innerHTML += row;
+            });
+        }
+        fetchClasses();
+    </script>
+</body>

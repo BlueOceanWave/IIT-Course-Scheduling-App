@@ -1,69 +1,154 @@
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 html{
-    background-image: url('/static/builtin/mies_campus.jpg');
+    background-image: url('/static/images/mies_campus.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
 /*style elements for the container*/
-.container {
-    padding: 40px;
+.box {
+    padding: 2.5rem;
     background-color:#D3D3D3;
     text-align: center;
     /*add border elements to the container*/
-    border: 3px solid black;
-    width: 450px;
-    height: 250px;
+    /*3.5 inches x 5 inches*/
+    width: 480px;
+    height: 336px;
     margin: 0 auto;
     position: absolute;
     /*below code places login page in center of page*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 0.25rem solid;
 }
 
-/*style login-button*/
-/*increase size of login-button*/
+#enter-button {
+    background-color: #2565AE;
+    color: white;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    width: 320px;
+    height: 72px;
+    font-size: 1.875rem;
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.625rem;
+}
+
 #login-button {
     background-color: #2565AE;
     color: white;
     text-align: center;
-    margin-bottom: 20px;
-    width: 10em;
-    height: 2em;
-    font-size: 30px;
+    margin-bottom: 1.25rem;
+    width: 320px;
+    height: 72px;
+    font-size: 1.875rem;
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.625rem;
+}
+
+#login-button:hover {
+    background-color: #1E4B8D;
 }
 
 /*style guest-button*/
 #guest-button {
     background-color: #D5F3FE;
     color: black;
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    width: 250px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#guest-button:hover {
+    background-color: #B0D7F6;
 }
 
 /*style create-account*/
 #create-account{
     background-color: white;
     color: black;
-    margin-top: 200px;
+    margin-top: 13em;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#create-account:hover{
+    background-color: #F5F5F5;
+}
+
+#create-account1 {
+    /*include sign-in attributes*/
+    background-color: #2565AE;
+    color: white;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    width: 320px;
+    height: 72px;
+    font-size: 1.875rem;
+    /*remove border from buttons*/
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.625rem;
+}
+
+/*
+#enter-button {
+    /*include sign-in attributes
+    background-color: #2565AE;
+    color: white;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    width: 160px;
+    height: 32px;
+    font-size: 1.875rem;
+    /*remove border from buttons
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.625rem;
+}*/
+
+/*include hover effect*/
+#create-account1:hover{
+    background-color: #1E4B8D;
 }
 
 /*center the text within the input box*/
 input{
+    margin-top: 10px;
     text-align: center;
-    /*margin-left: 10px;*/
-    margin-bottom: 30px;
-    width: 15em;
-    height: 2em;
+    margin-bottom: 1.25rem;
+    width: 330px;
+    height: 48px;
+    margin-right: 4rem;
+    border-radius: 5px;
 }
 
 h1{
@@ -76,5 +161,138 @@ h1{
 .material-symbols-outlined {
     width: 48px;
     height: 48px;
-    font-size: 32px;
+    font-size: 2rem;
 }
+
+#major-header{
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    margin-top: -1px;
+}
+
+#majorOptions {
+   /*identify dimensions of input field*/
+   margin-top: 10px;
+   text-align: center;
+   margin-bottom: 1.25rem;
+   width: 330px;
+   height: 48px;
+   border-radius: 5px;
+   font-family: 'Roboto', sans-serif;
+   border: 0.1rem solid;
+}
+
+/*Styling for Weekdays*/
+.days-box {
+    position: absolute;
+    left: 10px;
+    padding: 5px;
+    padding: 2.5rem;
+    /*background-color:#034694;*/
+    /*background-color: rgba(0, 0, 128, 0.5);*/
+    /*background-color: rgba(30, 144, 255, 0.5);*/
+    background-color: rgba(173, 216, 230, 0.5);;
+    text-align: center;
+    width: 54%;
+    height: 100%;
+    position: absolute;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+#welcome-header{
+    /*color: white;*/
+    /*
+    color: black; 
+    margin-top: -10px;
+    border: 0.5rem solid white;*/
+    border: 5px solid #000;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#resultsBox {
+    border: 1px solid black;
+    width: 420px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    /*margin: 10px auto;*/
+    margin: 0 auto;
+}
+
+/*creating separate box for right side of page*/
+.searchBox {
+    padding: 2.5rem;
+    background-color: rgba(173, 216, 230, 0.5);
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    right: 10px;
+    margin-left: 20px;
+}
+
+#columnStyle {
+    text-align: center;
+    height: 500px;
+    width: 200px;
+    vertical-align: top;
+    padding-top: 20px;
+    color: black;
+    background-color: white;
+}
+
+.search-container {
+    position: relative;
+    /*
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;*/
+    display: inline-block;
+}
+
+#searchInput {
+    background:
+        url('/static/images/search.png') left center no-repeat,
+        url('/static/images/white_color.png') center no-repeat;
+    background-size: 50px 50px, 400px 400px;
+    padding-left: 30px;
+    width: 290px;
+    margin-top: 40px;
+}
+
+/*background-image: url('/static/images/mies_campus.jpg');*/
+
+#searchButton {
+    width: 20%;
+    height: 51px;
+    margin-left: -16%;
+}
+
+#custom-table {
+    vertical-align: top;
+}
+
+/*
+#searchInput{
+    position: absolute;
+    text-align: center;
+    width: 200px; /* Adjust the width of the input as needed 
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+
+/*search button
+#searchButton {
+    /*width: 250px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    width: 200px; /* Adjust the width of the input as needed
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}*/

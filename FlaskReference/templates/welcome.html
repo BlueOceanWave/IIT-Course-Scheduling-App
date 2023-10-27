@@ -1,17 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome!</title>
+    <title>Fall 2023 Course Schedule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
+    <!-- Adding Google fonts to website -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- Adding Google icons to website -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <!-- Adding icon to header file for tab -->
+    <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script type="text/JavaScript" src="{{ url_for('static', filename='/script/script.js')}}"></script>
 </head>
 <body>
-    <center>
-        {% if name %}
-        <h1>Welcome!</h1>
-        <h3 style="color: blue;"> Hello {{name|safe}}, how are you ?</h3>  <!-- vulnerability here!!! -->
-        <h3 style="color: blue;"> Your major is: {{major}}</h3>
-        {% endif %}
-    </center>
+  
+    <!-- Top right corner: Clickable box -->
+    <div class="searchBox">
+        <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
+            <input type="hidden" name="name" value="{{name}}">
+            <input type="hidden" name="major" value="{{major}}">
+            {{name|safe}} - {{major}}
+        </form>
+        <!-- Right side: Search and results box -->
+        <div style="position: absolute; right: 10px; top: 60px;">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button id="searchButton" onclick="searchCourse()">Search</button>  
+                <!-- Results will appear here -->
+                <div id="resultsBox">
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Updating Days box -->
+    <div class="days-box">
+        <h1 id="welcome-header">Fall 2023</h1>
+        <table id ="custom-table" border="5" cellspacing="0" align="center">
+            <tr>
+                <td id="columnStyle">
+                    <b>Monday</b> 
+                </td>
+                <td id="columnStyle">
+                    <b>Tuesday</b> 
+                </td>
+                <td id="columnStyle">
+                    <b>Wednesday</b> 
+                </td>
+                <td id="columnStyle">
+                    <b>Thursday</b>  
+                </td>
+                <td id="columnStyle">
+                    <b>Friday</b> 
+                </td>
+            </td>
+        </tr>
+    </table>
+</div>
+         
+    <!-- Bottom box: Recommended classes -->
+    <div style="position: absolute; bottom: 10px; left: 10px; right: 500px; border: 1px solid black; padding: 5px;">
+        Recommended Classes:
+    </div>
+
+    <!--<a href="/course_display">See list of courses</a> -->
+    
 </body>
 </html>

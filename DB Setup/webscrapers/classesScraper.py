@@ -122,7 +122,7 @@ def get_data():
 
 def to_JSON():
     #create a .json file from all of the classes
-    outputFileName = "Fall_2023.json"
+    outputFileName = "DB Setup/data/Fall_2023.json"
     with open(outputFileName, 'w') as json_file:  
         json_string = json.dump(class_list, json_file, indent = 4)
 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome!</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <!-- linking stylesheet here -->
+  </head>
+  <body>
+    <input type="hidden" id="hiddenUsername" value="{{name|safe}}" />
+    <input type="hidden" id="hiddenMajor" value="{{major}}" />
+    <center>
+      <br /><br /><br />
+      <h1>Welcome to your account page {{name|safe}}!</h1>
+      <br /><br /><br />
+      <h3 style="color: blue">
+        Here, you can edit your username, password, and major.
+      </h3>
+      <br /><br /><br />
+      <button
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#changeInfoModal"
+      >
+        Change Account Info
+      </button>
+      <button
+        class="btn btn-secondary"
+        data-toggle="modal"
+        data-target="#logoutModal"
+      >
+        Logout
+      </button>
+
+      <!-- Change Account Info Modal -->
+      <div class="modal" id="changeInfoModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Change Account Info</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="passwordCheckForm">
+                <div class="form-group">
+                  <label for="password">Enter your password:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logout Modal -->
+      <div class="modal" id="logoutModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Confirm Logout</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to logout?</p>
+              <button
+                onclick="window.location.href='/';"
+                class="btn btn-danger"
+              >
+                Yes
+              </button>
+              <button class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </center>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      document.getElementById("passwordCheckForm").onsubmit = function (event) {
+        event.preventDefault();
+        var password = document.getElementById("password").value;
+        var username = document.getElementById("hiddenUsername").value;
+        var major = document.getElementById("hiddenMajor").value;
+
+        // Verify password with POST request
+        fetch("/verify_password", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: username,
+            password: password,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status == "success") {
+              // On success, send POST request to change_account_info
+              alert("we are here");
+              let queryParams = `?username=${username}&major=${major}`;
+              window.location.href = '/change_account_info' + queryParams;
+            } else {
+              alert("Wrong password. Please try again.");
+            }
+          });
+      };
+    </script>
+  </body>
+</html>
