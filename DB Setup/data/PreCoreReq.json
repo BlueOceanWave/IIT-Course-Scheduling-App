@@ -611,36 +611,6 @@
     },
     {
         "Subject": "ARCH",
-        "Course": "403",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 33
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "403",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 34
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "403",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 35
-    },
-    {
-        "Subject": "ARCH",
         "Course": "404",
         "Pre-Subject": "ARCH",
         "Pre-Course": "403",
@@ -648,26 +618,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 36
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "404",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 37
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "404",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 38
     },
     {
         "Subject": "ARCH",
@@ -731,36 +681,6 @@
     },
     {
         "Subject": "ARCH",
-        "Course": "417",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 40
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "417",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 41
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "417",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 42
-    },
-    {
-        "Subject": "ARCH",
         "Course": "418",
         "Pre-Subject": "ARCH",
         "Pre-Course": "230",
@@ -818,36 +738,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 43
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "418",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 44
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "418",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 45
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "418",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 46
     },
     {
         "Subject": "ARCH",
@@ -921,26 +811,6 @@
     },
     {
         "Subject": "ARCH",
-        "Course": "419",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 48
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "419",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 49
-    },
-    {
-        "Subject": "ARCH",
         "Course": "420",
         "Pre-Subject": "ARCH",
         "Pre-Course": "230",
@@ -1008,26 +878,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 50
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "420",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 51
-    },
-    {
-        "Subject": "ARCH",
-        "Course": "420",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 52
     },
     {
         "Subject": "ARCH",
@@ -1622,16 +1472,6 @@
     {
         "Subject": "AAH",
         "Course": "119",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 97
-    },
-    {
-        "Subject": "AAH",
-        "Course": "119",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -1671,26 +1511,6 @@
     },
     {
         "Subject": "AAH",
-        "Course": "119",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 102
-    },
-    {
-        "Subject": "AAH",
-        "Course": "119",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 103
-    },
-    {
-        "Subject": "AAH",
         "Course": "120",
         "Pre-Subject": "COM",
         "Pre-Course": "101",
@@ -1708,16 +1528,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 105
-    },
-    {
-        "Subject": "AAH",
-        "Course": "120",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 106
     },
     {
         "Subject": "AAH",
@@ -1758,26 +1568,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 110
-    },
-    {
-        "Subject": "AAH",
-        "Course": "120",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 111
-    },
-    {
-        "Subject": "AAH",
-        "Course": "120",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 112
     },
     {
         "Subject": "AAH",
@@ -1948,16 +1738,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 128
-    },
-    {
-        "Subject": "AAH",
-        "Course": "468",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 129
     },
     {
         "Subject": "AAH",
@@ -2242,16 +2022,6 @@
     {
         "Subject": "BIOL",
         "Course": "401",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 156
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "401",
         "Pre-Subject": "BIOL",
         "Pre-Course": "115",
         "Other": "None",
@@ -2282,52 +2052,12 @@
     {
         "Subject": "BIOL",
         "Course": "401",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 158
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "401",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 159
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "401",
         "Pre-Subject": "CHEM",
         "Pre-Course": "237",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 159
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "401",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 160
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "401",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 160
     },
     {
         "Subject": "BIOL",
@@ -2362,31 +2092,11 @@
     {
         "Subject": "BIOL",
         "Course": "402",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 162
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "402",
         "Pre-Subject": "BIOL",
         "Pre-Course": "401",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
-        "Index": 163
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "402",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
         "Index": 163
     },
     {
@@ -2491,16 +2201,6 @@
     },
     {
         "Subject": "BIOL",
-        "Course": "410",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 171
-    },
-    {
-        "Subject": "BIOL",
         "Course": "413",
         "Pre-Subject": "BIOL",
         "Pre-Course": "214",
@@ -2511,36 +2211,6 @@
     },
     {
         "Subject": "BIOL",
-        "Course": "413",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 173
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "413",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 174
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "413",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 175
-    },
-    {
-        "Subject": "BIOL",
         "Course": "415",
         "Pre-Subject": "BIOL",
         "Pre-Course": "214",
@@ -2548,26 +2218,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 176
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "415",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 177
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "415",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 178
     },
     {
         "Subject": "BIOL",
@@ -2608,26 +2258,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 180
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "420",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 181
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "420",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 182
     },
     {
         "Subject": "BIOL",
@@ -2681,16 +2311,6 @@
     },
     {
         "Subject": "BIOL",
-        "Course": "426",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 184
-    },
-    {
-        "Subject": "BIOL",
         "Course": "430",
         "Pre-Subject": "BIOL",
         "Pre-Course": "114",
@@ -2708,16 +2328,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 186
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "430",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 187
     },
     {
         "Subject": "BIOL",
@@ -2778,16 +2388,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 191
-    },
-    {
-        "Subject": "BIOL",
-        "Course": "445",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 192
     },
     {
         "Subject": "BIOL",
@@ -3402,32 +3002,12 @@
     {
         "Subject": "BME",
         "Course": "422",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 235
-    },
-    {
-        "Subject": "BME",
-        "Course": "422",
         "Pre-Subject": "BME",
         "Pre-Course": "330",
         "Other": "None",
         "Concurrent": "True",
         "MinGrade": "D",
         "Index": 235
-    },
-    {
-        "Subject": "BME",
-        "Course": "422",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 236
     },
     {
         "Subject": "BME",
@@ -3501,36 +3081,6 @@
     },
     {
         "Subject": "BME",
-        "Course": "431",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 241
-    },
-    {
-        "Subject": "BME",
-        "Course": "431",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 242
-    },
-    {
-        "Subject": "BME",
-        "Course": "431",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 243
-    },
-    {
-        "Subject": "BME",
         "Course": "433",
         "Pre-Subject": "MATH",
         "Pre-Course": "251",
@@ -3591,16 +3141,6 @@
     },
     {
         "Subject": "BME",
-        "Course": "443",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 249
-    },
-    {
-        "Subject": "BME",
         "Course": "445",
         "Pre-Subject": "BME",
         "Pre-Course": "453",
@@ -3628,16 +3168,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 252
-    },
-    {
-        "Subject": "BME",
-        "Course": "450",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 253
     },
     {
         "Subject": "BME",
@@ -3701,16 +3231,6 @@
     },
     {
         "Subject": "BME",
-        "Course": "455",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 260
-    },
-    {
-        "Subject": "BME",
         "Course": "475",
         "Pre-Subject": "BME",
         "Pre-Course": "330",
@@ -3738,16 +3258,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 263
-    },
-    {
-        "Subject": "BME",
-        "Course": "475",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 264
     },
     {
         "Subject": "BME",
@@ -4028,16 +3538,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 280
-    },
-    {
-        "Subject": "BUS",
-        "Course": "211",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 281
     },
     {
         "Subject": "BUS",
@@ -4481,16 +3981,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "406",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 316
-    },
-    {
-        "Subject": "CHE",
         "Course": "412",
         "Pre-Subject": "CHEM",
         "Pre-Course": "125",
@@ -4498,16 +3988,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 317
-    },
-    {
-        "Subject": "CHE",
-        "Course": "412",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 318
     },
     {
         "Subject": "CHE",
@@ -4558,16 +4038,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 320
-    },
-    {
-        "Subject": "CHE",
-        "Course": "423",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 321
     },
     {
         "Subject": "CHE",
@@ -4581,16 +4051,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "426",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 323
-    },
-    {
-        "Subject": "CHE",
         "Course": "433",
         "Pre-Subject": "CHE",
         "Pre-Course": "302",
@@ -4608,16 +4068,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 324
-    },
-    {
-        "Subject": "CHE",
-        "Course": "433",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 325
     },
     {
         "Subject": "CHE",
@@ -4641,16 +4091,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "435",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 327
-    },
-    {
-        "Subject": "CHE",
         "Course": "439",
         "Pre-Subject": "None",
         "Pre-Course": "None",
@@ -4678,16 +4118,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 328
-    },
-    {
-        "Subject": "CHE",
-        "Course": "439",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 329
     },
     {
         "Subject": "CHE",
@@ -4698,16 +4128,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 330
-    },
-    {
-        "Subject": "CHE",
-        "Course": "451",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 331
     },
     {
         "Subject": "CHE",
@@ -4731,16 +4151,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "455",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 333
-    },
-    {
-        "Subject": "CHE",
         "Course": "465",
         "Pre-Subject": "CHE",
         "Pre-Course": "302",
@@ -4751,16 +4161,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "465",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 335
-    },
-    {
-        "Subject": "CHE",
         "Course": "467",
         "Pre-Subject": "CHE",
         "Pre-Course": "423",
@@ -4768,16 +4168,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 336
-    },
-    {
-        "Subject": "CHE",
-        "Course": "467",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 337
     },
     {
         "Subject": "CHE",
@@ -4841,16 +4231,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "470",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 341
-    },
-    {
-        "Subject": "CHE",
         "Course": "489",
         "Pre-Subject": "CHE",
         "Pre-Course": "302",
@@ -4858,16 +4238,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 342
-    },
-    {
-        "Subject": "CHE",
-        "Course": "489",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 343
     },
     {
         "Subject": "CHE",
@@ -4941,16 +4311,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "496",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 346
-    },
-    {
-        "Subject": "CHE",
         "Course": "498",
         "Pre-Subject": "CHE",
         "Pre-Course": "494",
@@ -4958,16 +4318,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 347
-    },
-    {
-        "Subject": "CHE",
-        "Course": "498",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 348
     },
     {
         "Subject": "CHE",
@@ -5001,16 +4351,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "501",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 351
-    },
-    {
-        "Subject": "CHE",
         "Course": "503",
         "Pre-Subject": "CHE",
         "Pre-Course": "451",
@@ -5018,16 +4358,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 352
-    },
-    {
-        "Subject": "CHE",
-        "Course": "503",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 353
     },
     {
         "Subject": "CHE",
@@ -5041,36 +4371,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "525",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 355
-    },
-    {
-        "Subject": "CHE",
-        "Course": "525",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 356
-    },
-    {
-        "Subject": "CHE",
-        "Course": "525",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 357
-    },
-    {
-        "Subject": "CHE",
         "Course": "530",
         "Pre-Subject": "CHE",
         "Pre-Course": "435",
@@ -5078,36 +4378,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 358
-    },
-    {
-        "Subject": "CHE",
-        "Course": "530",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 359
-    },
-    {
-        "Subject": "CHE",
-        "Course": "530",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 360
-    },
-    {
-        "Subject": "CHE",
-        "Course": "530",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 361
     },
     {
         "Subject": "CHE",
@@ -5121,36 +4391,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 363
-    },
-    {
-        "Subject": "CHE",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 364
-    },
-    {
-        "Subject": "CHE",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 365
-    },
-    {
-        "Subject": "CHE",
         "Course": "551",
         "Pre-Subject": "CHE",
         "Pre-Course": "406",
@@ -5158,16 +4398,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 366
-    },
-    {
-        "Subject": "CHE",
-        "Course": "551",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 367
     },
     {
         "Subject": "CHE",
@@ -5181,16 +4411,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "553",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 369
-    },
-    {
-        "Subject": "CHE",
         "Course": "555",
         "Pre-Subject": "CHE",
         "Pre-Course": "406",
@@ -5201,36 +4421,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 371
-    },
-    {
-        "Subject": "CHE",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 372
-    },
-    {
-        "Subject": "CHE",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 373
-    },
-    {
-        "Subject": "CHE",
         "Course": "565",
         "Pre-Subject": "None",
         "Pre-Course": "None",
@@ -5251,16 +4441,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "565",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 375
-    },
-    {
-        "Subject": "CHE",
         "Course": "566",
         "Pre-Subject": "None",
         "Pre-Course": "None",
@@ -5278,16 +4458,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 376
-    },
-    {
-        "Subject": "CHE",
-        "Course": "566",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 377
     },
     {
         "Subject": "CHE",
@@ -5301,36 +4471,6 @@
     },
     {
         "Subject": "CHE",
-        "Course": "575",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 379
-    },
-    {
-        "Subject": "CHE",
-        "Course": "575",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 380
-    },
-    {
-        "Subject": "CHE",
-        "Course": "575",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 381
-    },
-    {
-        "Subject": "CHE",
         "Course": "577",
         "Pre-Subject": "CHE",
         "Pre-Course": "423",
@@ -5338,16 +4478,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 382
-    },
-    {
-        "Subject": "CHE",
-        "Course": "577",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 383
     },
     {
         "Subject": "CHE",
@@ -5368,16 +4498,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 384
-    },
-    {
-        "Subject": "CHE",
-        "Course": "582",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 385
     },
     {
         "Subject": "CHEM",
@@ -5741,16 +4861,6 @@
     },
     {
         "Subject": "CHEM",
-        "Course": "415",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 411
-    },
-    {
-        "Subject": "CHEM",
         "Course": "416",
         "Pre-Subject": "CHEM",
         "Pre-Course": "240",
@@ -5768,16 +4878,6 @@
         "Concurrent": "True",
         "MinGrade": "D",
         "Index": 412
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "416",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 413
     },
     {
         "Subject": "CHEM",
@@ -5818,46 +4918,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 415
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 416
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 417
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 418
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 419
     },
     {
         "Subject": "CHEM",
@@ -5921,36 +4981,6 @@
     },
     {
         "Subject": "CHEM",
-        "Course": "454",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 423
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "454",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 424
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "454",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 425
-    },
-    {
-        "Subject": "CHEM",
         "Course": "455",
         "Pre-Subject": "CHEM",
         "Pre-Course": "239",
@@ -5958,16 +4988,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 426
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "455",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 427
     },
     {
         "Subject": "CHEM",
@@ -6108,16 +5128,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 433
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "470",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 434
     },
     {
         "Subject": "CHEM",
@@ -6341,36 +5351,6 @@
     },
     {
         "Subject": "CHEM",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 449
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 450
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 451
-    },
-    {
-        "Subject": "CHEM",
         "Course": "537",
         "Pre-Subject": "CHEM",
         "Pre-Course": "470",
@@ -6401,36 +5381,6 @@
     },
     {
         "Subject": "CHEM",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 454
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 455
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 456
-    },
-    {
-        "Subject": "CHEM",
         "Course": "539",
         "Pre-Subject": "CHEM",
         "Pre-Course": "239",
@@ -6438,36 +5388,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 457
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "539",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 458
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "539",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 459
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "539",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 460
     },
     {
         "Subject": "CHEM",
@@ -6511,36 +5431,6 @@
     },
     {
         "Subject": "CHEM",
-        "Course": "550",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 463
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "550",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 463
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "550",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 463
-    },
-    {
-        "Subject": "CHEM",
         "Course": "552",
         "Pre-Subject": "CHEM",
         "Pre-Course": "550",
@@ -6581,36 +5471,6 @@
     },
     {
         "Subject": "CHEM",
-        "Course": "553",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 466
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "553",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 467
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "553",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 468
-    },
-    {
-        "Subject": "CHEM",
         "Course": "631",
         "Pre-Subject": "CHEM",
         "Pre-Course": "455",
@@ -6638,36 +5498,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 470
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "635",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 471
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "635",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 472
-    },
-    {
-        "Subject": "CHEM",
-        "Course": "635",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 473
     },
     {
         "Subject": "CHEM",
@@ -7091,36 +5921,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "411",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 502
-    },
-    {
-        "Subject": "CAE",
-        "Course": "411",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 503
-    },
-    {
-        "Subject": "CAE",
-        "Course": "411",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 504
-    },
-    {
-        "Subject": "CAE",
         "Course": "415",
         "Pre-Subject": "CAE",
         "Pre-Course": "323",
@@ -7128,16 +5928,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 505
-    },
-    {
-        "Subject": "CAE",
-        "Course": "415",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 506
     },
     {
         "Subject": "CAE",
@@ -7161,26 +5951,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "422",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 509
-    },
-    {
-        "Subject": "CAE",
-        "Course": "422",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 510
-    },
-    {
-        "Subject": "CAE",
         "Course": "424",
         "Pre-Subject": "None",
         "Pre-Course": "None",
@@ -7191,16 +5961,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "424",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 512
-    },
-    {
-        "Subject": "CAE",
         "Course": "430",
         "Pre-Subject": "MATH",
         "Pre-Course": "252",
@@ -7208,16 +5968,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 513
-    },
-    {
-        "Subject": "CAE",
-        "Course": "430",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 514
     },
     {
         "Subject": "CAE",
@@ -7281,26 +6031,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "435",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 519
-    },
-    {
-        "Subject": "CAE",
-        "Course": "435",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 520
-    },
-    {
-        "Subject": "CAE",
         "Course": "436",
         "Pre-Subject": "CAE",
         "Pre-Course": "307",
@@ -7308,16 +6038,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 521
-    },
-    {
-        "Subject": "CAE",
-        "Course": "436",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 522
     },
     {
         "Subject": "CAE",
@@ -7411,26 +6131,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "457",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 531
-    },
-    {
-        "Subject": "CAE",
-        "Course": "457",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 532
-    },
-    {
-        "Subject": "CAE",
         "Course": "461",
         "Pre-Subject": "CAE",
         "Pre-Course": "302",
@@ -7461,16 +6161,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "461",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 536
-    },
-    {
-        "Subject": "CAE",
         "Course": "463",
         "Pre-Subject": "CAE",
         "Pre-Course": "331",
@@ -7478,16 +6168,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 537
-    },
-    {
-        "Subject": "CAE",
-        "Course": "463",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 538
     },
     {
         "Subject": "CAE",
@@ -7571,16 +6251,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "486",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 546
-    },
-    {
-        "Subject": "CAE",
         "Course": "503",
         "Pre-Subject": "CAE",
         "Pre-Course": "411",
@@ -7611,26 +6281,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "503",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 550
-    },
-    {
-        "Subject": "CAE",
-        "Course": "503",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 551
-    },
-    {
-        "Subject": "CAE",
         "Course": "504",
         "Pre-Subject": "CAE",
         "Pre-Course": "529",
@@ -7648,26 +6298,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 553
-    },
-    {
-        "Subject": "CAE",
-        "Course": "508",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 554
-    },
-    {
-        "Subject": "CAE",
-        "Course": "508",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 555
     },
     {
         "Subject": "CAE",
@@ -7698,36 +6328,6 @@
         "Concurrent": "True",
         "MinGrade": "C",
         "Index": 558
-    },
-    {
-        "Subject": "CAE",
-        "Course": "518",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 559
-    },
-    {
-        "Subject": "CAE",
-        "Course": "518",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 560
-    },
-    {
-        "Subject": "CAE",
-        "Course": "518",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 561
     },
     {
         "Subject": "CAE",
@@ -7781,36 +6381,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "525",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 566
-    },
-    {
-        "Subject": "CAE",
-        "Course": "525",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 567
-    },
-    {
-        "Subject": "CAE",
-        "Course": "525",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 568
-    },
-    {
-        "Subject": "CAE",
         "Course": "526",
         "Pre-Subject": "None",
         "Pre-Course": "None",
@@ -7841,26 +6411,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "529",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 572
-    },
-    {
-        "Subject": "CAE",
-        "Course": "529",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 573
-    },
-    {
-        "Subject": "CAE",
         "Course": "530",
         "Pre-Subject": "CAE",
         "Pre-Course": "411",
@@ -7868,26 +6418,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 574
-    },
-    {
-        "Subject": "CAE",
-        "Course": "530",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 575
-    },
-    {
-        "Subject": "CAE",
-        "Course": "530",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 576
     },
     {
         "Subject": "CAE",
@@ -7918,26 +6448,6 @@
         "Concurrent": "True",
         "MinGrade": "C",
         "Index": 579
-    },
-    {
-        "Subject": "CAE",
-        "Course": "534",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 580
-    },
-    {
-        "Subject": "CAE",
-        "Course": "534",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 581
     },
     {
         "Subject": "CAE",
@@ -8091,36 +6601,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "561",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 596
-    },
-    {
-        "Subject": "CAE",
-        "Course": "561",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 597
-    },
-    {
-        "Subject": "CAE",
-        "Course": "561",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 598
-    },
-    {
-        "Subject": "CAE",
         "Course": "563",
         "Pre-Subject": "CAE",
         "Pre-Course": "323",
@@ -8142,32 +6622,12 @@
     {
         "Subject": "CAE",
         "Course": "563",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 600
-    },
-    {
-        "Subject": "CAE",
-        "Course": "563",
         "Pre-Subject": "CAE",
         "Pre-Course": "562",
         "Other": "None",
         "Concurrent": "True",
         "MinGrade": "C",
         "Index": 600
-    },
-    {
-        "Subject": "CAE",
-        "Course": "563",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 601
     },
     {
         "Subject": "CAE",
@@ -8202,32 +6662,12 @@
     {
         "Subject": "CAE",
         "Course": "564",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 603
-    },
-    {
-        "Subject": "CAE",
-        "Course": "564",
         "Pre-Subject": "CAE",
         "Pre-Course": "457",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 603
-    },
-    {
-        "Subject": "CAE",
-        "Course": "564",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 604
     },
     {
         "Subject": "CAE",
@@ -8272,16 +6712,6 @@
     {
         "Subject": "CAE",
         "Course": "566",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 607
-    },
-    {
-        "Subject": "CAE",
-        "Course": "566",
         "Pre-Subject": "CAE",
         "Pre-Course": "420",
         "Other": "None",
@@ -8292,32 +6722,12 @@
     {
         "Subject": "CAE",
         "Course": "566",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 608
-    },
-    {
-        "Subject": "CAE",
-        "Course": "566",
         "Pre-Subject": "CAE",
         "Pre-Course": "420",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 608
-    },
-    {
-        "Subject": "CAE",
-        "Course": "576",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 609
     },
     {
         "Subject": "CAE",
@@ -8341,26 +6751,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "582",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 612
-    },
-    {
-        "Subject": "CAE",
-        "Course": "582",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 613
-    },
-    {
-        "Subject": "CAE",
         "Course": "583",
         "Pre-Subject": "CAE",
         "Pre-Course": "529",
@@ -8368,26 +6758,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 614
-    },
-    {
-        "Subject": "CAE",
-        "Course": "583",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 615
-    },
-    {
-        "Subject": "CAE",
-        "Course": "583",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 616
     },
     {
         "Subject": "CAE",
@@ -8451,36 +6821,6 @@
     },
     {
         "Subject": "CAE",
-        "Course": "586",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 622
-    },
-    {
-        "Subject": "CAE",
-        "Course": "586",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 623
-    },
-    {
-        "Subject": "CAE",
-        "Course": "586",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 624
-    },
-    {
-        "Subject": "CAE",
         "Course": "587",
         "Pre-Subject": "CAE",
         "Pre-Course": "569",
@@ -8498,36 +6838,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 626
-    },
-    {
-        "Subject": "CAE",
-        "Course": "590",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 627
-    },
-    {
-        "Subject": "CAE",
-        "Course": "590",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 628
-    },
-    {
-        "Subject": "CAE",
-        "Course": "590",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 629
     },
     {
         "Subject": "COM",
@@ -8558,16 +6868,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 632
-    },
-    {
-        "Subject": "COM",
-        "Course": "126",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 633
     },
     {
         "Subject": "COM",
@@ -8611,26 +6911,6 @@
     },
     {
         "Subject": "COM",
-        "Course": "126",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 638
-    },
-    {
-        "Subject": "COM",
-        "Course": "126",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 639
-    },
-    {
-        "Subject": "COM",
         "Course": "201",
         "Pre-Subject": "COM",
         "Pre-Course": "101",
@@ -8648,16 +6928,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 641
-    },
-    {
-        "Subject": "COM",
-        "Course": "201",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 642
     },
     {
         "Subject": "COM",
@@ -8698,26 +6968,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 646
-    },
-    {
-        "Subject": "COM",
-        "Course": "201",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 647
-    },
-    {
-        "Subject": "COM",
-        "Course": "201",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 648
     },
     {
         "Subject": "COM",
@@ -9082,16 +7332,6 @@
     {
         "Subject": "COM",
         "Course": "323",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 685
-    },
-    {
-        "Subject": "COM",
-        "Course": "323",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -9128,26 +7368,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 689
-    },
-    {
-        "Subject": "COM",
-        "Course": "323",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 690
-    },
-    {
-        "Subject": "COM",
-        "Course": "323",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 691
     },
     {
         "Subject": "COM",
@@ -9472,16 +7692,6 @@
     {
         "Subject": "COM",
         "Course": "381",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 724
-    },
-    {
-        "Subject": "COM",
-        "Course": "381",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -9518,26 +7728,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 728
-    },
-    {
-        "Subject": "COM",
-        "Course": "381",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 729
-    },
-    {
-        "Subject": "COM",
-        "Course": "381",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 730
     },
     {
         "Subject": "COM",
@@ -9722,16 +7912,6 @@
     {
         "Subject": "COM",
         "Course": "421",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 749
-    },
-    {
-        "Subject": "COM",
-        "Course": "421",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -9771,26 +7951,6 @@
     },
     {
         "Subject": "COM",
-        "Course": "421",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 754
-    },
-    {
-        "Subject": "COM",
-        "Course": "421",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 755
-    },
-    {
-        "Subject": "COM",
         "Course": "423",
         "Pre-Subject": "COM",
         "Pre-Course": "101",
@@ -9808,16 +7968,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 757
-    },
-    {
-        "Subject": "COM",
-        "Course": "423",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 758
     },
     {
         "Subject": "COM",
@@ -9861,26 +8011,6 @@
     },
     {
         "Subject": "COM",
-        "Course": "423",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 763
-    },
-    {
-        "Subject": "COM",
-        "Course": "423",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 764
-    },
-    {
-        "Subject": "COM",
         "Course": "424",
         "Pre-Subject": "COM",
         "Pre-Course": "101",
@@ -9898,16 +8028,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 766
-    },
-    {
-        "Subject": "COM",
-        "Course": "424",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 767
     },
     {
         "Subject": "COM",
@@ -9948,26 +8068,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 771
-    },
-    {
-        "Subject": "COM",
-        "Course": "424",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 772
-    },
-    {
-        "Subject": "COM",
-        "Course": "424",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 773
     },
     {
         "Subject": "COM",
@@ -10032,16 +8132,6 @@
     {
         "Subject": "COM",
         "Course": "428",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 780
-    },
-    {
-        "Subject": "COM",
-        "Course": "428",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -10078,26 +8168,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 784
-    },
-    {
-        "Subject": "COM",
-        "Course": "428",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 785
-    },
-    {
-        "Subject": "COM",
-        "Course": "428",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 786
     },
     {
         "Subject": "COM",
@@ -10172,16 +8242,6 @@
     {
         "Subject": "COM",
         "Course": "431",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 794
-    },
-    {
-        "Subject": "COM",
-        "Course": "431",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -10221,26 +8281,6 @@
     },
     {
         "Subject": "COM",
-        "Course": "431",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 799
-    },
-    {
-        "Subject": "COM",
-        "Course": "431",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 800
-    },
-    {
-        "Subject": "COM",
         "Course": "432",
         "Pre-Subject": "COM",
         "Pre-Course": "431",
@@ -10268,16 +8308,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 803
-    },
-    {
-        "Subject": "COM",
-        "Course": "432",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 804
     },
     {
         "Subject": "COM",
@@ -10318,26 +8348,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 808
-    },
-    {
-        "Subject": "COM",
-        "Course": "432",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 809
-    },
-    {
-        "Subject": "COM",
-        "Course": "432",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 810
     },
     {
         "Subject": "COM",
@@ -10402,16 +8412,6 @@
     {
         "Subject": "COM",
         "Course": "437",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 817
-    },
-    {
-        "Subject": "COM",
-        "Course": "437",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -10451,26 +8451,6 @@
     },
     {
         "Subject": "COM",
-        "Course": "437",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 822
-    },
-    {
-        "Subject": "COM",
-        "Course": "437",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 823
-    },
-    {
-        "Subject": "COM",
         "Course": "438",
         "Pre-Subject": "COM",
         "Pre-Course": "101",
@@ -10488,16 +8468,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 825
-    },
-    {
-        "Subject": "COM",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 826
     },
     {
         "Subject": "COM",
@@ -10538,26 +8508,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 830
-    },
-    {
-        "Subject": "COM",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 831
-    },
-    {
-        "Subject": "COM",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 832
     },
     {
         "Subject": "COM",
@@ -10631,16 +8581,6 @@
     },
     {
         "Subject": "COM",
-        "Course": "491",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 840
-    },
-    {
-        "Subject": "COM",
         "Course": "497",
         "Pre-Subject": "HUM",
         "Pre-Course": "102",
@@ -10668,16 +8608,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 843
-    },
-    {
-        "Subject": "COM",
-        "Course": "497",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 844
     },
     {
         "Subject": "COM",
@@ -10768,16 +8698,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 853
-    },
-    {
-        "Subject": "CS",
-        "Course": "201",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 854
     },
     {
         "Subject": "CS",
@@ -14031,16 +11951,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "401",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1080
-    },
-    {
-        "Subject": "ECE",
         "Course": "403",
         "Pre-Subject": "ECE",
         "Pre-Course": "308",
@@ -14051,52 +11961,12 @@
     },
     {
         "Subject": "ECE",
-        "Course": "403",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1081
-    },
-    {
-        "Subject": "ECE",
-        "Course": "403",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1081
-    },
-    {
-        "Subject": "ECE",
         "Course": "405",
         "Pre-Subject": "ECE",
         "Pre-Course": "308",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
-        "Index": 1082
-    },
-    {
-        "Subject": "ECE",
-        "Course": "405",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1082
-    },
-    {
-        "Subject": "ECE",
-        "Course": "405",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
         "Index": 1082
     },
     {
@@ -14111,36 +11981,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "406",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1084
-    },
-    {
-        "Subject": "ECE",
-        "Course": "406",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1085
-    },
-    {
-        "Subject": "ECE",
-        "Course": "406",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1086
-    },
-    {
-        "Subject": "ECE",
         "Course": "411",
         "Pre-Subject": "ECE",
         "Pre-Course": "311",
@@ -14148,16 +11988,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1087
-    },
-    {
-        "Subject": "ECE",
-        "Course": "411",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1088
     },
     {
         "Subject": "ECE",
@@ -14178,16 +12008,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1089
-    },
-    {
-        "Subject": "ECE",
-        "Course": "412",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1090
     },
     {
         "Subject": "ECE",
@@ -14201,16 +12021,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "417",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1092
-    },
-    {
-        "Subject": "ECE",
         "Course": "418",
         "Pre-Subject": "ECE",
         "Pre-Course": "319",
@@ -14218,16 +12028,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1093
-    },
-    {
-        "Subject": "ECE",
-        "Course": "418",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1094
     },
     {
         "Subject": "ECE",
@@ -14241,16 +12041,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "419",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1096
-    },
-    {
-        "Subject": "ECE",
         "Course": "420",
         "Pre-Subject": "ECE",
         "Pre-Course": "319",
@@ -14258,16 +12048,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1097
-    },
-    {
-        "Subject": "ECE",
-        "Course": "420",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1098
     },
     {
         "Subject": "ECE",
@@ -14281,16 +12061,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "421",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1100
-    },
-    {
-        "Subject": "ECE",
         "Course": "423",
         "Pre-Subject": "ECE",
         "Pre-Course": "307",
@@ -14298,16 +12068,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1101
-    },
-    {
-        "Subject": "ECE",
-        "Course": "423",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1102
     },
     {
         "Subject": "ECE",
@@ -14341,16 +12101,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "429",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1105
-    },
-    {
-        "Subject": "ECE",
         "Course": "430",
         "Pre-Subject": "ECE",
         "Pre-Course": "311",
@@ -14372,16 +12122,6 @@
     {
         "Subject": "ECE",
         "Course": "436",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1108
-    },
-    {
-        "Subject": "ECE",
-        "Course": "436",
         "Pre-Subject": "BME",
         "Pre-Course": "330",
         "Other": "None",
@@ -14398,16 +12138,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1110
-    },
-    {
-        "Subject": "ECE",
-        "Course": "437",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1111
     },
     {
         "Subject": "ECE",
@@ -14441,26 +12171,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1115
-    },
-    {
-        "Subject": "ECE",
-        "Course": "438",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1116
-    },
-    {
-        "Subject": "ECE",
         "Course": "442",
         "Pre-Subject": "ECE",
         "Pre-Course": "242",
@@ -14468,26 +12178,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1117
-    },
-    {
-        "Subject": "ECE",
-        "Course": "442",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1118
-    },
-    {
-        "Subject": "ECE",
-        "Course": "442",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1119
     },
     {
         "Subject": "ECE",
@@ -14528,16 +12218,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1122
-    },
-    {
-        "Subject": "ECE",
-        "Course": "446",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1123
     },
     {
         "Subject": "ECE",
@@ -14591,26 +12271,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "481",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1128
-    },
-    {
-        "Subject": "ECE",
-        "Course": "481",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1129
-    },
-    {
-        "Subject": "ECE",
         "Course": "485",
         "Pre-Subject": "ECE",
         "Pre-Course": "218",
@@ -14631,16 +12291,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "485",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1131
-    },
-    {
-        "Subject": "ECE",
         "Course": "509",
         "Pre-Subject": "ECE",
         "Pre-Course": "307",
@@ -14651,36 +12301,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "509",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1133
-    },
-    {
-        "Subject": "ECE",
-        "Course": "509",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1134
-    },
-    {
-        "Subject": "ECE",
-        "Course": "509",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1135
-    },
-    {
-        "Subject": "ECE",
         "Course": "514",
         "Pre-Subject": "ECE",
         "Pre-Course": "511",
@@ -14701,36 +12321,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "514",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1137
-    },
-    {
-        "Subject": "ECE",
-        "Course": "514",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1138
-    },
-    {
-        "Subject": "ECE",
-        "Course": "514",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1139
-    },
-    {
-        "Subject": "ECE",
         "Course": "515",
         "Pre-Subject": "ECE",
         "Pre-Course": "511",
@@ -14748,36 +12338,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1140
-    },
-    {
-        "Subject": "ECE",
-        "Course": "515",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1141
-    },
-    {
-        "Subject": "ECE",
-        "Course": "515",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1142
-    },
-    {
-        "Subject": "ECE",
-        "Course": "515",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1143
     },
     {
         "Subject": "ECE",
@@ -14831,36 +12391,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "521",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1149
-    },
-    {
-        "Subject": "ECE",
-        "Course": "521",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1150
-    },
-    {
-        "Subject": "ECE",
-        "Course": "521",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1151
-    },
-    {
-        "Subject": "ECE",
         "Course": "522",
         "Pre-Subject": "ECE",
         "Pre-Course": "307",
@@ -14868,36 +12398,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1152
-    },
-    {
-        "Subject": "ECE",
-        "Course": "522",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1153
-    },
-    {
-        "Subject": "ECE",
-        "Course": "522",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1154
-    },
-    {
-        "Subject": "ECE",
-        "Course": "522",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1155
     },
     {
         "Subject": "ECE",
@@ -14921,36 +12421,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "524",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1157
-    },
-    {
-        "Subject": "ECE",
-        "Course": "524",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1158
-    },
-    {
-        "Subject": "ECE",
-        "Course": "524",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1159
-    },
-    {
-        "Subject": "ECE",
         "Course": "526",
         "Pre-Subject": "ECE",
         "Pre-Course": "308",
@@ -14968,36 +12438,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1160
-    },
-    {
-        "Subject": "ECE",
-        "Course": "526",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1161
-    },
-    {
-        "Subject": "ECE",
-        "Course": "526",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1162
-    },
-    {
-        "Subject": "ECE",
-        "Course": "526",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1163
     },
     {
         "Subject": "ECE",
@@ -15011,36 +12451,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "527",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1165
-    },
-    {
-        "Subject": "ECE",
-        "Course": "527",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1166
-    },
-    {
-        "Subject": "ECE",
-        "Course": "527",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1167
-    },
-    {
-        "Subject": "ECE",
         "Course": "530",
         "Pre-Subject": "ECE",
         "Pre-Course": "429",
@@ -15051,36 +12461,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "530",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1169
-    },
-    {
-        "Subject": "ECE",
-        "Course": "530",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1170
-    },
-    {
-        "Subject": "ECE",
-        "Course": "530",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1171
-    },
-    {
-        "Subject": "ECE",
         "Course": "531",
         "Pre-Subject": "ECE",
         "Pre-Course": "308",
@@ -15088,36 +12468,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1172
-    },
-    {
-        "Subject": "ECE",
-        "Course": "531",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1173
-    },
-    {
-        "Subject": "ECE",
-        "Course": "531",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1174
-    },
-    {
-        "Subject": "ECE",
-        "Course": "531",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1175
     },
     {
         "Subject": "ECE",
@@ -15138,36 +12488,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1177
-    },
-    {
-        "Subject": "ECE",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1178
-    },
-    {
-        "Subject": "ECE",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1179
-    },
-    {
-        "Subject": "ECE",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1180
     },
     {
         "Subject": "ECE",
@@ -15211,36 +12531,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1185
-    },
-    {
-        "Subject": "ECE",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1186
-    },
-    {
-        "Subject": "ECE",
-        "Course": "538",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1187
-    },
-    {
-        "Subject": "ECE",
         "Course": "542",
         "Pre-Subject": "ECE",
         "Pre-Course": "407",
@@ -15271,16 +12561,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "543",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1191
-    },
-    {
-        "Subject": "ECE",
         "Course": "546",
         "Pre-Subject": "ECE",
         "Pre-Course": "543",
@@ -15288,36 +12568,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1192
-    },
-    {
-        "Subject": "ECE",
-        "Course": "546",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1193
-    },
-    {
-        "Subject": "ECE",
-        "Course": "546",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1194
-    },
-    {
-        "Subject": "ECE",
-        "Course": "546",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1195
     },
     {
         "Subject": "ECE",
@@ -15331,36 +12581,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "548",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1197
-    },
-    {
-        "Subject": "ECE",
-        "Course": "548",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1198
-    },
-    {
-        "Subject": "ECE",
-        "Course": "548",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1199
-    },
-    {
-        "Subject": "ECE",
         "Course": "549",
         "Pre-Subject": "ECE",
         "Pre-Course": "438",
@@ -15368,36 +12588,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1200
-    },
-    {
-        "Subject": "ECE",
-        "Course": "549",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1201
-    },
-    {
-        "Subject": "ECE",
-        "Course": "549",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1202
-    },
-    {
-        "Subject": "ECE",
-        "Course": "549",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1203
     },
     {
         "Subject": "ECE",
@@ -15411,36 +12601,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "550",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1205
-    },
-    {
-        "Subject": "ECE",
-        "Course": "550",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1206
-    },
-    {
-        "Subject": "ECE",
-        "Course": "550",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1207
-    },
-    {
-        "Subject": "ECE",
         "Course": "551",
         "Pre-Subject": "ECE",
         "Pre-Course": "411",
@@ -15451,36 +12611,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "551",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1209
-    },
-    {
-        "Subject": "ECE",
-        "Course": "551",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1210
-    },
-    {
-        "Subject": "ECE",
-        "Course": "551",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1211
-    },
-    {
-        "Subject": "ECE",
         "Course": "552",
         "Pre-Subject": "ECE",
         "Pre-Course": "411",
@@ -15488,36 +12618,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1212
-    },
-    {
-        "Subject": "ECE",
-        "Course": "552",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1213
-    },
-    {
-        "Subject": "ECE",
-        "Course": "552",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1214
-    },
-    {
-        "Subject": "ECE",
-        "Course": "552",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1215
     },
     {
         "Subject": "ECE",
@@ -15541,36 +12641,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "553",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1218
-    },
-    {
-        "Subject": "ECE",
-        "Course": "553",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1219
-    },
-    {
-        "Subject": "ECE",
-        "Course": "553",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1220
-    },
-    {
-        "Subject": "ECE",
         "Course": "554",
         "Pre-Subject": "ECE",
         "Pre-Course": "418",
@@ -15588,36 +12658,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1222
-    },
-    {
-        "Subject": "ECE",
-        "Course": "554",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1223
-    },
-    {
-        "Subject": "ECE",
-        "Course": "554",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1224
-    },
-    {
-        "Subject": "ECE",
-        "Course": "554",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1225
     },
     {
         "Subject": "ECE",
@@ -15641,36 +12681,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1228
-    },
-    {
-        "Subject": "ECE",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1229
-    },
-    {
-        "Subject": "ECE",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1230
-    },
-    {
-        "Subject": "ECE",
         "Course": "556",
         "Pre-Subject": "ECE",
         "Pre-Course": "420",
@@ -15678,36 +12688,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1231
-    },
-    {
-        "Subject": "ECE",
-        "Course": "556",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1232
-    },
-    {
-        "Subject": "ECE",
-        "Course": "556",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1233
-    },
-    {
-        "Subject": "ECE",
-        "Course": "556",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1234
     },
     {
         "Subject": "ECE",
@@ -15731,36 +12711,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "557",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1237
-    },
-    {
-        "Subject": "ECE",
-        "Course": "557",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1238
-    },
-    {
-        "Subject": "ECE",
-        "Course": "557",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1239
-    },
-    {
-        "Subject": "ECE",
         "Course": "558",
         "Pre-Subject": "ECE",
         "Pre-Course": "418",
@@ -15778,36 +12728,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1241
-    },
-    {
-        "Subject": "ECE",
-        "Course": "558",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1242
-    },
-    {
-        "Subject": "ECE",
-        "Course": "558",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1243
-    },
-    {
-        "Subject": "ECE",
-        "Course": "558",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1244
     },
     {
         "Subject": "ECE",
@@ -15831,36 +12751,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "559",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1247
-    },
-    {
-        "Subject": "ECE",
-        "Course": "559",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1248
-    },
-    {
-        "Subject": "ECE",
-        "Course": "559",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1249
-    },
-    {
-        "Subject": "ECE",
         "Course": "560",
         "Pre-Subject": "ECE",
         "Pre-Course": "418",
@@ -15878,36 +12768,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1251
-    },
-    {
-        "Subject": "ECE",
-        "Course": "560",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1252
-    },
-    {
-        "Subject": "ECE",
-        "Course": "560",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1253
-    },
-    {
-        "Subject": "ECE",
-        "Course": "560",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1254
     },
     {
         "Subject": "ECE",
@@ -15931,36 +12791,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "561",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1257
-    },
-    {
-        "Subject": "ECE",
-        "Course": "561",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1258
-    },
-    {
-        "Subject": "ECE",
-        "Course": "561",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1259
-    },
-    {
-        "Subject": "ECE",
         "Course": "562",
         "Pre-Subject": "ECE",
         "Pre-Course": "418",
@@ -15978,36 +12808,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1261
-    },
-    {
-        "Subject": "ECE",
-        "Course": "562",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1262
-    },
-    {
-        "Subject": "ECE",
-        "Course": "562",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1263
-    },
-    {
-        "Subject": "ECE",
-        "Course": "562",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1264
     },
     {
         "Subject": "ECE",
@@ -16031,36 +12831,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "564",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1267
-    },
-    {
-        "Subject": "ECE",
-        "Course": "564",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1268
-    },
-    {
-        "Subject": "ECE",
-        "Course": "564",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1269
-    },
-    {
-        "Subject": "ECE",
         "Course": "567",
         "Pre-Subject": "ECE",
         "Pre-Course": "511",
@@ -16078,36 +12848,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1270
-    },
-    {
-        "Subject": "ECE",
-        "Course": "567",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1271
-    },
-    {
-        "Subject": "ECE",
-        "Course": "567",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1272
-    },
-    {
-        "Subject": "ECE",
-        "Course": "567",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1273
     },
     {
         "Subject": "ECE",
@@ -16141,16 +12881,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "568",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1275
-    },
-    {
-        "Subject": "ECE",
         "Course": "570",
         "Pre-Subject": "ECE",
         "Pre-Course": "403",
@@ -16162,72 +12892,12 @@
     {
         "Subject": "ECE",
         "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1278
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1279
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
         "Pre-Subject": "ECE",
         "Pre-Course": "403",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1279
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1280
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1281
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1281
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1282
     },
     {
         "Subject": "ECE",
@@ -16242,82 +12912,12 @@
     {
         "Subject": "ECE",
         "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1283
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1284
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1284
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1285
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
         "Pre-Subject": "ECE",
         "Pre-Course": "403",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1285
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1286
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1287
-    },
-    {
-        "Subject": "ECE",
-        "Course": "570",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1287
     },
     {
         "Subject": "ECE",
@@ -16338,36 +12938,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1288
-    },
-    {
-        "Subject": "ECE",
-        "Course": "575",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1289
-    },
-    {
-        "Subject": "ECE",
-        "Course": "575",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1290
-    },
-    {
-        "Subject": "ECE",
-        "Course": "575",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1291
     },
     {
         "Subject": "ECE",
@@ -16401,36 +12971,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "576",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1295
-    },
-    {
-        "Subject": "ECE",
-        "Course": "576",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1296
-    },
-    {
-        "Subject": "ECE",
-        "Course": "576",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1297
-    },
-    {
-        "Subject": "ECE",
         "Course": "578",
         "Pre-Subject": "ECE",
         "Pre-Course": "421",
@@ -16448,36 +12988,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 1299
-    },
-    {
-        "Subject": "ECE",
-        "Course": "578",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1300
-    },
-    {
-        "Subject": "ECE",
-        "Course": "578",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1301
-    },
-    {
-        "Subject": "ECE",
-        "Course": "578",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1302
     },
     {
         "Subject": "ECE",
@@ -16541,36 +13051,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "583",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1309
-    },
-    {
-        "Subject": "ECE",
-        "Course": "583",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1310
-    },
-    {
-        "Subject": "ECE",
-        "Course": "583",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1311
-    },
-    {
-        "Subject": "ECE",
         "Course": "584",
         "Pre-Subject": "ECE",
         "Pre-Course": "429",
@@ -16591,36 +13071,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "584",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1313
-    },
-    {
-        "Subject": "ECE",
-        "Course": "584",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1314
-    },
-    {
-        "Subject": "ECE",
-        "Course": "584",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1315
-    },
-    {
-        "Subject": "ECE",
         "Course": "586",
         "Pre-Subject": "ECE",
         "Pre-Course": "485",
@@ -16628,36 +13078,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1316
-    },
-    {
-        "Subject": "ECE",
-        "Course": "586",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1317
-    },
-    {
-        "Subject": "ECE",
-        "Course": "586",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1318
-    },
-    {
-        "Subject": "ECE",
-        "Course": "586",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1319
     },
     {
         "Subject": "ECE",
@@ -16681,36 +13101,6 @@
     },
     {
         "Subject": "ECE",
-        "Course": "587",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1322
-    },
-    {
-        "Subject": "ECE",
-        "Course": "587",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1323
-    },
-    {
-        "Subject": "ECE",
-        "Course": "587",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1324
-    },
-    {
-        "Subject": "ECE",
         "Course": "588",
         "Pre-Subject": "None",
         "Pre-Course": "None",
@@ -16728,16 +13118,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 1326
-    },
-    {
-        "Subject": "ECE",
-        "Course": "588",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1327
     },
     {
         "Subject": "ECE",
@@ -19562,16 +15942,6 @@
     {
         "Subject": "HIST",
         "Course": "388",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1584
-    },
-    {
-        "Subject": "HIST",
-        "Course": "388",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -19608,26 +15978,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 1588
-    },
-    {
-        "Subject": "HIST",
-        "Course": "388",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1589
-    },
-    {
-        "Subject": "HIST",
-        "Course": "388",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1590
     },
     {
         "Subject": "HIST",
@@ -19742,16 +16092,6 @@
     {
         "Subject": "HUM",
         "Course": "200",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1602
-    },
-    {
-        "Subject": "HUM",
-        "Course": "200",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -19788,26 +16128,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 1606
-    },
-    {
-        "Subject": "HUM",
-        "Course": "200",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1607
-    },
-    {
-        "Subject": "HUM",
-        "Course": "200",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1608
     },
     {
         "Subject": "HUM",
@@ -19922,16 +16242,6 @@
     {
         "Subject": "HUM",
         "Course": "208",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1620
-    },
-    {
-        "Subject": "HUM",
-        "Course": "208",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -19968,26 +16278,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 1624
-    },
-    {
-        "Subject": "HUM",
-        "Course": "208",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1625
-    },
-    {
-        "Subject": "HUM",
-        "Course": "208",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1626
     },
     {
         "Subject": "HUM",
@@ -20252,16 +16542,6 @@
     {
         "Subject": "HUM",
         "Course": "380",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1653
-    },
-    {
-        "Subject": "HUM",
-        "Course": "380",
         "Pre-Subject": "HUM",
         "Pre-Course": "202",
         "Other": "None",
@@ -20298,26 +16578,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 1657
-    },
-    {
-        "Subject": "HUM",
-        "Course": "380",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1658
-    },
-    {
-        "Subject": "HUM",
-        "Course": "380",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1659
     },
     {
         "Subject": "HUM",
@@ -21538,16 +17798,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 1738
-    },
-    {
-        "Subject": "ITMD",
-        "Course": "412",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 1739
     },
     {
         "Subject": "ITMD",
@@ -29311,16 +25561,6 @@
     },
     {
         "Subject": "MSED",
-        "Course": "400",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2140
-    },
-    {
-        "Subject": "MSED",
         "Course": "450",
         "Pre-Subject": "MSED",
         "Pre-Course": "300",
@@ -29891,16 +26131,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "400",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2168
-    },
-    {
-        "Subject": "MATH",
         "Course": "402",
         "Pre-Subject": "MATH",
         "Pre-Course": "251",
@@ -29908,16 +26138,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2169
-    },
-    {
-        "Subject": "MATH",
-        "Course": "402",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2170
     },
     {
         "Subject": "MATH",
@@ -29981,16 +26201,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "405",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2173
-    },
-    {
-        "Subject": "MATH",
         "Course": "410",
         "Pre-Subject": "MATH",
         "Pre-Course": "230",
@@ -29998,16 +26208,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2174
-    },
-    {
-        "Subject": "MATH",
-        "Course": "410",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2175
     },
     {
         "Subject": "MATH",
@@ -30028,16 +26228,6 @@
         "Concurrent": "True",
         "MinGrade": "D",
         "Index": 2177
-    },
-    {
-        "Subject": "MATH",
-        "Course": "430",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2178
     },
     {
         "Subject": "MATH",
@@ -30101,16 +26291,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "453",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2184
-    },
-    {
-        "Subject": "MATH",
         "Course": "454",
         "Pre-Subject": "MATH",
         "Pre-Course": "230",
@@ -30168,16 +26348,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2187
-    },
-    {
-        "Subject": "MATH",
-        "Course": "461",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2188
     },
     {
         "Subject": "MATH",
@@ -30191,16 +26361,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "474",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2190
-    },
-    {
-        "Subject": "MATH",
         "Course": "475",
         "Pre-Subject": "MATH",
         "Pre-Course": "251",
@@ -30211,16 +26371,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "475",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2192
-    },
-    {
-        "Subject": "MATH",
         "Course": "476",
         "Pre-Subject": "MATH",
         "Pre-Course": "475",
@@ -30228,16 +26378,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2193
-    },
-    {
-        "Subject": "MATH",
-        "Course": "476",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2194
     },
     {
         "Subject": "MATH",
@@ -30421,16 +26561,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "487",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2208
-    },
-    {
-        "Subject": "MATH",
         "Course": "488",
         "Pre-Subject": "MATH",
         "Pre-Course": "251",
@@ -30451,16 +26581,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "488",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2210
-    },
-    {
-        "Subject": "MATH",
         "Course": "489",
         "Pre-Subject": "MATH",
         "Pre-Course": "252",
@@ -30478,36 +26598,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2212
-    },
-    {
-        "Subject": "MATH",
-        "Course": "500",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2213
-    },
-    {
-        "Subject": "MATH",
-        "Course": "500",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2214
-    },
-    {
-        "Subject": "MATH",
-        "Course": "500",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2215
     },
     {
         "Subject": "MATH",
@@ -30541,56 +26631,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "512",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2219
-    },
-    {
-        "Subject": "MATH",
-        "Course": "512",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2220
-    },
-    {
-        "Subject": "MATH",
-        "Course": "512",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2221
-    },
-    {
-        "Subject": "MATH",
-        "Course": "515",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2222
-    },
-    {
-        "Subject": "MATH",
-        "Course": "515",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2223
-    },
-    {
-        "Subject": "MATH",
         "Course": "519",
         "Pre-Subject": "MATH",
         "Pre-Course": "402",
@@ -30598,36 +26638,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2224
-    },
-    {
-        "Subject": "MATH",
-        "Course": "519",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2225
-    },
-    {
-        "Subject": "MATH",
-        "Course": "519",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2226
-    },
-    {
-        "Subject": "MATH",
-        "Course": "519",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2227
     },
     {
         "Subject": "MATH",
@@ -30681,36 +26691,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "532",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2233
-    },
-    {
-        "Subject": "MATH",
-        "Course": "532",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2234
-    },
-    {
-        "Subject": "MATH",
-        "Course": "532",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2235
-    },
-    {
-        "Subject": "MATH",
         "Course": "535",
         "Pre-Subject": "MATH",
         "Pre-Course": "332",
@@ -30718,36 +26698,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2236
-    },
-    {
-        "Subject": "MATH",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2237
-    },
-    {
-        "Subject": "MATH",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2238
-    },
-    {
-        "Subject": "MATH",
-        "Course": "535",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2239
     },
     {
         "Subject": "MATH",
@@ -30802,16 +26752,6 @@
     {
         "Subject": "MATH",
         "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2242
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
         "Pre-Subject": "MATH",
         "Pre-Course": "332",
         "Other": "None",
@@ -30822,31 +26762,11 @@
     {
         "Subject": "MATH",
         "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2243
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
         "Pre-Subject": "MATH",
         "Pre-Course": "332",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
-        "Index": 2244
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
         "Index": 2244
     },
     {
@@ -30882,31 +26802,11 @@
     {
         "Subject": "MATH",
         "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2246
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
         "Pre-Subject": "MATH",
         "Pre-Course": "333",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
-        "Index": 2247
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
         "Index": 2247
     },
     {
@@ -30922,102 +26822,12 @@
     {
         "Subject": "MATH",
         "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2248
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2249
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
         "Pre-Subject": "MATH",
         "Pre-Course": "475",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2249
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2250
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2250
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2251
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2251
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2252
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2252
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2253
     },
     {
         "Subject": "MATH",
@@ -31032,142 +26842,12 @@
     {
         "Subject": "MATH",
         "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2254
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2254
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2255
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2255
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2256
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2256
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2257
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
         "Pre-Subject": "MATH",
         "Pre-Course": "475",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2257
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2258
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2258
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2259
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2259
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2260
-    },
-    {
-        "Subject": "MATH",
-        "Course": "542",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2260
     },
     {
         "Subject": "MATH",
@@ -31251,36 +26931,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "546",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2269
-    },
-    {
-        "Subject": "MATH",
-        "Course": "546",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2270
-    },
-    {
-        "Subject": "MATH",
-        "Course": "546",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2271
-    },
-    {
-        "Subject": "MATH",
         "Course": "548",
         "Pre-Subject": "MATH",
         "Pre-Course": "474",
@@ -31361,36 +27011,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2279
-    },
-    {
-        "Subject": "MATH",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2280
-    },
-    {
-        "Subject": "MATH",
-        "Course": "555",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2281
-    },
-    {
-        "Subject": "MATH",
         "Course": "556",
         "Pre-Subject": "MATH",
         "Pre-Course": "400",
@@ -31398,36 +27018,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2282
-    },
-    {
-        "Subject": "MATH",
-        "Course": "556",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2283
-    },
-    {
-        "Subject": "MATH",
-        "Course": "556",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2284
-    },
-    {
-        "Subject": "MATH",
-        "Course": "556",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2285
     },
     {
         "Subject": "MATH",
@@ -31541,36 +27131,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "567",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2295
-    },
-    {
-        "Subject": "MATH",
-        "Course": "567",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2296
-    },
-    {
-        "Subject": "MATH",
-        "Course": "567",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2297
-    },
-    {
-        "Subject": "MATH",
         "Course": "568",
         "Pre-Subject": "MATH",
         "Pre-Course": "563",
@@ -31612,16 +27172,6 @@
     {
         "Subject": "MATH",
         "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2300
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
         "Pre-Subject": "MATH",
         "Pre-Course": "474",
         "Other": "None",
@@ -31632,31 +27182,11 @@
     {
         "Subject": "MATH",
         "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2301
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
         "Pre-Subject": "MATH",
         "Pre-Course": "474",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
-        "Index": 2302
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
         "Index": 2302
     },
     {
@@ -31692,31 +27222,11 @@
     {
         "Subject": "MATH",
         "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2304
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
         "Pre-Subject": "MATH",
         "Pre-Course": "475",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
-        "Index": 2305
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
         "Index": 2305
     },
     {
@@ -31732,102 +27242,12 @@
     {
         "Subject": "MATH",
         "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2306
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2307
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
         "Pre-Subject": "MATH",
         "Pre-Course": "350",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2307
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2308
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2308
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2309
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2309
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2310
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2310
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2311
     },
     {
         "Subject": "MATH",
@@ -31842,142 +27262,12 @@
     {
         "Subject": "MATH",
         "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2312
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2312
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2313
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2313
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2314
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2314
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2315
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
         "Pre-Subject": "MATH",
         "Pre-Course": "350",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2315
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2316
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2316
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2317
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2317
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2318
-    },
-    {
-        "Subject": "MATH",
-        "Course": "569",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2318
     },
     {
         "Subject": "MATH",
@@ -32041,36 +27331,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "577",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2323
-    },
-    {
-        "Subject": "MATH",
-        "Course": "577",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2324
-    },
-    {
-        "Subject": "MATH",
-        "Course": "577",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2325
-    },
-    {
-        "Subject": "MATH",
         "Course": "578",
         "Pre-Subject": "MATH",
         "Pre-Course": "350",
@@ -32081,36 +27341,6 @@
     },
     {
         "Subject": "MATH",
-        "Course": "578",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2327
-    },
-    {
-        "Subject": "MATH",
-        "Course": "578",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2328
-    },
-    {
-        "Subject": "MATH",
-        "Course": "578",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2329
-    },
-    {
-        "Subject": "MATH",
         "Course": "579",
         "Pre-Subject": "MATH",
         "Pre-Course": "350",
@@ -32118,36 +27348,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2330
-    },
-    {
-        "Subject": "MATH",
-        "Course": "579",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2331
-    },
-    {
-        "Subject": "MATH",
-        "Course": "579",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2332
-    },
-    {
-        "Subject": "MATH",
-        "Course": "579",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2333
     },
     {
         "Subject": "MATH",
@@ -32168,36 +27368,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2335
-    },
-    {
-        "Subject": "MATH",
-        "Course": "581",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2336
-    },
-    {
-        "Subject": "MATH",
-        "Course": "581",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2337
-    },
-    {
-        "Subject": "MATH",
-        "Course": "581",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2338
     },
     {
         "Subject": "MATH",
@@ -33317,37 +28487,7 @@
         "Other": "Placement Test",
         "Concurrent": "False",
         "MinGrade": "None",
-        "Index": 2396
-    },
-    {
-        "Subject": "MATH",
-        "Course": "589",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
         "Index": 2397
-    },
-    {
-        "Subject": "MATH",
-        "Course": "589",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2397
-    },
-    {
-        "Subject": "MATH",
-        "Course": "589",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2398
     },
     {
         "Subject": "MATH",
@@ -33377,37 +28517,7 @@
         "Other": "Placement Test",
         "Concurrent": "False",
         "MinGrade": "None",
-        "Index": 2399
-    },
-    {
-        "Subject": "MATH",
-        "Course": "589",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
         "Index": 2400
-    },
-    {
-        "Subject": "MATH",
-        "Course": "589",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2400
-    },
-    {
-        "Subject": "MATH",
-        "Course": "589",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2401
     },
     {
         "Subject": "MATH",
@@ -34701,16 +29811,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "425",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2463
-    },
-    {
-        "Subject": "MMAE",
         "Course": "426",
         "Pre-Subject": "MMAE",
         "Pre-Course": "323",
@@ -34772,26 +29872,6 @@
     {
         "Subject": "MMAE",
         "Course": "433",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2468
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "433",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2469
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "433",
         "Pre-Subject": "MMAE",
         "Pre-Course": "323",
         "Other": "None",
@@ -34801,26 +29881,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "433",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2470
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "433",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2470
-    },
-    {
-        "Subject": "MMAE",
         "Course": "440",
         "Pre-Subject": "MMAE",
         "Pre-Course": "305",
@@ -34872,26 +29932,6 @@
     {
         "Subject": "MMAE",
         "Course": "440",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2473
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "440",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2474
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "440",
         "Pre-Subject": "MMAE",
         "Pre-Course": "315",
         "Other": "None",
@@ -34902,42 +29942,12 @@
     {
         "Subject": "MMAE",
         "Course": "440",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2475
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "440",
         "Pre-Subject": "MMAE",
         "Pre-Course": "319",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2475
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "440",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2476
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "440",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2476
     },
     {
         "Subject": "MMAE",
@@ -34961,16 +29971,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "441",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2478
-    },
-    {
-        "Subject": "MMAE",
         "Course": "443",
         "Pre-Subject": "MMAE",
         "Pre-Course": "305",
@@ -35002,52 +30002,12 @@
     {
         "Subject": "MMAE",
         "Course": "443",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2480
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "443",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2481
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "443",
         "Pre-Subject": "MATH",
         "Pre-Course": "252",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2481
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "443",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2482
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "443",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2482
     },
     {
         "Subject": "MMAE",
@@ -35111,16 +30071,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "451",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2487
-    },
-    {
-        "Subject": "MMAE",
         "Course": "453",
         "Pre-Subject": "MMAE",
         "Pre-Course": "321",
@@ -35128,26 +30078,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2488
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "453",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2489
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "453",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2490
     },
     {
         "Subject": "MMAE",
@@ -35161,36 +30091,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "461",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2492
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "461",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2493
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "461",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2494
-    },
-    {
-        "Subject": "MMAE",
         "Course": "463",
         "Pre-Subject": "MMAE",
         "Pre-Course": "365",
@@ -35198,16 +30098,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2495
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "463",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2496
     },
     {
         "Subject": "MMAE",
@@ -35228,16 +30118,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2498
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "465",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2499
     },
     {
         "Subject": "MMAE",
@@ -35271,16 +30151,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "470",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2501
-    },
-    {
-        "Subject": "MMAE",
         "Course": "472",
         "Pre-Subject": "MMAE",
         "Pre-Course": "372",
@@ -35301,16 +30171,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "473",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2504
-    },
-    {
-        "Subject": "MMAE",
         "Course": "476",
         "Pre-Subject": "MMAE",
         "Pre-Course": "370",
@@ -35321,16 +30181,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "476",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2506
-    },
-    {
-        "Subject": "MMAE",
         "Course": "482",
         "Pre-Subject": "MS",
         "Pre-Course": "201",
@@ -35338,16 +30188,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2507
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "482",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2508
     },
     {
         "Subject": "MMAE",
@@ -35388,16 +30228,6 @@
         "Concurrent": "False",
         "MinGrade": "None",
         "Index": 2510
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "501",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2511
     },
     {
         "Subject": "MMAE",
@@ -35681,36 +30511,6 @@
     },
     {
         "Subject": "MMAE",
-        "Course": "545",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2536
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "545",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2537
-    },
-    {
-        "Subject": "MMAE",
-        "Course": "545",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2538
-    },
-    {
-        "Subject": "MMAE",
         "Course": "549",
         "Pre-Subject": "MMAE",
         "Pre-Course": "543",
@@ -35778,16 +30578,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2544
-    },
-    {
-        "Subject": "MILS",
-        "Course": "107",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2545
     },
     {
         "Subject": "MILS",
@@ -37531,16 +32321,6 @@
     },
     {
         "Subject": "PHYS",
-        "Course": "403",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2701
-    },
-    {
-        "Subject": "PHYS",
         "Course": "404",
         "Pre-Subject": "PHYS",
         "Pre-Course": "223",
@@ -37558,16 +32338,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2702
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "404",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2703
     },
     {
         "Subject": "PHYS",
@@ -37622,32 +32392,12 @@
     {
         "Subject": "PHYS",
         "Course": "405",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2706
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "405",
         "Pre-Subject": "PHYS",
         "Pre-Course": "224",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2706
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "405",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2707
     },
     {
         "Subject": "PHYS",
@@ -37668,16 +32418,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2708
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "406",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2709
     },
     {
         "Subject": "PHYS",
@@ -37752,32 +32492,12 @@
     {
         "Subject": "PHYS",
         "Course": "412",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2715
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "412",
         "Pre-Subject": "PHYS",
         "Pre-Course": "223",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2715
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "412",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2716
     },
     {
         "Subject": "PHYS",
@@ -37811,16 +32531,6 @@
     },
     {
         "Subject": "PHYS",
-        "Course": "413",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2718
-    },
-    {
-        "Subject": "PHYS",
         "Course": "414",
         "Pre-Subject": "PHYS",
         "Pre-Course": "413",
@@ -37838,16 +32548,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2720
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "415",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2721
     },
     {
         "Subject": "PHYS",
@@ -37872,16 +32572,6 @@
     {
         "Subject": "PHYS",
         "Course": "418",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2724
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "418",
         "Pre-Subject": "PHYS",
         "Pre-Course": "223",
         "Other": "None",
@@ -37898,26 +32588,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2726
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "420",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2727
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "420",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2728
     },
     {
         "Subject": "PHYS",
@@ -37952,32 +32622,12 @@
     {
         "Subject": "PHYS",
         "Course": "425",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2732
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "425",
         "Pre-Subject": "PHYS",
         "Pre-Course": "224",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2732
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "425",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2733
     },
     {
         "Subject": "PHYS",
@@ -37992,32 +32642,12 @@
     {
         "Subject": "PHYS",
         "Course": "425",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2734
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "425",
         "Pre-Subject": "PHYS",
         "Pre-Course": "224",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2734
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "425",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2735
     },
     {
         "Subject": "PHYS",
@@ -38032,32 +32662,12 @@
     {
         "Subject": "PHYS",
         "Course": "425",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2736
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "425",
         "Pre-Subject": "PHYS",
         "Pre-Course": "224",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2736
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "425",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2737
     },
     {
         "Subject": "PHYS",
@@ -38082,16 +32692,6 @@
     {
         "Subject": "PHYS",
         "Course": "427",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2739
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "427",
         "Pre-Subject": "PHYS",
         "Pre-Course": "223",
         "Other": "None",
@@ -38111,16 +32711,6 @@
     },
     {
         "Subject": "PHYS",
-        "Course": "428",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2742
-    },
-    {
-        "Subject": "PHYS",
         "Course": "437",
         "Pre-Subject": "PHYS",
         "Pre-Course": "405",
@@ -38128,16 +32718,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2743
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "437",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2744
     },
     {
         "Subject": "PHYS",
@@ -38182,32 +32762,12 @@
     {
         "Subject": "PHYS",
         "Course": "440",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2747
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "440",
         "Pre-Subject": "PHYS",
         "Pre-Course": "223",
         "Other": "None",
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2747
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "440",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2748
     },
     {
         "Subject": "PHYS",
@@ -38258,16 +32818,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2752
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "485",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2753
     },
     {
         "Subject": "PHYS",
@@ -38418,16 +32968,6 @@
         "Concurrent": "False",
         "MinGrade": "C",
         "Index": 2764
-    },
-    {
-        "Subject": "PHYS",
-        "Course": "566",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2765
     },
     {
         "Subject": "PHYS",
@@ -39201,16 +33741,6 @@
     },
     {
         "Subject": "PSYC",
-        "Course": "370",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2818
-    },
-    {
-        "Subject": "PSYC",
         "Course": "381",
         "Pre-Subject": "PSYC",
         "Pre-Course": "221",
@@ -39281,26 +33811,6 @@
     },
     {
         "Subject": "PSYC",
-        "Course": "409",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2826
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "409",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2827
-    },
-    {
-        "Subject": "PSYC",
         "Course": "410",
         "Pre-Subject": "PSYC",
         "Pre-Course": "221",
@@ -39308,16 +33818,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2828
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "410",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2829
     },
     {
         "Subject": "PSYC",
@@ -39331,26 +33831,6 @@
     },
     {
         "Subject": "PSYC",
-        "Course": "411",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2831
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "411",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2832
-    },
-    {
-        "Subject": "PSYC",
         "Course": "412",
         "Pre-Subject": "PSYC",
         "Pre-Course": "221",
@@ -39358,16 +33838,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2833
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "412",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2834
     },
     {
         "Subject": "PSYC",
@@ -39381,26 +33851,6 @@
     },
     {
         "Subject": "PSYC",
-        "Course": "414",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2836
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "414",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2837
-    },
-    {
-        "Subject": "PSYC",
         "Course": "423",
         "Pre-Subject": "PSYC",
         "Pre-Course": "221",
@@ -39408,26 +33858,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2838
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "423",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2839
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "423",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2840
     },
     {
         "Subject": "PSYC",
@@ -39441,16 +33871,6 @@
     },
     {
         "Subject": "PSYC",
-        "Course": "426",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2842
-    },
-    {
-        "Subject": "PSYC",
         "Course": "435",
         "Pre-Subject": "PSYC",
         "Pre-Course": "221",
@@ -39458,26 +33878,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2843
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "435",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2844
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "435",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2845
     },
     {
         "Subject": "PSYC",
@@ -39518,26 +33918,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2848
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "436",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2849
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "436",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2850
     },
     {
         "Subject": "PSYC",
@@ -39601,16 +33981,6 @@
     },
     {
         "Subject": "PSYC",
-        "Course": "455",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2854
-    },
-    {
-        "Subject": "PSYC",
         "Course": "456",
         "Pre-Subject": "PSYC",
         "Pre-Course": "221",
@@ -39618,26 +33988,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2855
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "456",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2856
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "456",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2857
     },
     {
         "Subject": "PSYC",
@@ -39681,16 +34031,6 @@
     },
     {
         "Subject": "PSYC",
-        "Course": "481",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2861
-    },
-    {
-        "Subject": "PSYC",
         "Course": "482",
         "Pre-Subject": "PSYC",
         "Pre-Course": "204",
@@ -39708,26 +34048,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2862
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "482",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2863
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "482",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2864
     },
     {
         "Subject": "PSYC",
@@ -39761,16 +34081,6 @@
     },
     {
         "Subject": "PSYC",
-        "Course": "483",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2866
-    },
-    {
-        "Subject": "PSYC",
         "Course": "487",
         "Pre-Subject": "PSYC",
         "Pre-Course": "203",
@@ -39778,16 +34088,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2867
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "487",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2868
     },
     {
         "Subject": "PSYC",
@@ -39808,26 +34108,6 @@
         "Concurrent": "False",
         "MinGrade": "D",
         "Index": 2869
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "489",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2870
-    },
-    {
-        "Subject": "PSYC",
-        "Course": "489",
-        "Pre-Subject": "None",
-        "Pre-Course": "None",
-        "Other": "Placement Test",
-        "Concurrent": "False",
-        "MinGrade": "None",
-        "Index": 2871
     },
     {
         "Subject": "PSYC",
