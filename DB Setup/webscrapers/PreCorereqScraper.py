@@ -12,6 +12,7 @@ URL1 = "https://ssb.iit.edu/bnrprd/bwckctlg.p_disp_course_detail?cat_term_in=202
 URL2 = "&crse_numb_in=" #course number would go here (ie 480)
 req_list = []  #list of courses prereqs, to be made into JSON file
 index = 0
+errors = []
 
 '''
 Subject : CS 
@@ -25,61 +26,62 @@ Index : int to keep track of "and"s
 '''
 def parsereq(req, subject, coursenum) :
     try :
-        global index
-        presubject = "None"
-        precourse = "None"
-        other = "None"
-        concurrent = "False"
-        mingrade = "None"
-        pieces = req.split("\n")
-        cleanpieces = []
-        for piece in pieces :
-            if not piece == "" :
-                cleanpieces.append(piece)
-        pieces = cleanpieces
-
-        if len(pieces) < 3 : #this means that it is a placement test instead of a course
-            presubject = "None"
+        if not req.strip().replace("\n", "") == "Maynotbetakenconcurrently." : #sometimes the website scraping from has errors and does not list a course or any details
+            global index                                                        #get the index
+            presubject = "None" #default values
             precourse = "None"
-            other = "Placement Test"
+            other = "None"
             concurrent = "False"
             mingrade = "None"
-        else :
-            precoursesubject = pieces[0].split(":")[1] #format is CourseorTest:CS330 so split on : and take second half to get CS330
-            for i in range(len(precoursesubject)) :
-                if precoursesubject[i].isdigit() :
-                    presubject = precoursesubject[0:i]
-                    precourse = precoursesubject[i:]
-                    break
-            mingrade = pieces[1][pieces[1].find("f")+1:]
-            if "not" in pieces[2] :
-                concurrent = "False"
-            else :
-                concurrent = "True"
-        prereq = {  "Subject": subject,
-                    "Course": coursenum,
-                    "Pre-Subject": presubject,
-                    "Pre-Course": precourse	,
-                    "Other": other,
-                    "Concurrent": concurrent,
-                    "MinGrade": mingrade,
-                    "Index": index
-                }
-        req_list.append(prereq)
-    except :
-        print("Error on " + subject + coursenum)
+            pieces = req.split("\n") #get rid of formatting
+            cleanpieces = []
+            for piece in pieces :
+                if not piece == "" : #sometimes it was making the req pieces "" so we need to get rid of those instances
+                    cleanpieces.append(piece)
+            pieces = cleanpieces #just reset pieces
 
+            if len(pieces) < 3 : #this means that it is a placement test instead of a course
+                presubject = "None"
+                precourse = "None"
+                other = "Placement Test"
+                concurrent = "False"
+                mingrade = "None"
+            else :
+                precoursesubject = pieces[0].split(":")[1] #format is CourseorTest:CS330 so split on : and take second half to get CS330
+                for i in range(len(precoursesubject)) :    #loop through cs330
+                    if precoursesubject[i].isdigit() :     #once we find a digit, we know that the rest is course num
+                        presubject = precoursesubject[0:i] #break apart based on found digit
+                        precourse = precoursesubject[i:]
+                        break
+                mingrade = pieces[1][pieces[1].find("f")+1:] #"minimumgradofC" so find f and grab the next letter (probably couldve done index -1 but dont want to mess with it)
+                if "not" in pieces[2] : #if it says "maynotbetakenconcurrently" it contains not so just check for that
+                    concurrent = "False"
+                else :
+                    concurrent = "True"
+            prereq = {  "Subject": subject,  #create the json piece
+                        "Course": coursenum,
+                        "Pre-Subject": presubject,
+                        "Pre-Course": precourse	,
+                        "Other": other,
+                        "Concurrent": concurrent,
+                        "MinGrade": mingrade,
+                        "Index": index
+                    }
+            req_list.append(prereq) #build the JSON
+    except :
+        print("Error on " + subject + coursenum) #we errored here (there was a weird error on a specific one so I just added this. it just skips it)
+        errors.append(subject + " " + coursenum) #keep track to see how many errors we encounter (for debugging)
 
 def parse(req, subject, coursenum) : 
     global index
-    if isinstance(req, list) or isinstance(req, tuple) :
-        for indreq in req :
-            if indreq != "and" :
-                parsereq(indreq, subject, coursenum)
-        index = index + 1
+    if isinstance(req, list) or isinstance(req, tuple) : #check if its a list of requirements (ie an "and" of courses)
+        for indreq in req : #go through each req in the list/tuple
+            if indreq != "and" : #ignore the ands
+                parsereq(indreq, subject, coursenum) #parse the reqs
+        index = index + 1 #incrememnt after the loop so the "and"s have the same index
     else :
-        parsereq(req, subject, coursenum)
-        index = index + 1
+        parsereq(req, subject, coursenum) #parse them
+        index = index + 1 #change the index because it was just an or
         
 
         
@@ -108,24 +110,23 @@ def splitreqs(reqs, subject, courseNum) : #split the reqs into a list that follo
                     templist.append(andcourse[i]) 
                 reqparse.append(templist)
     reqclean = []
-    print(reqparse)
-    for req in reqparse :
+    for req in reqparse : #just clean up some of the req
         if isinstance(req, list) :
             templist = []
-            for innerreq in req :
+            for innerreq in req : #there was an error we would get ["\n", "and", "\n"] so this sorts that out by deleting the list and just putting an and
                 if not innerreq == "\n" :
                     templist.append(innerreq)
             if len(templist) == 1 :
-                reqclean.append("and")
+                reqclean.append("and") 
             else :
                 reqclean.append(templist)
-        elif not(req == "\n" or req == "") :
+        elif not(req == "\n" or req == "") : #just make sure its not an empty req
             reqclean.append(req)
-    print(reqclean)
-    if "and" in reqclean :
+    if "and" in reqclean : #if there is an instance where are "and"ing outside of a list (req1 and req2) instead of ((req1 and req2) or (req1 and req2))
         finalreqs = []
 
         # using list comprehension Split list into lists by particular value (got from https://www.geeksforgeeks.org/python-split-list-into-lists-by-particular-value/)
+        #turn [req1 or req2 and req3 or req4] into [[req1 or req2] and [req3 or req4]]
         size = len(reqclean)
         idx_list = [idx + 1 for idx, val in
                     enumerate(reqclean) if val == "and"]
@@ -142,16 +143,15 @@ def splitreqs(reqs, subject, courseNum) : #split the reqs into a list that follo
             finalreqs.append(templist)
 
         #make combinations of each [[], [], []] (https://stackoverflow.com/questions/798854/all-combinations-of-a-list-of-lists)
+        #we need to do this because ((req1 or req2) and (req3 or req4)) it is hard to deal with in this format so we need to apply
+        #some prepositional logic and do ((req1 and req3) or (req1 and req4) or (req2 and req3) or (req3 and req4))
         finalreqs = list(itertools.product(*finalreqs))
 
-        print(finalreqs)
-
-        for req in finalreqs :
+        for req in finalreqs : #parse all of the reqs
             parse(req, subject, courseNum)
 
     else :
-        print(reqclean)
-        for req in reqclean :
+        for req in reqclean :#parse all of the reqs (could condense this with above code but don't want to mess with it)
             parse(req, subject, courseNum)
 
 with open("../data/allCourses.JSON") as allcourses :
@@ -161,21 +161,20 @@ with open("../data/allCourses.JSON") as allcourses :
         if (i >= 0) : #use this to limit how many it actually does
             subject = classes[i]["subject"] #get the classes we have from JSON list already created (save on search and parsing time)
             courseNum = classes[i]["coursenum"] #get course num from JSON list
-            print("Course : " + subject + " " + courseNum)
             builturl = URL1 + subject + URL2 + courseNum #build the URL (if we just insert the Course subject and number in the right spot we get the page for that course)
             driver = webdriver.Chrome() #open the url we just built for the course
             driver.get(builturl)
+            print("Course: " + courseNum + " " + subject)
             data = driver.find_elements(By.CLASS_NAME, "ntdefault") #the main text is in this class
             text = data[0].text #get the text out of it
+            
             if "Corequisites" in text :     #if the course has corereqs it will say so. Just use that to determine if we even need to parse
-                ind = text.find("Corequisites:")
+                ind = text.find("Corequisites:") #this is basically the parse function but for corequisites instead of prerequisites 
                 ind2 = text.find("\nPre")
                 if ind2 == -1 :
                     ind2 = len(text) + 1
                 cores = text[ind + len("Corequisites:") + 1 : ind2-1]
                 cores = cores.split("\n")
-                if len(cores) > 1 :
-                    print("Multiple cores at " + presubject + " " + precourse)
                 for core in cores :
                     subjectcourse = core.split(" ")
                     presubject = subjectcourse[0]
@@ -199,10 +198,12 @@ with open("../data/allCourses.JSON") as allcourses :
 
                 ind = text.find("General Requirements:") #after "general requirements:" comes the prerequisites text
                 reqs = text[ind + len("General Requirements:") + 1:] #parse the reqs text based on what we just found for indexes
-                print(reqs)
                 splitreqs(reqs, subject, courseNum)
-for req in req_list :
-    print(req)
+#for req in req_list :
+#    print(req)
 outputFileName = "../data/PreCoreReq.json"  #the name of the file the courses will go
 with open(outputFileName, 'w') as json_file:  #export list to JSON file
     json_string = json.dump(req_list, json_file, indent = 4)
+print("Not entered into json file")
+for error in errors :
+    print(error)
