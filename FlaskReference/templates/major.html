@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
         <title>Select Your Major</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Linking stylesheets here -->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css')}}">
-
+        <!-- Linking fonts here -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
     <body>
         <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
         <!-- Store form in div container -->
         <div class="box">
-            <h1>Choose Your Major:</h1>
+            <h1 id="major-header">Choose Your<br>Major:</h1>
             <!-- Code for enter-button -->
             <form class = "grid" action = "/result" method ="POST">
                 <input type="hidden" name="source" value="major">
@@ -35,8 +36,6 @@
                 <button type="submit" id="enter-button">Enter</button>
             </form>
         </div>
-        <!-- if account was created successfully
-
         {% if done %}
         <form class = "grid" action = "/login" method ="POST">
             <h3 style="color: blue;">Account Created!</h3>
@@ -45,6 +44,7 @@
         <form class = "grid" action = "/" method ="POST">
             <button type="submit">Back to home</button>
         </form>
-        {% endif %}-->
+        {% endif %}
+
     </body>
     </html>

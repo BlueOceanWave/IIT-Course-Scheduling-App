@@ -26,6 +26,7 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
+    border: 0.25rem solid;
 }
 
 #enter-button {
@@ -162,3 +163,137 @@ h1{
     height: 48px;
     font-size: 2rem;
 }
+
+#major-header{
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    margin-top: -1px;
+}
+
+#majorOptions {
+   /*identify dimensions of input field*/
+   margin-top: 10px;
+   text-align: center;
+   margin-bottom: 1.25rem;
+   width: 330px;
+   height: 48px;
+   border-radius: 5px;
+   font-family: 'Roboto', sans-serif;
+   border: 0.1rem solid;
+}
+
+/*Styling for Weekdays*/
+.days-box {
+    position: absolute;
+    left: 10px;
+    padding: 5px;
+    padding: 2.5rem;
+    /*background-color:#034694;*/
+    /*background-color: rgba(0, 0, 128, 0.5);*/
+    /*background-color: rgba(30, 144, 255, 0.5);*/
+    background-color: rgba(173, 216, 230, 0.5);;
+    text-align: center;
+    width: 54%;
+    height: 100%;
+    position: absolute;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+#welcome-header{
+    /*color: white;*/
+    /*
+    color: black; 
+    margin-top: -10px;
+    border: 0.5rem solid white;*/
+    border: 5px solid #000;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#resultsBox {
+    border: 1px solid black;
+    width: 420px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    /*margin: 10px auto;*/
+    margin: 0 auto;
+}
+
+/*creating separate box for right side of page*/
+.searchBox {
+    padding: 2.5rem;
+    background-color: rgba(173, 216, 230, 0.5);
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    right: 10px;
+    margin-left: 20px;
+}
+
+#columnStyle {
+    text-align: center;
+    height: 500px;
+    width: 200px;
+    vertical-align: top;
+    padding-top: 20px;
+    color: black;
+    background-color: white;
+}
+
+.search-container {
+    position: relative;
+    /*
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;*/
+    display: inline-block;
+}
+
+#searchInput {
+    background:
+        url('/static/images/search.png') left center no-repeat,
+        url('/static/images/white_color.png') center no-repeat;
+    background-size: 50px 50px, 400px 400px;
+    padding-left: 30px;
+    width: 290px;
+    margin-top: 40px;
+    margin-right: 69px;
+}
+
+/*background-image: url('/static/images/mies_campus.jpg');*/
+
+#searchButton {
+    width: 20%;
+    height: 53.5px;
+    margin-left: -18%;
+}
+
+#custom-table {
+    vertical-align: top;
+}
+
+/*
+#searchInput{
+    position: absolute;
+    text-align: center;
+    width: 200px; /* Adjust the width of the input as needed 
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+
+/*search button
+#searchButton {
+    /*width: 250px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    width: 200px; /* Adjust the width of the input as needed
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}*/

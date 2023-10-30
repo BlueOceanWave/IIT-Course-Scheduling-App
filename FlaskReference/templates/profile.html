@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <title>Welcome!</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <!-- linking stylesheet here -->
   </head>
   <body>
     <input type="hidden" id="hiddenUsername" value="{{name|safe}}" />
@@ -93,7 +91,6 @@
     <script>
       document.getElementById("passwordCheckForm").onsubmit = function (event) {
         event.preventDefault();
-
         var password = document.getElementById("password").value;
         var username = document.getElementById("hiddenUsername").value;
         var major = document.getElementById("hiddenMajor").value;
