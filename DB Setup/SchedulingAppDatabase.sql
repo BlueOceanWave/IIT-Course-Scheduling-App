@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS instructors CASCADE;
 CREATE TABLE accounts
 (
  username varchar (50) PRIMARY KEY,
- password varchar (50),
+ password varchar (256),
  major varchar (50)
 );
 
