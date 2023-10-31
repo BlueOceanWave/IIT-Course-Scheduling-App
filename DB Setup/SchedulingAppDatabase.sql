@@ -92,3 +92,23 @@ CREATE TABLE enrollment
  FOREIGN KEY (CRN) REFERENCES classes
 );
 
+--Taken Classes
+CREATE TABLE taken
+(username varchar (50),
+ sID varchar (10),
+ cID int,
+ PRIMARY KEY (username, sID, cID),
+ FOREIGN KEY (username) REFERENCES accounts,
+ FOREIGN KEY (sID, cID) REFERENCES courses
+);
+
+--User Schedules
+CREATE TABLE schedules
+(username varchar (50),
+ sID varchar (10),
+ cID int,
+ sIndex int,
+ PRIMARY KEY (username, sID, cID, sIndex),
+ FOREIGN KEY (username) REFERENCES accounts,
+ FOREIGN KEY (sID, cID) REFERENCES courses
+);
