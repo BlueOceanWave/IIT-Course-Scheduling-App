@@ -218,6 +218,7 @@ h1{
     overflow-y: scroll;
     /*margin: 10px auto;*/
     margin: 0 auto;
+    background-color: white;
 }
 
 /*creating separate box for right side of page*/
@@ -274,6 +275,7 @@ h1{
 
 #custom-table {
     vertical-align: top;
+
 }
 
 /*

@@ -39,17 +39,23 @@ class Schedule:
     def detectLabConflict(self):
         conflictSections = []
 
-        for classSection in self.section:
+        for section1 in self.sections:
+            is_section1_lab = section1.isLab() or section1.isRecitation()
+            print(section1.course.cid, is_section1_lab)
+
             # Check if the class has a lab section 
-            if (classSection.course.hasLabSection() or classSection.course.hasRecitationSection()): # and not (classSection.isLab() or classSection.isRecitation()):
-                # Check to see if the class has a lab section scheduled
-                for labSection in self.section:
-                    if labSection.isLab() or labSection.isRecitation():
+            if (section1.course.hasLabSection() or section1.course.hasRecitationSection()):
+                # Check to see if the class has a lab section scheduled or vice versa
+                for section2 in self.sections:
+                    is_section2_lab = section2.isLab() or section2.isRecitation()
+                    print('  ', section2.course.cid, is_section2_lab, is_section1_lab^is_section2_lab)
+                    if (section1.course == section2.course) and (is_section1_lab ^ is_section2_lab):
                         break
                 else:
-                    conflictSections.append(classSection)        
+                    if section1 not in conflictSections:
+                        conflictSections.append(section1)            
 
-                
+        return conflictSections
     
     def _updateDays(self):
         self.days = {
@@ -77,3 +83,6 @@ sched.addSection(search('cs 440')[0].sections[0])
 
 for (c1, c2) in sched.detectTimeConflict():
     print(c1.course.cid, c2.course.cid)
+print('---')
+for c in sched.detectLabConflict():
+    print(c.course.cid)

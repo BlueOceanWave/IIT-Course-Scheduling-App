@@ -147,7 +147,7 @@ def result():
         print(type(isGuest))
         if isGuest != "True":    # if not guest, then add account to database
             newUser.insertToDB()
-            return render_template("signup.html",done=True)
+            return render_template("login.html", done=True)
         else:                   # if guest, then send straight to welcome page without adding to database
             return redirect(url_for('home', username="Guest", major=newUser.major))
     
