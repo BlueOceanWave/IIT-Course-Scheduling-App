@@ -36,6 +36,13 @@ class Section:
         def addInstructor(self, instructor):
             self.instructors.append(instructor)
 
+        def isLab(self):
+            return self._getSectionType() == 'Lab'
+        
+        def isRecitation(self):
+            return self._getSectionType() == 'Recitation'
+        
+
         def _toStandardTime(self, militaryTime):
             hr, min, sec = militaryTime.split(':')
             suffix = 'AM' if int(hr)<12 else 'PM'
@@ -59,7 +66,7 @@ class Section:
 
         def _getSectionType(self):
             if 'L' in self.snum:
-                return 'Lecture'
+                return 'Lab'
             elif 'R' in self.snum:
                 return 'Recitation'
             else:
@@ -118,12 +125,7 @@ class Course:
                 return True
             
         return False
-    def toJSON():
-        return
-
-    def fromJSON():
-        return
-
+  
     def __str__(self):
         result = ''
         result += f'{self.sid} {self.cid}: {self.title}'
