@@ -16,7 +16,7 @@ class Schedule:
 
         self._updateDays()
     
-    def detectConflict(self):
+    def detectTimeConflict(self):
         conflictClasses = []
 
         for sections in self.days.values():
@@ -36,12 +36,21 @@ class Schedule:
 
         return conflictClasses
 
-    def toJSON(self):
-        return
-    
-    def fromJSON(self):
-        return
+    def detectLabConflict(self):
+        conflictSections = []
 
+        for classSection in self.section:
+            # Check if the class has a lab section 
+            if (classSection.course.hasLabSection() or classSection.course.hasRecitationSection()): # and not (classSection.isLab() or classSection.isRecitation()):
+                # Check to see if the class has a lab section scheduled
+                for labSection in self.section:
+                    if labSection.isLab() or labSection.isRecitation():
+                        break
+                else:
+                    conflictSections.append(classSection)        
+
+                
+    
     def _updateDays(self):
         self.days = {
             'M': [],
@@ -66,5 +75,5 @@ sched = Schedule([sections[5], sections[6]])
 sched.addSection(search('cs 495')[0].sections[0])
 sched.addSection(search('cs 440')[0].sections[0])
 
-for (c1, c2) in sched.detectConflict():
+for (c1, c2) in sched.detectTimeConflict():
     print(c1.course.cid, c2.course.cid)
