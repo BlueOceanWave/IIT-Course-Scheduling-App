@@ -4,13 +4,12 @@ from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
 from db_oop import student_account, classes, getAllClasses
-import search, json
+import search, json, bcrypt
 
 '''This is where flask application is being made.'''
 app = Flask(__name__, template_folder="templates")
+salt =  b'$2b$12$Hw.Vq/gUQ1/0s37Wep3xP.'
 
-key = b'-NwUP8bcuumHeCWIJPz2L_MQimrSxUCKXZaNwYHRbQU='
-cipher = Fernet(key)
 
 # Directs to Main Page 
 @app.route("/", methods = ['GET', 'POST'])
@@ -93,7 +92,7 @@ def verify_password():
     username = data.get('username')
     password = data.get('password')
 
-    account = student_account(username, password)
+    account = student_account(username, bcrypt.hashpw(password.encode('utf-8'), salt).decode('utf-8'))
     if account.isInDB():
         return jsonify(status="success")
     else:
@@ -105,13 +104,13 @@ def change_account_info():
     major = request.args.get('major')
     print(username,  major)
     user = student_account(un=username, mjr=major).getFromDBWOPassword()
+    print(user.username,user.major,user.password)
     return render_template('change_account_info.html', username=user.username, password=user.password, major=user.major)
 
 
 @app.route('/update_account_info', methods=['POST'])
 def update_account_info():
     # Extract data from the form
-    old_password = request.form.get('old_password')
     old_username = request.form.get('old_username')
     new_username = request.form.get('new_username')
     new_password = request.form.get('new_password')
@@ -121,8 +120,12 @@ def update_account_info():
     if new_password != confirm_password:
         return "Passwords do not match! Please go back and try again."
     # Use the changeInfo method from db_oop.py
-    account = student_account(un=old_username, pswd=old_password).getFromDB()
-    account.changeInfo(old_username, new_username, new_password, new_major)
+    account = student_account(un=old_username).getFromDBWOPassword()
+    print(account.username,account.major,account.password)
+    if new_password != "":
+        account.changeInfo(old_username, new_username, bcrypt.hashpw(new_password.encode('utf-8'), salt).decode('utf-8'), new_major)
+    else:
+        account.changeInfo(old_username, new_username, new_password, new_major)
     return redirect(f'/view_profile?name={new_username}&major={new_major}')
 
 # This version of the /result route uses the object-oriented approach for the database entries (see db_test.py)
@@ -137,7 +140,7 @@ def result():
         password_input = request.form.get("pass")  # Extracts the "name" field from the dictionary
         major_input = request.form.get("major")
         isGuest = request.form.get('guest')
-        newUser = student_account(un=name_input, pswd=password_input, mjr=major_input) 
+        newUser = student_account(un=name_input, pswd=bcrypt.hashpw(password_input.encode('utf-8'), salt).decode('utf-8'), mjr=major_input) 
         print(newUser.username)
         print(newUser.password)
         print(newUser.major)
@@ -153,12 +156,12 @@ def result():
         password_input = request.form.get("pass")
         guest_input = request.form.get("guest-input") 
         print("name is ", name_input)
-        userInput = student_account(name_input, password_input)
+        userInput = student_account(name_input, bcrypt.hashpw(password_input.encode('utf-8'), salt).decode('utf-8'))
         print(userInput.isInDB())
         if userInput.isInDB() is False:
             return "Invalid credentials!"
         else:
-            student_db_info = student_account.getFromDB(userInput)
+            student_db_info = userInput.getFromDB()
             return redirect(url_for("home", username=student_db_info.username, 
                                           major=student_db_info.major)) # renders and executes index.html again,
                                                                         # but this time with the given name

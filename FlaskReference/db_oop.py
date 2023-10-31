@@ -1,6 +1,8 @@
 import psycopg2
-import json
+import json, bcrypt
 from datetime import time
+
+salt =  b'$2b$12$Hw.Vq/gUQ1/0s37Wep3xP.'
 
 # This is my attempt at making an object-oriented approach at communicating with the database
 # The goal is to make a user object, and link it to the database.
@@ -24,6 +26,7 @@ class student_account:
 
     def __init__(self, un="", pswd="", mjr=""):
         self.username = un
+        # self.password = bcrypt.hashpw(pswd.encode('utf-8'), salt).decode('utf-8')
         self.password = pswd
         self.major = mjr
         
@@ -105,14 +108,25 @@ class student_account:
         
     def changeInfo(self, old_username, new_username, new_password, new_major):
         cursor = connection.cursor()
-        query = f"""
-            UPDATE {self.table}
-            SET username = %s, password = %s, major = %s
-            WHERE username = %s;
-        """
-        values = (new_username, new_password, new_major, old_username)
-        cursor.execute(query, values)
-        connection.commit()
+        if new_password != "":
+            query = f"""
+                UPDATE {self.table}
+                SET username = %s, password = %s, major = %s
+                WHERE username = %s;
+            """
+            values = (new_username, new_password, new_major, old_username)
+            cursor.execute(query, values)
+            connection.commit()
+        else:
+            print("blank new password")
+            query = f"""
+                UPDATE {self.table}
+                SET username = %s, major = %s
+                WHERE username = %s;
+            """
+            values = (new_username, new_major, old_username)
+            cursor.execute(query, values)
+            connection.commit()
         cursor.close()
         return
 
