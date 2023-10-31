@@ -21,11 +21,7 @@
                 <input type="hidden" name = "name" id="name" value="{{ name }}">
                 <input type="hidden" name = "pass" id="password" value="{{ password }}">
                 <input type="hidden" name = "guest" id="guest" value="{{ guest }}">
-                <!--<label for = "Major" id = "majorLabel">Choose Your Major:</label><br>-->
-                <!-- <form class="grid" action="/major" method="POST">
-                    <input type="hidden" name="guest-input" value="true">
-                    <button type="submit" id="guest-button">Continue as Guest</button><br>
-                </form>-->
+                
                 <select name = "major" id = "majorOptions">
                     <option value = "Computer Science" selected>Computer Science</option>
                     <option value = "Computer Engineering">Computer Engineering</option>
@@ -36,6 +32,8 @@
                 <button type="submit" id="enter-button">Enter</button>
             </form>
         </div>
+
+
         {% if done %}
         <form class = "grid" action = "/login" method ="POST">
             <h3 style="color: blue;">Account Created!</h3>
