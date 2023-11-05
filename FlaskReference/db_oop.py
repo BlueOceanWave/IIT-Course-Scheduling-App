@@ -185,3 +185,13 @@ def getAllClasses():
     finally:
         if connection:
             connection.close()
+
+def insertToTaken(username, sid, cid):
+    cursor = connection.cursor()
+    query = f"INSERT INTO taken (username, sid, cid) VALUES (%s, %s, %s)"
+    values = (username, sid, cid)
+    cursor.execute(query, values)
+    connection.commit()
+    cursor.close()
+    print("Taken class added for ", username)
+    return True
