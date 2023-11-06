@@ -3,7 +3,7 @@ from jinja2 import Environment
 from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
-from db_oop import student_account, classes, getAllClasses, insertToTaken
+from db_oop import student_account, classes, getAllClasses, insertToTaken, getTakenCourses
 import search, json, bcrypt
 
 '''This is where flask application is being made.'''
@@ -178,6 +178,16 @@ def add_taken():
         return jsonify(status="success")
     else:
         return jsonify(status="fail")
+
+@app.route("/get_taken_course/<username>", methods = ['POST', 'GET'])
+def get_taken(username):
+    taken_courses = getTakenCourses(username)
+    courses_json = []
+    for c in taken_courses:
+        for id in c:
+            courses_json.append({"sid": id[0], "cid" : id[1]})
+    print("sent ", courses_json)
+    return jsonify(courses_json)
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
