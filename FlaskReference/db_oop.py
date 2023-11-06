@@ -195,3 +195,14 @@ def insertToTaken(username, sid, cid):
     cursor.close()
     print("Taken class added for ", username)
     return True
+
+
+def getTakenCourses(username):
+    cursor = connection.cursor()
+    query = f"SELECT sid, cid FROM taken WHERE username = %s"
+    values = (username,)
+    cursor.execute(query, values)
+    result = cursor.fetchall()
+    cursor.close()
+    print("Got course/s ", result, " for ", username)
+    return [result]
