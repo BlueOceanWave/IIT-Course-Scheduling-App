@@ -264,8 +264,8 @@ def show_search_results(searchbar):
 
 # print(show_search_results("ece 443"))
 
-for c in search('cs 330'):
-    print(c)
-    for s in c.sections:
-        print("  ", s)
-    print()
+# for c in search('cs 330'):
+#     print(c)
+#     for s in c.sections:
+#         print("  ", s)
+#     print()

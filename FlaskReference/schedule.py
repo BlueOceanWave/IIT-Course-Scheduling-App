@@ -5,10 +5,12 @@ class Schedule:
         self.sections = sections
         self._updateDays()
     
+    # Adds a section to the schedule
     def addSection(self, section):
         self.sections.append(section)
         self._updateDays()
     
+    # Removes a section from the schedule
     def removeSection(self, section):
         idx = self.sections.index(section)
         if idx != -1:
@@ -16,6 +18,8 @@ class Schedule:
 
         self._updateDays()
     
+    # Returns list of conflict classes
+    # Each conflict is a tuple of two sections
     def detectTimeConflict(self):
         conflictClasses = []
 
@@ -36,6 +40,7 @@ class Schedule:
 
         return conflictClasses
 
+    # Returns a list of sections missing its lab/class
     def detectLabConflict(self):
         conflictSections = []
 
@@ -57,6 +62,7 @@ class Schedule:
 
         return conflictSections
     
+    # Update each day with its classes
     def _updateDays(self):
         self.days = {
             'M': [],
@@ -82,7 +88,6 @@ sched.addSection(search('cs 495')[0].sections[0])
 sched.addSection(search('cs 440')[0].sections[0])
 
 for (c1, c2) in sched.detectTimeConflict():
-    print(c1.course.cid, c2.course.cid)
-print('---')
+    print(f'Time conflict: {c1.course.cid}, {c2.course.cid}')
 for c in sched.detectLabConflict():
-    print(c.course.cid)
+    print('Missing lab/class: ', c.course.cid)
