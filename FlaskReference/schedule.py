@@ -41,14 +41,14 @@ class Schedule:
 
         for section1 in self.sections:
             is_section1_lab = section1.isLab() or section1.isRecitation()
-            print(section1.course.cid, is_section1_lab)
+            # print(section1.course.cid, is_section1_lab)
 
             # Check if the class has a lab section 
             if (section1.course.hasLabSection() or section1.course.hasRecitationSection()):
                 # Check to see if the class has a lab section scheduled or vice versa
                 for section2 in self.sections:
                     is_section2_lab = section2.isLab() or section2.isRecitation()
-                    print('  ', section2.course.cid, is_section2_lab, is_section1_lab^is_section2_lab)
+                    # print('  ', section2.course.cid, is_section2_lab, is_section1_lab^is_section2_lab)
                     if (section1.course == section2.course) and (is_section1_lab ^ is_section2_lab):
                         break
                 else:
@@ -75,8 +75,8 @@ class Schedule:
                 self.days[day].append(section)
 
         
-sections =  search('cs 100')[0].sections
-sched = Schedule([sections[5], sections[6]])
+sections =  search('cs 330')[0].sections
+sched = Schedule([sections[0]])#, sections[6]])
 
 sched.addSection(search('cs 495')[0].sections[0])
 sched.addSection(search('cs 440')[0].sections[0])
