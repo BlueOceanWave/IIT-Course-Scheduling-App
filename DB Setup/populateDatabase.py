@@ -346,7 +346,7 @@ def addMajorRequirementsToDatabase() :
 
 
 # Deletes all tables and recreates them
-createDatabase() 
+# createDatabase() 
 
 # Add table entries in order to ensure foriegn keys are satisfied
 addSubjectsToDatabse(subjects) 

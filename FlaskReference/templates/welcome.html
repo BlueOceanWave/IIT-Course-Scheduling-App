@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <!-- Adding icon to header file for tab -->
     <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <script type="text/JavaScript" src="{{ url_for('static', filename='/script/script.js')}}"></script>
 </head>
 <body>
-  
+    <div id="pageIdentifier" data-page-name="welcome"></div>
     <!-- Top right corner: Clickable box -->
     <div class="searchBox">
         <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
@@ -69,6 +68,6 @@
     </div>
 
     <!--<a href="/course_display">See list of courses</a> -->
-    
+    <script type="text/JavaScript" src="{{ url_for('static', filename='/script/show_courses.js')}}"></script>
 </body>
 </html>

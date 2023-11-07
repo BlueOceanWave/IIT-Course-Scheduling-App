@@ -5,8 +5,29 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
     <!-- linking stylesheet here -->
+    <style>
+      #resultsBox {
+        width: 50%; /* Adjust width as needed, or set to a fixed width like 600px */
+        height: 300px; /* Set a fixed height for your results box */
+        overflow-y: auto; /* Add a vertical scrollbar to the box */
+        border: 1px solid #ccc; /* Add a border for better visibility (optional) */
+        margin-top: 20px; /* Space above the results box (optional) */
+        padding: 10px; /* Padding inside the box (optional) */
+      }
+    </style>
+    <style>
+      #takenCoursesBox {
+        width: 50%; /* Adjust width as needed, or set to a fixed width like 600px */
+        height: 300px; /* Set a fixed height for your results box */
+        overflow-y: auto; /* Add a vertical scrollbar to the box */
+        border: 1px solid #ccc; /* Add a border for better visibility (optional) */
+        margin-top: 20px; /* Space above the results box (optional) */
+        padding: 10px; /* Padding inside the box (optional) */
+      }
+    </style>
   </head>
   <body>
+    <div id="pageIdentifier" data-page-name="profile"></div>
     <input type="hidden" id="hiddenUsername" value="{{name|safe}}" />
     <input type="hidden" id="hiddenMajor" value="{{major}}" />
     <center>
@@ -31,6 +52,20 @@
       >
         Logout
       </button>
+
+      <br><br><br><br><br>
+
+      <center>
+        <h3>Search for Courses:</h3>
+        <input type="text" id="searchInput" placeholder="Enter a course to search..." />
+        <button onclick="searchTakenCourse()" class="btn btn-info">Search</button>
+        <div id="resultsBox"></div>
+      </center>
+      <br><br>
+      <center>
+        <h3>Taken Courses:</h3>
+        <div id="takenCoursesBox"></div>
+      </center>
 
       <!-- Change Account Info Modal -->
       <div class="modal" id="changeInfoModal">
@@ -119,5 +154,6 @@
           });
       };
     </script>
+    <script type="text/JavaScript" src="{{ url_for('static', filename='/script/show_courses.js')}}"></script>
   </body>
 </html>
