@@ -304,8 +304,8 @@ def addMajorRequirementsToDatabase() :
 
     for major in majorrequirements : #get all majors in majorrequirements
         try:  #need to manually add core requirements (IPRO and hum/social sciences)
-            cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO I", "497", '6', '1']) 
-            cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO II", "497", '6', '2'])
+            #cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO I", "497", '6', '1']) 
+            #cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO II", "497", '6', '2'])
             for (i, cid) in [(1, '200'), (2, '202'), (3, '204'), (4, '206'), (5, '208')] :
                 cursor.execute(majorQuery, [major, 'Humanities Requirement', "HUM", cid, '3', str(2 + i)])
 
