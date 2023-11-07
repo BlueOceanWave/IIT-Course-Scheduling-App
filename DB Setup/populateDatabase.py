@@ -11,11 +11,11 @@ connection = psycopg2.connect(
 )
 
 # Extract json files
-classes_json = open('IPRO-497-Group-D/DB Setup/data/Fall_2023.json')
-courses_json = open('IPRO-497-Group-D/DB Setup/data/allCourses.json')
-subjects_json = open('IPRO-497-Group-D/DB Setup/data/subjects.json')
-requirements_json = open('IPRO-497-Group-D/DB Setup/data/PreCoreReq.json')
-majorrequirements_json = open('IPRO-497-Group-D/DB Setup/data/majorRequirements.json')
+classes_json = open('DB Setup/data/Fall_2023.json')
+courses_json = open('DB Setup/data/allCourses.json')
+subjects_json = open('DB Setup/data/subjects.json')
+requirements_json = open('DB Setup/data/PreCoreReq.json')
+majorrequirements_json = open('DB Setup/data/majorRequirements.json')
 classes = json.load(classes_json)
 courses = json.load(courses_json)
 subjects = json.load(subjects_json)
@@ -145,7 +145,7 @@ def extractRequirementData(entry):
 def createDatabase():
     cursor = connection.cursor()
 
-    with open('IPRO-497-Group-D/DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
+    with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
         sql_commands = sql_file.read()
         cursor.execute(sql_commands)
     
