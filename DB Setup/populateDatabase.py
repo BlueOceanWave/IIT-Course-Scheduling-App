@@ -156,10 +156,15 @@ def extractEnrollmentData(entry):
 def createDatabase():
     cursor = connection.cursor()
 
-    with open('IPRO-497-Group-D/DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
-        sql_commands = sql_file.read()
-        cursor.execute(sql_commands)
-    
+    try:
+        with open('IPRO-497-Group-D/DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
+            sql_commands = sql_file.read()
+            cursor.execute(sql_commands)
+    except:
+        with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
+            sql_commands = sql_file.read()
+            cursor.execute(sql_commands)
+            
     connection.commit()
     cursor.close()
 
