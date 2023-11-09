@@ -155,5 +155,12 @@
       };
     </script>
     <script type="text/JavaScript" src="{{ url_for('static', filename='/script/show_courses.js')}}"></script>
+    <script>
+      // Call the function to get and display courses when the page loads
+      window.onload = function () {
+          getAndDisplayTakenCourses();
+      };
+  </script>
+
   </body>
 </html>

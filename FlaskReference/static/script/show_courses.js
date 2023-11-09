@@ -2,23 +2,38 @@
 function getAndDisplayTakenCourses() {
     var username = document.getElementById("hiddenUsername").value; // Assumes you have a hidden input with the username
     fetch(`/get_taken_course/${username}`)
-      .then(response => response.json())
-      .then(courses => {
-        var coursesBox = document.getElementById('takenCoursesBox');
-        coursesBox.innerHTML = ''; // Clear the container before adding new content
-        courses.forEach(course => {
-          coursesBox.innerHTML += `<p>${course.sid} ${course.cid}, </p>`; // Display each course in a new paragraph
-        });
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
+        .then(response => response.json())
+        .then(courses => {
+            var coursesBox = document.getElementById('takenCoursesBox');
+            coursesBox.innerHTML = ''; // Clear the container before adding new content
+            courses.sort((a, b) => a.sid.localeCompare(b.sid));
+            let lastSID = ''; // Keep track of the last 'sid' we've seen
+            courses.forEach(course => {
+                //alert(`${lastSID} and ${course.sid}`);
+                if (lastSID !== course.sid) {
+                    // Check if 'sid' has changed since the last course
+                    if (lastSID !== '') {
+                        // New line if this is not the first course added
+                        coursesBox.innerHTML += `<p></p>`;
+                    }
+                    // Start a new paragraph and update 'lastSID'
+                    coursesBox.innerHTML += `${course.sid} ${course.cid}, `;
+                } else {
+                    // If 'sid' hasn't changed, continue appending to the same paragraph
+                    coursesBox.innerHTML += `${course.sid} ${course.cid}, `;
+                }
+                lastSID = course.sid;
+            });
 
-  // Call the function to get and display courses when the page loads
-  window.onload = function() {
-    getAndDisplayTakenCourses();
-  };
+            if (courses.length > 0) {
+                // Close the last paragraph if any courses were added
+                coursesBox.innerHTML += `</p>`;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
 
 function searchCourse() {
     let searchTerm = document.getElementById('searchInput').value;
@@ -29,26 +44,44 @@ function searchCourse() {
         },
         body: `query=${searchTerm}`,
     })
-    .then(response => response.json())
-    .then(data => {
-        let resultsBox = document.getElementById('resultsBox');
-        resultsBox.innerHTML = '';  // Clear previous results
-        data.forEach(course => {
-            let courseElem = document.createElement('div');
-            courseElem.innerHTML = `<br><strong>${course.title} (${course.sid} ${course.cid})</strong>: ${course.description}`;
-            resultsBox.appendChild(courseElem);
-            course.sections.forEach(section => {
-                let sectionElem = document.createElement('a');
-                sectionElem.href = '#';
-                sectionElem.innerHTML = `Section: ${section.snum}, ${section.starttime}-${section.endtime} <br>`;
-                sectionElem.addEventListener('click', function() {
-                    // Perform action for the welcome page
-                    alert(`Clicked on section ${section.snum} of ${course.title} from welcome.html`); 
+        .then(response => response.json())
+        .then(data => {
+            let resultsBox = document.getElementById('resultsBox');
+            resultsBox.innerHTML = '';  // Clear previous results
+            data.forEach(course => {
+                let courseElem = document.createElement('div');
+                courseElem.innerHTML = `<br><strong>${course.title} (${course.sid} ${course.cid})</strong>: ${course.description}`;
+                resultsBox.appendChild(courseElem);
+                course.sections.forEach(section => {
+                    let sectionElem = document.createElement('a');
+                    sectionElem.href = '#';
+                    sectionElem.innerHTML = `Section: ${section.snum}, ${section.days} from ${section.starttime}-${section.endtime} <br>`;
+                    sectionElem.addEventListener('click', function () {
+                        // Perform action for the welcome page
+                        alert(`Clicked on section ${section.snum} of ${course.title} from welcome.html`);
+                        var username = document.getElementById('name').value;
+                        fetch('/add_to_schedule', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                username: username,
+                                crn: section.crn,
+                                sindex: '1'
+                            })
+                        }).then(response => response.json()).then(data => {
+                            if (data.status == "success") {
+                                //window.location.href = '/change_account_info'; // Redirect to change account info page
+                            } else {
+                                alert("Something wrong happened. F.");
+                            }
+                        });
+                    });
+                    resultsBox.appendChild(sectionElem);
                 });
-                resultsBox.appendChild(sectionElem);
             });
         });
-    });
 }
 
 function searchTakenCourse() {
@@ -60,66 +93,44 @@ function searchTakenCourse() {
         },
         body: `query=${searchTerm}`,
     })
-    .then(response => response.json())
-    .then(data => {
-        let resultsBox = document.getElementById('resultsBox');
-        resultsBox.innerHTML = '';  // Clear previous results
-        data.forEach(course => {
-            let courseElem = document.createElement('div');
-            let takenElem = document.createElement('a');
-            takenElem.href = '#';
-            courseElem.innerHTML = `<br><strong>${course.title} (${course.sid} ${course.cid})</strong>: ${course.description}`;
-            takenElem.innerHTML = `I've already taken this`;
-            resultsBox.appendChild(courseElem);
-            resultsBox.appendChild(takenElem);
-            takenElem.addEventListener('click', function() {
-                var username = document.getElementById('hiddenUsername').value;
-                alert(`Page 2 action for ${course.title} from profile.html`);
-                fetch('/add_taken_course', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        username: username,
-                        sid : course.sid,
-                        cid : course.cid
-                    })
-                }).then(response => response.json()).then(data => {
-                    if (data.status == "success") {
-                        //window.location.href = '/change_account_info'; // Redirect to change account info page
-                    } else {
-                        alert("Something wrong happened. F.");
-                    }
-                }); 
-                getAndDisplayTakenCourses();
+        .then(response => response.json())
+        .then(data => {
+            let resultsBox = document.getElementById('resultsBox');
+            resultsBox.innerHTML = '';  // Clear previous results
+            data.forEach(course => {
+                let courseElem = document.createElement('div');
+                let takenElem = document.createElement('a');
+                takenElem.href = '#';
+                courseElem.innerHTML = `<br><strong>${course.title} (${course.sid} ${course.cid})</strong>: ${course.description}`;
+                takenElem.innerHTML = `I've already taken this`;
+                resultsBox.appendChild(courseElem);
+                resultsBox.appendChild(takenElem);
+                takenElem.addEventListener('click', function () {
+                    // Perform action for the profile page
+                    var username = document.getElementById('hiddenUsername').value;
+                    fetch('/add_taken_course', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            username: username,
+                            sid: course.sid,
+                            cid: course.cid
+                        })
+                    }).then(response => response.json()).then(data => {
+                        if (data.status == "success") {
+                            //window.location.href = '/change_account_info'; // Redirect to change account info page
+                        } else {
+                            alert("Something wrong happened. F.");
+                        }
+                    });
+                    getAndDisplayTakenCourses();
+                });
             });
         });
-    });
 }
 
 function submitForm() {
     document.getElementById('profileForm').submit();
 }
-
-// Function to get and display taken courses
-function getAndDisplayTakenCourses() {
-    var username = document.getElementById("hiddenUsername").value; // Assumes you have a hidden input with the username
-    fetch(`/get_taken_course/${username}`)
-      .then(response => response.json())
-      .then(courses => {
-        var coursesBox = document.getElementById('takenCoursesBox');
-        coursesBox.innerHTML = ''; // Clear the container before adding new content
-        courses.forEach(course => {
-          coursesBox.innerHTML += `<p>${course.sid} ${course.cid}, </p>`; // Display each course in a new paragraph
-        });
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
-
-  // Call the function to get and display courses when the page loads
-  window.onload = function() {
-    getAndDisplayTakenCourses();
-  };

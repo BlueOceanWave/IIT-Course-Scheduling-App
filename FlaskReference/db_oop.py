@@ -186,6 +186,7 @@ def getAllClasses():
         if connection:
             connection.close()
 
+
 def insertToTaken(username, sid, cid):
     cursor = connection.cursor()
     query = f"INSERT INTO taken (username, sid, cid) VALUES (%s, %s, %s)"
@@ -205,4 +206,26 @@ def getTakenCourses(username):
     result = cursor.fetchall()
     cursor.close()
     print("Got course/s ", result, " for ", username)
+    return [result]
+
+
+def insertToSchedules(username, crn, sindex):
+    cursor = connection.cursor()
+    query = f"INSERT INTO schedules (username, crn, sindex) VALUES (%s, %s, %s)"
+    values = (username, crn, sindex)
+    cursor.execute(query, values)
+    connection.commit()
+    cursor.close()
+    print("class added to ", username, "'s schedule")
+    return True
+
+
+def getSchedule(username, sindex):  # only gives crns for now; must be modified to give more details other than just crns
+    cursor = connection.cursor()
+    query = f"SELECT crn FROM schedules WHERE username = %s AND sindex = %s"
+    values = (username, sindex)
+    cursor.execute(query, values)
+    result = cursor.fetchall()
+    cursor.close()
+    print("Got schedule ", result, " for ", username)
     return [result]

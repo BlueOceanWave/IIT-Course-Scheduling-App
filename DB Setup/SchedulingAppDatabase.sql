@@ -108,12 +108,11 @@ CREATE TABLE taken
 --User Schedules
 CREATE TABLE schedules
 (username varchar (50),
- sID varchar (10),
- cID int,
+ CRN int,
  sIndex int,
- PRIMARY KEY (username, sID, cID, sIndex),
+ PRIMARY KEY (username, CRN, sIndex),
  FOREIGN KEY (username) REFERENCES accounts,
- FOREIGN KEY (sID, cID) REFERENCES courses
+FOREIGN KEY (CRN) REFERENCES classes
 );
 
 --Major Requirements
