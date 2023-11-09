@@ -12,21 +12,24 @@ connection = psycopg2.connect(
 
 # Extract json files
 try:
-    classes_json = open('IPRO-497-Group-D/DB Setup/data/Fall_2023.json')
+    classes_json = open('IPRO-497-Group-D/DB Setup/data/Spring_2024.json')
+    Spring_2024_classes_json = open('IPRO-497-Group-D/DB Setup/data/Spring_2024.json')
     courses_json = open('IPRO-497-Group-D/DB Setup/data/allCourses.json')
     subjects_json = open('IPRO-497-Group-D/DB Setup/data/subjects.json')
     requirements_json = open('IPRO-497-Group-D/DB Setup/data/PreCoreReq.json')
     majorrequirements_json = open('IPRO-497-Group-D/DB Setup/data/majorRequirements.json')
     enrollment_json = open('IPRO-497-Group-D/DB Setup/data/Fall_2023_Enrollment.json')
 except:
-    classes_json = open('DB Setup/data/Fall_2023.json')
+    classes_json = open('DB Setup/data/Spring_2024.json')
+    Spring_2024_classes_json = open('IPRO-497-Group-D/DB Setup/data/Spring_2024.json')
     courses_json = open('DB Setup/data/allCourses.json')
     subjects_json = open('DB Setup/data/subjects.json')
     requirements_json = open('DB Setup/data/PreCoreReq.json')
     majorrequirements_json = open('DB Setup/data/majorRequirements.json')
-    enrollment_json = open('DB Setup/data/Fall_2023_Enrollment.json')
+    #enrollment_json = open('DB Setup/data/Fall_2023_Enrollment.json')
     
 classes = json.load(classes_json)
+Spring_2024 = json.load(Spring_2024_classes_json)
 courses = json.load(courses_json)
 subjects = json.load(subjects_json)
 requirements = json.load(requirements_json)
@@ -386,4 +389,4 @@ addCoursesToDatabse(courses)
 addClassesToDatabase(classes)
 addRequirementsToDatabase(requirements)
 addMajorRequirementsToDatabase()
-addEnrollmentDataToDatabase()
+#addEnrollmentDataToDatabase()
