@@ -11,15 +11,27 @@ connection = psycopg2.connect(
 )
 
 # Extract json files
-classes_json = open('DB Setup/data/Fall_2023.json')
-courses_json = open('DB Setup/data/allCourses.json')
-subjects_json = open('DB Setup/data/subjects.json')
-requirements_json = open('DB Setup/data/PreCoreReq.json')
+try:
+    classes_json = open('IPRO-497-Group-D/DB Setup/data/Fall_2023.json')
+    courses_json = open('IPRO-497-Group-D/DB Setup/data/allCourses.json')
+    subjects_json = open('IPRO-497-Group-D/DB Setup/data/subjects.json')
+    requirements_json = open('IPRO-497-Group-D/DB Setup/data/PreCoreReq.json')
+    majorrequirements_json = open('IPRO-497-Group-D/DB Setup/data/majorRequirements.json')
+    enrollment_json = open('IPRO-497-Group-D/DB Setup/data/Fall_2023_Enrollment.json')
+except:
+    classes_json = open('DB Setup/data/Fall_2023.json')
+    courses_json = open('DB Setup/data/allCourses.json')
+    subjects_json = open('DB Setup/data/subjects.json')
+    requirements_json = open('DB Setup/data/PreCoreReq.json')
+    majorrequirements_json = open('DB Setup/data/majorRequirements.json')
+    enrollment_json = open('DB Setup/data/Fall_2023_Enrollment.json')
+    
 classes = json.load(classes_json)
 courses = json.load(courses_json)
 subjects = json.load(subjects_json)
 requirements = json.load(requirements_json)
-
+majorrequirements = json.load(majorrequirements_json)
+enrollment = json.load(enrollment_json)
 
 def extractTime(time):
     ABORT_VALUE = None
@@ -138,15 +150,21 @@ def extractRequirementData(entry):
 
     return result
 
-
+def extractEnrollmentData(entry):
+    print("Hi")
 
 def createDatabase():
     cursor = connection.cursor()
 
-    with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
-        sql_commands = sql_file.read()
-        cursor.execute(sql_commands)
-    
+    try:
+        with open('IPRO-497-Group-D/DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
+            sql_commands = sql_file.read()
+            cursor.execute(sql_commands)
+    except:
+        with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
+            sql_commands = sql_file.read()
+            cursor.execute(sql_commands)
+            
     connection.commit()
     cursor.close()
 
@@ -277,11 +295,95 @@ def addRequirementsToDatabase(requirements):
 
     print('Added requirements to database')
 
+def addMajorRequirementsToDatabase() :
+
+    #list of things to be added manually :
+        #Computer Science
+            #CS electives
+            #Science Electives
+            #Free Electives
+        
+        #Computer and Cybersecurity Engineering
+            #Cybersecurity Software engineering elective
+            #Career Elective '', I
+
+        #Computer Engineering
+            #Professional ECE electives
+            #Career Elective '', I, II, III
+
+    majors = []
+    start = 1
+    index = 8
+
+    cursor = connection.cursor()
+    majorQuery = 'INSERT INTO majors (major, requirement, sID, cID, hours, index) VALUES (%s, %s, %s, %s, %s, %s)'
+
+    for major in majorrequirements : #get all majors in majorrequirements
+        try:  #need to manually add core requirements (IPRO and hum/social sciences)
+            #cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO I", "497", '6', '1']) 
+            #cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO II", "497", '6', '2'])
+            for (i, cid) in [(1, '200'), (2, '202'), (3, '204'), (4, '206'), (5, '208')] :
+                cursor.execute(majorQuery, [major, 'Humanities Requirement', "HUM", cid, '3', str(2 + i)])
+
+                #-------------------I need to add higher level humanity requirements here ------------------------
+                #-------------------I need to add higher level humanity requirements here ------------------------
+                #-------------------I need to add higher level humanity requirements here ------------------------
+                
+        except Exception as error:
+            print(f"Couldn't add IPRO and Humanities for {major}")
+            print(error)
+
+        for requirement in majorrequirements[major] : #get all the individual requirements
+            if 'IPRO' in requirement : #if its an ipro, dont process it
+                pass
+            elif (start == 1) and ('(' in requirement) and (')' in requirement) : #if it is the first line in requirements and can be processed (may not need start)
+                hours = requirement[requirement.index('(') + 1 : requirement.index(')')] #find the values between (hours)
+                if '-' in hours : #if it is something like 2-3 hours
+                    hours = str(min(list(map(lambda x : int(x), hours.split('-'))))) #get both values from string, make them ints, min them, and then convert back to string
+                start += 1 #make it so this doesnt keep running
+
+            for classes in  majorrequirements[major][requirement]: #the json is a dictionary of majors, which the keys are a dictionary of requirement sections
+
+                if not ('Select' in classes or 'Choose' in classes or 'See' in classes or '(' in classes or 'Elective' in classes) : #everytime I encountered an invalid entry I added a case to ignore it
+                    
+                    for classes in classes.split(' or ') : #if the values had class or class, we want them to have the same index
+                        subcourse = classes.split(' ')     #split the class from "sid cid"
+                        sID = subcourse[0]
+                        cID = subcourse[1]
+                        try: #try to add to database
+                            cursor.execute(majorQuery, [major, requirement, sID, cID, hours, str(index)]) #insert all the values
+                            connection.commit() #commit to the database
+                        except Exception as error : #if error, tell us on what value and why
+                            print(f"Could not add {major} requirement {requirement} with course {sID} {cID}")
+                            print(error)
+                    index += 1 #increment index so that new values are not put together
+            start = 1
+
+def addEnrollmentDataToDatabase():
+    cursor = connection.cursor()
+    enrollmentQuery = 'INSERT INTO enrollment (crn, enrollment, enrollmentmax, waitlist) VALUES (%s, %s, %s, %s)'
+    databaseQuery = 'SELECT 1 FROM classes WHERE crn = %s'
+    for cls in (classes):
+        cursor.execute(databaseQuery, [cls['CRN']])
+        if(cursor.fetchone()):
+            try:
+                cursor.execute(enrollmentQuery, (cls['CRN'], enrollment[cls['CRN']]['seats']['actual'], enrollment[cls['CRN']]['seats']['capacity'], enrollment[cls['CRN']]['waitlist']['actual']))
+                connection.commit() #commit to the database
+            except Exception as error:
+                print(f"Couldn't add IPRO and Humanities for {cls['CRN']}")
+                print(error)
+                continue
+            
+    
+ 
+
 # Deletes all tables and recreates them
-# createDatabase() 
+createDatabase() 
 
 # Add table entries in order to ensure foriegn keys are satisfied
 addSubjectsToDatabse(subjects) 
 addCoursesToDatabse(courses)
 addClassesToDatabase(classes)
 addRequirementsToDatabase(requirements)
+addMajorRequirementsToDatabase()
+addEnrollmentDataToDatabase()

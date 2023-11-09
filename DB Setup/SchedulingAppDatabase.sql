@@ -8,7 +8,10 @@ DROP TABLE IF EXISTS classes CASCADE;
 DROP TABLE IF EXISTS enrollment CASCADE;
 DROP TABLE IF EXISTS term CASCADE;
 DROP TABLE IF EXISTS instructors CASCADE;
-
+DROP TABLE IF EXISTS enrollment CASCADE;
+DROP TABLE IF EXISTS taken CASCADE;
+DROP TABLE IF EXISTS schedules CASCADE;
+DROP TABLE IF EXISTS majors CASCADE;
 --Account
 CREATE TABLE accounts
 (
@@ -111,3 +114,15 @@ CREATE TABLE schedules
  FOREIGN KEY (username) REFERENCES accounts,
 FOREIGN KEY (CRN) REFERENCES classes
 );
+
+--Major Requirements
+CREATE TABLE majors
+(major varchar (100),
+ requirement varchar(100), --Name of requirement, for user understanding (so we can tell them what requirement they're not meeting)
+ sID varchar(10),
+ cID int,
+ hours int,  --This is to know if requirement fully satisfied (sum hours from classes taken and compare to this)
+ index int,  --This is to know when there is an option between two classes but both dont count. ie ECE 443 or CS 458. you can take one of these but both dont count toward major
+ PRIMARY KEY (major, requirement, sID, cID), --
+ FOREIGN KEY (sID, cID) REFERENCES courses --The course requirement needs to be in our database
+ );

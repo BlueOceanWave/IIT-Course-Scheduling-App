@@ -38,8 +38,15 @@
 - GitHub flow - https://docs.github.com/en/get-started/quickstart/github-flow
 
 ## Week 10 ##
-
+- The dry run and final presentation dates were incorrectly listed on Tuesday.  The syllabus has been changed to show Dry run (11/20) and final presentation (11/27) dates changed to be on - Monday (e.g., normal class time).
+- Make sure all the stories you need for your primary scenario are on the board. 
+- Consider labeling all the stories for your primary scenario to make it easy to identify and work on those stories.
+  
 ## Week 11 ##
+- Drive to complete one scenario from your teams Product Design Doc
+- I will be picking one to two teams to represent our class on 7/20 or 7/13
+- Dry run AND Final presentation template - https://github.com/mschray/IPro497Sample/blob/main/Course%20Content/Final%20Presentation%20Template.pptx
+- Is everyone clear on what they are going to be doing until the final presentation?
 
 ## Week 12 ##
 
