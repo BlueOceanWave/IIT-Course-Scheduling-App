@@ -3,7 +3,7 @@ from jinja2 import Environment
 from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
-from db_oop import student_account, classes, getAllClasses, insertToTaken, getTakenCourses
+from db_oop import student_account, classes, getAllClasses, insertToTaken, getTakenCourses, insertToSchedules
 import search, json, bcrypt
 
 '''This is where flask application is being made.'''
@@ -188,6 +188,19 @@ def get_taken(username):
             courses_json.append({"sid": id[0], "cid" : id[1]})
     print("sent ", courses_json)
     return jsonify(courses_json)
+
+@app.route("/add_to_schedule", methods = ['POST'])
+def add_to_schedule():
+    data = request.json
+    username = data.get('username')
+    crn = data.get('crn')
+    sindex = data.get('sindex')
+    inserted = insertToSchedules(username, crn, sindex)
+    print("added to schedules")
+    if inserted:
+        return jsonify(status="success")
+    else:
+        return jsonify(status="fail")
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
