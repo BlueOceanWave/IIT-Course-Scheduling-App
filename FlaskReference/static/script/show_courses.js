@@ -50,7 +50,7 @@ function searchCourse() {
             resultsBox.innerHTML = '';  // Clear previous results
             data.forEach(course => {
                 let courseElem = document.createElement('div');
-                var shortDesc = course.description;//.substring(0, course.description.indexOf("."))
+                var shortDesc = course.description.substring(0, course.description.indexOf(".") + 1);
                 courseElem.innerHTML = `<br><strong>${course.title} (${course.sid} ${course.cid})</strong>: ${shortDesc}`;
                 resultsBox.appendChild(courseElem);
                 course.sections.forEach(section => {
