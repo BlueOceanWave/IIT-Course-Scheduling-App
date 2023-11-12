@@ -204,9 +204,9 @@ def del_taken():
     username = data.get('username')
     sid = data.get('sid')
     cid = data.get('cid')
-    inserted, message = deleteFromTaken(username, sid, cid)
+    deleted, message = deleteFromTaken(username, sid, cid)
     
-    if inserted:
+    if deleted:
         print(message)
         return jsonify(status="success")
     else:

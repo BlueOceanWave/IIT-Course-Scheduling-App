@@ -207,6 +207,7 @@ def deleteFromTaken(username, sid, cid):
     cursor.execute(checkQuery, [username, sid, cid])
     if(cursor.fetchone()):
         query = "DELETE FROM taken WHERE (username = %s AND sid = %s AND cid = %s)"
+        print("HELLO " + username,sid,cid)
         cursor.execute(query, [username, sid, cid])
         connection.commit()
         cursor.close()

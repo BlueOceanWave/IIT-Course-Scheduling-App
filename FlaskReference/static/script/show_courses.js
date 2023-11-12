@@ -14,21 +14,46 @@ function getAndDisplayTakenCourses() {
                     // Check if 'sid' has changed since the last course
                     if (lastSID !== '') {
                         // New line if this is not the first course added
+                        
                         coursesBox.innerHTML += `<p></p>`;
                     }
                     // Start a new paragraph and update 'lastSID'
-                    coursesBox.innerHTML += `${course.sid} ${course.cid}, `;
+                    coursesBox.innerHTML += `<a class="course-link" href="#" data-sid="${course.sid}" data-cid="${course.cid}">${course.sid} ${course.cid}</a>, `;
+                    
                 } else {
-                    // If 'sid' hasn't changed, continue appending to the same paragraph
-                    coursesBox.innerHTML += `${course.sid} ${course.cid}, `;
+                    coursesBox.innerHTML += `<a class="course-link" href="#" data-sid="${course.sid}" data-cid="${course.cid}">${course.sid} ${course.cid}</a>, `;
                 }
                 lastSID = course.sid;
+                
             });
 
             if (courses.length > 0) {
                 // Close the last paragraph if any courses were added
                 coursesBox.innerHTML += `</p>`;
             }
+
+            coursesBox.addEventListener('click', function (del) {
+                if (del.target.classList.contains('course-link')) {
+                    sid = del.target.dataset.sid;
+                    cid = del.target.dataset.cid;
+
+                    fetch('/del_taken_course', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            username: username,
+                            sid: sid,
+                            cid: cid
+                        })
+                    }).then(response => response.json()).then(data => {
+                        if (data.status == "success") {
+                            getAndDisplayTakenCourses(); // Refresh the displayed courses after deletion
+                        }
+                    });
+                }
+            });
         })
         .catch(error => {
             console.error('Error:', error);
