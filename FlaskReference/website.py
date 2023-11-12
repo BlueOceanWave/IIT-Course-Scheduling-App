@@ -3,7 +3,7 @@ from jinja2 import Environment
 from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
-from db_oop import student_account, classes, getAllClasses, insertToTaken, getTakenCourses, insertToSchedules
+from db_oop import student_account, classes, getAllClasses, insertToTaken, deleteFromTaken, getTakenCourses, insertToSchedules
 import search, json, bcrypt
 import psycopg2
 
@@ -189,13 +189,30 @@ def add_taken():
     username = data.get('username')
     sid = data.get('sid')
     cid = data.get('cid')
-    inserted = insertToTaken(username, sid, cid)
-    print("added to taken")
+    inserted, message = insertToTaken(username, sid, cid)
+    
     if inserted:
+        print(message)
         return jsonify(status="success")
     else:
+        print(message)
         return jsonify(status="fail")
-
+    
+@app.route("/del_taken_course", methods = ['POST'])
+def del_taken():
+    data = request.json
+    username = data.get('username')
+    sid = data.get('sid')
+    cid = data.get('cid')
+    inserted, message = deleteFromTaken(username, sid, cid)
+    
+    if inserted:
+        print(message)
+        return jsonify(status="success")
+    else:
+        print(message)
+        return jsonify(status="fail")
+    
 @app.route("/get_taken_course/<username>", methods = ['POST', 'GET'])
 def get_taken(username):
     taken_courses = getTakenCourses(username)

@@ -189,14 +189,30 @@ def getAllClasses():
 
 def insertToTaken(username, sid, cid):
     cursor = connection.cursor()
-    query = f"INSERT INTO taken (username, sid, cid) VALUES (%s, %s, %s)"
-    values = (username, sid, cid)
-    cursor.execute(query, values)
-    connection.commit()
-    cursor.close()
-    print("Taken class added for ", username)
-    return True
+    checkQuery = "SELECT 1 FROM taken WHERE (username = %s AND sid = %s AND cid = %s)"
+    cursor.execute(checkQuery, [username, sid, cid])
+    if(not cursor.fetchone()):
+        query = f"INSERT INTO taken (username, sid, cid) VALUES (%s, %s, %s)"
+        values = (username, sid, cid)
+        cursor.execute(query, values)
+        connection.commit()
+        cursor.close()
+        print("Taken class added for ", username)
+        return True, "Added To Taken"
+    return False, "Class Already In Taken"
 
+def deleteFromTaken(username, sid, cid):
+    cursor = connection.cursor()
+    checkQuery = "SELECT 1 FROM taken WHERE (username = %s AND sid = %s AND cid = %s)"
+    cursor.execute(checkQuery, [username, sid, cid])
+    if(cursor.fetchone()):
+        query = "DELETE FROM taken WHERE (username = %s AND sid = %s AND cid = %s)"
+        cursor.execute(query, [username, sid, cid])
+        connection.commit()
+        cursor.close()
+        print("Taken class deleted for ", username)
+        return True, "Deleted From Taken"
+    return False, "Class Doesnt Exist"
 
 def getTakenCourses(username):
     cursor = connection.cursor()
