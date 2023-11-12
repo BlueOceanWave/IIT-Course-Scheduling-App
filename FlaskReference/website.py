@@ -1,15 +1,24 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, flash
 from jinja2 import Environment
 from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
 from db_oop import student_account, classes, getAllClasses, insertToTaken, getTakenCourses, insertToSchedules
 import search, json, bcrypt
+import psycopg2
 
 '''This is where flask application is being made.'''
 app = Flask(__name__, template_folder="templates")
+app.secret_key = 'VerySecretKey'
 salt =  b'$2b$12$Hw.Vq/gUQ1/0s37Wep3xP.'
 
+connection = psycopg2.connect(
+    dbname='NewDB',
+    user='postgres',
+    password='123456',
+    host='localhost',
+    port='5432'
+)
 
 # Directs to Main Page 
 @app.route("/", methods = ['GET', 'POST'])
@@ -84,7 +93,15 @@ def guest_major():
 def redirect_major():
     name_input = request.form.get("name")
     password_input = request.form.get("pass")
-    return render_template("major.html", name = name_input, password = password_input, guest=False)
+    
+    cursor = connection.cursor()
+    query = "SELECT 1 FROM accounts WHERE (username = '"
+    cursor.execute(query + name_input + "')")
+    if(not cursor.fetchone()):
+        return render_template("major.html", name = name_input, password = password_input, guest=False)
+    message = "Username Already Exists"
+    return render_template("signup.html", message = message)
+    #return render_template("major.html", name = name_input, password = password_input, guest=False)
 
 @app.route('/verify_password', methods=['POST'])
 def verify_password():
