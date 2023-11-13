@@ -460,7 +460,7 @@ def addMajorRequirementsToDatabase() :
 
                 #---------------------------------I need to do electives for each major now--------------------------------------------------
             #for CS 
-            if major = "Bachelor of Science in Computer Science" :
+            if major == "Bachelor of Science in Computer Science" :
                 #"Computer Science Electives (12)": [
                 #"Select 12 credit hours 2"
                 cids = list(range(300, 500))
@@ -480,7 +480,7 @@ def addMajorRequirementsToDatabase() :
                 #I think for this one, just do a * in the database or something because I cannot do every class in the database for this.
                 #"Free Electives (12)": [
                 #"Select 12 credit hours"
-                cursor.execute(majorQuery, [major, 'Free Elective', "*", 1, '12', str(buffer)])
+                cursor.execute(majorQuery, [major, 'Free Elective', "CS", 100, '12', str(buffer)])
                 buffer += 1
 
 
