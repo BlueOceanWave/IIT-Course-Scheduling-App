@@ -18,10 +18,10 @@ function getAndDisplayTakenCourses() {
                         coursesBox.innerHTML += `<p></p>`;
                     }
                     // Start a new paragraph and update 'lastSID'
-                    coursesBox.innerHTML += `<a class="course-link" href="#" data-sid="${course.sid}" data-cid="${course.cid}">${course.sid} ${course.cid}</a>, `;
+                    coursesBox.innerHTML += `| <a class="course-link" href="#" data-sid="${course.sid}" data-cid="${course.cid}">${course.sid} ${course.cid}</a> | `;
                     
                 } else {
-                    coursesBox.innerHTML += `<a class="course-link" href="#" data-sid="${course.sid}" data-cid="${course.cid}">${course.sid} ${course.cid}</a>, `;
+                    coursesBox.innerHTML += ` | <a class="course-link" href="#" data-sid="${course.sid}" data-cid="${course.cid}">${course.sid} ${course.cid}</a> |  `;
                 }
                 lastSID = course.sid;
                 
