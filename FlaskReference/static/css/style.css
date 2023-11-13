@@ -185,40 +185,16 @@ h1{
 /*Styling for Weekdays*/
 .days-box {
     position: absolute;
-    left: 10px;
+    left: 0px;
     padding: 5px;
     padding: 2.5rem;
-    /*background-color:#034694;*/
-    /*background-color: rgba(0, 0, 128, 0.5);*/
-    /*background-color: rgba(30, 144, 255, 0.5);*/
-    background-color: rgba(173, 216, 230, 0.5);;
+    background-color: rgba(173, 216, 230, 0.5);
     text-align: center;
-    width: 54%;
+    width: 55%;
     height: 100%;
     position: absolute;
     margin-right: 20px;
     overflow: hidden;
-}
-
-#welcome-header{
-    /*color: white;*/
-    /*
-    color: black; 
-    margin-top: -10px;
-    border: 0.5rem solid white;*/
-    border: 5px solid #000;
-    border-collapse: collapse;
-    margin: 0 auto;
-}
-
-#resultsBox {
-    border: 1px solid black;
-    width: 420px;
-    height: calc(100vh - 100px);
-    overflow-y: scroll;
-    /*margin: 10px auto;*/
-    margin: 0 auto;
-    background-color: white;
 }
 
 /*creating separate box for right side of page*/
@@ -231,9 +207,28 @@ h1{
     height: 100%;
     margin: 0 auto;
     position: absolute;
-    right: 10px;
-    margin-left: 20px;
+    right: 0px;
 }
+
+
+
+
+#welcome-header{
+    background-color: rgb(90, 90, 90);
+    margin: 0 auto;
+    color: white;
+}
+
+#resultsBox {
+    border: 1px solid black;
+    width: 420px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    /*margin: 10px auto;*/
+    margin: 0 auto;
+    background-color: white;
+}
+
 
 #columnStyle {
     text-align: center;
@@ -276,6 +271,32 @@ h1{
 #custom-table {
     vertical-align: top;
 
+}
+
+#schedule {
+    background-color: rgb(255, 255, 255, .90);
+    width: 50%; /* Set the width to 200 pixels */
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.schedule-event-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the container takes up the full height of the event block */
+}
+
+#recommendedClasses {
+    background-color: rgb(255, 255, 255);
+    position: relative; 
+    width: 50%;
+
+    top: 20px; 
+    left: 10px; 
+    right: 500px; 
+    border: 1px solid black; 
+    padding: 5px;
 }
 
 /*

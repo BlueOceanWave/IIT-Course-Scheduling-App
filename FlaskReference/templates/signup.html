@@ -2,6 +2,30 @@
 <html lang="en">
     <head>
         <title>Sign Up</title>
+        <style>
+            #accountAlreadyExists {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px;
+                text-align: center;
+                background-color: #fff;
+                border: 2px solid #858585;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 250px;
+                height: 125px;
+            }
+            #accountAlreadyExists button {
+            padding: 10px;
+            background-color: #f13d3d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+        </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Link stylesheets in header file -->
@@ -29,7 +53,7 @@
     <body>
         <!-- Include JavaScript code to prompt the user at different for input fields at different instances-->
         <h1>Create Account</h1>
-        <form class = "grid" action = "/redirect_major" method ="POST" onsubmit="return validateForm();">
+        <form class = "grid" action = "/redirect_major" id="createAccountForm" method ="POST" onsubmit="return validateForm();">
             <input type="hidden" name="source" value="signup">
             <div class="box">
                 <span class="material-symbols-outlined">person</span>
@@ -49,6 +73,23 @@
             {% endif %}
             
             <!--should redirect to login page-->
+        {% if message %}
+        <!-- Display the modal -->
+        <div id="accountAlreadyExists">
+            <p>{{ message }}</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
 
+        <!-- Trigger the modal display with JavaScript -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('accountAlreadyExists').style.display = 'block';
+            });
+
+            function closeModal() {
+                document.getElementById('accountAlreadyExists').style.display = 'none';
+            }
+        </script>
+        {% endif %}
     </body>
 </html>

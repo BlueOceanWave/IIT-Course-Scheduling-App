@@ -8,10 +8,10 @@ DROP TABLE IF EXISTS classes CASCADE;
 DROP TABLE IF EXISTS enrollment CASCADE;
 DROP TABLE IF EXISTS term CASCADE;
 DROP TABLE IF EXISTS instructors CASCADE;
+DROP TABLE IF EXISTS enrollment CASCADE;
 DROP TABLE IF EXISTS taken CASCADE;
-DROP TABLE IF EXISTS majors CASCADE;
 DROP TABLE IF EXISTS schedules CASCADE;
-
+DROP TABLE IF EXISTS majors CASCADE;
 --Account
 CREATE TABLE accounts
 (
@@ -108,12 +108,11 @@ CREATE TABLE taken
 --User Schedules
 CREATE TABLE schedules
 (username varchar (50),
- sID varchar (10),
- cID int,
+ CRN int,
  sIndex int,
- PRIMARY KEY (username, sID, cID, sIndex),
+ PRIMARY KEY (username, CRN, sIndex),
  FOREIGN KEY (username) REFERENCES accounts,
- FOREIGN KEY (sID, cID) REFERENCES courses
+FOREIGN KEY (CRN) REFERENCES classes
 );
 
 --Major Requirements

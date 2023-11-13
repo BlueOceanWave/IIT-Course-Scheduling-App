@@ -11,17 +11,30 @@ connection = psycopg2.connect(
 )
 
 # Extract json files
-classes_json = open('../DB Setup/data/Fall_2023.json')
-courses_json = open('../DB Setup/data/allCourses.json')
-subjects_json = open('../DB Setup/data/subjects.json')
-requirements_json = open('../DB Setup/data/PreCoreReq.json')
-majorrequirements_json = open('../DB Setup/data/majorRequirements.json')
+try:
+    classes_json = open('IPRO-497-Group-D/DB Setup/data/Fall_2023.json')
+    #Spring_2024_classes_json = open('IPRO-497-Group-D/DB Setup/data/Spring_2024.json')
+    courses_json = open('IPRO-497-Group-D/DB Setup/data/allCourses.json')
+    subjects_json = open('IPRO-497-Group-D/DB Setup/data/subjects.json')
+    requirements_json = open('IPRO-497-Group-D/DB Setup/data/PreCoreReq.json')
+    majorrequirements_json = open('IPRO-497-Group-D/DB Setup/data/majorRequirements.json')
+    enrollment_json = open('IPRO-497-Group-D/DB Setup/data/Fall_2023_Enrollment.json')
+except:
+    classes_json = open('DB Setup/data/Fall_2023.json')
+    #Spring_2024_classes_json = open('IPRO-497-Group-D/DB Setup/data/Spring_2024.json')
+    courses_json = open('DB Setup/data/allCourses.json')
+    subjects_json = open('DB Setup/data/subjects.json')
+    requirements_json = open('DB Setup/data/PreCoreReq.json')
+    majorrequirements_json = open('DB Setup/data/majorRequirements.json')
+    enrollment_json = open('DB Setup/data/Fall_2023_Enrollment.json')
+    
 classes = json.load(classes_json)
+#Spring_2024 = json.load(Spring_2024_classes_json)
 courses = json.load(courses_json)
 subjects = json.load(subjects_json)
 requirements = json.load(requirements_json)
 majorrequirements = json.load(majorrequirements_json)
-
+enrollment = json.load(enrollment_json)
 
 def extractTime(time):
     ABORT_VALUE = None
@@ -140,15 +153,21 @@ def extractRequirementData(entry):
 
     return result
 
-
+def extractEnrollmentData(entry):
+    print("Hi")
 
 def createDatabase():
     cursor = connection.cursor()
 
-    with open('../DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
-        sql_commands = sql_file.read()
-        cursor.execute(sql_commands)
-    
+    try:
+        with open('IPRO-497-Group-D/DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
+            sql_commands = sql_file.read()
+            cursor.execute(sql_commands)
+    except:
+        with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
+            sql_commands = sql_file.read()
+            cursor.execute(sql_commands)
+            
     connection.commit()
     cursor.close()
 
@@ -516,7 +535,23 @@ def addMajorRequirementsToDatabase() :
             start = 1
     print('Added Major Requirements')
 
-
+def addEnrollmentDataToDatabase():
+    cursor = connection.cursor()
+    enrollmentQuery = 'INSERT INTO enrollment (crn, enrollment, enrollmentmax, waitlist) VALUES (%s, %s, %s, %s)'
+    databaseQuery = 'SELECT 1 FROM classes WHERE crn = %s'
+    for cls in (classes):
+        cursor.execute(databaseQuery, [cls['CRN']])
+        if(cursor.fetchone()):
+            try:
+                cursor.execute(enrollmentQuery, (cls['CRN'], enrollment[cls['CRN']]['seats']['actual'], enrollment[cls['CRN']]['seats']['capacity'], enrollment[cls['CRN']]['waitlist']['actual']))
+                connection.commit() #commit to the database
+            except Exception as error:
+                print(f"Couldn't add IPRO and Humanities for {cls['CRN']}")
+                print(error)
+                continue
+            
+    
+ 
 
 # Deletes all tables and recreates them
 createDatabase() 
@@ -527,3 +562,4 @@ addCoursesToDatabse(courses)
 addClassesToDatabase(classes)
 addRequirementsToDatabase(requirements)
 addMajorRequirementsToDatabase()
+#addEnrollmentDataToDatabase()

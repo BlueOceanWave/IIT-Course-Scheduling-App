@@ -42,6 +42,13 @@ class Section:
         def isRecitation(self):
             return self._getSectionType() == 'Recitation'
         
+        def daysToIndex(self):
+            # Convert day (M-F) to index (1-5)
+            result = []
+            for day in self.days:
+                result.append('MTWRF'.index(day)+1)
+
+            return result
 
         def _toStandardTime(self, militaryTime):
             hr, min, sec = militaryTime.split(':')
