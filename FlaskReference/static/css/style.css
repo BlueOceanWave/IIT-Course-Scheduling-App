@@ -185,20 +185,33 @@ h1{
 /*Styling for Weekdays*/
 .days-box {
     position: absolute;
-    left: 10px;
+    left: 0px;
     padding: 5px;
     padding: 2.5rem;
-    /*background-color:#034694;*/
-    /*background-color: rgba(0, 0, 128, 0.5);*/
-    /*background-color: rgba(30, 144, 255, 0.5);*/
-    background-color: rgba(173, 216, 230, 0.5);;
+    background-color: rgba(173, 216, 230, 0.5);
     text-align: center;
-    width: 54%;
+    width: 55%;
     height: 100%;
     position: absolute;
     margin-right: 20px;
     overflow: hidden;
 }
+
+/*creating separate box for right side of page*/
+.searchBox {
+    padding: 2.5rem;
+    background-color: rgba(173, 216, 230, 0.5);
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    right: 0px;
+}
+
+
+
 
 #welcome-header{
     /*color: white;*/
@@ -221,19 +234,6 @@ h1{
     background-color: white;
 }
 
-/*creating separate box for right side of page*/
-.searchBox {
-    padding: 2.5rem;
-    background-color: rgba(173, 216, 230, 0.5);
-    overflow: hidden;
-    text-align: center;
-    width: 30%;
-    height: 100%;
-    margin: 0 auto;
-    position: absolute;
-    right: 10px;
-    margin-left: 20px;
-}
 
 #columnStyle {
     text-align: center;

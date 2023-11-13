@@ -186,16 +186,34 @@ def getAllClasses():
         if connection:
             connection.close()
 
+
 def insertToTaken(username, sid, cid):
     cursor = connection.cursor()
-    query = f"INSERT INTO taken (username, sid, cid) VALUES (%s, %s, %s)"
-    values = (username, sid, cid)
-    cursor.execute(query, values)
-    connection.commit()
-    cursor.close()
-    print("Taken class added for ", username)
-    return True
+    checkQuery = "SELECT 1 FROM taken WHERE (username = %s AND sid = %s AND cid = %s)"
+    cursor.execute(checkQuery, [username, sid, cid])
+    if(not cursor.fetchone()):
+        query = f"INSERT INTO taken (username, sid, cid) VALUES (%s, %s, %s)"
+        values = (username, sid, cid)
+        cursor.execute(query, values)
+        connection.commit()
+        cursor.close()
+        print("Taken class added for ", username)
+        return True, "Added To Taken"
+    return False, "Class Already In Taken"
 
+def deleteFromTaken(username, sid, cid):
+    cursor = connection.cursor()
+    checkQuery = "SELECT 1 FROM taken WHERE (username = %s AND sid = %s AND cid = %s)"
+    cursor.execute(checkQuery, [username, sid, cid])
+    if(cursor.fetchone()):
+        query = "DELETE FROM taken WHERE (username = %s AND sid = %s AND cid = %s)"
+        print("HELLO " + username,sid,cid)
+        cursor.execute(query, [username, sid, cid])
+        connection.commit()
+        cursor.close()
+        print("Taken class deleted for ", username)
+        return True, "Deleted From Taken"
+    return False, "Class Doesnt Exist"
 
 def getTakenCourses(username):
     cursor = connection.cursor()
@@ -205,4 +223,26 @@ def getTakenCourses(username):
     result = cursor.fetchall()
     cursor.close()
     print("Got course/s ", result, " for ", username)
+    return [result]
+
+
+def insertToSchedules(username, crn, sindex):
+    cursor = connection.cursor()
+    query = f"INSERT INTO schedules (username, crn, sindex) VALUES (%s, %s, %s)"
+    values = (username, crn, sindex)
+    cursor.execute(query, values)
+    connection.commit()
+    cursor.close()
+    print("class added to ", username, "'s schedule")
+    return True
+
+
+def getSchedule(username, sindex):  # only gives crns for now; must be modified to give more details other than just crns
+    cursor = connection.cursor()
+    query = f"SELECT crn FROM schedules WHERE username = %s AND sindex = %s"
+    values = (username, sindex)
+    cursor.execute(query, values)
+    result = cursor.fetchall()
+    cursor.close()
+    print("Got schedule ", result, " for ", username)
     return [result]

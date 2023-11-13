@@ -24,14 +24,12 @@
     <h1 id="welcome-header">Fall 2023</h1>
     
     <!-- Top right corner: Clickable box -->
-    <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
-        <input type="hidden" name="name" value="{{name}}">
-        <input type="hidden" name="major" value="{{major}}">
-        {{name|safe}} - {{major}}
-    </form>
-    
-
     <div class="searchBox">
+        <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
+            <input type="hidden" id = "name" name="name" value="{{name}}">
+            <input type="hidden" id = "major" name="major" value="{{major}}">
+            {{name|safe}} - {{major}}
+        </form>
         <!-- Right side: Search and results box -->
         <div style="position: absolute; right: 10px; top: 60px;">
             <div class="search-container">
