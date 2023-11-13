@@ -14,16 +14,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <!-- Adding icon to header file for tab -->
     <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <!-- Adding Google Calendar for displaying schedule-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.js"></script>
 </head>
+
 <body>
     <div id="pageIdentifier" data-page-name="welcome"></div>
+    <h1 id="welcome-header">Fall 2023</h1>
+    
     <!-- Top right corner: Clickable box -->
+    <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
+        <input type="hidden" name="name" value="{{name}}">
+        <input type="hidden" name="major" value="{{major}}">
+        {{name|safe}} - {{major}}
+    </form>
+    
+
     <div class="searchBox">
-        <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
-            <input type="hidden" name="name" value="{{name}}">
-            <input type="hidden" name="major" value="{{major}}">
-            {{name|safe}} - {{major}}
-        </form>
         <!-- Right side: Search and results box -->
         <div style="position: absolute; right: 10px; top: 60px;">
             <div class="search-container">
@@ -38,34 +46,43 @@
     </div>
 
     <!-- Updating Days box -->
-    <div class="days-box">
-        <h1 id="welcome-header">Fall 2023</h1>
-        <table id ="custom-table" border="5" cellspacing="0" align="center">
-            <tr>
-                <td id="columnStyle">
-                    <b>Monday</b> 
-                </td>
-                <td id="columnStyle">
-                    <b>Tuesday</b> 
-                </td>
-                <td id="columnStyle">
-                    <b>Wednesday</b> 
-                </td>
-                <td id="columnStyle">
-                    <b>Thursday</b>  
-                </td>
-                <td id="columnStyle">
-                    <b>Friday</b> 
-                </td>
-            </td>
-        </tr>
-    </table>
-</div>
+    <div id="schedule">
+        <div id="calendar"> 
+
+        </div>
+
+    </div>
          
     <!-- Bottom box: Recommended classes -->
-    <div style="position: absolute; bottom: 10px; left: 10px; right: 500px; border: 1px solid black; padding: 5px;">
+    <div id = "recommendedClasses">
         Recommended Classes:
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'timeGridWeek',
+                views: {
+                    timeGridWeek: {
+                        buttonText: 'Week', // Display 'Week' instead of '5 Days'
+                        slotDuration: '00:30:00', // Set the time slot duration as needed
+                        dayHeaderFormat: {weekday: 'short'},
+                        hiddenDays: [0, 6], // Hide Saturday (0) and Sunday (6)
+                    }
+                },
+                headerToolbar: false, // Hide the entire header
+                slotLabelFormat: { hour: 'numeric', minute: '2-digit', omitZeroMinute: false, meridiem: 'short' }, // Display time in slots
+                slotMinTime: '07:00:00', // Set the start time for the day
+                slotMaxTime: '22:00:00', // Set the end time for the day
+                slotDuration: '02:00:00',
+                allDaySlot: false, // Hide the "all-day" slot
+            });
+
+            calendar.render();
+        })
+    </script>
 
     <!--<a href="/course_display">See list of courses</a> -->
     <script type="text/JavaScript" src="{{ url_for('static', filename='/script/show_courses.js')}}"></script>
