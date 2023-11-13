@@ -81,13 +81,17 @@ class Schedule:
                 self.days[day].append(section)
 
         
-sections =  search('cs 330')[0].sections
-sched = Schedule([sections[0]])#, sections[6]])
+# sections =  search('cs 330')[0].sections
+# sched = Schedule([sections[0]])#, sections[6]])
 
-sched.addSection(search('cs 495')[0].sections[0])
-sched.addSection(search('cs 440')[0].sections[0])
+# sched.addSection(search('cs 495')[0].sections[0])
+# sched.addSection(search('cs 440')[0].sections[0])
 
-for (c1, c2) in sched.detectTimeConflict():
-    print(f'Time conflict: {c1.course.cid}, {c2.course.cid}')
-for c in sched.detectLabConflict():
-    print('Missing lab/class: ', c.course.cid)
+# for (c1, c2) in sched.detectTimeConflict():
+#     print(f'Time conflict: {c1.course.cid}, {c2.course.cid}')
+# for c in sched.detectLabConflict():
+#     print('Missing lab/class: ', c.course.cid)
+
+
+print(search('cs 495')[0].sections[0].days)
+print(search('cs 495')[0].sections[0].daysToIndex())

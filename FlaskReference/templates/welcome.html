@@ -71,12 +71,25 @@
                     }
                 },
                 headerToolbar: false, // Hide the entire header
+                allDaySlot: false, // Hide the "all-day" slot
+
                 slotLabelFormat: { hour: 'numeric', minute: '2-digit', omitZeroMinute: false, meridiem: 'short' }, // Display time in slots
+                slotLabelInterval: {hours: 1},
                 slotMinTime: '07:00:00', // Set the start time for the day
                 slotMaxTime: '22:00:00', // Set the end time for the day
-                slotDuration: '02:00:00',
-                allDaySlot: false, // Hide the "all-day" slot
+
+                // Workaround for "nowIndicator: false" not working (for some reason)
+                now: '2023-11-12T12:00:00', //Set day to a Saturday so highlighted column isn't visble
+
+                displayEventTime: false,
+                eventContent: function(arg) {
+                    return {
+                        html: `<div class="schedule-event-text">${arg.event.title}</div>`
+                    };
+                },
+                
             });
+
 
             calendar.render();
         })

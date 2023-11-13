@@ -83,8 +83,24 @@ function searchCourse() {
                     sectionElem.href = '#';
                     sectionElem.innerHTML = `Section: ${section.snum}, ${section.days} from ${section.starttime}-${section.endtime} <br>`;
                     sectionElem.addEventListener('click', function () {
-                        // Perform action for the welcome page
-                        alert(`Clicked on section ${section.snum} of ${course.title} from welcome.html`);
+                        // Array of colors for courses
+                        colors = ['#f5ad1d', '#e37730', '#3ad6aa', '#10bce3', '#9e3ccf', '#cbd932', '#d93237']
+
+                        // Convert days from MTWRF to numbers
+                        let days = []
+                        for (const day of section.days) {
+                            days.push('MTWRF'.indexOf(day)+1);
+                        }
+
+                        // Add course to calendar
+                        calendar.addEvent({
+                            title: `${course.sid} ${course.cid} ${section.crn}`,
+                            startTime: section.starttime,
+                            endTime: section.endtime,
+                            daysOfWeek: days,
+                            color: colors[calendar.getEvents().length%colors.length],
+                        });
+         
                         var username = document.getElementById('name').value;
                         fetch('/add_to_schedule', {
                             method: 'POST',
