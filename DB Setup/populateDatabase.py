@@ -26,7 +26,7 @@ except:
     subjects_json = open('DB Setup/data/subjects.json')
     requirements_json = open('DB Setup/data/PreCoreReq.json')
     majorrequirements_json = open('DB Setup/data/majorRequirements.json')
-    #enrollment_json = open('DB Setup/data/Fall_2023_Enrollment.json')
+    enrollment_json = open('DB Setup/data/Fall_2023_Enrollment.json')
     
 classes = json.load(classes_json)
 #Spring_2024 = json.load(Spring_2024_classes_json)
