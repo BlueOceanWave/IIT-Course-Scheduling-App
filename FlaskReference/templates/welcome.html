@@ -57,16 +57,20 @@
     </div>
 
     <script>
+        // Create calendar 
         document.addEventListener('DOMContentLoaded', function() {
+            // Get calendar div
             var calendarEl = document.getElementById('calendar');
 
             calendar = new FullCalendar.Calendar(calendarEl, {
+
+                // Create a time grid week view
                 initialView: 'timeGridWeek',
                 views: {
                     timeGridWeek: {
                         buttonText: 'Week', // Display 'Week' instead of '5 Days'
                         slotDuration: '00:30:00', // Set the time slot duration as needed
-                        dayHeaderFormat: {weekday: 'short'},
+                        dayHeaderFormat: {weekday: 'short'}, // Prints Mon-Fri
                         hiddenDays: [0, 6], // Hide Saturday (0) and Sunday (6)
                     }
                 },
@@ -74,23 +78,23 @@
                 allDaySlot: false, // Hide the "all-day" slot
 
                 slotLabelFormat: { hour: 'numeric', minute: '2-digit', omitZeroMinute: false, meridiem: 'short' }, // Display time in slots
-                slotLabelInterval: {hours: 1},
+                slotLabelInterval: {hours: 1}, // How often to display time labels
                 slotMinTime: '07:00:00', // Set the start time for the day
                 slotMaxTime: '22:00:00', // Set the end time for the day
 
-                // Workaround for "nowIndicator: false" not working (for some reason)
+                // Workaround because "nowIndicator: false" is not working (for some reason)
                 now: '2023-11-12T12:00:00', //Set day to a Saturday so highlighted column isn't visble
 
-                displayEventTime: false,
-                eventContent: function(arg) {
+                displayEventTime: false, // Don't display time within the events
+                eventContent: function(arg) { // Centers text within event blocks
                     return {
                         html: `<div class="schedule-event-text">${arg.event.title}</div>`
                     };
-                },
+                },S
                 
             });
 
-
+            // Display calendar
             calendar.render();
         })
     </script>

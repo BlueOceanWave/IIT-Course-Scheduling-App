@@ -94,11 +94,11 @@ function searchCourse() {
 
                         // Add course to calendar
                         calendar.addEvent({
-                            title: `${course.sid} ${course.cid} ${section.crn}`,
-                            startTime: section.starttime,
-                            endTime: section.endtime,
-                            daysOfWeek: days,
-                            color: colors[calendar.getEvents().length%colors.length],
+                            title: `${course.sid} ${course.cid} ${section.crn}`, // The text to display
+                            startTime: section.starttime, // start time
+                            endTime: section.endtime, // end time
+                            daysOfWeek: days, // The days of the class
+                            color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
                         });
          
                         var username = document.getElementById('name').value;
