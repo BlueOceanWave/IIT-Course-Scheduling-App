@@ -99,6 +99,16 @@
         })
     </script>
 
+    <!-- Submit search request when enter key is hit -->
+    <script>
+        var searchbar = document.getElementById("searchInput");
+        searchbar.addEventListener("keydown", function (e) {
+            if (e.keyCode === 13) { //Check if enter key was hit
+                searchCourse(); //Search for class
+            }
+        });
+    </script>
+
     <!--<a href="/course_display">See list of courses</a> -->
     <script type="text/JavaScript" src="{{ url_for('static', filename='/script/show_courses.js')}}"></script>
 </body>
