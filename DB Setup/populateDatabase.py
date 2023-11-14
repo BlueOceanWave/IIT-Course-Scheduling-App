@@ -181,6 +181,11 @@ def addSubjectsToDatabse(subjects):
 
         cursor.execute(subjectQuery, subjectValues)
     
+    #needed this for major requirements so I could differentiate between taking one and two IPROs
+    subjectQuery = 'INSERT INTO subjects (sID, lID) VALUES (%s, %s)'
+    subjectValues = ('IPRO II', '497')
+    cursor.execute(subjectQuery, subjectValues)
+
     connection.commit()
     cursor.close()
 
@@ -313,25 +318,192 @@ def addMajorRequirementsToDatabase() :
         #Computer Engineering
             #Professional ECE electives
             #Career Elective '', I, II, III
-
-    majors = []
     start = 1
     index = 8
+    buffer = 1
 
     cursor = connection.cursor()
     majorQuery = 'INSERT INTO majors (major, requirement, sID, cID, hours, index) VALUES (%s, %s, %s, %s, %s, %s)'
+    courseQuery = 'SELECT * FROM COURSES'
+    cursor.execute(courseQuery)
+    courseslist = cursor.fetchall()
+    coursesdict = {}
+    for crse in courseslist :
+        s = crse[0]
+        c = str(crse[1])
+        cs = s + c
+        coursesdict[cs] = crse[3]
 
     for major in majorrequirements : #get all majors in majorrequirements
         try:  #need to manually add core requirements (IPRO and hum/social sciences)
-            #cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO I", "497", '6', '1']) 
-            #cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO II", "497", '6', '2'])
-            for (i, cid) in [(1, '200'), (2, '202'), (3, '204'), (4, '206'), (5, '208')] :
-                cursor.execute(majorQuery, [major, 'Humanities Requirement', "HUM", cid, '3', str(2 + i)])
+            cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO", "497", '6', str(buffer)]) 
+            buffer += 1
+            cursor.execute(majorQuery, [major, 'IPRO Requirement', "IPRO II", "497", '6', str(buffer)])
+            buffer += 1
 
-                #-------------------I need to add higher level humanity requirements here ------------------------
-                #-------------------I need to add higher level humanity requirements here ------------------------
-                #-------------------I need to add higher level humanity requirements here ------------------------
+            #200 level Humanities requirement
+            for (i, cid) in [(1, '200'), (2, '202'), (3, '204'), (4, '206'), (5, '208')] :
+                cursor.execute(majorQuery, [major, 'Humanities Requirement', "HUM", cid, '3', str(buffer)])
+                buffer += 1
+
+            #humanities upper level
+            for i in range(119, 499) :
+                cs = 'AAH' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "AAH", str(i), '3', str(buffer)])
+                    buffer += 1
+            
+            for i in range(125, 499) :
+                cs = 'COM' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "COM", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'HIST' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "HIST", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'HUM' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "HUM", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'LIT' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "LIT", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'PHIL' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "PHIL", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            #Additional hum, soc, or com level social sciences
+            for i in range(151, 499) :
+                cs = 'ECON' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "ECON", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'PS' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "PS", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'PSYC' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "PSYC", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'SOC' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "SOC", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'SSCI' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "SSCI", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            #Upper level social science
+            for i in range(300, 499) :
+                cs = 'ECON' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Upper-level Social Science Electives', "ECON", str(i), '6', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'PS' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Upper-level Social Science Electives', "PS", str(i), '6', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'PSYC' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Upper-level Social Science Electives', "PSYC", str(i), '6', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'SOC' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Upper-level Social Science Electives', "SOC", str(i), '6', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'SSCI' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Upper-level Social Science Electives', "SSCI", str(i), '6', str(buffer)])
+                    buffer += 1
+
+            #Lower level social sciences
+            for i in range(200, 499) :
+                cs = 'ECON' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Lower-level Social Science Electives', "ECON", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'PS' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Lower-level Social Science Electives', "PS", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'PSYC' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Lower-level Social Science Electives', "PSYC", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'SOC' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Lower-level Social Science Electives', "SOC", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(200, 499) :
+                cs = 'SSCI' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Lower-level Social Science Electives', "SSCI", str(i), '3', str(buffer)])
+                    buffer += 1
                 
+
+                #---------------------------------I need to do electives for each major now--------------------------------------------------
+            #for CS 
+            if major == "Bachelor of Science in Computer Science" :
+                #"Computer Science Electives (12)": [
+                #"Select 12 credit hours 2"
+                cids = list(range(300, 500))
+                for i in [330, 331, 350, 351, 425, 430, 440, 450, 485, 487] :
+                    cids.remove(i)
+                for cid in cids :
+                    cs = 'CS' + str(cid)
+                    if cs in coursesdict :
+                        cursor.execute(majorQuery, [major, 'Computer Science Elective', "CS", str(cid), '12', str(buffer)])
+                        buffer += 1
+
+
+                #"Science Electives (6)": [
+                #"Select six credit hours 3"
+
+            
+                #I think for this one, just do a * in the database or something because I cannot do every class in the database for this.
+                #"Free Electives (12)": [
+                #"Select 12 credit hours"
+                cursor.execute(majorQuery, [major, 'Free Elective', "CS", 100, '12', str(buffer)])
+                buffer += 1
+
+
+
         except Exception as error:
             print(f"Couldn't add IPRO and Humanities for {major}")
             print(error)
@@ -354,13 +526,14 @@ def addMajorRequirementsToDatabase() :
                         sID = subcourse[0]
                         cID = subcourse[1]
                         try: #try to add to database
-                            cursor.execute(majorQuery, [major, requirement, sID, cID, hours, str(index)]) #insert all the values
+                            cursor.execute(majorQuery, [major, requirement, sID, cID, hours, str(buffer)]) #insert all the values
                             connection.commit() #commit to the database
                         except Exception as error : #if error, tell us on what value and why
                             print(f"Could not add {major} requirement {requirement} with course {sID} {cID}")
                             print(error)
-                    index += 1 #increment index so that new values are not put together
+                    buffer += 1 #increment index so that new values are not put together
             start = 1
+    print('Added Major Requirements')
 
 def addEnrollmentDataToDatabase():
     cursor = connection.cursor()

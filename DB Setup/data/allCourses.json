@@ -10955,6 +10955,13 @@
         "hours": "3"
     },
     {
+        "subject": "IPRO II",
+        "coursenum": "497",
+        "title": "Interprofessional Project (IPRO)",
+        "desc": "Interprofessional projects allow students to learn teamwork, leadership and project management skills, while working in multidisciplinary teams on projects involving technical, ethical, environmental, economic, public policy, and legal issues. IPRO project teams are typically comprised of 10-12 students from sophomore through graduate level and from all disciplines that can contribute to a project. Every effort will be made to accommodate students' first choices; however, it may be necessary to balance students across all projects scheduled for the semester or to consolidate students into fewer projects to meet minimum team requirement. Specific rules about selection of IPRO projects may apply to certain degree programs. Some projects may carry Humanities or Social Science credit. Students are encouraged to consult the lead faculty member for the project and their faculty advisor before registering for a project.",
+        "hours": "3"
+    },
+    {
         "subject": "ITMD",
         "coursenum": "321",
         "title": "Data Modeling and Applications",
