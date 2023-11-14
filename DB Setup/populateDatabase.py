@@ -519,7 +519,7 @@ def addMajorRequirementsToDatabase() :
 
             for classes in  majorrequirements[major][requirement]: #the json is a dictionary of majors, which the keys are a dictionary of requirement sections
 
-                if not ('Select' in classes or 'Choose' in classes or 'See' in classes or '(' in classes or 'Elective' in classes) : #everytime I encountered an invalid entry I added a case to ignore it
+                if not ('Select' in classes or 'Choose' in classes or 'See' in classes or '(' in classes or 'Elective' in classes or 'Select' in requirement or 'Choose' in requirement or 'See' in requirement) : #everytime I encountered an invalid entry I added a case to ignore it
                     
                     for classes in classes.split(' or ') : #if the values had class or class, we want them to have the same index
                         subcourse = classes.split(' ')     #split the class from "sid cid"
