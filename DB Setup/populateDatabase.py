@@ -20,13 +20,13 @@ try:
     majorrequirements_json = open('IPRO-497-Group-D/DB Setup/data/majorRequirements.json')
     enrollment_json = open('IPRO-497-Group-D/DB Setup/data/Fall_2023_Enrollment.json')
 except:
-    classes_json = open('DB Setup/data/Fall_2023.json')
+    classes_json = open('../DB Setup/data/Fall_2023.json')
     #Spring_2024_classes_json = open('IPRO-497-Group-D/DB Setup/data/Spring_2024.json')
-    courses_json = open('DB Setup/data/allCourses.json')
-    subjects_json = open('DB Setup/data/subjects.json')
-    requirements_json = open('DB Setup/data/PreCoreReq.json')
-    majorrequirements_json = open('DB Setup/data/majorRequirements.json')
-    enrollment_json = open('DB Setup/data/Fall_2023_Enrollment.json')
+    courses_json = open('../DB Setup/data/allCourses.json')
+    subjects_json = open('../DB Setup/data/subjects.json')
+    requirements_json = open('../DB Setup/data/PreCoreReq.json')
+    majorrequirements_json = open('../DB Setup/data/majorRequirements.json')
+    enrollment_json = open('../DB Setup/data/Fall_2023_Enrollment.json')
     
 classes = json.load(classes_json)
 #Spring_2024 = json.load(Spring_2024_classes_json)
@@ -164,7 +164,7 @@ def createDatabase():
             sql_commands = sql_file.read()
             cursor.execute(sql_commands)
     except:
-        with open('DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
+        with open('../DB Setup/SchedulingAppDatabase.sql', 'r') as sql_file:
             sql_commands = sql_file.read()
             cursor.execute(sql_commands)
             
@@ -519,7 +519,7 @@ def addMajorRequirementsToDatabase() :
 
             for classes in  majorrequirements[major][requirement]: #the json is a dictionary of majors, which the keys are a dictionary of requirement sections
 
-                if not ('Select' in classes or 'Choose' in classes or 'See' in classes or '(' in classes or 'Elective' in classes) : #everytime I encountered an invalid entry I added a case to ignore it
+                if not ('Select' in classes or 'Choose' in classes or 'See' in classes or '(' in classes or 'Elective' in classes or 'Select' in requirement or 'Choose' in requirement or 'See' in requirement) : #everytime I encountered an invalid entry I added a case to ignore it
                     
                     for classes in classes.split(' or ') : #if the values had class or class, we want them to have the same index
                         subcourse = classes.split(' ')     #split the class from "sid cid"
