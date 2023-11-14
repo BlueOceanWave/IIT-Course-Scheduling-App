@@ -25,7 +25,7 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 5px;
+    border-radius: 30px;
     border: 0.25rem solid;
 }
 
@@ -280,12 +280,6 @@ h1{
     margin-top: 1%;
 }
 
-.schedule-event-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ensure the container takes up the full height of the event block */
-}
 
 #recommendedClasses {
     background-color: rgb(255, 255, 255);
