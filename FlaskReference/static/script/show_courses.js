@@ -92,16 +92,20 @@ function searchCourse() {
                             days.push('MTWRF'.indexOf(day)+1);
                         }
 
-                        // Add course to calendar
-                        calendar.addEvent({
-                            id: section.crn,
-                            title: `${course.sid} ${course.cid} ${section.crn}`, // The text to display
-                            startTime: section.starttime, // start time
-                            endTime: section.endtime, // end time
-                            daysOfWeek: days, // The days of the class
-                            color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
-                        });
-         
+                        // Check if the class exists
+                        if(calendar.getEventById(section.crn) == null)
+                        {
+                            // Add course to calendar
+                            calendar.addEvent({
+                                id: section.crn,
+                                title: `${course.sid} ${course.cid} ${section.crn}`, // The text to display
+                                startTime: section.starttime, // start time
+                                endTime: section.endtime, // end time
+                                daysOfWeek: days, // The days of the class
+                                color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
+                            });
+                        }
+
                         var username = document.getElementById('name').value;
                         fetch('/add_to_schedule', {
                             method: 'POST',
