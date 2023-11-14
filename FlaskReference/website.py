@@ -97,7 +97,16 @@ def redirect_major():
     query = "SELECT 1 FROM accounts WHERE (username = '"
     cursor.execute(query + name_input + "')")
     if(not cursor.fetchone()):
-        return render_template("major.html", name = name_input, password = password_input, guest=False)
+        print("AAADASESRAFUYDIUSADHGBIA")
+        if(not (" " in name_input) and name_input != ""):
+            if(not (" " in name_input) and name_input != ""):
+                return render_template("major.html", name = name_input, password = password_input, guest=False)
+            else:
+                message = "Username Must Not Be Empty or Contain Spaces"
+                return render_template("signup.html", message = message)
+        else:
+            message = "Password Must Not Be Empty or Contain Spaces"
+            return render_template("signup.html", message = message)
     message = "Username Already Exists"
     return render_template("signup.html", message = message)
 
@@ -208,7 +217,7 @@ def del_taken():
     else:
         print(message)
         return jsonify(status="fail")
-        
+
 @app.route("/get_taken_course/<username>", methods = ['POST', 'GET'])
 def get_taken(username):
     taken_courses = getTakenCourses(username)
