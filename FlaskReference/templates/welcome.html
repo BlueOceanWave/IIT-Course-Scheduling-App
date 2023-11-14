@@ -86,9 +86,14 @@
                 now: '2023-11-12T12:00:00', //Set day to a Saturday so highlighted column isn't visble
 
                 displayEventTime: false, // Don't display time within the events
-                eventContent: function(arg) { // Centers text within event blocks
+                eventContent: function(arg) {
                     return {
-                        html: `<div class="schedule-event-text">${arg.event.title}</div>`
+                        html: `
+                            <div class="schedule-event">
+                                <button class="deleteCourse" onclick="deleteCourse('${arg.event.id}')">x</button>  
+                                <div class="schedule-event-text">${arg.event.title}</div>
+                            </div>
+                        `
                     };
                 },
                 
