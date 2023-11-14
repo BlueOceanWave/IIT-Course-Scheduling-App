@@ -27,6 +27,9 @@
     </style>
   </head>
   <body>
+    <div style="position: absolute; top: 10px; left: 10px;">
+      <button id="backToScheduler" class="btn btn-warning">Go Back to Scheduler</button>
+    </div>
     <div id="pageIdentifier" data-page-name="profile"></div>
     <input type="hidden" id="hiddenUsername" value="{{name|safe}}" />
     <input type="hidden" id="hiddenMajor" value="{{major}}" />
@@ -64,6 +67,7 @@
       <br><br>
       <center>
         <h3>Taken Courses:</h3>
+        <div>Click on a course to remove it</div>
         <div id="takenCoursesBox"></div>
       </center>
 
@@ -161,6 +165,12 @@
           getAndDisplayTakenCourses();
       };
   </script>
-
+  <script>
+    document.getElementById('backToScheduler').addEventListener('click', function() {
+      var username = document.getElementById('hiddenUsername').value;
+      var major = document.getElementById('hiddenMajor').value;
+      window.location.href = `/home/${username}/${major}`;
+    });
+  </script>
   </body>
 </html>
