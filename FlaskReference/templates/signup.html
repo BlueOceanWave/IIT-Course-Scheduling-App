@@ -17,6 +17,7 @@
                 width: 250px;
                 height: 125px;
                 border-radius: 10px;
+                box-shadow: 3px 3px 5px gray;
             }
             #error button {
             padding: 5px;
@@ -43,10 +44,12 @@
             function validateForm() {
                 const password = document.getElementById('password').value;
                 const confirmPassword = document.getElementById('confirmPassword').value;
-    
+                const errorElement = document.getElementById('errorMessage');
+                
                 if (password !== confirmPassword) {
-                    alert('The two password inputs must match.');
-                    return false;
+                    errorElement.innerText = "Passwords Are Not The Same"
+                    document.getElementById('error').style.display = 'block';
+                    return false; 
                 }
                 return true;
             }
@@ -78,7 +81,7 @@
         {% if message %}
         <!-- Display the modal -->
         <div id="error">
-            <p>{{ message }}</p>
+            <p id="errorMessage">{{ message }}</p>
             <button onclick="closeModal()">Close</button>
         </div>
 
