@@ -3,13 +3,22 @@ from jinja2 import Environment
 from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
-from db_oop import student_account, classes, getAllClasses, insertToTaken, getTakenCourses
+from db_oop import student_account, classes, getAllClasses, insertToTaken, deleteFromTaken, getTakenCourses, insertToSchedules
 import search, json, bcrypt
+import psycopg2
 
 '''This is where flask application is being made.'''
 app = Flask(__name__, template_folder="templates")
 salt =  b'$2b$12$Hw.Vq/gUQ1/0s37Wep3xP.'
 
+
+connection = psycopg2.connect(
+    dbname='NewDB',
+    user='postgres',
+    password='123456',
+    host='localhost',
+    port='5432'
+)
 
 # Directs to Main Page 
 @app.route("/", methods = ['GET', 'POST'])
@@ -84,7 +93,13 @@ def guest_major():
 def redirect_major():
     name_input = request.form.get("name")
     password_input = request.form.get("pass")
-    return render_template("major.html", name = name_input, password = password_input, guest=False)
+    cursor = connection.cursor()
+    query = "SELECT 1 FROM accounts WHERE (username = '"
+    cursor.execute(query + name_input + "')")
+    if(not cursor.fetchone()):
+        return render_template("major.html", name = name_input, password = password_input, guest=False)
+    message = "Username Already Exists"
+    return render_template("signup.html", message = message)
 
 @app.route('/verify_password', methods=['POST'])
 def verify_password():
@@ -179,6 +194,21 @@ def add_taken():
     else:
         return jsonify(status="fail")
 
+@app.route("/del_taken_course", methods = ['POST'])
+def del_taken():
+    data = request.json
+    username = data.get('username')
+    sid = data.get('sid')
+    cid = data.get('cid')
+    deleted, message = deleteFromTaken(username, sid, cid)
+    
+    if deleted:
+        print(message)
+        return jsonify(status="success")
+    else:
+        print(message)
+        return jsonify(status="fail")
+        
 @app.route("/get_taken_course/<username>", methods = ['POST', 'GET'])
 def get_taken(username):
     taken_courses = getTakenCourses(username)
