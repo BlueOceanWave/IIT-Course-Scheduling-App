@@ -18,7 +18,7 @@ html{
     /*add border elements to the container*/
     /*3.5 inches x 5 inches*/
     width: 480px;
-    height: 336px;
+    height: 360px;
     margin: 0 auto;
     position: absolute;
     /*below code places login page in center of page*/

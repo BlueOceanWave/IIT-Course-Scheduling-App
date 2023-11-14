@@ -64,6 +64,7 @@
                 <span class="material-symbols-outlined">lock</span>
                 <input type="password" id="confirmPassword" placeholder="Confirm Password"><br>
                 <button type="submit" id="create-account1">Create Account</button><br>
+                <button type="button" id="back-button">Go Back</button>
             </div>
         </form>
             {% if done %}
@@ -93,4 +94,9 @@
         </script>
         {% endif %}
     </body>
+    <script>
+        document.getElementById('back-button').addEventListener('click', function() {
+          window.location.href = `/`;
+        });
+    </script>
 </html>
