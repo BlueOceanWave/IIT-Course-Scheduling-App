@@ -94,6 +94,7 @@ function searchCourse() {
 
                         // Add course to calendar
                         calendar.addEvent({
+                            id: section.crn,
                             title: `${course.sid} ${course.cid} ${section.crn}`, // The text to display
                             startTime: section.starttime, // start time
                             endTime: section.endtime, // end time
