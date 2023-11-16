@@ -2,6 +2,14 @@
 import psycopg2
 import json
 
+
+
+#####################################NOTES I NEED TO LOOK AT THE CORE REQUIREMENTS AND MAKE SURE IM ACTUALLY COVERING EVERYTHING BECAUSE I CURRENTLY AM NOT
+#ALSO NEED TO LOOK AT INDEXES 
+#ALSO NEED TO LOOK AT MAXIMIZING CLASSES THAT APPLY TO REQUIREMENTS
+
+
+
 # Connect to PostgreSQL database
 connection = psycopg2.connect(
     dbname='NewDB',
@@ -48,7 +56,13 @@ def getTaken(user) :
         majorQuery = "SELECT sid, cid FROM taken WHERE username=%s"
         cursor.execute(majorQuery, [user])
         taken = cursor.fetchall()
-        return taken
+        takenfinal = []
+        for took in taken :
+            hourQuery = "SELECT sid, cid, hours FROM courses WHERE sid=%s and cid=%s"
+            cursor.execute(hourQuery, [took[0], took[1]])
+            andHours = cursor.fetchall()
+            takenfinal.append(andHours[0])
+        return takenfinal
     except Exception as e :
         print("Error recommending: " + str(e))
 
@@ -63,6 +77,10 @@ def getReqs(major) :
         print("Error recommending: " + str(e))
 
 def removeReqs(reqs, taken) : #here is where I will remove satisfied requirements. shouldnt recommend a math course if all math reqs are filled
+    print(taken)
+
+    loweruppersoc = ''
+
     modreqs = reqs
     uniquereqs = list(set([(i[1], i[4]) for i in reqs])) #get unique set of requirements
     genreqs = {} #dictionary of credit hours
@@ -70,9 +88,7 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
     for req in uniquereqs : #go through recs and make a dictionary of req name and credit hours needed
         genreqs[req[0]] = req[1]
 
-    print(reqs)
     for req in reqs : #make a dictionary of classes that fulfill a requirement
-        print(req)
         reqname = req[1] 
         if reqname in classesgenreqs : #for some reason need to do this in multiple steps, it returns none if done in one
             cs = (str(req[2]) + str(req[3])) #this is something like 'CS480'
@@ -83,16 +99,49 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
             classesgenreqs[reqname] = classes #reset the dictionary key value pair
         else :
             classesgenreqs[reqname] = [str(req[2]) + str(req[3])] #initialize the pair
-
+    takenhours = {(str(i[0]) + str(i[1])): i[2] for i in taken}
     taken = [str(i[0]) + str(i[1]) for i in taken] #remove the tuple aspect from classes
+    
+    print(takenhours)
 
     for requirement in reqs : #here is where I want to remove the requirements I have already taken
+
         req = str(requirement[2]) + str(requirement[3]) #build the requirement to match taken
+
         if req in taken : #see if taken
-            taken.remove(req) #remove it from taken so that it doesnt double count it for multiple sections
-            classes = classesgenreqs[requirement[1]]
-            classes.remove(str(requirement[2]) + str(requirement[3]))
-            classesgenreqs[requirement[1]] = classes #remove the class from requirements, this way we know what options are still available.
+
+            if requirement[1] in classesgenreqs : #need to make sure the requirement hasn't been removed, and that social sciences came from two fields
+                print(f"{req} fulfilling {requirement}")
+
+                taken.remove(req) #remove it from taken so that it doesnt double count it for multiple sections
+                classes = classesgenreqs[requirement[1]]
+                classes.remove(str(requirement[2]) + str(requirement[3]))
+                classesgenreqs[requirement[1]] = classes #remove the class from requirements, this way we know what options are still available.
+                genreqs[requirement[1]] = genreqs[requirement[1]] - int(takenhours[req])
+
+                if genreqs[requirement[1]] <= 0 :
+                    del genreqs[requirement[1]]
+                    del classesgenreqs[requirement[1]]
+                    print()
+                    print(f"deleted req {requirement[1]}")
+                    print()
+
+    if 'Free Elective' in uniquereqs : #since there are some free elective sections in some majors (dont have this in database because I dont know how to represent it)
+        for take in taken :
+            taken.remove(take)
+            genreqs['Free Elective'] = genreqs['Free Elective'] - int(requirement[4])
+            if genreqs['Free Elective'] <= 0 :
+                del genreqs['Free Elective']
+                del classesgenreqs['Free Elective']
+
+    return (classesgenreqs, genreqs)  #this returns two dictionaries. Both have the same keys but one returns credit hours still needed to fulfill this requirement 
+                                                                                            #the other returns courses that will satisfy that requirement
+
+    print(classesgenreqs) #this is a dictionary of requirements and classes to fill that requirement
+    print(genreqs)        #this is a dictionary of requirements and credit hours to fill that requirement
+    print(taken)          #this is the list of classes taken
+    return(classesgenreqs)
+
         
 
 def recommendClasses(reqs, major) :

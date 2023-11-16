@@ -345,8 +345,8 @@ def addMajorRequirementsToDatabase() :
             for (i, cid) in [(1, '200'), (2, '202'), (3, '204'), (4, '206'), (5, '208')] :
                 cursor.execute(majorQuery, [major, 'Humanities Requirement', "HUM", cid, '3', str(buffer)])
                 buffer += 1
-
-            #humanities upper level
+            
+            #Additional hum, soc, or com level social sciences
             for i in range(119, 499) :
                 cs = 'AAH' + str(i)
                 if cs in coursesdict :
@@ -383,7 +383,7 @@ def addMajorRequirementsToDatabase() :
                     cursor.execute(majorQuery, [major, 'Additional Humanities, Social Sciences or COM Elective', "PHIL", str(i), '3', str(buffer)])
                     buffer += 1
 
-            #Additional hum, soc, or com level social sciences
+            
             for i in range(151, 499) :
                 cs = 'ECON' + str(i)
                 if cs in coursesdict :
@@ -474,6 +474,43 @@ def addMajorRequirementsToDatabase() :
                 cs = 'SSCI' + str(i)
                 if cs in coursesdict :
                     cursor.execute(majorQuery, [major, 'Lower-level Social Science Electives', "SSCI", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            #Humanities upper level elective
+            for i in range(300, 499) :
+                cs = 'AAH' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Humanities Upper-level Elective', "AAH", str(i), '3', str(buffer)])
+                    buffer += 1
+            
+            for i in range(300, 499) :
+                cs = 'COM' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Humanities Upper-level Elective', "COM", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'HIST' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Humanities Upper-level Elective', "HIST", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'HUM' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Humanities Upper-level Elective', "HUM", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'LIT' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Humanities Upper-level Elective', "LIT", str(i), '3', str(buffer)])
+                    buffer += 1
+
+            for i in range(300, 499) :
+                cs = 'PHIL' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Humanities Upper-level Elective', "PHIL", str(i), '3', str(buffer)])
                     buffer += 1
                 
 
