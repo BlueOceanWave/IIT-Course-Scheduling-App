@@ -229,23 +229,8 @@ h1{
     background-color: white;
 }
 
-
-#columnStyle {
-    text-align: center;
-    height: 500px;
-    width: 200px;
-    vertical-align: top;
-    padding-top: 20px;
-    color: black;
-    background-color: white;
-}
-
 .search-container {
     position: relative;
-    /*
-    width: 100%;
-    text-align: center;
-    margin-top: 20%;*/
     display: inline-block;
 }
 
@@ -302,34 +287,9 @@ button.deleteCourse {
     background-color: rgb(255, 255, 255);
     position: relative; 
     width: 50%;
-
     top: 20px; 
     left: 10px; 
     right: 500px; 
     border: 1px solid black; 
     padding: 5px;
 }
-
-
-
-/*
-#searchInput{
-    position: absolute;
-    text-align: center;
-    width: 200px; /* Adjust the width of the input as needed 
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-}
-
-/*search button
-#searchButton {
-    /*width: 250px;
-    height: 40px;
-    position: absolute;
-    text-align: center;
-    width: 200px; /* Adjust the width of the input as needed
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-}*/
