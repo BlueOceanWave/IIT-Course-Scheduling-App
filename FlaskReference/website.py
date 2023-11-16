@@ -97,17 +97,17 @@ def redirect_major():
     query = "SELECT 1 FROM accounts WHERE (username = '"
     cursor.execute(query + name_input + "')")
     if(not cursor.fetchone()):
-        print("AAADASESRAFUYDIUSADHGBIA")
+        print("AAADASESRAFUYDIUSADHGBIA: (" + name_input, password_input + ")")
         if(not (" " in name_input) and name_input != ""):
-            if(not (" " in name_input) and name_input != ""):
+            if(not (" " in password_input) and password_input != ""):
                 return render_template("major.html", name = name_input, password = password_input, guest=False)
             else:
-                message = "Username Must Not Be Empty or Contain Spaces"
+                message = "Password Must Not Be Empty or Contain Spaces"
                 return render_template("signup.html", message = message)
         else:
-            message = "Password Must Not Be Empty or Contain Spaces"
+            message = "Username Must Not Be Empty or Contain Spaces"
             return render_template("signup.html", message = message)
-    message = "Username Already Exists"
+    message = "Username Already Exists Please Try Another"
     return render_template("signup.html", message = message)
 
 @app.route('/verify_password', methods=['POST'])
@@ -183,7 +183,8 @@ def result():
         userInput = student_account(name_input, bcrypt.hashpw(password_input.encode('utf-8'), salt).decode('utf-8'))
         print(userInput.isInDB())
         if userInput.isInDB() is False:
-            return "Invalid credentials!"
+            message = "Invalid Credentials"
+            return render_template("login.html", message = message)
         else:
             student_db_info = userInput.getFromDB()
             return redirect(url_for("home", username=student_db_info.username, 

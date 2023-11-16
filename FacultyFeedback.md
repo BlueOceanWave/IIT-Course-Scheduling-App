@@ -49,6 +49,10 @@
 - Is everyone clear on what they are going to be doing until the final presentation?
 
 ## Week 12 ##
+- Dry Run 7 minutes
+- Final presentation (more agenda items )7 to 12 minutes
+- Both weeks - presenting to the entire class (teams selected in random order)
+- Dry run AND Final presentation template - https://github.com/mschray/IPro497Sample/blob/main/Course%20Content/Final%20Presentation%20Template.pptx
 
 ## Week 13 ##
 

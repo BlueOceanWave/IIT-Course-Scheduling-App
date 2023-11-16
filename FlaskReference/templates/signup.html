@@ -3,7 +3,7 @@
     <head>
         <title>Sign Up</title>
         <style>
-            #accountAlreadyExists {
+            #error {
                 display: none;
                 position: fixed;
                 top: 50%;
@@ -12,18 +12,21 @@
                 padding: 10px;
                 text-align: center;
                 background-color: #fff;
-                border: 2px solid #858585;
+                border: 3px solid #000000;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 width: 250px;
                 height: 125px;
+                border-radius: 10px;
+                box-shadow: 3px 3px 5px gray;
             }
-            #accountAlreadyExists button {
-            padding: 10px;
+            #error button {
+            padding: 5px;
             background-color: #f13d3d;
             color: #fff;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            width: 200px;
             }
         </style>
         <meta charset="utf-8">
@@ -41,10 +44,12 @@
             function validateForm() {
                 const password = document.getElementById('password').value;
                 const confirmPassword = document.getElementById('confirmPassword').value;
-    
+                const errorElement = document.getElementById('errorMessage');
+                
                 if (password !== confirmPassword) {
-                    alert('The two password inputs must match.');
-                    return false;
+                    errorElement.innerText = "Passwords Are Not The Same"
+                    document.getElementById('error').style.display = 'block';
+                    return false; 
                 }
                 return true;
             }
@@ -62,6 +67,7 @@
                 <span class="material-symbols-outlined">lock</span>
                 <input type="password" id="confirmPassword" placeholder="Confirm Password"><br>
                 <button type="submit" id="create-account1">Create Account</button><br>
+                <button type="button" id="back-button">Go Back</button>
             </div>
         </form>
             {% if done %}
@@ -74,21 +80,26 @@
             <!--should redirect to login page-->
         {% if message %}
         <!-- Display the modal -->
-        <div id="accountAlreadyExists">
-            <p>{{ message }}</p>
+        <div id="error">
+            <p id="errorMessage">{{ message }}</p>
             <button onclick="closeModal()">Close</button>
         </div>
 
         <!-- Trigger the modal display with JavaScript -->
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                document.getElementById('accountAlreadyExists').style.display = 'block';
+                document.getElementById('error').style.display = 'block';
             });
 
             function closeModal() {
-                document.getElementById('accountAlreadyExists').style.display = 'none';
+                document.getElementById('error').style.display = 'none';
             }
         </script>
         {% endif %}
     </body>
+    <script>
+        document.getElementById('back-button').addEventListener('click', function() {
+          window.location.href = `/`;
+        });
+    </script>
 </html>

@@ -18,7 +18,7 @@ html{
     /*add border elements to the container*/
     /*3.5 inches x 5 inches*/
     width: 480px;
-    height: 336px;
+    height: 360px;
     margin: 0 auto;
     position: absolute;
     /*below code places login page in center of page*/
@@ -229,23 +229,8 @@ h1{
     background-color: white;
 }
 
-
-#columnStyle {
-    text-align: center;
-    height: 500px;
-    width: 200px;
-    vertical-align: top;
-    padding-top: 20px;
-    color: black;
-    background-color: white;
-}
-
 .search-container {
     position: relative;
-    /*
-    width: 100%;
-    text-align: center;
-    margin-top: 20%;*/
     display: inline-block;
 }
 
@@ -280,10 +265,21 @@ h1{
     margin-top: 1%;
 }
 
-.schedule-event-text {
+button.deleteCourse {
+    position:absolute; 
+    top:0; 
+    right:0;
+
+    background: none;
+    border: none;
+    color: red;
+}
+
+.schedule-event {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100%; /* Ensure the container takes up the full height of the event block */
 }
 
@@ -291,32 +287,9 @@ h1{
     background-color: rgb(255, 255, 255);
     position: relative; 
     width: 50%;
-
     top: 20px; 
     left: 10px; 
     right: 500px; 
     border: 1px solid black; 
     padding: 5px;
 }
-
-/*
-#searchInput{
-    position: absolute;
-    text-align: center;
-    width: 200px; /* Adjust the width of the input as needed 
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-}
-
-/*search button
-#searchButton {
-    /*width: 250px;
-    height: 40px;
-    position: absolute;
-    text-align: center;
-    width: 200px; /* Adjust the width of the input as needed
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-}*/

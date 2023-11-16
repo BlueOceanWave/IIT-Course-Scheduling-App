@@ -181,3 +181,7 @@ function searchTakenCourse() {
 function submitForm() {
     document.getElementById('profileForm').submit();
 }
+
+function deleteCourse(id) {
+    calendar.getEventById(id).remove()
+}

@@ -2,6 +2,33 @@
 <html lang="en">
     <head>
         <title>Login Page</title>
+        <style>
+            #error {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px;
+                text-align: center;
+                background-color: #fff;
+                border: 3px solid #000000;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 250px;
+                height: 125px;
+                border-radius: 10px;
+                box-shadow: 3px 3px 5px gray;
+            }
+            #error button {
+            padding: 5px;
+            background-color: #f13d3d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 200px;
+            }
+        </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
@@ -29,6 +56,7 @@
                 </form>          
                 <form class="grid" action="/guest_major" method="POST">
                     <input type="hidden" name="guest-input" value="true">
+                    <br>
                     <button type="submit" id="guest-button">Continue as Guest</button><br>
                 </form>
             </div>
@@ -36,5 +64,23 @@
         <form class="grid" action="/signup" method="POST">    
             <button type="submit" id="create-account">Create Account</button>
         </form>
+        {% if message %}
+        <!-- Display the modal -->
+        <div id="error">
+            <p id="errorMessage">{{ message }}</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+
+        <!-- Trigger the modal display with JavaScript -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('error').style.display = 'block';
+            });
+
+            function closeModal() {
+                document.getElementById('error').style.display = 'none';
+            }
+        </script>
+        {% endif %}
     </body>
 </html>

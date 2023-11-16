@@ -30,6 +30,8 @@
             <br>
                 <!--<input type="hidden" name="enter-input" value="true">--> 
                 <button type="submit" id="enter-button">Enter</button>
+                <br>
+                <button type="button" id="back-button">Go Back</button>
             </form>
         </div>
 
@@ -45,4 +47,9 @@
         {% endif %}
 
     </body>
+    <script>
+        document.getElementById('back-button').addEventListener('click', function() {
+          window.location.href = `/`;
+        });
+    </script>
     </html>
