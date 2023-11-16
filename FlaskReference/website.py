@@ -183,7 +183,8 @@ def result():
         userInput = student_account(name_input, bcrypt.hashpw(password_input.encode('utf-8'), salt).decode('utf-8'))
         print(userInput.isInDB())
         if userInput.isInDB() is False:
-            return "Invalid credentials!"
+            message = "Invalid Credentials"
+            return render_template("login.html", message = message)
         else:
             student_db_info = userInput.getFromDB()
             return redirect(url_for("home", username=student_db_info.username, 
