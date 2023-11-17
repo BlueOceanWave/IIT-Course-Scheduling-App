@@ -42,6 +42,7 @@
     <link rel="icon" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <!-- Adding Google Calendar for displaying schedule-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.css">
+    <script type="text/JavaScript" src="{{ url_for('static', filename='/script/show_courses.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.js"></script>
 </head>
 
@@ -58,7 +59,6 @@
             {{name|safe}} - {{major}}
         </form>
         <!-- Right side: Search and results box -->
-        <div style="position: absolute; top: 6%; right: 5%; left: 5%">
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search...">
                 <button id="searchButton" onclick="searchCourse()">Search</button>  
@@ -142,7 +142,6 @@
         });
     </script>
 
-    <!--<a href="/course_display">See list of courses</a> -->
-    <script type="text/JavaScript" src="{{ url_for('static', filename='/script/show_courses.js')}}"></script>
+   
 </body>
 </html>

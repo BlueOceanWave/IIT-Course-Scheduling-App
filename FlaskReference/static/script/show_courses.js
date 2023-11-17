@@ -60,8 +60,10 @@ function getAndDisplayTakenCourses() {
         });
 }
 
+//JavaScript Debugging to find out why the height of box changes
 function searchCourse() {
     let searchTerm = document.getElementById('searchInput').value;
+
     fetch('/search_course', {
         method: 'POST',
         headers: {
