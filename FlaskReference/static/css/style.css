@@ -197,6 +197,14 @@ h1{
     overflow: hidden;
 }
 
+
+
+#welcome-header{
+    background-color: rgb(90, 90, 90);
+    margin: 0 auto;
+    color: white;
+}
+
 /*creating separate box for right side of page*/
 .searchBox {
     padding: 2.5rem;
@@ -208,12 +216,6 @@ h1{
     margin: 0 auto;
     position: absolute;
     right: 0px;
-}
-
-#welcome-header{
-    background-color: rgb(90, 90, 90);
-    margin: 0 auto;
-    color: white;
 }
 
 #resultsBox {
@@ -230,6 +232,7 @@ h1{
     display: inline-block;
 }
 
+/*search bar*/
 #searchInput {
     background:
         url('/static/images/search.png') left center no-repeat,
