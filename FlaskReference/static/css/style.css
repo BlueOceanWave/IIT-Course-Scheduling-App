@@ -220,7 +220,7 @@ h1{
 
 #resultsBox {
     border: 1px solid black;
-    width: 100%;
+    width: 110%;
     height: calc(100vh - 100px);
     overflow-y: scroll;
     margin: 0 auto;
@@ -260,7 +260,8 @@ h1{
 #schedule {
     background-color: rgb(255, 255, 255, .90);
     width: 50%; /* Set the width to 200 pixels */
-    margin-left: 5%;
+    margin-left: 9%;
+    margin-right: 9%;
     margin-top: 1%;
 }
 
@@ -286,8 +287,8 @@ button.deleteCourse {
     position: relative; 
     width: 50%;
     top: 20px; 
-    left: 10px; 
-    right: 500px; 
+    left: 9%; 
+    right: 9%; 
     border: 1px solid black; 
     padding: 5px;
 }
