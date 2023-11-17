@@ -220,7 +220,7 @@ h1{
 
 #resultsBox {
     border: 1px solid black;
-    width: 110%;
+    width: 100%;
     height: calc(100vh - 100px);
     overflow-y: scroll;
     margin: 0 auto;
