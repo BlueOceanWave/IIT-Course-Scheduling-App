@@ -72,7 +72,7 @@ html{
     border: none;
     width: 250px;
     height: 40px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 5px;
 }
 
@@ -242,6 +242,7 @@ h1{
     width: 290px;
     margin-top: 40px;
     margin-right: 69px;
+    display: inline-block;
 }
 
 /*background-image: url('/static/images/mies_campus.jpg');*/
@@ -250,6 +251,7 @@ h1{
     width: 20%;
     height: 53.5px;
     margin-left: -18%;
+    display: inline-block;
 }
 
 #custom-table {
