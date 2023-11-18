@@ -240,6 +240,7 @@ h1{
     margin-top: 40px;
     margin-right: 69px;
     display: inline-block;
+    position: relative;
 }
 
 /*background-image: url('/static/images/mies_campus.jpg');*/
@@ -249,6 +250,7 @@ h1{
     height: 53.5px;
     margin-left: -18%;
     display: inline-block;
+    position: relative;
 }
 
 #custom-table {
