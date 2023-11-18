@@ -52,11 +52,10 @@ html{
     width: 320px;
     height: 72px;
     font-size: 1.875rem;
-    /*remove border from buttons*/
     padding: 0;
     border: none;
     border-radius: 5px;
-    margin-top: 0.625rem;
+    margin-top: 1.25rem;
 }
 
 #login-button:hover {
@@ -72,7 +71,7 @@ html{
     border: none;
     width: 250px;
     height: 40px;
-    margin-top: 10px;
+    margin-top: 5px;
     border-radius: 5px;
 }
 
