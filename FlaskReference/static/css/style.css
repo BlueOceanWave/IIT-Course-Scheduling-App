@@ -115,23 +115,6 @@ html{
     margin-top: 0.625rem;
 }
 
-/*
-#enter-button {
-    /*include sign-in attributes
-    background-color: #2565AE;
-    color: white;
-    text-align: center;
-    margin-bottom: 1.25rem;
-    width: 160px;
-    height: 32px;
-    font-size: 1.875rem;
-    /*remove border from buttons
-    padding: 0;
-    border: none;
-    border-radius: 5px;
-    margin-top: 0.625rem;
-}*/
-
 /*include hover effect*/
 #create-account1:hover{
     background-color: #1E4B8D;
@@ -215,6 +198,7 @@ h1{
     right: 0px;
 }
 
+/*modify the resultsBox*/
 #resultsBox {
     border: 1px solid black;
     width: 100%;
@@ -293,4 +277,12 @@ button.deleteCourse {
     right: 9%; 
     border: 1px solid black; 
     padding: 5px;
+}
+
+/*Media Queries for Smaller Screens*/
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 600px) {
+    #resultsBox {
+        height: calc(100vh - 50px);
+    }
 }
