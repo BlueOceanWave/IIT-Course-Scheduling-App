@@ -106,6 +106,10 @@ function searchCourse() {
                                 daysOfWeek: days, // The days of the class
                                 color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
                             });
+
+                            // Update class list
+                            updateClassList();
+
                         }
 
                         var username = document.getElementById('name').value;
@@ -178,6 +182,10 @@ function searchTakenCourse() {
                 });
             });
         });
+}
+
+function updateClassList() {
+    
 }
 
 function submitForm() {
