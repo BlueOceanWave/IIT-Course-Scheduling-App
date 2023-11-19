@@ -100,12 +100,16 @@ function searchCourse() {
                             // Add course to calendar
                             calendar.addEvent({
                                 id: section.crn,
-                                title: `${course.sid} ${course.cid} ${section.crn}`, // The text to display
+                                title: `${course.sid} ${course.cid}`, // The text to display
                                 startTime: section.starttime, // start time
                                 endTime: section.endtime, // end time
                                 daysOfWeek: days, // The days of the class
                                 color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
                             });
+
+                            // Update class list
+                            updateClassList();
+
                         }
 
                         var username = document.getElementById('name').value;
@@ -178,6 +182,10 @@ function searchTakenCourse() {
                 });
             });
         });
+}
+
+function updateClassList() {
+    
 }
 
 function submitForm() {

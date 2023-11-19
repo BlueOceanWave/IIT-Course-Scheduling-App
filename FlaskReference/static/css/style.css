@@ -246,7 +246,7 @@ h1{
 #schedule {
     background-color: rgb(255, 255, 255, .90);
     width: 50%; /* Set the width to 200 pixels */
-    margin-left: 9%;
+    margin-left: 2%;
     margin-right: 9%;
     margin-top: 1%;
 }
@@ -284,4 +284,12 @@ button.deleteCourse {
 /* Media Query for Screens Between 129px and 606px */
 @media screen and (min-width: 151px) and (max-width: 778px) {
     
+}
+
+/*Media Queries for Smaller Screens*/
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 600px) {
+    #resultsBox {
+        height: calc(100vh - 50px);
+    }
 }
