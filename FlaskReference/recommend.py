@@ -154,7 +154,7 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
     hoursQuery = "SELECT hours FROM courses WHERE sid=%s and cid=%s"
 
     recs = [] #the list of recommendations to return
-    hours = 0 #the number of credit hours
+    tothours = 0 #the number of credit hours
     sorted_hoursreqs = sorted(hoursreqs.items(), key=lambda x:x[1], reverse=True) #get a sorted list of requirements by credit hours
 
     print(sorted_hoursreqs)
@@ -174,7 +174,7 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
             cursor.execute(hoursQuery, (sid, cid))
             coursehours = cursor.fetchall()[0][0]
 
-            if hours + coursehours < 18 :
+            if tothours + coursehours <= 18 and coursehours > 0:
 
                 cursor.execute(instructorQuery, [crn])
                 instructor = cursor.fetchall()[0][1]
@@ -183,7 +183,9 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
                 sched.addSection(section)
 
                 if len(sched.detectTimeConflict()) == 0 :
-                    recs.append((crn, recommend))
+                    tothours += coursehours
+                    print(tothours)
+                    recs.append((crn, recommend, coursehours))
                     break
                 else :
                     sched.removeSection(section)
