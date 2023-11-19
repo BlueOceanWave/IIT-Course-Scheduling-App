@@ -246,7 +246,7 @@ h1{
 #schedule {
     background-color: rgb(255, 255, 255, .90);
     width: 50%; /* Set the width to 200 pixels */
-    margin-left: 9%;
+    margin-left: 2%;
     margin-right: 9%;
     margin-top: 1%;
 }
@@ -278,6 +278,7 @@ button.deleteCourse {
     border: 1px solid black; 
     padding: 5px;
 }
+
 
 /*Media Queries for Smaller Screens*/
 /* Media Query for Smaller Screens */
