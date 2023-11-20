@@ -204,7 +204,7 @@ h1{
     width: 100%;
     height: calc(100vh - 100px);
     overflow-y: scroll;
-    margin: 0 auto;
+    margin: -20px auto 0;
     background-color: white;
 }
 
@@ -222,7 +222,6 @@ h1{
     padding-left: 30px;
     width: 290px;
     margin-top: 40px;
-    margin-right: 69px;
     display: inline-block;
 }
 
@@ -231,16 +230,14 @@ h1{
 #searchButton {
     width: 100px;
     height: 53px;
-    margin-left: -6%;
-    margin-right: 1%;
-    margin-top: 40px;
     display: inline-block;
-    position: fixed;
+    position: relative;
+    top: -73.7px;
+    left: 160px;
 }
 
 #custom-table {
     vertical-align: top;
-
 }
 
 #schedule {
