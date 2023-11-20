@@ -167,14 +167,12 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
 
                 if len(sched.detectTimeConflict()) == 0 :
                     tothours += coursehours
-                    print(tothours)
                     recs.append((crn, recommend, coursehours))
                     break
                 else :
                     sched.removeSection(section)
     for section in sched.sections :
         sched.removeSection(section)
-    print(recs)
     return recs
 
 def recommendCourses(user) :
@@ -182,9 +180,6 @@ def recommendCourses(user) :
     taken = getTaken(user) #get what classes they've taken from the database
     reqs = getReqs(major)  #get their requirements into a list
     (classesreqs, hoursreq) = removeReqs(reqs, taken) #remove requirements that are completed. from this list of reqs we can determine what classes to recommend
-    print(recommendClasses(classesreqs, hoursreq, taken))
-    print(recommendClasses(classesreqs, hoursreq, taken))
-    print(recommendClasses(classesreqs, hoursreq, taken))
     return recommendClasses(classesreqs, hoursreq, taken) #recommend the classes
 
 recommendCourses('hansgutts')
