@@ -100,12 +100,16 @@ function searchCourse() {
                             // Add course to calendar
                             calendar.addEvent({
                                 id: section.crn,
-                                title: `${course.sid} ${course.cid} ${section.crn}`, // The text to display
+                                title: `${course.sid} ${course.cid}`, // The text to display
                                 startTime: section.starttime, // start time
                                 endTime: section.endtime, // end time
                                 daysOfWeek: days, // The days of the class
                                 color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
                             });
+
+                            // Update class list
+                            updateClassList();
+
                         }
 
                         var username = document.getElementById('name').value;
@@ -179,6 +183,71 @@ function searchTakenCourse() {
             });
         });
 }
+
+function getAndDisplayRemainingCourses(username) {
+    fetch(`/get_remaining_courses/${username}`)
+        .then(response => response.json())
+        .then(remainingCourses => {
+            return fetch(`/get_remaining_hours/${username}`)
+                .then(response => response.json())
+                .then(remainingHours => ({ remainingCourses, remainingHours }));
+        })
+        .then(data => {
+            const { remainingCourses, remainingHours } = data;
+            const remainingCoursesBox = document.getElementById('remainingCoursesBox');
+            remainingCoursesBox.innerHTML = ''; // Clear previous content
+
+            for (let requirement in remainingCourses) {
+                if (requirement.toLowerCase().includes('elective')) {
+                    // If the requirement contains the word 'elective', display the requirement and hours needed
+                    const hours = remainingHours[requirement];
+                    remainingCoursesBox.innerHTML += `<p><strong>${requirement}:</strong> ${hours} credit hours needed</p>`;
+                } else {
+                    // Otherwise, display the list of courses for that requirement
+                    const coursesList = remainingCourses[requirement].join(', ');
+                    remainingCoursesBox.innerHTML += `<p><strong>${requirement}:</strong> ${coursesList}</p>`;
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function getAndDisplayRecommendedCourses(username) {
+    // Make a GET request to the server
+    fetch(`/get_recommended_courses/${username}`)
+      .then(response => {
+        // Check if the response is ok (status code 200-299)
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse JSON response into native JavaScript objects
+      })
+      .then(recommendedCourses => {
+        // Get the element with id="recommendedClasses"
+        const recommendedClassesBox = document.getElementById('recommendedClasses');
+        recommendedClassesBox.innerHTML = ''; // Clear any previous content
+  
+        // Create a list of recommended courses
+        recommendedCourses.forEach(course => {
+          // course is expected to be a tuple-like array, for example: [10172, 'ECE211', 3]
+          const courseId = course[0];  // Assuming the first element is the course ID
+          const courseCode = course[1]; // Assuming the second element is the course code
+          const courseCredit = course[2]; // Assuming the third element is the course credit
+  
+          // Create a new div element for this course and add it to the box
+          const courseDiv = document.createElement('div');
+          courseDiv.className = 'recommended-course';
+          courseDiv.innerHTML = `${courseCode}`;
+          recommendedClassesBox.appendChild(courseDiv);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching recommended courses:', error);
+      });
+  }
+  
 
 function submitForm() {
     document.getElementById('profileForm').submit();

@@ -113,12 +113,13 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
                 del genreqs['Free Elective']
                 del classesgenreqs['Free Elective']
 
+    # print("classesgenreqs: ", classesgenreqs) #this is a dictionary of requirements and classes to fill that requirement
+    # print("genreqs: ", genreqs)        #this is a dictionary of requirements and credit hours to fill that requirement
+    # print("taken: ", taken)          #this is the list of classes taken
+    
     return (classesgenreqs, genreqs)  #this returns two dictionaries. Both have the same keys but one returns credit hours still needed to fulfill this requirement 
                                                                                             #the other returns courses that will satisfy that requirement
 
-    print(classesgenreqs) #this is a dictionary of requirements and classes to fill that requirement
-    print(genreqs)        #this is a dictionary of requirements and credit hours to fill that requirement
-    print(taken)          #this is the list of classes taken
 
 def getsidcid(course) :
     return (course[0:len(course)-3], course[len(course)-3:])
@@ -173,7 +174,22 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
                     sched.removeSection(section)
     for section in sched.sections :
         sched.removeSection(section)
+    cursor.close()
     return recs
+
+def remainingCourses(user):
+    major = getMajor(user) #get what major they are from data base
+    taken = getTaken(user) #get what classes they've taken from the database
+    reqs = getReqs(major)  #get their requirements into a list
+    (classesreqs, hoursreq) = removeReqs(reqs, taken)
+    return classesreqs
+
+def remainingHours(user):
+    major = getMajor(user) #get what major they are from data base
+    taken = getTaken(user) #get what classes they've taken from the database
+    reqs = getReqs(major)  #get their requirements into a list
+    (classesreqs, hoursreq) = removeReqs(reqs, taken)
+    return hoursreq
 
 def recommendCourses(user) :
     major = getMajor(user) #get what major they are from data base
@@ -182,4 +198,6 @@ def recommendCourses(user) :
     (classesreqs, hoursreq) = removeReqs(reqs, taken) #remove requirements that are completed. from this list of reqs we can determine what classes to recommend
     return recommendClasses(classesreqs, hoursreq, taken) #recommend the classes
 
-recommendCourses('hansgutts')
+# remainingCourses('mom')
+# remainingHours('mom')
+#print(recommendCourses('mom'))

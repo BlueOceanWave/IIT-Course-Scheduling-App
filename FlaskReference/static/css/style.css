@@ -204,7 +204,7 @@ h1{
     width: 100%;
     height: calc(100vh - 100px);
     overflow-y: scroll;
-    margin: 0 auto;
+    margin: -10px auto 0;
     background-color: white;
 }
 
@@ -222,7 +222,6 @@ h1{
     padding-left: 30px;
     width: 290px;
     margin-top: 40px;
-    margin-right: 69px;
     display: inline-block;
 }
 
@@ -231,22 +230,20 @@ h1{
 #searchButton {
     width: 100px;
     height: 53px;
-    margin-left: -6%;
-    margin-right: 1%;
-    margin-top: 40px;
     display: inline-block;
-    position: fixed;
+    position: relative;
+    top: -73.7px;
+    left: 160px;
 }
 
 #custom-table {
     vertical-align: top;
-
 }
 
 #schedule {
     background-color: rgb(255, 255, 255, .90);
     width: 50%; /* Set the width to 200 pixels */
-    margin-left: 9%;
+    margin-left: 2%;
     margin-right: 9%;
     margin-top: 1%;
 }
@@ -279,10 +276,10 @@ button.deleteCourse {
     padding: 5px;
 }
 
-/*Media Queries for Smaller Screens*/
-/* Media Query for Smaller Screens */
-@media screen and (max-width: 600px) {
-    #resultsBox {
-        height: calc(100vh - 50px);
+/*Media Query for Monitor Screens*/
+@media screen and (min-width: 1200px) {
+    #searchButton {
+        left: -70px;
+        top: 0px;
     }
 }

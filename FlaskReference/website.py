@@ -6,6 +6,7 @@ import db
 from db_oop import student_account, classes, getAllClasses, insertToTaken, deleteFromTaken, getTakenCourses, insertToSchedules
 import search, json, bcrypt
 import psycopg2
+from recommend import remainingHours, remainingCourses, recommendCourses
 
 '''This is where flask application is being made.'''
 app = Flask(__name__, template_folder="templates")
@@ -228,6 +229,18 @@ def get_taken(username):
             courses_json.append({"sid": id[0], "cid" : id[1]})
     print("sent ", courses_json)
     return jsonify(courses_json)
+
+@app.route("/get_remaining_courses/<username>", methods = ['GET'])
+def get_remaining_courses(username):
+    return jsonify(remainingCourses(username))
+
+@app.route("/get_remaining_hours/<username>", methods = ['GET'])
+def get_remaining_hours(username):
+    return jsonify(remainingHours(username))
+
+@app.route("/get_recommended_courses/<username>", methods = ['GET'])
+def recommend(username):
+    return jsonify(recommendCourses(username))
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')

@@ -4,32 +4,9 @@
     <title>Welcome!</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-    <!-- linking stylesheet here -->
-    <style>
-      #resultsBox {
-        width: 50%; /* Adjust width as needed, or set to a fixed width like 600px */
-        height: 300px; /* Set a fixed height for your results box */
-        overflow-y: auto; /* Add a vertical scrollbar to the box */
-        border: 1px solid #ccc; /* Add a border for better visibility (optional) */
-        margin-top: 20px; /* Space above the results box (optional) */
-        padding: 10px; /* Padding inside the box (optional) */
-      }
-    </style>
-    <style>
-      #takenCoursesBox {
-        width: 50%; /* Adjust width as needed, or set to a fixed width like 600px */
-        height: 300px; /* Set a fixed height for your results box */
-        overflow-y: auto; /* Add a vertical scrollbar to the box */
-        border: 1px solid #ccc; /* Add a border for better visibility (optional) */
-        margin-top: 20px; /* Space above the results box (optional) */
-        padding: 10px; /* Padding inside the box (optional) */
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/profile.css')}}">
   </head>
   <body>
-    <div style="position: absolute; top: 10px; left: 10px;">
-      <button id="backToScheduler" class="btn btn-warning">Go Back to Scheduler</button>
-    </div>
     <div id="pageIdentifier" data-page-name="profile"></div>
     <input type="hidden" id="hiddenUsername" value="{{name|safe}}" />
     <input type="hidden" id="hiddenMajor" value="{{major}}" />
@@ -41,6 +18,7 @@
         Here, you can edit your username, password, and major.
       </h3>
       <br /><br /><br />
+      <button id="backToScheduler" class="btn btn-warning">Go Back to Scheduler</button>
       <button
         class="btn btn-primary"
         data-toggle="modal"
@@ -65,11 +43,29 @@
         <div id="resultsBox"></div>
       </center>
       <br><br>
-      <center>
-        <h3>Taken Courses:</h3>
-        <div>Click on a course to remove it</div>
-        <div id="takenCoursesBox"></div>
-      </center>
+
+      <div class="row row-closer">
+        <!-- Column for Taken Courses -->
+        <div class="col-md-6">
+          <center>
+            <h3>Taken Courses:</h3>
+            <div>Click on a course to remove it</div>
+            <div id="takenCoursesBox" class="scroll-box"></div>
+            <br><br><br><br><br>
+          </center>
+        </div>
+        
+        <!-- Column for Courses Still Needed -->
+        <div class="col-md-6">
+          <center>
+            <br>
+            <h3>Courses you still need to take:</h3>
+            <div id="remainingCoursesBox" class="scroll-box"></div>
+            <br><br><br><br><br>
+          </center>
+        </div>
+        
+      </div>
 
       <!-- Change Account Info Modal -->
       <div class="modal" id="changeInfoModal">
@@ -162,7 +158,9 @@
     <script>
       // Call the function to get and display courses when the page loads
       window.onload = function () {
+          const username = document.getElementById('hiddenUsername').value; // Assuming there's an element with id 'hiddenUsername'
           getAndDisplayTakenCourses();
+          getAndDisplayRemainingCourses(username);
       };
   </script>
   <script>
