@@ -5,13 +5,6 @@ import random
 import schedule
 import search
 
-
-#####################################NOTES I NEED TO LOOK AT THE CORE REQUIREMENTS AND MAKE SURE IM ACTUALLY COVERING EVERYTHING BECAUSE I CURRENTLY AM NOT
-#ALSO NEED TO LOOK AT INDEXES 
-#ALSO NEED TO LOOK AT MAXIMIZING CLASSES THAT APPLY TO REQUIREMENTS
-
-
-
 # Connect to PostgreSQL database
 connection = psycopg2.connect(
     dbname='NewDB',
@@ -24,13 +17,6 @@ connection = psycopg2.connect(
 class InvalidMajor(Exception) :
     "Major is invalid"
     pass
-
-'''class Recommender(self, major, majorRequirements, remainingReqs, taken) :
-    def __init__(self, user) :
-        self.major = getMajor(user)
-        self.majorRequirements = getReqs(major)
-        self.taken = getTaken(user)'''
-        
 
 cursor = connection.cursor()
 
@@ -80,9 +66,6 @@ def getReqs(major) :
 
 def removeReqs(reqs, taken) : #here is where I will remove satisfied requirements. shouldnt recommend a math course if all math reqs are filled
 
-    loweruppersoc = ''
-
-    modreqs = reqs
     uniquereqs = list(set([(i[1], i[4]) for i in reqs])) #get unique set of requirements
     genreqs = {} #dictionary of credit hours
     classesgenreqs = {} #dictionary of available classes
@@ -102,8 +85,6 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
             classesgenreqs[reqname] = [str(req[2]) + str(req[3])] #initialize the pair
     takenhours = {(str(i[0]) + str(i[1])): i[2] for i in taken}
     taken = [str(i[0]) + str(i[1]) for i in taken] #remove the tuple aspect from classes
-    
-    #print(takenhours)
 
     for requirement in reqs : #here is where I want to remove the requirements I have already taken
 
@@ -112,7 +93,7 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
         if req in taken : #see if taken
 
             if requirement[1] in classesgenreqs : #need to make sure the requirement hasn't been removed, and that social sciences came from two fields
-                print(f"{req} fulfilling {requirement}")
+                
 
                 taken.remove(req) #remove it from taken so that it doesnt double count it for multiple sections
                 classes = classesgenreqs[requirement[1]]
@@ -123,9 +104,6 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
                 if genreqs[requirement[1]] <= 0 :
                     del genreqs[requirement[1]]
                     del classesgenreqs[requirement[1]]
-                    print()
-                    print(f"deleted req {requirement[1]}")
-                    print()
 
     if 'Free Elective' in uniquereqs : #since there are some free elective sections in some majors (dont have this in database because I dont know how to represent it)
         for take in taken :
@@ -158,7 +136,6 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
     tothours = 0 #the number of credit hours
     sorted_hoursreqs = sorted(hoursreqs.items(), key=lambda x:x[1], reverse=True) #get a sorted list of requirements by credit hours
 
-    print("sorted: ", sorted_hoursreqs)
     for (req, hours) in sorted_hoursreqs : #loop through the sorted list
         sections = []
 
@@ -175,26 +152,28 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
             cursor.execute(hoursQuery, (sid, cid))
             coursehours = cursor.fetchall()[0][0]
 
-            if tothours + coursehours <= 18 and coursehours > 0:
+            if tothours + coursehours <= 18 and coursehours > 0 and req != 'Free Elective':
 
                 cursor.execute(instructorQuery, [crn])
                 instructor = cursor.fetchall()[0][1]
 
+                if days is None :
+                    days = 'None'
+
                 section = search.Section(crn, snum, days, str(starttime), str(endtime), campus, online, building, room, instructor)
-                #print("section: ",section)
+                
+                
+
                 sched.addSection(section)
 
                 if len(sched.detectTimeConflict()) == 0 :
                     tothours += coursehours
-                    #print(tothours)
                     recs.append((crn, recommend, coursehours))
                     break
                 else :
                     sched.removeSection(section)
-                #grab first section
-                #remove the section from all
-                #get the section here
-                #add the section to sched
+    for section in sched.sections :
+        sched.removeSection(section)
     cursor.close()
     return recs
 
@@ -217,6 +196,17 @@ def recommendCourses(user) :
     taken = getTaken(user) #get what classes they've taken from the database
     reqs = getReqs(major)  #get their requirements into a list
     (classesreqs, hoursreq) = removeReqs(reqs, taken) #remove requirements that are completed. from this list of reqs we can determine what classes to recommend
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
+    print(recommendClasses(classesreqs, hoursreq, taken))
     return recommendClasses(classesreqs, hoursreq, taken) #recommend the classes
 
 # remainingCourses('mom')
