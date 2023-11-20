@@ -111,13 +111,13 @@ function searchCourse() {
                                 daysOfWeek: days, // The days of the class
                                 color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
                             });
-
+                            
                             if(section.startime == 'None' || section.endtime == 'None' ||  days == 'None'){
                                 var cList = document.getElementById("classList");
                                 var cls = document.createElement("div");
                                 cls.className = "singleClass";
                                 cls.innerHTML = `${course.sid} ${course.cid} <br> ${section.crn} <br>`;
-     
+//Marcins Really Bad Code
                                 cls.style.textAlign = "center";
                                 cls.style.color = "white";
                                 cls.style.margin = "5px";
@@ -125,7 +125,7 @@ function searchCourse() {
                                 cls.style.backgroundColor = colors[calendar.getEvents().length%colors.length];
                                 cls.style.borderRadius = "4px";
                                 cls.style.border = "1px solid #000000";
-                      
+//Marcins Really Bad Code
                                 var deleteButton = document.createElement("button");
                                 deleteButton.textContent = "Remove";
                                 deleteButton.style.backgroundColor = "rgba(230, 230, 230)";
@@ -264,16 +264,83 @@ function getAndDisplayRecommendedCourses(username) {
   
         // Create a list of recommended courses
         recommendedCourses.forEach(course => {
-          // course is expected to be a tuple-like array, for example: [10172, 'ECE211', 3]
-          const courseId = course[0];  // Assuming the first element is the course ID
-          const courseCode = course[1]; // Assuming the second element is the course code
-          const courseCredit = course[2]; // Assuming the third element is the course credit
-  
-          // Create a new div element for this course and add it to the box
-          const courseDiv = document.createElement('div');
-          courseDiv.className = 'recommended-course';
-          courseDiv.innerHTML = `${courseCode}`;
-          recommendedClassesBox.appendChild(courseDiv);
+        // course is expected to be a tuple-like array, for example: [10172, 'ECE211', 3]
+        const courseId = course[0];  // Assuming the first element is the course ID
+        const courseCode = course[1]; // Assuming the second element is the course code
+        const courseCredit = course[2]; // Assuming the third element is the course credit
+        // Create a new div element for this course and add it to the box
+        const courseDiv = document.createElement('div');
+        courseDiv.className = 'recommended-course';
+        courseDiv.innerHTML = `${courseCode}`;
+        recommendedClassesBox.appendChild(courseDiv);
+//MARCIN ADDED BUTTON, PROB BAD
+        var addButton = document.createElement("button");
+        addButton.textContent = "Add Course";
+        addButton.style.backgroundColor = "rgba(230, 230, 230)";
+        addButton.style.borderRadius = "5px"
+        addButton.onclick = function () {
+            
+            // Array of colors for courses
+            colors = ['#f5ad1d', '#e37730', '#3ad6aa', '#10bce3', '#9e3ccf', '#cbd932', '#d93237']
+
+            // Convert days from MTWRF to numbers
+            let days = []
+            for (const day of "MWF") {
+                days.push('MTWRF'.indexOf(day)+1);
+            }
+            
+            // Check if the class exists
+            if(calendar.getEventById(courseId) == null)
+            {
+                // Add course to calendar
+                
+                calendar.addEvent({
+                    id: courseId,
+                    title: `${courseCode}`, // The text to display
+                    //startTime: section.starttime, // start time
+                    //endTime: section.endtime, // end time
+                    //daysOfWeek: days, // The days of the class
+                    startTime: "12:00:00", // start time
+                    endTime: "14:00:00", // end time
+                    daysOfWeek: "1,3,5", // The days of the class
+                    color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
+                });
+
+                if(section.startime == 'None' || section.endtime == 'None' ||  days == 'None'){
+                    var cList = document.getElementById("classList");
+                    var cls = document.createElement("div");
+                    cls.className = "singleClass";
+                    cls.innerHTML = `${course.sid} ${course.cid} <br> ${section.crn} <br>`;
+//Marcins Really Bad Code
+                    cls.style.textAlign = "center";
+                    cls.style.color = "white";
+                    cls.style.margin = "5px";
+                    cls.style.padding = "10px";
+                    cls.style.backgroundColor = colors[calendar.getEvents().length%colors.length];
+                    cls.style.borderRadius = "4px";
+                    cls.style.border = "1px solid #000000";
+//Marcins Really Bad Code          
+                    var deleteButton = document.createElement("button");
+                    deleteButton.textContent = "Remove";
+                    deleteButton.style.backgroundColor = "rgba(230, 230, 230)";
+                    deleteButton.style.borderRadius = "5px"
+                    deleteButton.onclick = function () {
+                        // Delete the parent element when the button is clicked
+                        calendar.getEventById(section.crn).remove()
+                        cls.remove();
+                    };
+                
+                    // Append the delete button to the dynamically created element
+                    cls.appendChild(deleteButton);
+                    cList.appendChild(cls);
+                }
+                // Update class list
+                updateClassList();
+
+                }    
+        };
+        recommendedClassesBox.appendChild(addButton);
+//MARCIN ADDED BUTTON, PROB BAD
         });
       })
       .catch(error => {
