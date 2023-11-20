@@ -103,7 +103,7 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
     takenhours = {(str(i[0]) + str(i[1])): i[2] for i in taken}
     taken = [str(i[0]) + str(i[1]) for i in taken] #remove the tuple aspect from classes
     
-    print(takenhours)
+    #print(takenhours)
 
     for requirement in reqs : #here is where I want to remove the requirements I have already taken
 
@@ -135,12 +135,13 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
                 del genreqs['Free Elective']
                 del classesgenreqs['Free Elective']
 
+    # print("classesgenreqs: ", classesgenreqs) #this is a dictionary of requirements and classes to fill that requirement
+    # print("genreqs: ", genreqs)        #this is a dictionary of requirements and credit hours to fill that requirement
+    # print("taken: ", taken)          #this is the list of classes taken
+    
     return (classesgenreqs, genreqs)  #this returns two dictionaries. Both have the same keys but one returns credit hours still needed to fulfill this requirement 
                                                                                             #the other returns courses that will satisfy that requirement
 
-    print(classesgenreqs) #this is a dictionary of requirements and classes to fill that requirement
-    print(genreqs)        #this is a dictionary of requirements and credit hours to fill that requirement
-    print(taken)          #this is the list of classes taken
 
 def getsidcid(course) :
     return (course[0:len(course)-3], course[len(course)-3:])
@@ -157,7 +158,7 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
     tothours = 0 #the number of credit hours
     sorted_hoursreqs = sorted(hoursreqs.items(), key=lambda x:x[1], reverse=True) #get a sorted list of requirements by credit hours
 
-    print(sorted_hoursreqs)
+    print("sorted: ", sorted_hoursreqs)
     for (req, hours) in sorted_hoursreqs : #loop through the sorted list
         sections = []
 
@@ -184,22 +185,30 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
 
                 if len(sched.detectTimeConflict()) == 0 :
                     tothours += coursehours
-                    print(tothours)
+                    #print(tothours)
                     recs.append((crn, recommend, coursehours))
                     break
                 else :
                     sched.removeSection(section)
-
-
-
-
-
-
                 #grab first section
                 #remove the section from all
                 #get the section here
                 #add the section to sched
-    print(recs)
+    return recs
+
+def remainingCourses(user):
+    major = getMajor(user) #get what major they are from data base
+    taken = getTaken(user) #get what classes they've taken from the database
+    reqs = getReqs(major)  #get their requirements into a list
+    (classesreqs, hoursreq) = removeReqs(reqs, taken)
+    return classesreqs
+
+def remainingHours(user):
+    major = getMajor(user) #get what major they are from data base
+    taken = getTaken(user) #get what classes they've taken from the database
+    reqs = getReqs(major)  #get their requirements into a list
+    (classesreqs, hoursreq) = removeReqs(reqs, taken)
+    return hoursreq
 
 def recommendCourses(user) :
     major = getMajor(user) #get what major they are from data base
@@ -208,4 +217,6 @@ def recommendCourses(user) :
     (classesreqs, hoursreq) = removeReqs(reqs, taken) #remove requirements that are completed. from this list of reqs we can determine what classes to recommend
     return recommendClasses(classesreqs, hoursreq, taken) #recommend the classes
 
-recommendCourses('hansgutts')
+# remainingCourses('mom')
+# remainingHours('mom')
+print(recommendCourses('mom'))

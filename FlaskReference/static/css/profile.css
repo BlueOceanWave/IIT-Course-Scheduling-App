@@ -1,0 +1,19 @@
+#resultsBox, #takenCoursesBox, #remainingCoursesBox {
+    /* Set the width to be less than half of the parent container */
+    /* Considering padding and border, setting width to 48% will ensure they can fit side by side */
+    width: 75%;
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  /* Remove the extra padding from the grid columns */
+  .row-closer > .col,
+  .row-closer > [class*="col-"] {
+    padding-right: 2px; /* Narrow padding */
+    padding-left: 2px;
+  }
+  
+  
