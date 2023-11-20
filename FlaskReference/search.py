@@ -186,7 +186,7 @@ attr_idx = {
 
 # Get attributes for searching
 def getSearchAttributes(attributes):
-    cols = ['sid', 'cid', 'title']
+    cols = ['sid', 'cid', 'title', 'crn']
     return [str(attributes[attr_idx[i]]) for i in cols]
 
 # Get attributes for class object
