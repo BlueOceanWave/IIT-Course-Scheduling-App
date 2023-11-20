@@ -230,12 +230,37 @@ def insertToSchedules(username, crn, sindex):
     cursor = connection.cursor()
     query = f"INSERT INTO schedules (username, crn, sindex) VALUES (%s, %s, %s)"
     values = (username, crn, sindex)
-    cursor.execute(query, values)
-    connection.commit()
-    cursor.close()
-    print("class added to ", username, "'s schedule")
-    return True
+    
 
+    try:
+        cursor.execute(query, values)
+        connection.commit()
+        print("class added to ", username, "'s schedule")
+        return True
+    except: 
+        connection.rollback()
+        print("Error adding class to ", username, "'s schedule")
+        return False
+    finally:
+        cursor.close()
+
+def deleteFromSchedule(username, crn, sindex):
+    cursor = connection.cursor()
+    query = f"DELETE FROM schedules WHERE (username = %s AND crn = %s AND sindex = %s)"
+    values = (username, crn, sindex)
+
+    try:
+        cursor.execute(query, values)
+        connection.commit()
+        print("class deleted from ", username, "'s schedule")
+        return True
+    except: 
+        connection.rollback()
+        print("Error deleting class from ", username, "'s schedule")
+        return False
+    finally:
+        cursor.close()
+    
 
 def getSchedule(username, sindex):  # only gives crns for now; must be modified to give more details other than just crns
     cursor = connection.cursor()

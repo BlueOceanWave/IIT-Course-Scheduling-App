@@ -3,7 +3,7 @@ from jinja2 import Environment
 from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
-from db_oop import student_account, classes, getAllClasses, insertToTaken, deleteFromTaken, getTakenCourses, insertToSchedules
+from db_oop import student_account, classes, getAllClasses, insertToTaken, deleteFromTaken, getTakenCourses, insertToSchedules, deleteFromSchedule
 import search, json, bcrypt
 import psycopg2
 from recommend import remainingHours, remainingCourses, recommendCourses
@@ -241,6 +241,32 @@ def get_remaining_hours(username):
 @app.route("/get_recommended_courses/<username>", methods = ['GET'])
 def recommend(username):
     return jsonify(recommendCourses(username))
+
+
+@app.route("/add_to_schedule", methods = ['POST'])
+def addClassToSchedule():
+    data = request.json
+    user = data.get('username')
+    crn = data.get('crn')
+    schedule = data.get('sindex')
+
+    if insertToSchedules(user, crn, schedule):
+        return 'success'
+    else:
+        return 'fail'
+    
+@app.route("/delete_from_schedule", methods = ['DELETE'])
+def deleteClassFromSchedule():
+    data = request.json
+    user = data.get('username')
+    crn = data.get('crn')
+    schedule = data.get('sindex')
+
+    if deleteFromSchedule(user, crn, schedule):
+        return 'success'
+    else:
+        return 'fail'
+
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')

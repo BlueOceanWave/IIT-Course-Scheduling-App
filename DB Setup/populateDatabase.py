@@ -516,28 +516,28 @@ def addMajorRequirementsToDatabase() :
                         
                 #science electives
                 for i in range(100, 399) :
-                cs = 'BIOL' + str(i)
-                if cs in coursesdict :
-                    cursor.execute(majorQuery, [major, 'Science Elective', "BIOL", str(i), '6', str(buffer)])
-                    buffer += 1
+                    cs = 'BIOL' + str(i)
+                    if cs in coursesdict :
+                        cursor.execute(majorQuery, [major, 'Science Elective', "BIOL", str(i), '6', str(buffer)])
+                        buffer += 1
 
                 for i in range(100, 399) :
-                cs = 'CHEM' + str(i)
-                if cs in coursesdict :
-                    cursor.execute(majorQuery, [major, 'Science Elective', "CHEM", str(i), '6', str(buffer)])
-                    buffer += 1
+                    cs = 'CHEM' + str(i)
+                    if cs in coursesdict :
+                        cursor.execute(majorQuery, [major, 'Science Elective', "CHEM", str(i), '6', str(buffer)])
+                        buffer += 1
 
                 for i in range(100, 399) :
-                cs = 'PHYS' + str(i)
-                if cs in coursesdict :
-                    cursor.execute(majorQuery, [major, 'Science Elective', "PHYS", str(i), '6', str(buffer)])
-                    buffer += 1
+                    cs = 'PHYS' + str(i)
+                    if cs in coursesdict :
+                        cursor.execute(majorQuery, [major, 'Science Elective', "PHYS", str(i), '6', str(buffer)])
+                        buffer += 1
 
                 for i in range(100, 399) :
-                cs = 'SCI' + str(i)
-                if cs in coursesdict :
-                    cursor.execute(majorQuery, [major, 'Science Elective', "SCI", str(i), '6', str(buffer)])
-                    buffer += 1
+                    cs = 'SCI' + str(i)
+                    if cs in coursesdict :
+                        cursor.execute(majorQuery, [major, 'Science Elective', "SCI", str(i), '6', str(buffer)])
+                        buffer += 1
             
                 #I think for this one, just do a * in the database or something because I don't want to do every class in the database for this.
                 cursor.execute(majorQuery, [major, 'Free Elective', "CS", 100, '12', str(buffer)])

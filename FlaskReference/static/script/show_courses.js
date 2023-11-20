@@ -113,7 +113,10 @@ function searchCourse() {
                                 color: clr, // Cycle through colors
                             });
                             
-                            
+                            //Add class to db
+                            var username = document.getElementById('name').value;
+                            addClassToDB(username, section.crn, "1");
+                                
                             var cList = document.getElementById("classList");
                             var cls = document.createElement("div");
                             cls.className = section.crn;
@@ -135,6 +138,9 @@ function searchCourse() {
                                 // Delete the parent element when the button is clicked
                                 calendar.getEventById(section.crn).remove()
                                 cls.remove();
+
+                                var username = document.getElementById('name').value;
+                                deleteClassFromDB(username, section.crn, "1");
                             };
                         
                             // Append the delete button to the dynamically created element
@@ -145,25 +151,6 @@ function searchCourse() {
                             updateClassList();
 
                         }    
-
-                        var username = document.getElementById('name').value;
-                        fetch('/add_to_schedule', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                username: username,
-                                crn: section.crn,
-                                sindex: '1'
-                            })
-                        }).then(response => response.json()).then(data => {
-                            if (data.status == "success") {
-                                //window.location.href = '/change_account_info'; // Redirect to change account info page
-                            } else {
-                                alert("Something wrong happened. F.");
-                            }
-                        });
                     });
                     resultsBox.appendChild(sectionElem);
                 });
@@ -307,6 +294,9 @@ function getAndDisplayRecommendedCourses(username) {
                     color: clr, // Cycle through colors
                 });
 
+                //Add class to db
+                var username = document.getElementById('name').value;
+                addClassToDB(username, section.crn, "1");
                 
                 var cList = document.getElementById("classList");
                 var cls = document.createElement("div");
@@ -329,6 +319,9 @@ function getAndDisplayRecommendedCourses(username) {
                     // Delete the parent element when the button is clicked
                     calendar.getEventById(courseId).remove()
                     cls.remove();
+
+                    var username = document.getElementById('name').value;
+                    deleteClassFromDB(username, section.crn, "1");
                 };
             
                 // Append the delete button to the dynamically created element
@@ -357,4 +350,44 @@ function submitForm() {
 function deleteCourse(id) {
     document.getElementsByClassName(id)[0].remove()
     calendar.getEventById(id).remove()
+}
+
+function addClassToDB(username, crn, sIndex){
+    fetch('/add_to_schedule', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: username,
+            crn: crn,
+            sindex: sIndex
+        })
+    }).then(response => response.json()).then(data => {
+        if (data.status == "success") {
+            //window.location.href = '/change_account_info'; // Redirect to change account info page
+        } else {
+            alert("Something wrong happened. F.");
+        }
+    });
+}
+
+function deleteClassFromDB(username, crn, sIndex){
+    fetch('/delete_from_schedule', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: username,
+            crn: crn,
+            sindex: sIndex
+        })
+    }).then(response => response.json()).then(data => {
+        if (data.status == "success") {
+            //window.location.href = '/change_account_info'; // Redirect to change account info page
+        } else {
+            alert("Something wrong happened. F.");
+        }
+    });
 }
