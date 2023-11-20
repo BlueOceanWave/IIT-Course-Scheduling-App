@@ -116,7 +116,7 @@ function searchCourse() {
                             
                             var cList = document.getElementById("classList");
                             var cls = document.createElement("div");
-                            cls.className = "singleClass";
+                            cls.className = section.crn;
                             cls.innerHTML = `${course.sid} ${course.cid} <br> ${section.crn} <br>`;
 //Marcins Really Bad Code
                             cls.style.textAlign = "center";
@@ -310,7 +310,7 @@ function getAndDisplayRecommendedCourses(username) {
                 
                 var cList = document.getElementById("classList");
                 var cls = document.createElement("div");
-                cls.className = "singleClass";
+                cls.className = courseId;
                 cls.innerHTML = `${courseCode} <br> ${courseId} <br>`;
 //Marcins Really Bad Code
                 cls.style.textAlign = "center";
@@ -327,7 +327,7 @@ function getAndDisplayRecommendedCourses(username) {
                 deleteButton.style.borderRadius = "5px"
                 deleteButton.onclick = function () {
                     // Delete the parent element when the button is clicked
-                    calendar.getEventById(section.crn).remove()
+                    calendar.getEventById(courseId).remove()
                     cls.remove();
                 };
             
@@ -355,5 +355,6 @@ function submitForm() {
 }
 
 function deleteCourse(id) {
+    document.getElementsByClassName(id)[0].remove()
     calendar.getEventById(id).remove()
 }
