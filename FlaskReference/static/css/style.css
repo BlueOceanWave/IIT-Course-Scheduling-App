@@ -127,10 +127,8 @@ h1 {
 /*center the text within the input box*/
 input{
     text-align: center;
-    margin-bottom: 0.75rem;
     width: 330px;
     height: 48px;
-    margin-right: 4rem;
     border-radius: 5px;
 }
 
@@ -185,8 +183,6 @@ input{
     overflow: hidden;
 }
 
-
-
 #welcome-header{
     background-color: rgb(90, 90, 90);
     margin: 0 auto;
@@ -238,8 +234,7 @@ input{
     width: 100px;
     height: 53px;
     display: inline-block;
-    position: relative;
-    vertical-align: top;
+    margin-left: -10px;
 }
 
 #custom-table {
@@ -252,6 +247,7 @@ input{
     margin-left: 2%;
     margin-right: 9%;
     margin-top: 1%;
+    margin-left: 10px;
 }
 
 button.deleteCourse {
@@ -280,21 +276,4 @@ button.deleteCourse {
     right: 9%; 
     border: 1px solid black; 
     padding: 5px;
-}
-
-/*Media Query for Desktop Screens*/
-@media (min-width: 1025px) {
-    #searchButton {
-        margin-top: -65.7px;
-        margin-left: 330px;
-    }
-}
-
-
-/*Media Query for Monitor Screens*/
-@media screen and (min-width: 1200px) {
-    #searchButton {
-        left: -70px;
-        top: 0px;
-    }
 }
