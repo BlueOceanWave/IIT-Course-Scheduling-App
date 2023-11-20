@@ -181,6 +181,7 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
                 instructor = cursor.fetchall()[0][1]
 
                 section = search.Section(crn, snum, days, str(starttime), str(endtime), campus, online, building, room, instructor)
+                #print("section: ",section)
                 sched.addSection(section)
 
                 if len(sched.detectTimeConflict()) == 0 :
@@ -194,6 +195,7 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
                 #remove the section from all
                 #get the section here
                 #add the section to sched
+    cursor.close()
     return recs
 
 def remainingCourses(user):
@@ -219,4 +221,4 @@ def recommendCourses(user) :
 
 # remainingCourses('mom')
 # remainingHours('mom')
-print(recommendCourses('mom'))
+#print(recommendCourses('mom'))

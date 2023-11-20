@@ -234,6 +234,10 @@ def get_taken(username):
 def get_remaining_courses(username):
     return jsonify(remainingCourses(username))
 
+@app.route("/get_remaining_hours/<username>", methods = ['GET'])
+def get_remaining_hours(username):
+    return jsonify(remainingHours(username))
+
 @app.route("/get_recommended_courses/<username>", methods = ['GET'])
 def recommend(username):
     return jsonify(recommendCourses(username))
