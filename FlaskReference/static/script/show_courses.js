@@ -103,13 +103,14 @@ function searchCourse() {
                         if(calendar.getEventById(section.crn) == null)
                         {
                             // Add course to calendar
+                            clr = colors[calendar.getEvents().length%colors.length]
                             calendar.addEvent({
                                 id: section.crn,
                                 title: `${course.sid} ${course.cid}`, // The text to display
                                 startTime: section.starttime, // start time
                                 endTime: section.endtime, // end time
                                 daysOfWeek: days, // The days of the class
-                                color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
+                                color: clr, // Cycle through colors
                             });
                             
                             
@@ -122,7 +123,7 @@ function searchCourse() {
                             cls.style.color = "white";
                             cls.style.margin = "5px";
                             cls.style.padding = "10px";
-                            cls.style.backgroundColor = colors[calendar.getEvents().length%colors.length];
+                            cls.style.backgroundColor = clr;
                             cls.style.borderRadius = "4px";
                             cls.style.border = "1px solid #000000";
 //Marcins Really Bad Code
@@ -293,7 +294,7 @@ function getAndDisplayRecommendedCourses(username) {
             if(calendar.getEventById(courseId) == null)
             {
                 // Add course to calendar
-                
+                clr = colors[calendar.getEvents().length%colors.length]
                 calendar.addEvent({
                     id: courseId,
                     title: `${courseCode}`, // The text to display
@@ -303,20 +304,20 @@ function getAndDisplayRecommendedCourses(username) {
                     startTime: "12:00:00", // start time
                     endTime: "14:00:00", // end time
                     daysOfWeek: "1,3,5", // The days of the class
-                    color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
+                    color: clr, // Cycle through colors
                 });
 
                 
                 var cList = document.getElementById("classList");
                 var cls = document.createElement("div");
                 cls.className = "singleClass";
-                cls.innerHTML = `${course.sid} ${course.cid} <br> ${section.crn} <br>`;
+                cls.innerHTML = `${courseCode} <br> ${courseId} <br>`;
 //Marcins Really Bad Code
                 cls.style.textAlign = "center";
                 cls.style.color = "white";
                 cls.style.margin = "5px";
                 cls.style.padding = "10px";
-                cls.style.backgroundColor = colors[calendar.getEvents().length%colors.length];
+                cls.style.backgroundColor = clr;
                 cls.style.borderRadius = "4px";
                 cls.style.border = "1px solid #000000";
 //Marcins Really Bad Code          
