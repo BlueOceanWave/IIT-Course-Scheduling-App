@@ -279,6 +279,12 @@ button.deleteCourse {
     padding: 5px;
 }
 
+/*Media Query for Smaller Screens*/
+/*129 pixels by 606 pixels*//* Media Query for Screens Between 129px and 606px */
+/* Media Query for Screens Between 129px and 606px */
+@media screen and (min-width: 151px) and (max-width: 778px) {
+    
+}
 
 /*Media Queries for Smaller Screens*/
 /* Media Query for Smaller Screens */
