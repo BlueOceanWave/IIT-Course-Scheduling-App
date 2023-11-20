@@ -204,7 +204,7 @@ h1{
     width: 100%;
     height: calc(100vh - 100px);
     overflow-y: scroll;
-    margin: -20px auto 0;
+    margin: -10px auto 0;
     background-color: white;
 }
 
@@ -276,17 +276,10 @@ button.deleteCourse {
     padding: 5px;
 }
 
-/*Media Query for Smaller Screens*/
-/*129 pixels by 606 pixels*//* Media Query for Screens Between 129px and 606px */
-/* Media Query for Screens Between 129px and 606px */
-@media screen and (min-width: 151px) and (max-width: 778px) {
-    
-}
-
-/*Media Queries for Smaller Screens*/
-/* Media Query for Smaller Screens */
-@media screen and (max-width: 600px) {
-    #resultsBox {
-        height: calc(100vh - 50px);
+/*Media Query for Monitor Screens*/
+@media screen and (min-width: 1200px) {
+    #searchButton {
+        left: -70px;
+        top: 0px;
     }
 }
