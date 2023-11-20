@@ -115,9 +115,9 @@ function searchCourse() {
                             if(section.startime == 'None' || section.endtime == 'None' ||  days == 'None'){
                                 var cList = document.getElementById("classList");
                                 var cls = document.createElement("div");
-                                
+                                cls.className = "singleClass";
                                 cls.innerHTML = `${course.sid} ${course.cid} <br> ${section.crn} <br>`;
-
+     
                                 cls.style.textAlign = "center";
                                 cls.style.color = "white";
                                 cls.style.margin = "5px";
@@ -125,7 +125,7 @@ function searchCourse() {
                                 cls.style.backgroundColor = colors[calendar.getEvents().length%colors.length];
                                 cls.style.borderRadius = "4px";
                                 cls.style.border = "1px solid #000000";
-                                
+                      
                                 var deleteButton = document.createElement("button");
                                 deleteButton.textContent = "Remove";
                                 deleteButton.style.backgroundColor = "rgba(230, 230, 230)";
