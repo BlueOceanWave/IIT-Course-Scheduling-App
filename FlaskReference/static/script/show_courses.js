@@ -59,8 +59,6 @@ function getAndDisplayTakenCourses() {
             console.error('Error:', error);
         });
 }
-
-//JavaScript Debugging to find out why the height of box changes
 function searchCourse() {
     let searchTerm = document.getElementById('searchInput').value;
 
@@ -72,9 +70,16 @@ function searchCourse() {
         body: `query=${searchTerm}`,
     })
         .then(response => response.json())
+
+        //data is being passed from the user
         .then(data => {
             let resultsBox = document.getElementById('resultsBox');
             resultsBox.innerHTML = '';  // Clear previous results
+
+            if (data.length == 0) {
+                resultsBox.innerHTML = '<p>No results found</p>';
+            }
+            
             data.forEach(course => {
                 let courseElem = document.createElement('div');
                 var shortDesc = course.description.substring(0, course.description.indexOf(". ") + 1);
