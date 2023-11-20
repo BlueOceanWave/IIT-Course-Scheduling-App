@@ -112,10 +112,38 @@ function searchCourse() {
                                 color: colors[calendar.getEvents().length%colors.length], // Cycle through colors
                             });
 
+                            if(section.startime == 'None' || section.endtime == 'None' ||  days == 'None'){
+                                var cList = document.getElementById("classList");
+                                var cls = document.createElement("div");
+                                
+                                cls.innerHTML = `${course.sid} ${course.cid} <br> ${section.crn} <br>`;
+
+                                cls.style.textAlign = "center";
+                                cls.style.color = "white";
+                                cls.style.margin = "5px";
+                                cls.style.padding = "10px";
+                                cls.style.backgroundColor = colors[calendar.getEvents().length%colors.length];
+                                cls.style.borderRadius = "4px";
+                                cls.style.border = "1px solid #000000";
+                                
+                                var deleteButton = document.createElement("button");
+                                deleteButton.textContent = "Remove";
+                                deleteButton.style.backgroundColor = "rgba(230, 230, 230)";
+                                deleteButton.style.borderRadius = "5px"
+                                deleteButton.onclick = function () {
+                                    // Delete the parent element when the button is clicked
+                                    calendar.getEventById(section.crn).remove()
+                                    cls.remove();
+                                };
+                            
+                                // Append the delete button to the dynamically created element
+                                cls.appendChild(deleteButton);
+                                cList.appendChild(cls);
+                            }
                             // Update class list
                             updateClassList();
 
-                        }
+                        }    
 
                         var username = document.getElementById('name').value;
                         fetch('/add_to_schedule', {

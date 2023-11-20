@@ -93,5 +93,5 @@ class Schedule:
 #     print('Missing lab/class: ', c.course.cid)
 
 
-print(search('cs 495')[0].sections[0].days)
-print(search('cs 495')[0].sections[0].daysToIndex())
+#print(search('cs 495')[0].sections[0].days)
+#print(search('cs 495')[0].sections[0].daysToIndex())
