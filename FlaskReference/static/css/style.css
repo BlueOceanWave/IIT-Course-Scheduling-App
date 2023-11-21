@@ -205,11 +205,12 @@ input{
 /*modify the resultsBox*/
 #resultsBox {
     border: 1px solid black;
-    width: 100%;
+    width: 450px;
     height: calc(100vh - 100px);
     overflow-y: scroll;
     margin: 0 auto;
     background-color: white;
+    margin-top: 40px;
 }
 
 .search-container {
