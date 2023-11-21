@@ -132,7 +132,7 @@ input{
     border-radius: 5px;
 }
 
-#name, #password {
+#name, #password, #confirmPassword {
     text-align: center;
     margin-bottom: 0.75rem;
     width: 330px;
