@@ -272,15 +272,24 @@ def schedule_info():
     classes = []
     # Convert to proper format
     for result in results:
-        # Make class
-        classInfo = {
-            'crn': result[0],
-            'sid': result[1],
-            'cid': result[2],
-            'starttime': result[3].strftime('%H:%M') + ':00',
-            'endtime': result[4].strftime('%H:%M') + ':00',
-            'days': result[5]
-        }
+        if result[3] == None or result[4] == None:
+            classInfo = {
+                'crn': result[0],
+                'sid': result[1],
+                'cid': result[2],
+                'starttime': None,
+                'endtime': None,
+                'days': []
+            }
+        else:
+            classInfo = {
+                'crn': result[0],
+                'sid': result[1],
+                'cid': result[2],
+                'starttime': result[3].strftime('%H:%M') + ':00',
+                'endtime': result[4].strftime('%H:%M') + ':00',
+                'days': result[5]
+            }
 
         classes.append(classInfo)
 
