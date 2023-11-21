@@ -272,25 +272,19 @@ def schedule_info():
     classes = []
     # Convert to proper format
     for result in results:
-        
-        # Convert days to numbers
-        days = []
-        for day in result[-1]:
-            days.append("MTWRF".index(day) + 1)
-        
         # Make class
         classInfo = {
             'crn': result[0],
-            'cid': result[1],
-            'sid': result[2],
-            'starttime': result[3].strftime('%H:%M'),
-            'endtime': result[4].strftime('%H:%M'),
-            'days': days, 
+            'sid': result[1],
+            'cid': result[2],
+            'starttime': result[3].strftime('%H:%M') + ':00',
+            'endtime': result[4].strftime('%H:%M') + ':00',
+            'days': result[5]
         }
 
         classes.append(classInfo)
 
-    print('Json', jsonify(classes))
+    print('Json', (classes))
     return jsonify(classes)
 
 

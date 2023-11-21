@@ -369,5 +369,6 @@ function addCourseToCalendar(course, section){
          // Append the delete button to the dynamically created element
          cls.appendChild(deleteButton);
          cList.appendChild(cls);
+ 
      }
  }
