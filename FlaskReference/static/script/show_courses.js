@@ -350,10 +350,13 @@ function submitForm() {
 function deleteCourse(id) {
     document.getElementsByClassName(id)[0].remove()
     calendar.getEventById(id).remove()
+    
+    var username = document.getElementById('name').value;
+    deleteClassFromDB(username, id, "1");
 }
 
 function addClassToDB(username, crn, sIndex){
-    fetch('/add_to_schedule', {
+    fetch('/modify_schedule', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -373,7 +376,7 @@ function addClassToDB(username, crn, sIndex){
 }
 
 function deleteClassFromDB(username, crn, sIndex){
-    fetch('/delete_from_schedule', {
+    fetch('/modify_schedule', {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -381,6 +384,25 @@ function deleteClassFromDB(username, crn, sIndex){
         body: JSON.stringify({
             username: username,
             crn: crn,
+            sindex: sIndex
+        })
+    }).then(response => response.json()).then(data => {
+        if (data.status == "success") {
+            //window.location.href = '/change_account_info'; // Redirect to change account info page
+        } else {
+            alert("Something wrong happened. F.");
+        }
+    });
+}
+
+function getScheduleClasses(username, sIndex){
+    fetch('/schedule_info', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: username,
             sindex: sIndex
         })
     }).then(response => response.json()).then(data => {

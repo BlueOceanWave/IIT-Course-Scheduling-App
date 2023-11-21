@@ -264,10 +264,12 @@ def deleteFromSchedule(username, crn, sindex):
 
 def getSchedule(username, sindex):  # only gives crns for now; must be modified to give more details other than just crns
     cursor = connection.cursor()
-    query = f"SELECT crn FROM schedules WHERE username = %s AND sindex = %s"
+    query = f"SELECT crn, sid, cid, starttime, endtime, days\
+            FROM schedules INNER JOIN classes USING (crn) INNER JOIN courses USING (sid, cid)\
+            WHERE username = %s AND sindex = %s"
     values = (username, sindex)
     cursor.execute(query, values)
     result = cursor.fetchall()
     cursor.close()
-    print("Got schedule ", result, " for ", username)
-    return [result]
+    print("Got schedule ", sindex, " for ", username)
+    return result

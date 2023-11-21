@@ -243,29 +243,32 @@ def recommend(username):
     return jsonify(recommendCourses(username))
 
 
-@app.route("/add_to_schedule", methods = ['POST'])
-def addClassToSchedule():
+@app.route('/modify_schedule', methods = ['POST', 'DELETE'])
+def modify_schedule():
     data = request.json
     user = data.get('username')
     crn = data.get('crn')
     schedule = data.get('sindex')
 
-    if insertToSchedules(user, crn, schedule):
-        return 'success'
-    else:
-        return 'fail'
-    
-@app.route("/delete_from_schedule", methods = ['DELETE'])
-def deleteClassFromSchedule():
+    if request.method =="POST":
+        if insertToSchedules(user, crn, schedule):
+            return 'success'
+        else:
+            return 'fail'
+    elif request.method =="DELETE": 
+        if deleteFromSchedule(user, crn, schedule):
+            return 'success'
+        else:
+            return 'fail'
+
+@app.route("/schedule_info", methods = ['GET'])
+def get_schedule():
     data = request.json
     user = data.get('username')
-    crn = data.get('crn')
     schedule = data.get('sindex')
 
-    if deleteFromSchedule(user, crn, schedule):
-        return 'success'
-    else:
-        return 'fail'
+    classes = jsonify(insertToSchedules(user, schedule))
+    return classes
 
 
 if __name__ == "__main__":
