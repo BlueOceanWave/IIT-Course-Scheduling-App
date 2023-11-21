@@ -97,7 +97,7 @@ function searchCourse(searchTerm) {
                 course.sections.forEach((section) => {
                     let sectionElem = document.createElement("a");
                     sectionElem.href = "#";
-                    sectionElem.innerHTML = `<span style="font-size: smaller;"> Section: ${section.snum}, ${section.days} from ${section.starttime}-${section.endtime}</span><br>`;
+                    sectionElem.innerHTML = `<span style="font-size: smaller; text-align: left;"> Section: ${section.snum}, ${section.days} from ${section.starttime}-${section.endtime}</span><br>`;
                     sectionElem.addEventListener("click", function () {
                         addCourseToCalendar(course, section);
                     });

@@ -249,6 +249,7 @@ input{
     margin-right: 9%;
     margin-top: 1%;
     margin-left: 10px;
+    height: 100%;
 }
 
 button.deleteCourse {
@@ -312,7 +313,7 @@ button.deleteCourse {
     margin-left: -8%;
     margin-top: 1%;
     width: 10%; 
-    height: 750px;
+    height: 615px;
     overflow-y: scroll;
     border: 1px solid black;
     background-color: white;
