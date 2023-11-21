@@ -119,7 +119,9 @@
         // Call the function to get and display courses when the page loads
         window.onload = function () {
             const username = document.getElementById('name').value; // Assuming there's an element with id 'hiddenUsername'
+            
             getAndDisplayRecommendedCourses(username);
+            getScheduleClasses(username, "1");
         };
     </script>
 </body>

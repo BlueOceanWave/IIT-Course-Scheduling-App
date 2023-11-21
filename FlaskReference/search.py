@@ -213,13 +213,24 @@ def search(searchbar):
             search_terms.remove(term)
             break
 
+    crn = None
+    if len(search_terms) == 1 and search_terms[0].isnumeric() and len(search_terms[0]) == 5:
+        crn = search_terms[0]
+
     # Search all classes for a match
     matches = []
+
     for raw_class in classes:
         search_attributes = getSearchAttributes(raw_class)
         
+        # If we're searching for crn's, then ignore all other attributes
+        if crn is not None:
+            if crn == search_attributes[3]:
+                matches.append(raw_class)
+                continue
+
         # If the subject ID was specified, match it. If not, continue
-        if sID is None or sID.lower() == search_attributes[0].lower():
+        elif sID is None or sID.lower() == search_attributes[0].lower():
             # Check if any other search terms are left
             # If not, return any class of that subject
             if len(search_terms) == 0:
@@ -229,7 +240,7 @@ def search(searchbar):
             # If we get here, then other terms are left for us to match
             allTermsPresent = True
             for term in search_terms:
-                if term.lower() not in ' '.join(search_attributes).lower():
+                if term.lower() not in ' '.join(search_attributes[:-1]).lower():
                     allTermsPresent = False
             
             # Only add if all the terms are present
