@@ -88,7 +88,7 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
 
     for requirement in reqs : #here is where I want to remove the requirements I have already taken
 
-        req = str(requirement[2]) + str(requirement[3]) #build the requirement to match taken
+        req = str(requirement[2]) +  str(requirement[3]) #build the requirement to match taken
 
         if req in taken : #see if taken
 
