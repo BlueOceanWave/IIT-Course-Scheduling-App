@@ -325,50 +325,51 @@ function addCourseToCalendar(course, section){
  
      // Check if the class exists
      if (calendar.getEventById(section.crn) == null) {
-         // Add course to calendar
-         clr = colors[calendar.getEvents().length % colors.length];
-         calendar.addEvent({
-             id: section.crn,
-             title: `${course.sid} ${course.cid}`, // The text to display
-             startTime: section.starttime, // start time
-             endTime: section.endtime, // end time
-             daysOfWeek: days, // The days of the class
-             color: clr, // Cycle through colors
-         });
+        // Figure out the color of the box
+        var cList = document.getElementById("classList");
+        clr = colors[cList.childElementCount % colors.length];
+
+        // Add course to calendar
+        calendar.addEvent({
+            id: section.crn,
+            title: `${course.sid} ${course.cid}`, // The text to display
+            startTime: section.starttime, // start time
+            endTime: section.endtime, // end time
+            daysOfWeek: days, // The days of the class
+            color: clr, // Cycle through colors
+        });
+
+        //Add class to db
+        var username = document.getElementById("name").value;
+        addClassToDB(username, section.crn, "1");
+        
+        var cList = document.getElementById("classList");
+        var cls = document.createElement("div");
+        cls.className = section.crn;
+        cls.innerHTML = `${course.sid} ${course.cid} <br> ${section.crn} <br>`;
+        //Marcins Really Bad Code
+        cls.style.textAlign = "center";
+        cls.style.color = "white";
+        cls.style.margin = "5px";
+        cls.style.padding = "10px";
+        cls.style.backgroundColor = clr;
+        cls.style.borderRadius = "4px";
+        cls.style.border = "1px solid #000000";
+        //Marcins Really Bad Code
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Remove";
+        deleteButton.style.backgroundColor = "rgba(230, 230, 230)";
+        deleteButton.style.borderRadius = "5px";
+        deleteButton.onclick = function () {
+            // Delete the parent element when the button is clicked
+            calendar.getEventById(section.crn).remove();
+            cls.remove();
+              var username = document.getElementById("name").value;
+            deleteClassFromDB(username, section.crn, "1");
+        };
  
-         //Add class to db
-         var username = document.getElementById("name").value;
-         addClassToDB(username, section.crn, "1");
- 
-         var cList = document.getElementById("classList");
-         var cls = document.createElement("div");
-         cls.className = section.crn;
-         cls.innerHTML = `${course.sid} ${course.cid} <br> ${section.crn} <br>`;
-         //Marcins Really Bad Code
-         cls.style.textAlign = "center";
-         cls.style.color = "white";
-         cls.style.margin = "5px";
-         cls.style.padding = "10px";
-         cls.style.backgroundColor = clr;
-         cls.style.borderRadius = "4px";
-         cls.style.border = "1px solid #000000";
-         //Marcins Really Bad Code
-         var deleteButton = document.createElement("button");
-         deleteButton.textContent = "Remove";
-         deleteButton.style.backgroundColor = "rgba(230, 230, 230)";
-         deleteButton.style.borderRadius = "5px";
-         deleteButton.onclick = function () {
-             // Delete the parent element when the button is clicked
-             calendar.getEventById(section.crn).remove();
-             cls.remove();
- 
-             var username = document.getElementById("name").value;
-             deleteClassFromDB(username, section.crn, "1");
-         };
- 
-         // Append the delete button to the dynamically created element
-         cls.appendChild(deleteButton);
-         cList.appendChild(cls);
- 
-     }
+        // Append the delete button to the dynamically created element
+        cls.appendChild(deleteButton);
+        cList.appendChild(cls);
+      }
  }
