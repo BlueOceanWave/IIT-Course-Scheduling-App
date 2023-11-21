@@ -308,13 +308,12 @@ button.deleteCourse {
 }
 
 /*Styling for classList here*/
-
 #classList {
     margin-left: -8%;
     margin-top: 1%;
     width: 10%; 
     height: 750px;
-    overflow-y: "scroll";
+    overflow-y: scroll;
     border: 1px solid black;
     background-color: white;
 }
