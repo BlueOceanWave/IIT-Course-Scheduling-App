@@ -79,7 +79,7 @@ function searchCourse(searchTerm) {
             resultsBox.innerHTML = ""; // Clear previous results
 
             if (data.length == 0) {
-                resultsBox.innerHTML = "<p>No results found</p>";
+                resultsBox.innerHTML = "<p>No results found.</p>";
             }
 
             data.forEach((course) => {
@@ -88,12 +88,16 @@ function searchCourse(searchTerm) {
                     0,
                     course.description.indexOf(". ") + 1
                 );
-                courseElem.innerHTML = `<br><strong>${course.title} (${course.sid} ${course.cid})</strong>: ${shortDesc}`;
+
+                //Modify these elements
+                //Move course.title to the center
+                courseElem.innerHTML = `<hr><strong style="display: block; text-align: center;">${course.title} (${course.sid} ${course.cid})</strong><br><span style="font-size: smaller; display: inline; text-align: justify; text-justify: inter-word; margin-left: 10px; margin-right: 10px;">${shortDesc}</span>`;
+               
                 resultsBox.appendChild(courseElem);
                 course.sections.forEach((section) => {
                     let sectionElem = document.createElement("a");
                     sectionElem.href = "#";
-                    sectionElem.innerHTML = `Section: ${section.snum}, ${section.days} from ${section.starttime}-${section.endtime} <br>`;
+                    sectionElem.innerHTML = `<span style="font-size: smaller;"> Section: ${section.snum}, ${section.days} from ${section.starttime}-${section.endtime}</span><br>`;
                     sectionElem.addEventListener("click", function () {
                         // Array of colors for courses
                         colors = [
