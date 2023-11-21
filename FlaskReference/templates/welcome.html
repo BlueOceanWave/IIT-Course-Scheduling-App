@@ -2,61 +2,6 @@
 <html lang="en">
 <head>
     <title>Spring 2024 Course Schedule</title>
-    <style>
-        .horizontalContainer {
-            display: flex;
-        }
-
-        #deleteCourse {
-            text-align: center;
-            padding: 5px;
-            color: #fff;
-            left: 5%;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 20px;
-            height: 20px;
-            z-index: 10;
-        }
-        #deleteCourse::before {
-            content: "";
-            position: absolute;
-            top: 4px; /* Adjust this value to move the background up */
-            right: 1%;
-            bottom: -7px;
-            left: 1%;
-            background-color: rgba(230, 90, 90);
-            border-radius: 4px;
-            z-index: -10;
-        }
-
-        #classList {
-            margin-left: -8%;
-            margin-top: 1%;
-            width: 10%; 
-            height: 750px;
-            overflow-y: "scroll";
-            border: 1px solid black;
-            background-color: white;
-        }
-        #classList h3{
-            text-align: center;
-            margin: 0 auto;
-            padding: 5px;
-        }
-        
-        #singleClass {
-            text-align: "center";
-            color: "white";
-            margin: "5px";
-            padding: "10px";
-            background-color: "red";
-            border-radius: "4px";
-            border: "1px solid #000000";
-        }
-
-    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/normalize.css')}}">
@@ -77,12 +22,9 @@
         document.getElementById(classList).style.height = document.getElementById('calendar').style.height;
     </script>
 </head>
-
 <body>
-    
     <div id="pageIdentifier" data-page-name="welcome"></div>
     <h1 id="welcome-header">Spring 2024</h1>
-    
     <!-- Top right corner: Clickable box -->
     <div class="searchBox">
         <form id="profileForm" action="/view_profile" method="POST" style="position: absolute; top: 10px; right: 10px; border: 1px solid black; padding: 5px; cursor: pointer;" onclick="submitForm()">
@@ -100,26 +42,21 @@
             </div>
         </div>
     </div>
-
-
     <div class="horizontalContainer">
         <!-- Updating Days box -->
         <div id="schedule">
             <div id="calendar"> 
             </div>
         </div>
-            
         <!-- List of Selected Classes-->
         <div id = 'classList'>
-            <h3 id = "classListHeader" >Classes</h3>
+            <h3 id = "classListHeader">Classes</h3>
         </div>
     </div>
-
     <!-- Bottom box: Recommended classes -->
     <div id = "recommendedClasses">
         Recommended Classes:
     </div>
-
     <script>
         // Create calendar 
         document.addEventListener('DOMContentLoaded', function() {
@@ -187,6 +124,5 @@
             getScheduleClasses(username, "1");
         };
     </script>
-   
 </body>
 </html>
