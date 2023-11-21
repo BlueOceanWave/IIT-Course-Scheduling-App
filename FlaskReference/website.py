@@ -3,7 +3,8 @@ from jinja2 import Environment
 from flask_socketio import SocketIO
 from cryptography.fernet import Fernet
 import db
-from db_oop import student_account, classes, getAllClasses, insertToTaken, deleteFromTaken, getTakenCourses, insertToSchedules, deleteFromSchedule
+from datetime import time
+from db_oop import student_account, classes, getAllClasses, insertToTaken, deleteFromTaken, getTakenCourses, insertToSchedules, deleteFromSchedule, getSchedule
 import search, json, bcrypt
 import psycopg2
 from recommend import remainingHours, remainingCourses, recommendCourses
@@ -242,7 +243,6 @@ def get_remaining_hours(username):
 def recommend(username):
     return jsonify(recommendCourses(username))
 
-
 @app.route('/modify_schedule', methods = ['POST', 'DELETE'])
 def modify_schedule():
     data = request.json
@@ -261,14 +261,37 @@ def modify_schedule():
         else:
             return 'fail'
 
-@app.route("/schedule_info", methods = ['GET'])
-def get_schedule():
+@app.route("/schedule_info", methods = ['POST'])
+def schedule_info():
     data = request.json
     user = data.get('username')
     schedule = data.get('sindex')
 
-    classes = jsonify(insertToSchedules(user, schedule))
-    return classes
+    results = getSchedule(user, schedule)
+
+    classes = []
+    # Convert to proper format
+    for result in results:
+        
+        # Convert days to numbers
+        days = []
+        for day in result[-1]:
+            days.append("MTWRF".index(day) + 1)
+        
+        # Make class
+        classInfo = {
+            'crn': result[0],
+            'cid': result[1],
+            'sid': result[2],
+            'starttime': result[3].strftime('%H:%M'),
+            'endtime': result[4].strftime('%H:%M'),
+            'days': days, 
+        }
+
+        classes.append(classInfo)
+
+    print('Json', jsonify(classes))
+    return jsonify(classes)
 
 
 if __name__ == "__main__":
