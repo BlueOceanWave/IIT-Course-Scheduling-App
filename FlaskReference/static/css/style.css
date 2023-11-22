@@ -333,11 +333,3 @@ button.deleteCourse {
     border-radius: "4px";
     border: "1px solid #000000";
 }
-
-/*Media Query for monitors*/
-@media screen and (min-width: 1200px) {
-    #classList {
-        height: 710px;
-    }
-
-}
