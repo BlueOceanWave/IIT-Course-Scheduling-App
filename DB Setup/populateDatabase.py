@@ -137,7 +137,6 @@ def extractClassData(entry):
         'cType': entry['cType'],
         'instructors': entry['instructors']
     }
-
     return result
 
 def extractRequirementData(entry):
