@@ -249,7 +249,6 @@ input{
     margin-right: 9%;
     margin-top: 1%;
     margin-left: 10px;
-    height: 100%;
 }
 
 button.deleteCourse {
@@ -313,7 +312,7 @@ button.deleteCourse {
     margin-left: -8%;
     margin-top: 1%;
     width: 10%; 
-    height: -10%;
+    height: 530px;
     overflow-y: scroll;
     border: 1px solid black;
     background-color: white;
@@ -333,4 +332,12 @@ button.deleteCourse {
     background-color: "red";
     border-radius: "4px";
     border: "1px solid #000000";
+}
+
+/*Media Query for monitors*/
+@media screen and (min-width: 1200px) {
+    #classList {
+        height: 710px;
+    }
+
 }
