@@ -65,14 +65,18 @@ def search_course():
                      "instructors": section.instructors}
                      for section in course.sections]
         
+        instructors_list = [instructor for section in sections for instructor in section["instructors"]]
+        
         course_dict = {
             "sid": course.sid,
             "cid": course.cid,
             "title": course.title,
             "description": course.description,
             "hours": course.hours,
-            "sections": sections
+            "sections": sections,
+            "instructors": instructors_list,
         }
+
         result.append(course_dict)
 
     return json.dumps(result)  # Return the data as JSON

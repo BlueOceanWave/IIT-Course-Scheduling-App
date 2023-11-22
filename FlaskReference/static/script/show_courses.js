@@ -44,6 +44,7 @@ function getAndDisplayTakenCourses() {
                             username: username,
                             sid: sid,
                             cid: cid,
+                            //Add
                         }),
                     })
                         .then((response) => response.json())
@@ -89,12 +90,16 @@ function searchCourse(searchTerm) {
                     course.description.indexOf(". ") + 1
                 );
 
+
                 //Modify these elements
                 //Move course.title to the center
-                courseElem.innerHTML = `<hr><strong style="display: block; text-align: center;">${course.title} (${course.sid} ${course.cid})</strong><br><span style="font-size: smaller; display: inline; text-align: justify; text-justify: inter-word; margin-left: 10px; margin-right: 10px;">${shortDesc}</span>`;
+                //instructors_list
+
+                courseElem.innerHTML = `<hr><strong style="display: block; text-align: center;">${course.title}${course.sid}${course.cid})</strong><br><span style="font-size: smaller; display: inline; text-align: justify; text-justify: inter-word; margin-left: 10px; margin-right: 10px;">${shortDesc}</span>`;
                
                 resultsBox.appendChild(courseElem);
                 course.sections.forEach((section) => {
+
                     let sectionElem = document.createElement("a");
                     sectionElem.href = "#";
                     sectionElem.innerHTML = `<span style="font-size: smaller; text-align: left;"> Section: ${section.snum}, ${section.days} from ${section.starttime}-${section.endtime}</span><br>`;
@@ -103,6 +108,7 @@ function searchCourse(searchTerm) {
                     });
                     resultsBox.appendChild(sectionElem);
                 });
+
             });
         });
 }
