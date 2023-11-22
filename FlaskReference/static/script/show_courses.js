@@ -157,6 +157,7 @@ function searchTakenCourse() {
                             }
                         });
                     getAndDisplayTakenCourses();
+                    getAndDisplayRemainingCourses(username);
                 });
             });
         });
