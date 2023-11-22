@@ -95,7 +95,7 @@ function searchCourse(searchTerm) {
                 //Move course.title to the center
                 //instructors_list
 
-                courseElem.innerHTML = `<hr><strong style="display: block; text-align: center;">${course.title}${course.sid}${course.cid})</strong><br><span style="font-size: smaller; display: inline; text-align: justify; text-justify: inter-word; margin-left: 10px; margin-right: 10px;">${shortDesc}</span>`;
+                courseElem.innerHTML = `<hr><strong style="display: block; text-align: center;">${course.title} (${course.sid} ${course.cid})</strong><br><span style="font-size: smaller; display: inline; text-align: justify; text-justify: inter-word; margin-left: 10px; margin-right: 10px;">${shortDesc}</span>`;
                
                 resultsBox.appendChild(courseElem);
                 course.sections.forEach((section) => {
