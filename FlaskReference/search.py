@@ -12,6 +12,10 @@ connection = psycopg2.connect(
     port='5432'
 )
 
+cs116 = Section()
+cs116.course.hasLabSection()
+cs116.course.hasRecitationSection()
+
 class Section:
         def __init__(self, crn, snum, days, starttime, endtime, campus, online, building, room, instructor, course=None, enrollment=None, enrollmentmax=None, waitlist=None):
             self.crn = crn

@@ -102,7 +102,14 @@ function searchCourse(searchTerm) {
 
                     let sectionElem = document.createElement("a");
                     sectionElem.href = "#";
-                    sectionElem.innerHTML = `<span style="font-size: smaller; text-align: left;"> Section: ${section.snum}, ${section.days} from ${section.starttime}-${section.endtime}</span><br>`;
+
+                    if (section.starttime == 'None' && section.endtime == 'None' && section.days == 'None'){
+                        sectionElem.innerHTML = `<span style="font-size: smaller; text-align: left;"> Section: ${section.snum}, ${section.instructors}, No day/time specified</span><br>`;
+                    }
+                    else{
+                        sectionElem.innerHTML = `<span style="font-size: smaller; text-align: left;"> Section: ${section.snum}, ${section.instructors}, ${section.days} from ${section.starttime}-${section.endtime}</span><br>`;
+                    }
+
                     sectionElem.addEventListener("click", function () {
                         addCourseToCalendar(course, section);
                     });
