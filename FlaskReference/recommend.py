@@ -5,6 +5,9 @@ import random
 import schedule
 import search
 
+#section has course
+#so section.course()
+
 # Connect to PostgreSQL database
 connection = psycopg2.connect(
     dbname='NewDB',
@@ -83,7 +86,11 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
             classesgenreqs[reqname] = classes #reset the dictionary key value pair
         else :
             classesgenreqs[reqname] = [str(req[2]) + str(req[3])] #initialize the pair
-    takenhours = {(str(i[0]) + str(i[1])): i[2] for i in taken}
+    takenhours = {(str(i[0]) + str(i[1])): i[2] for i in taken} #dictionary of taken courses and credit hours for that course
+    tothourstaken = 0 #need to keep track of hours taken by user (for ipro rec)
+
+    for course in takenhours : #go through each course
+        tothourstaken += takenhours[course] #and add the hours
     taken = [str(i[0]) + str(i[1]) for i in taken] #remove the tuple aspect from classes
 
     for requirement in reqs : #here is where I want to remove the requirements I have already taken
@@ -117,16 +124,18 @@ def removeReqs(reqs, taken) : #here is where I will remove satisfied requirement
     # print("genreqs: ", genreqs)        #this is a dictionary of requirements and credit hours to fill that requirement
     # print("taken: ", taken)          #this is the list of classes taken
     
-    return (classesgenreqs, genreqs)  #this returns two dictionaries. Both have the same keys but one returns credit hours still needed to fulfill this requirement 
+    return (classesgenreqs, genreqs, tothourstaken)  #this returns two dictionaries. Both have the same keys but one returns credit hours still needed to fulfill this requirement 
                                                                                             #the other returns courses that will satisfy that requirement
 
 
 def getsidcid(course) :
     return (course[0:len(course)-3], course[len(course)-3:])
 
-def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to recommend and return [(crn, cs100), ...]
+def recommendClasses(classesreqs, hoursreqs, taken, credithours) : #decide which classes to recommend and return [(crn, cs100), ...]
     cursor = connection.cursor() #set up objects
     sched = schedule.Schedule()
+
+    doubleclasses = True
 
     classesQuery = "SELECT * FROM classes WHERE sid=%s AND cid=%s" #set up queries
     instructorQuery = "SELECT * FROM instructors WHERE crn = %s"
@@ -136,42 +145,72 @@ def recommendClasses(classesreqs, hoursreqs, taken) : #decide which classes to r
     tothours = 0 #the number of credit hours
     sorted_hoursreqs = sorted(hoursreqs.items(), key=lambda x:x[1], reverse=True) #get a sorted list of requirements by credit hours
 
+    takenconverted = [str(sid) + str(cid) for (sid, cid, hours) in taken]
+    
+    print(sorted_hoursreqs)
+    numreqs = len(sorted_hoursreqs)
+    if "Free Elective" in sorted_hoursreqs :
+        numreqs -= 1
+    if credithours <= 70 :
+        numreqs -= 1
+    if len(sorted_hoursreqs) < 5 :
+        repeat = 5-len(sorted_hoursreqs)
+        print(f"repeat {repeat}")
+
+
+
     for (req, hours) in sorted_hoursreqs : #loop through the sorted list
-        sections = []
+        if req != 'Free Elective' :
+            if len(classesreqs[req]) > 0 :
+                keepgoing = True
+                for possible in classesreqs[req] :
 
-        possible = classesreqs[req]
-        recommend = possible[0]
+                    sections = []
+                    recommend = possible
 
-        possible = possible[1:]
+                    (sid, cid) = getsidcid(recommend)
 
-        cursor.execute(classesQuery, getsidcid(recommend))
-        sections = cursor.fetchall()
+                    cursor.execute(classesQuery, (sid, cid))
+                    sections = cursor.fetchall()
 
-        for (crn, sid, cid, snum, semester, days, starttime, endtime, campus, online, building, room) in sections :
+                    coursestaken = [str(tsid) + str(tcid) for (tsid, tcid, hours) in taken]
+                    
+                    for (crn, sid, cid, snum, semester, days, starttime, endtime, campus, online, building, room) in sections :
+                        #print("4")
+                        cursor.execute(hoursQuery, (sid, cid))
+                        coursehours = cursor.fetchall()[0][0]
 
-            cursor.execute(hoursQuery, (sid, cid))
-            coursehours = cursor.fetchall()[0][0]
+                        if tothours + coursehours <= 18 and coursehours >= 2 and len(recs) <=5 and req != 'Free Elective' and not(recommend in takenconverted) and keepgoing :
+                            if not (req == "IPRO Requirement") or credithours >= 70 :
+                                cursor.execute(instructorQuery, [crn])
+                                instructor = cursor.fetchall()[0][1]
 
-            if tothours + coursehours <= 18 and coursehours > 0 and req != 'Free Elective':
+                                if days is None :
+                                    days = 'None'
 
-                cursor.execute(instructorQuery, [crn])
-                instructor = cursor.fetchall()[0][1]
+                                section = search.Section(crn, snum, days, str(starttime), str(endtime), campus, online, building, room, instructor)
 
-                if days is None :
-                    days = 'None'
+                                
 
-                section = search.Section(crn, snum, days, str(starttime), str(endtime), campus, online, building, room, instructor)
-                
-                
+                                sched.addSection(section)
 
-                sched.addSection(section)
-
-                if len(sched.detectTimeConflict()) == 0 :
-                    tothours += coursehours
-                    recs.append((crn, recommend, coursehours))
-                    break
-                else :
-                    sched.removeSection(section)
+                                if len(sched.detectTimeConflict()) == 0 :
+                                    
+                                    tothours += coursehours
+                                    recs.append((crn, recommend, coursehours))
+                                    #if doubleclasses :
+                                    #    doubleclasses = False
+                                    #else :
+                                    if repeat == 0 :
+                                        keepgoing = False
+                                    else :
+                                        repeat -= 1
+                                    
+                                    break
+                                        
+                                else :
+                                    sched.removeSection(section)
+            repeat = 0
     for section in sched.sections :
         sched.removeSection(section)
     cursor.close()
@@ -181,23 +220,24 @@ def remainingCourses(user):
     major = getMajor(user) #get what major they are from data base
     taken = getTaken(user) #get what classes they've taken from the database
     reqs = getReqs(major)  #get their requirements into a list
-    (classesreqs, hoursreq) = removeReqs(reqs, taken)
+    (classesreqs, hoursreq, tot) = removeReqs(reqs, taken)
     return classesreqs
 
 def remainingHours(user):
     major = getMajor(user) #get what major they are from data base
     taken = getTaken(user) #get what classes they've taken from the database
     reqs = getReqs(major)  #get their requirements into a list
-    (classesreqs, hoursreq) = removeReqs(reqs, taken)
+    (classesreqs, hoursreq, tot) = removeReqs(reqs, taken)
     return hoursreq
 
 def recommendCourses(user) :
     major = getMajor(user) #get what major they are from data base
     taken = getTaken(user) #get what classes they've taken from the database
     reqs = getReqs(major)  #get their requirements into a list
-    (classesreqs, hoursreq) = removeReqs(reqs, taken) #remove requirements that are completed. from this list of reqs we can determine what classes to recommend
-    return recommendClasses(classesreqs, hoursreq, taken) #recommend the classes
+    (classesreqs, hoursreq, tothours) = removeReqs(reqs, taken) #remove requirements that are completed. from this list of reqs we can determine what classes to recommend
+    return recommendClasses(classesreqs, hoursreq, taken, tothours) #recommend the classes
 
 # remainingCourses('mom')
 # remainingHours('mom')
 #print(recommendCourses('mom'))
+print(recommendCourses('hansgutts'))

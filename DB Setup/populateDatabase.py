@@ -330,6 +330,12 @@ def addMajorRequirementsToDatabase() :
             for (i, cid) in [(1, '200'), (2, '202'), (3, '204'), (4, '206'), (5, '208')] :
                 cursor.execute(majorQuery, [major, 'Humanities Requirement', "HUM", cid, '3', str(buffer)])
                 buffer += 1
+
+            for i in range(210, 299) :
+                cs = 'HUM' + str(i)
+                if cs in coursesdict :
+                    cursor.execute(majorQuery, [major, 'Humanities Requirement', "HUM", i, '3', str(buffer)])
+                    buffer += 1
             
             #Additional hum, soc, or com level social sciences
             for i in range(119, 499) :
@@ -505,7 +511,7 @@ def addMajorRequirementsToDatabase() :
                 #"Computer Science Electives (12)": [
                 #"Select 12 credit hours 2"
                 cids = list(range(300, 500))
-                for i in [330, 331, 350, 351, 425, 430, 440, 450, 485, 487] :
+                for i in [330, 331, 350, 351, 401, 402, 403, 425, 430, 440, 450, 485, 487] :
                     cids.remove(i)
                 for cid in cids :
                     cs = 'CS' + str(cid)
@@ -539,8 +545,12 @@ def addMajorRequirementsToDatabase() :
                         buffer += 1
             
                 #I think for this one, just do a * in the database or something because I don't want to do every class in the database for this.
-                cursor.execute(majorQuery, [major, 'Free Elective', "CS", 100, '12', str(buffer)])
-                buffer += 1
+                #i = 0
+                for course in courseslist :
+                    cursor.execute(majorQuery, [major, 'Free Elective', course[0], course[1], '12', str(buffer)])
+                    buffer += 1
+                #cursor.execute(majorQuery, [major, 'Free Elective', "CS", 100, '12', str(buffer)])
+                #buffer += 1
 
 
 
