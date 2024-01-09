@@ -13,7 +13,7 @@ As a group of students that attend IIT, we all had similar problems when it came
 ![IIt Image](https://github.com/MarcinLanda/IPRO-IIT-Scheduling-App/raw/main/FlaskReference/static/images/mies_campus.jpg?raw=true "IIt Image")
 
 When you open the application, you are greeted by a login screen which allows you to either login, continue as a guest or create an account. 
-![Login Page](https://github.com/MarcinLanda/IPRO-IIT-Scheduling-App/raw/main/FlaskReference/static/images/search.png?raw=true "Login Page")
+![Login Page](https://github.com/MarcinLanda/IPRO-IIT-Scheduling-App/raw/main/FlaskReference/static/images/osh.png?raw=true "Login Page")
 
 When creating an account, you are required to enter a username and password. There are two fields to enter in your password, the second one is the confirm the password is correct.
 ![Account Page](https://github.com/MarcinLanda/IPRO-IIT-Scheduling-App/raw/main/FlaskReference/static/images/Page2.png?raw=true "Account Page")
