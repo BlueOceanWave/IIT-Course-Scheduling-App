@@ -19,4 +19,4 @@ As a group of students that attend IIT, we all had similar problems when it came
 ## Application Walkthrough
 ![Login Page]([/main/FlaskReference/static/images/Page1.png?raw=true "Login Page")
 ![Login Page](/repository/FlaskReference/static/images/Page1.png "Login Page")
-![Login Page](https://github.com/MarcinLanda/IPRO-IIT-Scheduling-App/raw/main/FlaskReference/static/images/Page1.png "Login Page")
+![Login Page](https://github.com/MarcinLanda/IPRO-IIT-Scheduling-App/raw/main/FlaskReference/static/images/mies_campus.jpg?raw=true "Login Page")
