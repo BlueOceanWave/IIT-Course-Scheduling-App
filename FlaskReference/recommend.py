@@ -147,8 +147,8 @@ def recommendClasses(classesreqs, hoursreqs, taken, credithours) : #decide which
 
     takenconverted = [str(sid) + str(cid) for (sid, cid, hours) in taken]
     
-    print(sorted_hoursreqs)
     numreqs = len(sorted_hoursreqs)
+    repeat = 0
     if "Free Elective" in sorted_hoursreqs :
         numreqs -= 1
     if credithours <= 70 :
@@ -240,4 +240,4 @@ def recommendCourses(user) :
 # remainingCourses('mom')
 # remainingHours('mom')
 #print(recommendCourses('mom'))
-print(recommendCourses('hansgutts'))
+# print(recommendCourses('hansgutts'))
